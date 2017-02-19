@@ -1,0 +1,15 @@
+<h1>Welcome to climate cents</h1>
+
+<h2>This is climate cents and its amazing</h2>
+
+<h3>Locations</h3>
+<% if @locations.present? %>
+  <% @locations.each do |location| %>
+    <section>
+      <h6><%= location.name %></h6>
+    </section>
+  <% end %>
+<% else %>
+  <p>No locations entered yet</p>
+
+<% end %>
