@@ -16,10 +16,13 @@ class ChargesController < ApplicationController
       currency: 'usd'
       )
 
-
-
   rescue Stripe::CardError => e
     flash[:error] = e.message
+
+    if e.nil?
+      puts "***** HI HI HI "
+    end
+
     redirect_to charges_path
   end
 
