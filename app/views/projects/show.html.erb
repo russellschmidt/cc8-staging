@@ -1,3 +1,12 @@
 <h1><%= @project.name %></h1>
 <h2><%= @partner.name %></h2>
+
+<div>
+  <p>Help heal the bay today!</p>
+  <div>
+  <%= link_to 'Donate $5', new_charge_path, class: 'btn btn-success btn-lg' %>
+  </div>
+</div>
+
+<hr/>
 <%= link_to 'Back', :back, class: "btn btn-primary btn-sm" %>
