@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :projects, only: [:show]
 
-  resources :charges, only: [:new, :create]
+  resources :charges
 
   root 'home#index'
 end
