@@ -4,11 +4,47 @@
 
 <h3>Locations</h3>
 <% if @locations.present? %>
-  <% @locations.each do |location| %>
-    <section>
-      <h6><%= location.name %></h6>
-    </section>
-  <% end %>
+  <div class="row">
+    <% @locations.each do |location| %>
+      <section class="col-md-4 col-lg-3">
+        <h6><%= location.name %></h6>
+        <% if @partners.where(location_id: location.id).present? %>
+          <% @partners.where(location_id: location.id).each do |partner| %>
+            <div>
+              <p><%= partner.name %></p>
+              <p><%= partner.blurb %></p>
+              <% if @projects.where(partner_id: partner.id).present? %>
+                <% @projects.where(partner_id: partner.id).each do |project| %>
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <p><%= project.name %></p>
+                      <p><%= project.blurb %></p>
+                      <% if @campaigns.where(project_id: project.id, active: true).present? %>
+                        <% @campaigns.where(project_id: project.id, active: true).each do |campaign| %>
+                          <div class="row">
+                            <div class="col-xs-12">
+                              <p><%= campaign.name %></p>
+                              <p><%= number_to_currency(campaign.dollar_goal_in_cents/100) %></p>
+                            </div>
+                          </div>
+                        <% end %>
+                      <% else %>
+                        <p>No fundraising campaigns active at this time</p>
+                      <% end %>
+                    </div>
+                  </div>
+                <% end %>
+              <% else %>
+                <p>Projects for this partner are coming soon!</p>
+              <% end %>
+            </div>
+          <% end %>
+        <% else %>
+          <p>Partners for this location are coming soon!</p>
+        <% end %>
+      </section>
+    <% end %>
+  </div>
 <% else %>
   <p>No locations entered yet</p>
 

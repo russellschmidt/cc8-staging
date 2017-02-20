@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170219231304) do
+ActiveRecord::Schema.define(version: 20170220011325) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "campaigns", force: :cascade do |t|
+    t.integer  "project_id"
+    t.string   "name"
+    t.text     "description"
+    t.integer  "dollar_goal_in_cents"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.integer  "co2_per_dollar"
+    t.boolean  "active"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.index ["project_id"], name: "index_campaigns_on_project_id", using: :btree
+  end
 
   create_table "locations", force: :cascade do |t|
     t.string   "name"
@@ -21,4 +35,27 @@ ActiveRecord::Schema.define(version: 20170219231304) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "partners", force: :cascade do |t|
+    t.integer  "location_id"
+    t.string   "name"
+    t.text     "blurb"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["location_id"], name: "index_partners_on_location_id", using: :btree
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "name"
+    t.text     "blurb"
+    t.text     "description"
+    t.integer  "partner_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["partner_id"], name: "index_projects_on_partner_id", using: :btree
+  end
+
+  add_foreign_key "campaigns", "projects"
+  add_foreign_key "partners", "locations"
+  add_foreign_key "projects", "partners"
 end
