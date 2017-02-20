@@ -10,4 +10,14 @@ module HomeHelper
   def get_project_campaigns(project)
     Campaign.where(project_id: project.id, active: true)
   end
+
+  def total_donations_for_campaign(campaign)
+    Donation.where(campaign_id: campaign.id).sum(:campaign_donation_in_cents)
+  end
+
+  def percent_funded(campaign)
+    unless total_donations_for_campaign(campaign).nil? && campaign.dollar_goal_in_cents.nil?
+      ((total_donations_for_campaign(campaign).to_f / campaign.dollar_goal_in_cents).to_f * 100).to_i
+    end
+  end
 end
