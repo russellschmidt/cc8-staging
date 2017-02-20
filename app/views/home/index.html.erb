@@ -26,7 +26,7 @@
                               <div class="col-xs-12">
                                 <p><%= campaign.name %></p>
                                 <div class="progress">
-                                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= percent_funded(campaign)%>" aria-valuemin="0" aria-valuemax="<%= number_to_currency(campaign.dollar_goal_in_cents/100) %>" style="min-width: 2em; width: <%= percent_funded(campaign)%>%; max-width: 100%;">
+                                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= percent_funded(campaign)%>" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: <%= percent_funded(campaign)%>%; max-width: 100%;">
                                     <%= percent_funded(campaign) %>%
                                   </div>
                                 </div>
