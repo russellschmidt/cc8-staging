@@ -15,28 +15,30 @@
               <p><%= partner.blurb %></p>
               <% if get_partner_projects(partner).present? %>
                 <% get_partner_projects(partner).each do |project| %>
-                  <div class="row">
-                    <div class="col-xs-12">
-                      <p><%= project.name %></p>
-                      <p><%= project.blurb %></p>
-                      <% if get_project_campaigns(project).present? %>
-                        <% get_project_campaigns(project).each do |campaign| %>
-                          <div class="row">
-                            <div class="col-xs-12">
-                              <p><%= campaign.name %></p>
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0.00" aria-valuemin="0" aria-valuemax="<%= number_to_currency(campaign.dollar_goal_in_cents/100) %>" style="min-width: 2em; width: 0%;">
-                                  0%
+                  <%= link_to project_path(project) do %>
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <p><%= project.name %></p>
+                        <p><%= project.blurb %></p>
+                        <% if get_project_campaigns(project).present? %>
+                          <% get_project_campaigns(project).each do |campaign| %>
+                            <div class="row">
+                              <div class="col-xs-12">
+                                <p><%= campaign.name %></p>
+                                <div class="progress">
+                                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0.00" aria-valuemin="0" aria-valuemax="<%= number_to_currency(campaign.dollar_goal_in_cents/100) %>" style="min-width: 2em; width: 0%;">
+                                    0%
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          <% end %>
+                        <% else %>
+                          <p>No fundraising campaigns active at this time</p>
                         <% end %>
-                      <% else %>
-                        <p>No fundraising campaigns active at this time</p>
-                      <% end %>
+                      </div>
                     </div>
-                  </div>
+                  <% end %>
                 <% end %>
               <% else %>
                 <p>Projects for this partner are coming soon!</p>
