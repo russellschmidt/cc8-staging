@@ -41,6 +41,7 @@ gem 'jbuilder', '~> 2.5'
 # RS added for test-dev-prod
 gem 'devise', '~>4.2.0'
 gem 'bootstrap-sass', '~> 3.3'
+
 gem 'autoprefixer-rails'
 gem 'friendly_id', '~> 5.1.0'
 
