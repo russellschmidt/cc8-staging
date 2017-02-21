@@ -39,6 +39,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://checkout.stripe.com/checkout.js"></script>
   </head>
 
   <body>
@@ -55,5 +56,6 @@
 
       <%= yield %>
     </div>
+
   </body>
 </html>
