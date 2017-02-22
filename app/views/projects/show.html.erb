@@ -34,7 +34,9 @@
           <script src="https://checkout.stripe.com/checkout.js"></script>
           <%= hidden_field_tag 'stripeToken' %>
           <%= hidden_field_tag 'stripeEmail' %>
-          <%= hidden_field_tag 'amount', 5000 %>
+          <%= hidden_field_tag 'donationToCampaign', 2500 %>
+          <%= hidden_field_tag 'donationtoTip', 250 %>
+          <%= hidden_field_tag 'totalDonation', 2750 %>
           <%= hidden_field_tag 'campaign_id', get_project_campaigns(@project).first.id %>
           <section class="row">
             <div class="col-xs-6">
@@ -72,10 +74,10 @@
                 <label>
                   <input type="radio" name="donationRadio" id="donationRadio6" value="customRadio">
                     <div class="form-group">
-                      <label class="sr-only" for="customDonationRadio">Amount (in dollars)</label>
+                      <label class="sr-only" for="customDonationRadioInput">Amount (in dollars)</label>
                       <div class="input-group">
                         <div class="input-group-addon">$</div>
-                        <input type="text" class="form-control" id="customDonationRadio" placeholder="Custom Donation">
+                        <input type="text" class="form-control" id="customDonationRadioInput" placeholder="Custom Donation">
                         <div class="input-group-addon">.00</div>
                       </div>
                     </div>
@@ -88,8 +90,8 @@
                 <label class="sr-only" for="tipAmount">Amount (in dollars)</label>
                 <div class="input-group">
                   <div class="input-group-addon">$</div>
-                  <input type="text" class="form-control" id="tipAmount" placeholder="Tip">
-                  <div class="input-group-addon">.00</div>
+                  <input type="text" class="form-control" id="tipAmount" value="2.50">
+
                 </div>
               </div>
             </div>
@@ -111,7 +113,7 @@
             handler.open({
               name: 'Climate Cents',
               description: 'Donation to <%= get_project_campaigns(@project).first.name %>',
-              amount: 5000
+              amount: 1234
             });
             e.preventDefault();
           })
