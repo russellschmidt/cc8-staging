@@ -3,9 +3,6 @@ class ChargesController < ApplicationController
   end
 
   def create
-    tip = 0
-    campaign_donation = params[:amount].to_i - tip
-
     customer = Stripe::Customer.create(
       email: params[:stripeEmail],
       card: params[:stripeToken]
@@ -13,7 +10,7 @@ class ChargesController < ApplicationController
 
     charge = Stripe::Charge.create(
       customer: customer.id,
-      amount: params[:amount],
+      amount: params[:totalDonation],
       description: 'Test Stripe Customer',
       currency: 'usd'
       )
@@ -21,9 +18,9 @@ class ChargesController < ApplicationController
     donation = Donation.new(
       campaign_id: params[:campaign_id],
       stripe_customer_id: customer.id,
-      total_in_cents: params[:amount],
-      tip_in_cents: tip,
-      campaign_donation_in_cents: campaign_donation
+      total_in_cents: params[:totalDonation],
+      tip_in_cents: params[:donationToTip],
+      campaign_donation_in_cents: params[:donationToCampaign]
     )
 
     if current_user.present?

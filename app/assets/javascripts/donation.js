@@ -60,23 +60,13 @@ function flipNegativeDonationValue(donation){
   return donation;
 }
 
-function setCustomDonation(tip, tip_percent, donation){
-  donation = $('#customDonationRadioInput').val() * 100;
-  tip = calculateTip(tip_percent, donation);
-  $("#tipAmount").val(tip);
-}
-
 function calculateTip(tipPercent, donation) {
   return ((tipPercent*donation/100).toFixed(2));
 }
 
-function calculateTotals(tip, donation) {
-
-}
-
 function setHiddenFields(donation, tip, total) {
   $('input[type=hidden]#donationToCampaign').val(donation);
-  $('input[type=hidden]#donationtoTip').val(tip);
+  $('input[type=hidden]#donationToTip').val(tip);
   $('input[type=hidden]#totalDonation').val(total);
 }
 
