@@ -113,7 +113,7 @@
             handler.open({
               name: 'Climate Cents',
               description: 'Donation to <%= get_project_campaigns(@project).first.name %>',
-              amount: 1234
+              amount: Number(document.getElementById('totalDonation').value)
             });
             e.preventDefault();
           })
