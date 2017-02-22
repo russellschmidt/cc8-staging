@@ -4,7 +4,7 @@ $(document).on('turbolinks:load', function() {
   $('#donationRadio1, #donationRadio2, #donationRadio3, #donationRadio4, #donationRadio5').click(function(){
     donation = Number($(this).val());
     donation = flipNegativeDonationValue(donation);
-    $('#customDonationRadioInput').val()
+
     tip = calculateTip(TIP_PERCENT, donation);
     $("#tipAmount").val(tip);
     tip = tip * 100;
@@ -16,7 +16,7 @@ $(document).on('turbolinks:load', function() {
     $("#donationRadio6").prop("checked", true);
     donation = Number($('#customDonationRadioInput').val() * 100);
     donation = flipNegativeDonationValue(donation);
-    $('#customDonationRadioInput').val()
+
     tip = calculateTip(TIP_PERCENT, donation);
     $("#tipAmount").val(tip);
     tip = tip * 100
@@ -36,7 +36,7 @@ $(document).on('turbolinks:load', function() {
   });
 
   $('#tipAmount').on('keyup', function(){
-    tip = $("#tipAmount").val();
+    tip = Number($("#tipAmount").val());
     tip = flipNegativeTipValue(tip);
     $("#tipAmount").val(tip);
     tip = tip * 100;
