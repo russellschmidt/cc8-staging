@@ -130,4 +130,18 @@
 
 
 <hr/>
-<%= link_to 'Back', :back, class: "btn btn-primary btn-sm" %>
+<div>
+  <%= link_to 'Back', :back, class: "btn btn-primary btn-sm" %>
+</div>
+<!-- Facebook share button code -->
+  <div class="fb-share-button"
+    data-href="<%= request.original_url %>"
+    data-layout="button_count"
+    data-size="large">
+  </div>
+<!-- end FB share, start twitter share -->
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=Check%20out%20this%20project%20on%20Climate%20Cents"
+  data-size="large">
+Tweet</a>
+<!-- end social share -->

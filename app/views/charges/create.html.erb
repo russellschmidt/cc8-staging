@@ -12,7 +12,9 @@ function myFacebookLogin() {
     {scope: 'publish_actions'});
 }
 </script>
-<button onclick="myFacebookLogin()" class="btn btn-lrg btn-primary"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Share on Facebook!</button>
+<button onclick="myFacebookLogin()" class="btn btn-lrg btn-primary"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>&nbsp;Share on Facebook!</button>
+
+<a href="https://twitter.com/share" class="twitter-share-button " data-text="I helped fight climate change by donating to offset <%= @co2 %> pounds of CO2!" data-url="http://climatecents.org" data-via="climatecents" data-hashtags="climatecents" data-lang="en" data-show-count="false" data-size="large">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <hr />
 <%= link_to 'Home', root_path, class: "btn btn-link" %>
