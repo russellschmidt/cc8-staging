@@ -6,7 +6,7 @@ class ChargesController < ApplicationController
     customer = Stripe::Customer.create(
       email: params[:stripeEmail],
       card: params[:stripeToken]
-      )
+    )
 
     charge = Stripe::Charge.create(
       customer: customer.id,
@@ -31,6 +31,9 @@ class ChargesController < ApplicationController
         donation.user_id = user.id
       end
     end
+
+    @campaign = Campaign.find(params[:campaign_id])
+    @co2 = @campaign.co2_per_dollar.to_f * (params[:donationToCampaign].to_f/100)
 
     if donation.save
       flash[:notice] = "Thank you!"

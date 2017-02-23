@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # first, clear the deck
+Donation.delete_all
 Campaign.delete_all
 Project.delete_all
 Partner.delete_all
@@ -63,3 +64,4 @@ puts "#{Location.count} new Location(s)"
 puts "#{Partner.count} new Partner(s)"
 puts "#{Project.count} new Project(s)"
 puts "#{Campaign.count} new Campaign(s)"
+puts "#{Donation.count} new Donation(s)"

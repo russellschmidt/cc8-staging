@@ -1,3 +1,6 @@
-<h2>Thanks, you paid <strong><%= number_to_currency((params[:totalDonation].to_i)/100) %></strong>!</h2>
+<h2>Thanks, you donated <strong><%= number_to_currency((params[:totalDonation].to_f)/100) %></strong>!</h2>
+<h3>Your contribution will remove the equivalent of
+  <%= pluralize(@co2, 'pound', 'pounds') %> of carbon dioxide (CO2) from the atmosphere
+</h3>
 <hr />
 <%= link_to 'Home', root_path, class: "btn btn-link" %>
