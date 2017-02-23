@@ -41,6 +41,7 @@
   </head>
 
   <body>
+  <!-- facebook SDK -->
     <script>
       window.fbAsyncInit = function() {
         FB.init({
@@ -59,7 +60,7 @@
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
     </script>
-
+  <!-- end facebook sdk -->
 
     <div class="container">
       <% if notice.present? || alert.present? %>
