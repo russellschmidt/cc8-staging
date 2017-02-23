@@ -19,21 +19,21 @@ $(document).on('turbolinks:load', function() {
 
     tip = calculateTip(TIP_PERCENT, donation);
     $("#tipAmount").val(tip);
-    tip = tip * 100
+    tip = tip * 100;
     total = tip + donation;
-    setHiddenFields(donation, tip, total)
+    setHiddenFields(donation, tip, total);
   });
 
   $("#donationRadio6").click(function(){
-    donation = Number($('#customDonationRadioInput').val() * 100);
+    donation = Number($('#customDonationRadioInput').val());
     donation = flipNegativeDonationValue(donation);
 
     $('#customDonationRadioInput').val(donation);
-    tip = calculateTip(TIP_PERCENT, donation);
+    tip = calculateTip(TIP_PERCENT, donation * 100);
     $("#tipAmount").val(tip);
-    tip = tip * 100
+    tip = tip * 100;
     total = tip + donation;
-    setHiddenFields(donation, tip, total)
+    setHiddenFields(donation, tip, total);
   });
 
   $('#tipAmount').on('keyup', function(){
@@ -42,10 +42,19 @@ $(document).on('turbolinks:load', function() {
     $("#tipAmount").val(tip);
     tip = tip * 100;
     total = tip + donation;
-    setHiddenFields(donation, tip, total)
+    setHiddenFields(donation, tip, total);
   });
 
 });
+
+function togglePaymentButton(){
+  const MIN_DONATION = 1;
+  var donation = $('input[type=hidden]#donationToCampaign').val(donation);
+  var tip = $('input[type=hidden]#donationToTip').val(tip);
+  var total = $('input[type=hidden]#totalDonation').val(total);
+
+
+}
 
 function flipNegativeTipValue(tip){
   if (tip < 0){
