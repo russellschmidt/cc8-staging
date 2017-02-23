@@ -1,6 +1,15 @@
 $(document).on('turbolinks:load', function() {
   const TIP_PERCENT = 0.10
   var tip, donation, total;
+
+  setInterval(function(){
+    if( ($("#customDonationRadioInput").val() == 0) && ($("#tipAmount").val() == 0) ){
+      $('#btn-buy').prop('disabled', true);
+    } else {
+      $('#btn-buy').prop('disabled', false);
+    }
+  }, 100);
+
   $('#donationRadio1, #donationRadio2, #donationRadio3, #donationRadio4, #donationRadio5').click(function(){
     donation = Number($(this).val());
     donation = flipNegativeDonationValue(donation);
