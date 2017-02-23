@@ -8,11 +8,11 @@
 // Only works after `FB.init` is called
 function myFacebookLogin() {
   FB.login(function(){
-    FB.api('/me/feed', 'post', {message: 'I just removed <%= @co2 %> pounds of CO2 with the help of Climate Cents http://www.climatecents.org'});},
+    FB.api('/me/feed', 'post', {message: 'My donation to Climate Cents removed <%= @co2 %> pounds of CO2 to help fight global warming http://www.climatecents.org'});},
     {scope: 'publish_actions'});
 }
 </script>
-<button onclick="myFacebookLogin()">Login with Facebook</button>
+<button onclick="myFacebookLogin()" class="btn btn-lrg btn-default">Share on Facebook!</button>
 
 <hr />
 <%= link_to 'Home', root_path, class: "btn btn-link" %>
