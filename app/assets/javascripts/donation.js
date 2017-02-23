@@ -27,6 +27,7 @@ $(document).on('turbolinks:load', function() {
   $("#donationRadio6").click(function(){
     donation = Number($('#customDonationRadioInput').val() * 100);
     donation = flipNegativeDonationValue(donation);
+
     $('#customDonationRadioInput').val(donation);
     tip = calculateTip(TIP_PERCENT, donation);
     $("#tipAmount").val(tip);
