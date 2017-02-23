@@ -19,18 +19,18 @@
     <!-- http://realfavicongenerator.net/ -->
 
     <meta property="fb:page_id" content="">
-    <meta property="og:title" content="">
-    <meta property="og:image" content="">
-    <meta property="og:description" content="">
-    <meta property="og:url" content="">
-    <meta property="og:site_name" content="">
+    <meta property="og:title" content="Support Climate Cents">
+    <meta property="og:image:secure_url" content="https://s3.amazonaws.com/climatecents/SocialShare/climatechangefight.jpg">
+    <meta property="og:description" content="<%= @meta_description_text %>">
+    <meta property="og:url" content="http://www.climatecents.org">
+    <meta property="og:site_name" content="Climate Cents">
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="">
     <meta name="twitter:title" content="">
     <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="">
+    <meta name="twitter:image" content="https://s3.amazonaws.com/climatecents/SocialShare/climatechangefight.jpg">
     <meta name="twitter:site" content="">
 
     <%= csrf_meta_tags %>
@@ -54,6 +54,16 @@
 
       <%= yield %>
     </div>
+
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
   </body>
 </html>

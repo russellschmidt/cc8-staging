@@ -2,5 +2,22 @@
 <h3>Your contribution will remove the equivalent of
   <%= pluralize(@co2, 'pound', 'pounds') %> of carbon dioxide (CO2) from the atmosphere
 </h3>
+<div>
+  <% twitter_msg = "I%20just%20removed%20#{@co2}%20pounds%20of%20CO2%by%20donating%20to%20@climatecents"%>
+  <%= link_to 'Share on Twitter', "https://twitter.com/home?status=#{ twitter_msg }" %>
+
+
+
+
+
+
+  <!-- Your share button code -->
+  <div class="fb-share-button"
+    data-href="http://www.climatecents.org"
+    data-layout="button_count"
+    data-size="large">
+  </div>
+
+
 <hr />
 <%= link_to 'Home', root_path, class: "btn btn-link" %>

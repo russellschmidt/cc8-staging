@@ -23,13 +23,8 @@ class ChargesController < ApplicationController
       campaign_donation_in_cents: params[:donationToCampaign]
     )
 
-    if current_user.present?
-      donation.user_id = User.find_by(current_user.email)
-    else
-      user = User.find_by(email: params[:stripeEmail])
-      if user.present?
-        donation.user_id = user.id
-      end
+    if user_signed_in?
+      donation = set_user_id donation
     end
 
     @campaign = Campaign.find(params[:campaign_id])
@@ -41,9 +36,20 @@ class ChargesController < ApplicationController
       flash[:error] = "Error saving the transaction to our database"
     end
 
+    @meta_description_text = "I just offset #{ @co2} pounds of CO2 by donating to Climate Cents"
+
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to charges_path
   end
+
+  private
+    def set_user_id(donation)
+      user = User.find_by(email: params[:stripeEmail])
+      if user.present?
+        donation.user_id = user.id
+      end
+      donation
+    end
 
 end
