@@ -1,8 +1,45 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2><%= current_user.email %></h2>
 
 <!-- put in donation table here -->
-<%
+<h3>Donations</h3>
+<% if get_donations.present? %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Campaign ID</th>
+        <th>Total Lbs CO2</th>
+        <th>Donation</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <% get_donations.each do |donation| %>
+    <tbody>
+      <tr>
+        <td><%= donation.campaign_id %></td>
+        <td><%= donation.campaign_donation_in_cents.to_f/100 * get_campaign(donation.campaign_id).co2_per_dollar %></td>
+        <td><%= number_to_currency(donation.campaign_donation_in_cents.to_f / 100) %></td>
+        <td><%= donation.created_at.to_s(:long) %></td>
+      </tr>
+    </tbody>
+    <% end %>
+    <tfoot>
+      <tr>
+        <td>Totals</td>
+        <td><%= get_total_co2(get_donations.first.user_id )%></td>
+        <td><%= number_to_currency(get_total_donation(get_donations.first.user_id).to_f / 100) %></td>
+        <td></td>
+      </tr>
+    </tfoot>
 
+  <table>
+  </div>
+<% else %>
+  <div>
+    <p>No donations yet!</p>
+  </div>
+<% end %>
+
+<h3>Edit <%= resource_name.to_s.humanize %></h3>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
