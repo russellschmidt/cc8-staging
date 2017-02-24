@@ -20,4 +20,13 @@ module HomeHelper
       ((total_donations_for_campaign(campaign).to_f / campaign.dollar_goal_in_cents).to_f * 100).to_i
     end
   end
+
+  def days_remaining(campaign)
+    (campaign.end_date.to_date - Time.now.to_date).to_i
+  end
+
+  def number_of_campaign_backers(campaign)
+    donations = Donation.where(campaign_id: campaign.id).distinct.count(:stripe_email)
+  end
+
 end

@@ -20,7 +20,8 @@ class ChargesController < ApplicationController
       stripe_customer_id: customer.id,
       total_in_cents: params[:totalDonation],
       tip_in_cents: params[:donationToTip],
-      campaign_donation_in_cents: params[:donationToCampaign]
+      campaign_donation_in_cents: params[:donationToCampaign],
+      stripe_email: params[:stripeEmail]
     )
 
     if user_signed_in?
@@ -51,5 +52,6 @@ class ChargesController < ApplicationController
       end
       donation
     end
+
 
 end

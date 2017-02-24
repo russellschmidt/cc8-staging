@@ -1,5 +1,5 @@
 $(document).on('turbolinks:load', function() {
-  const TIP_PERCENT = 0.10
+  const TIP_PERCENT = 0.15
   var tip, donation, total;
 
   setInterval(function(){

@@ -1,16 +1,23 @@
 <div id="home-body">
   <section id="hero-section">
-    <nav class="row">
-      <ul>
-        <li class="nav-top" id="nav-logo">LOGO</li>
-        <li class="nav-top">How It Works</li>
-        <li class="nav-top">Browse Projects</li>
-        <li class="nav-top">About Us</li>
-        <li class="nav-top">Get Involved</li>
-      </ul>
-    </nav>
-    <h1>Everyone Can Make Change</h1>
-    <h2>Fight climate change and see the effects right in your community</h2>
+    <header>
+      <nav class="row">
+        <ul>
+          <li class="nav-top" id="nav-logo">LOGO</li>
+          <li class="nav-top">How It Works</li>
+          <li class="nav-top">Browse Projects</li>
+          <li class="nav-top">About Us</li>
+          <li class="nav-top">Get Involved</li>
+        </ul>
+      </nav>
+      <hgroup>
+        <h1>Everyone Can Make Change.</h1>
+        <h2>Fight climate change and see the effects right in your community.</h2>
+        <div>
+          <button id="btn-hero-back-a-project"><span id="btn-hero-back-a-project-text">Back a Project</span></button>
+        </div>
+      </hgroup>
+    </header>
   </section>
 
   <div>
@@ -48,8 +55,12 @@
                                   <p><%= campaign.name %></p>
                                   <div class="progress">
                                     <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= percent_funded(campaign)%>" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: <%= percent_funded(campaign)%>%; max-width: 100%;">
-                                      <%= percent_funded(campaign) %>%
                                     </div>
+                                  </div>
+                                  <div class="progress-label">
+                                    <%= percent_funded(campaign) %>% funded |
+                                    <%= days_remaining(campaign) %> days remaining |
+                                    <%= number_of_campaign_backers(campaign) %> backers
                                   </div>
                                 </div>
                               </div>
