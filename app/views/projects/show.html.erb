@@ -133,15 +133,23 @@
 <div>
   <%= link_to 'Back', :back, class: "btn btn-primary btn-sm" %>
 </div>
+<hr/>
 <!-- Facebook share button code -->
-  <div class="fb-share-button"
-    data-href="<%= request.original_url %>"
-    data-layout="button_count"
-    data-size="large">
-  </div>
-<!-- end FB share, start twitter share -->
-<a class="twitter-share-button"
-  href="https://twitter.com/intent/tweet?text=Check%20out%20this%20project%20on%20Climate%20Cents"
+<div class="fb-share-button"
+  data-href="<%= request.original_url %>"
+  data-layout="button_count"
   data-size="large">
-Tweet</a>
+</div>
+<hr/>
+<!-- end FB share, start twitter share -->
+<div>
+  <a class="twitter-share-button"
+    href="https://twitter.com/share"
+    data-size="large"
+    data-text="Check out the <%=@project.name%> project from "
+    data-via="climatecents"
+    data-url="<%= request.original_url %>"
+    data-hashtags="climatecents">
+  Tweet</a>
+</div>
 <!-- end social share -->
