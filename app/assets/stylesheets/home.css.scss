@@ -1,5 +1,5 @@
-#home-body {
-
+div#home-body {
+  width: 1400px;
 }
 
 section#hero{
@@ -8,3 +8,38 @@ section#hero{
   background: radial-gradient(circle, #F5A623 0%, #063940 100%);
   border: 1px solid #979797;
 }
+
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li.nav-top {
+  display: inline;
+  padding: 0;
+  margin: 40px 0 0 0;
+  width: 150px;
+  height: 20px;
+  font-family: Oxygen;
+  font-size: 16px;
+  text-align: right;
+  line-height: 20px;
+  // color: #FFFFFF;
+}
+
+nav li.nav-top:last-item {
+
+}
+
+nav li#nav-logo {
+  width: 236px;
+  height: 39px;
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-right: 556px;
+}
+
