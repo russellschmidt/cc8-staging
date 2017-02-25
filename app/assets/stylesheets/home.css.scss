@@ -1,76 +1,83 @@
 div#home-body {
-  width: 1400px;
+  margin: 0;
+  padding: 0;
 }
 
-section#hero{
+section#hero-section{
+  width: 100%;
   height: 664px;
-  opacity: 0.45;
-  background: radial-gradient(circle, #F5A623 0%, #063940 100%);
+  background:
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    radial-gradient(circle, rgba(245,166,35,0.45) 0%, rgba(6,57,64,0.45) 100%),
+    url('https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/277H.png') no-repeat center center fixed;
+  background-size: cover;
   border: 1px solid #979797;
+  color: #FFFFFF;
 }
 
 nav {
-  margin: 0;
+  margin: 30px 0 0 0;
   padding: 0;
 }
 
 nav ul {
   list-style-type: none;
+
 }
 
 nav li.nav-top {
   display: inline;
-  padding: 0;
-  margin: 40px 0 0 0;
+  padding: 10px 30px 0 0;
   width: 150px;
   height: 20px;
   font-family: Oxygen;
   font-size: 16px;
   text-align: right;
   line-height: 20px;
-  // color: #FFFFFF;
 }
 
-nav li.nav-top:last-child {
-  margin-right: 30px;
+nav li.nav-top:last-child{
+  padding-right: 53px;
 }
 
 nav li#nav-logo {
   width: 236px;
   height: 39px;
   margin-left: 30px;
-  margin-top: 30px;
   margin-right: 556px;
 }
 
-hgroup {
-  margin: 0 auto;
+div#hero-header {
+  margin: 186px auto;
+  width: 100%;
   h1 {
-    width: 782px;
-    // height: 76px;
     font-family: Oxygen;
     font-size: 60px;
     font-weight: bold;
     text-align: center;
     line-height: 76px;
-    // color: #FFFFFF;
     margin-bottom: 22px;
   }
   h2 {
-    width: 699px;
-    // height: 31px;
     font-family: Oxygen;
     font-size: 24px;
     text-align: center;
     line-height: 31px;
-    // color: #FFFFFF;
+    margin-bottom: 38px;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  div#hero-header-btn{
+    margin: 0 auto;
+    text-align: center;
   }
   button#btn-hero-back-a-project{
     width: 250px;
     height: 40px;
     background-color: #3EC631;
     border-radius: 30px;
-
+    border: none;
+    font-weight: 300;
   }
 
   span#btn-hero-back-a-project-text {
