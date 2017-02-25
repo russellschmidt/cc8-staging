@@ -7,9 +7,9 @@ section#hero-section{
   width: 100%;
   height: 664px;
   background:
-    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-    radial-gradient(circle, rgba(245,166,35,0.45) 0%, rgba(6,57,64,0.45) 100%),
-    url('https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/277H.png') no-repeat center center fixed;
+    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+    radial-gradient(circle, rgba(245,166,35,0.40) 0%, rgba(6,57,64,0.40) 100%),
+    url('https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/277H.png') no-repeat center center;
   background-size: cover;
   border: 1px solid #979797;
   color: #FFFFFF;
@@ -22,7 +22,6 @@ nav {
 
 nav ul {
   list-style-type: none;
-
 }
 
 nav li.nav-top {
@@ -48,7 +47,7 @@ nav li#nav-logo {
 }
 
 div#hero-header {
-  margin: 186px auto;
+  margin: 120px auto;
   width: 100%;
   h1 {
     font-family: Oxygen;
@@ -90,4 +89,12 @@ div#hero-header {
     line-height: 22px;
     color: #FFFFFF;
   }
+}
+
+div#scroll-down-arrow {
+  box-sizing: border-box;
+  width: 30px;
+  height: 15px;
+  z-index: 100;
+  margin: 217px auto 0 auto;
 }
