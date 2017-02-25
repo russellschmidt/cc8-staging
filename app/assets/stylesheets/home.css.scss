@@ -3,6 +3,7 @@ div#home-body {
   padding: 0;
 }
 
+ // HERO
 section#hero-section{
   width: 100%;
   height: 664px;
@@ -47,7 +48,7 @@ nav li#nav-logo {
 }
 
 div#hero-header {
-  margin: 120px auto;
+  margin: 120px auto 0 auto;
   width: 100%;
   h1 {
     font-family: Oxygen;
@@ -98,3 +99,90 @@ div#scroll-down-arrow {
   z-index: 100;
   margin: 217px auto 0 auto;
 }
+
+ // CHIP IN
+section#chip-in-section {
+  height: 700px;
+  background-color: rgba(126,203,221,0.3);
+  margin: 0;
+  padding: 0;
+
+  div#chip-in-section-header{
+    padding-top: 71px;
+    margin: 0 auto;
+    hgroup h2 {
+      max-width: 795px;
+      height: 55px;
+      font-family: Oxygen;
+      font-size: 44px;
+      font-weight: 300;
+      text-align: center;
+      line-height: 55px;
+      color: #4A4A4A;
+      margin: 0 auto;
+    }
+    hgroup h3{
+      max-width: 782px;
+      height: 30px;
+      font-family: Oxygen;
+      font-size: 21px;
+      text-align: center;
+      line-height: 30px;
+      color: #6E6E6E;
+      margin: 0 auto;
+    }
+    hgroup h3:nth-child(2){
+      margin-top: 10px;
+    }
+
+  }
+
+  div#chip-in-section-articles{
+    padding-top: 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    article {
+      margin: 0 27px;
+      float: left;
+      max-width: 265px;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 16px;
+      text-align: center;
+      line-height: 26px;
+      color: #6E6E6E;
+      div.chip-in-section-icon {
+        width: 265px;
+        height: 140px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        img:last-child {
+
+        }
+      }
+      h2 {
+        max-width: 265px;
+        height: 38px;
+        font-family: Oxygen;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 38px;
+        color: #6E6E6E;
+        padding: 0;
+        margin: 16px 0 14px 0;
+      }
+      p {
+        max-width: 265px;
+        height: 104px;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+
+}
+
