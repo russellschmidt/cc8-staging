@@ -183,6 +183,43 @@ section#chip-in-section {
       }
     }
   }
+}
 
+// Projects section of home page
+section#home-projects-section {
+  height: 700px;
+  background-color: rgba(255,255,255,1);
+  margin: 0;
+  padding: 0;
+
+  div#home-projects-section-header{
+    padding-top: 71px;
+    margin: 0 auto;
+    hgroup h2 {
+      max-width: 795px;
+      height: 55px;
+      font-family: Oxygen;
+      font-size: 44px;
+      font-weight: 300;
+      text-align: center;
+      line-height: 55px;
+      color: #4A4A4A;
+      margin: 0 auto;
+    }
+    hgroup h3{
+      max-width: 825px;
+      height: 30px;
+      font-family: Oxygen;
+      font-size: 21px;
+      text-align: center;
+      line-height: 30px;
+      color: #6E6E6E;
+      margin: 0 auto;
+    }
+    hgroup h3:nth-child(2){
+      margin-top: 10px;
+    }
+
+  }
 }
 
