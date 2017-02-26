@@ -271,6 +271,48 @@ section#home-projects-section {
         line-height: 24px;
         color: #6E6E6E;
       }
+      .progress {
+        width: 290px;
+        height: 10px;
+        border-radius: 5px;
+        margin: 0 auto;
+      }
+      .progress-label {
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          align-items: flex-start;
+          li.leftmost {
+            margin-left: 30px;
+          }
+          li.rightmost {
+            margin-right: 30px;
+          }
+        }
+
+        li {
+          margin-top: 5px;
+          height: 15px;
+          font-family: Oxygen;
+          font-size: 12px;
+          font-weight: 300;
+          text-align: right;
+          line-height: 15px;
+          color: #6E6E6E;
+        }
+        span.progress-data-point {
+          height: 22px;
+          font-family: Oxygen;
+          font-size: 18px;
+          font-weight: bold;
+          line-height: 22px;
+          color: #6E6E6E;
+        }
+      }
     }
   }
 }

@@ -88,14 +88,23 @@
         <p><%= project.blurb %></p>
 
         <div class="progress">
-          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= percent_funded(campaign)%>" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: <%= percent_funded(campaign)%>%; max-width: 100%;">
+          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= percent_funded(campaign)%>" aria-valuemin="0" aria-valuemax="100" style="min-width: 1px; width: <%= percent_funded(campaign)%>%;">
           </div>
         </div>
         <div class="progress-label">
           <ul>
-            <li><%= percent_funded(campaign) %>% funded</li>
-            <li><%= days_remaining(campaign) %> days remaining</li>
-            <li><%= number_of_campaign_backers(campaign) %> backers</li>
+            <li class="leftmost"><span class="progress-data-point"><%= percent_funded(campaign) %>%</span></li>
+            <li><span class="progress-data-point"><%= number_of_campaign_backers(campaign) %></span></li>
+            <li class="rightmost"><span class="progress-data-point"><%= days_remaining(campaign) %> Days</span></li>
+          </ul>
+          <ul>
+            <li class="leftmost">Funded</li>
+            <% if number_of_campaign_backers(campaign) == 1 %>
+              <li>Backer</li>
+            <% else %>
+              <li>Backers</li>
+            <% end %>
+            <li class="rightmost">Remaining</li>
           </ul>
         </div>
 
