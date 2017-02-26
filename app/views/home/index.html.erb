@@ -80,9 +80,9 @@
                     <% get_project_campaigns(project).each do |campaign| %>
       <article>
         <div class="home-projects-section-image">
-          <img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/icon_01_identify.png" alt="We identify local projects that help reduce atmospheric CO2 to fight global warming"/>
+          <img src="<%= return_350x200_image_url(partner.id) %>" alt="We identify local projects such as <%= partner.name %>'s <%= project.name %> that help reduce atmospheric CO2 to fight global warming"/>
         </div>
-        <h5>Palos Verdes, CA</h5>
+        <h5><img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/icon-green-location-map.png" alt="Climate Cents Project Partner location"/><%= campaign.city %>, <%= campaign.state %></h5>
         <h3><%= partner.blurb %></h3>
         <h6><%= partner.name %></h6>
         <p><%= project.blurb %></p>
@@ -125,87 +125,43 @@
     </div>
   </section>
 
+  <section id="join-the-fight">
+
   </section>
 
-  <div>
-    <% if user_signed_in? %>
-      <%= link_to current_user.email, edit_user_registration_path, class: "btn btn-link"%>
-      <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "btn btn-link"%>
-    <% else %>
-      <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-link" %>
-      <%= link_to 'Sign in', new_user_session_path, class: "btn btn-link" %>
-    <% end %>
-  </div>
+  <section id="build-with-us">
 
-  <h3>Locations</h3>
-  <% if @locations.present? %>
-    <div class="row">
-      <% @locations.each do |location| %>
-        <section class="col-sm-6 col-md-4 col-lg-3">
-          <h6><%= location.name %></h6>
-          <% if get_location_partners(location).present? %>
-            <% get_location_partners(location).each do |partner| %>
-              <div>
-                <p><%= partner.name %></p>
-                <p><%= partner.blurb %></p>
-                <% if get_partner_projects(partner).present? %>
-                  <% get_partner_projects(partner).each do |project| %>
-                    <%= link_to project_path(project) do %>
-                      <div class="row">
-                        <div class="col-xs-12">
-                          <p><%= project.name %></p>
-                          <p><%= project.blurb %></p>
-                          <% if get_project_campaigns(project).present? %>
-                            <% get_project_campaigns(project).each do |campaign| %>
-                              <div class="row">
-                                <div class="col-xs-12">
-                                  <p><%= campaign.name %></p>
-                                  <div class="progress">
-                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= percent_funded(campaign)%>" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: <%= percent_funded(campaign)%>%; max-width: 100%;">
-                                    </div>
-                                  </div>
-                                  <div class="progress-label">
-                                    <%= percent_funded(campaign) %>% funded |
-                                    <%= days_remaining(campaign) %> days remaining |
-                                    <%= number_of_campaign_backers(campaign) %> backers
-                                  </div>
-                                </div>
-                              </div>
-                            <% end %>
-                          <% else %>
-                            <p>No fundraising campaigns active at this time</p>
-                          <% end %>
-                        </div>
-                      </div>
-                    <% end %>
-                  <% end %>
-                <% else %>
-                  <p>Projects for this partner are coming soon!</p>
-                <% end %>
-              </div>
-            <% end %>
-          <% else %>
-            <p>Partners for this location are coming soon!</p>
-          <% end %>
-        </section>
+  </section>
+
+  <section id="keep-in-touch">
+  </section>
+
+  <footer>
+    <div>
+      <% if user_signed_in? %>
+        <%= link_to current_user.email, edit_user_registration_path, class: "btn btn-link"%>
+        <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "btn btn-link"%>
+      <% else %>
+        <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-link" %>
+        <%= link_to 'Sign in', new_user_session_path, class: "btn btn-link" %>
       <% end %>
     </div>
-  <% else %>
-    <p>No locations entered yet</p>
-
-  <% end %>
-
-  <hr />
-
   <!-- Your share button code -->
-  <div class="fb-share-button"
-    data-href="http://www.climatecents.org"
-    data-layout="button_count"
-    data-size="large">
-  </div>
-  <hr/>
-  <div>
-    <a class="twitter-follow-button" href="https://twitter.com/climatecents"
-  data-size="large">Follow @ClimateCents</a>
-  </div>
-</div>
+    <div class="fb-share-button"
+      data-href="http://www.climatecents.org"
+      data-layout="button_count"
+      data-size="large">
+    </div>
+    <hr/>
+    <div>
+      <a class="twitter-follow-button" href="https://twitter.com/climatecents"
+        data-size="large">Follow @ClimateCents</a>
+    </div>
+
+  </footer>
+
+
+
+
+
+

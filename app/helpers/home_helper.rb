@@ -29,4 +29,15 @@ module HomeHelper
     donations = Donation.where(campaign_id: campaign.id).distinct.count(:stripe_email)
   end
 
+  def return_350x200_image_url(partner_id)
+    images = Image.where(partner_id: partner_id)
+    images.each do |image|
+      if /[350x200]/.match(image.aws_url)
+        return image.aws_url
+      else
+        return nil
+      end
+    end
+  end
+
 end

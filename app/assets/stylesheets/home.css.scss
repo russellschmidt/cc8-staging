@@ -220,6 +220,7 @@ section#home-projects-section {
       margin-top: 10px;
     }
   }
+
   div#home-projects-section-articles {
     padding-top: 30px;
     margin: 0 auto;
@@ -235,7 +236,11 @@ section#home-projects-section {
       margin: 39px 15px;
       div.home-projects-section-image {
         width: 350px;
-        height: 230px;
+        height: 200px;
+      }
+      h5, h3, h6, p {
+        margin-left: 30px;
+        margin-right: 19px;
       }
       h5 {
         width: 265px;
@@ -300,7 +305,7 @@ section#home-projects-section {
           font-family: Oxygen;
           font-size: 12px;
           font-weight: 300;
-          text-align: right;
+          text-align: center;
           line-height: 15px;
           color: #6E6E6E;
         }

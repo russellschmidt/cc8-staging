@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # first, clear the deck
+Image.delete_all
 Donation.delete_all
 Campaign.delete_all
 Project.delete_all
@@ -121,6 +122,13 @@ campaign = Campaign.new(project_id: project.id, name: "2017 Heal the Bay Campaig
   state: "CA",
   active: true)
 campaign.save
+
+image = Image.new(
+  aws_url: "https://s3.amazonaws.com/climatecents3/350x200-project/kelp-350x200.jpg",
+  partner_id: partner.id,
+  logo: false,
+  )
+image.save
 
 # ---------------
 # MEND
@@ -242,6 +250,13 @@ campaign = Campaign.new(project_id: project.id, name: "2017 MEND Urban Farming C
   active: true)
 campaign.save
 
+image = Image.new(
+  aws_url: "https://s3.amazonaws.com/climatecents3/350x200-project/Farm-350x200.jpg",
+  partner_id: partner.id,
+  logo: false,
+  )
+image.save
+
 # -------------
 # Isidore Recycling
 partner = Partner.new(location_id: loc.id,
@@ -274,7 +289,7 @@ Monday through Friday: 10:00am - 1:30pm and 2:30 - 5:30pm
 1769 Naud St, Los Angeles, CA 90012
 They’re especially interested in arranging a contributions from organizations like businesses, nonprofits, and governments who have a lot of material for disposal. Homeboy Recycling offers competitive pricing for its certified, secure, and responsible e-waste solutions.
 To schedule a pickup and get a quote, call (323) 222–3322 or email info@isidorerecycling.com.",
-  news: ""))
+  news: "")
 partner.save
 
 project = Project.new(partner_id: partner.id, name: "Recycle Electronics, Rebuild Lives",
@@ -303,6 +318,13 @@ campaign = Campaign.new(project_id: project.id, name: "2017 Isidore Recycling Ca
   state: "CA",
   active: true)
 campaign.save
+
+image = Image.new(
+  aws_url: "https://s3.amazonaws.com/climatecents3/350x200-project/recycle-350x200.jpg",
+  partner_id: partner.id,
+  logo: false,
+  )
+image.save
 
 # -------------
 # GRID Alternatives
@@ -359,6 +381,13 @@ campaign = Campaign.new(project_id: project.id, name: "2017 GRID Alternatives so
   active: true)
 campaign.save
 
+image = Image.new(
+  aws_url: "https://s3.amazonaws.com/climatecents3/350x200-project/solar-350x200.jpg",
+  partner_id: partner.id,
+  logo: false,
+  )
+image.save
+
 # --------------
 # End
 
@@ -367,3 +396,4 @@ puts "#{Partner.count} new Partner(s)"
 puts "#{Project.count} new Project(s)"
 puts "#{Campaign.count} new Campaign(s)"
 puts "#{Donation.count} new Donation(s)"
+puts "#{Image.count} new Image(s)"
