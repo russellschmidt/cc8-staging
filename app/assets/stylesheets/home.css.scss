@@ -219,7 +219,59 @@ section#home-projects-section {
     hgroup h3:nth-child(2){
       margin-top: 10px;
     }
-
+  }
+  div#home-projects-section-articles {
+    padding-top: 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    article {
+      max-width: 350px;
+      height: 540px;
+      background-color: #FFFFFF;
+      border: 1px solid #DCDCDC;
+      border-radius: 10px;
+      margin: 39px 15px;
+      div.home-projects-section-image {
+        width: 350px;
+        height: 230px;
+      }
+      h5 {
+        width: 265px;
+        height: 15px;
+        font-family: "Source Sans Pro";
+        font-size: 12px;
+        line-height: 15px;
+        color: #063940;
+        text-transform: uppercase;
+      }
+      h3 {
+        width: 300px;
+        height: 54px;
+        font-family: Oxygen;
+        font-size: 21px;
+        font-weight: bold;
+        line-height: 27px;
+        color: #6E6E6E;
+      }
+      h6 {
+        width: 265px;
+        height: 15px;
+        font-family: "Source Sans Pro";
+        font-size: 12px;
+        line-height: 15px;
+        color: #6E6E6E;
+      }
+      p {
+        width: 286px;
+        height: 96px;
+        font-family: "Source Sans Pro";
+        font-size: 16px;
+        line-height: 24px;
+        color: #6E6E6E;
+      }
+    }
   }
 }
 
