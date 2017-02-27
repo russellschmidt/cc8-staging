@@ -346,8 +346,10 @@ section#home-projects-section {
 section#join-the-fight {
   height: 400px;
   width: 100%;
-  background: url('https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/Rectangle+2+Copy.png') no-repeat center center;
-  background: #777D81;
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+  url('https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/microcrafts570.jpg') no-repeat center center;
+  background-size: cover;
+  // background: #777D81;
 
   div#join-the-fight-header  {
     width: 100%;
@@ -454,4 +456,59 @@ section#build-with-us {
       background-color: rgba(122, 201, 67, 1.0)
     }
   }
+}
+
+section#keep-in-touch {
+  height: 460px;
+  background-color: #FFFFFF;
+
+  div#keep-in-touch-header {
+    margin-top: 82px;
+
+    h2{
+      height: 55px;
+      font-family: Oxygen;
+      font-size: 44px;
+      font-weight: 300;
+      text-align: center;
+      line-height: 55px;
+      color: #4A4A4A;
+    }
+    h5 {
+      margin-top: 19px;
+      height: 30px;
+      font-family: Oxygen;
+      font-size: 21px;
+      text-align: center;
+      line-height: 30px;
+      color: #6E6E6E;
+    }
+  }
+  div#keep-in-touch-cta {
+    margin-top: 58px;
+    div#kit-email-div {
+      text-align: center;
+
+    }
+    input#kit-email {
+      width: 560px;
+      height: 45px;
+      font-family: Oxygen;
+      font-size: 21px;
+      font-weight: 300;
+      text-align: center;
+      line-height: 27px;
+      color: #4A4A4A;
+      margin-bottom: 38px;
+      box-sizing: border-box;
+      border: none;
+      border-bottom: 2px solid #3EC631;
+    }
+
+    div#kit-submit-div {
+      text-align: center;
+    }
+
+  }
+
 }
