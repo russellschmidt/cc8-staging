@@ -459,7 +459,7 @@ section#build-with-us {
 }
 
 section#keep-in-touch {
-  height: 460px;
+  height: 388px;
   background-color: #FFFFFF;
 
   div#keep-in-touch-header {
@@ -521,6 +521,82 @@ section#keep-in-touch {
         line-height: 22px;
         color: #3EC631;
       }
+      input:hover {
+        background: rgba(122, 201, 67, 0.25);
+      }
+    }
+  }
+}
+
+footer {
+  height: 540px;
+  background-color: #063940;
+  color: #FFFFFF;
+  div {
+    float: left;
+    margin-top: 80px;
+  }
+
+  div.left-column {
+    width: 300px;
+    margin-left: 250px;
+    h4 {
+      height: 27px;
+      font-family: Oxygen;
+      font-size: 21px;
+      font-weight: 300;
+      line-height: 27px;
+      color: #FFFFFF;
+      margin-bottom: 29px;
+    }
+    address {
+      max-width: 300px;
+      height: 90px;
+      h5 {
+        font-family: Oxygen;
+        font-size: 18px;
+        line-height: 22px;
+      }
+      a {
+        color: #3EC631;
+        text-decoration: none;
+      }
+    }
+  }
+  div.right-column {
+    width: 620px;
+    h4 {
+      max-width: 620px;
+      height: 27px;
+      font-family: Oxygen;
+      font-size: 21px;
+      font-weight: 300;
+      line-height: 27px;
+      color: #FFFFFF;
+    }
+    ul {
+      list-style-type: none;
+      margin-bottom: 79px;
+      margin-left: -40px;
+      margin-top: 32px;
+      li {
+        display: inline;
+        margin-right: 19px;
+      }
+    }
+    p {
+      width: 620px;
+      font-family: Oxygen;
+      font-size: 14px;
+      line-height: 21px;
+      color: #FFFFFF;
+    }
+    p:last-child {
+      margin-top: 84px;
+    }
+    p a {
+      color: #3EC631;
+      text-decoration: none;
     }
   }
 }

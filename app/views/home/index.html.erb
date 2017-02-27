@@ -179,31 +179,25 @@
   </section>
 
   <footer>
-    <div>
-      <% if user_signed_in? %>
-        <%= link_to current_user.email, edit_user_registration_path, class: "btn btn-link"%>
-        <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "btn btn-link"%>
-      <% else %>
-        <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-link" %>
-        <%= link_to 'Sign in', new_user_session_path, class: "btn btn-link" %>
-      <% end %>
+    <div class="left-column">
+      <h4>Contact Us:</h4>
+      <address>
+        <h5><a href="mailto:hello@climatecents.org?Subject=Website%20Query" target="_top">hello@climatecents.org</a></h5>
+        <h5>P.O. Box 25291</h5>
+        <h5>Los Angeles, CA 90025</h5>
+      </address>
     </div>
-  <!-- Your share button code -->
-    <div class="fb-share-button"
-      data-href="http://www.climatecents.org"
-      data-layout="button_count"
-      data-size="large">
+    <div class="right-column">
+      <h4>Check in on us in these places:</h4>
+      <ul>
+        <li><a href=""><img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170213/Facebook+Copy.png" alt="Climate Cents' Facebook"></a></li>
+        <li><a href=""><img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170213/Instagram+Copy.png" alt="Climate Cents' Instagram"></a></li>
+        <li><a href=""><img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170213/Twitter+Copy.png" alt="Climate Cents' Twitter"></a></li>
+      </ul>
+      <p>Donations to projects on this website go directly to our partner nonprofits.</p>
+      <p>Want to support Climate Cents directly? You can <a href="">donate here.</a></p>
+      <p>Climate Cents is a 501(c)(3) nonprofit. Tax ID 46-1275511.</p>
+      <p>2014-<%= Time.now.to_date.year %> Climate Cents</p>
     </div>
-    <hr/>
-    <div>
-      <a class="twitter-follow-button" href="https://twitter.com/climatecents"
-        data-size="large">Follow @ClimateCents</a>
-    </div>
-
   </footer>
-
-
-
-
-
-
+</div>

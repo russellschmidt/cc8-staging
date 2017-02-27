@@ -153,3 +153,27 @@
   Tweet</a>
 </div>
 <!-- end social share -->
+<hr />
+<div>
+  <% if user_signed_in? %>
+    <%= link_to current_user.email, edit_user_registration_path, class: "btn btn-link"%>
+    <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "btn btn-link"%>
+  <% else %>
+    <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-link" %>
+    <%= link_to 'Sign in', new_user_session_path, class: "btn btn-link" %>
+  <% end %>
+</div>
+<hr />
+<!-- Your share button code -->
+<div class="fb-share-button"
+  data-href="http://www.climatecents.org"
+  data-layout="button_count"
+  data-size="large">
+</div>
+<hr/>
+<div>
+  <a class="twitter-follow-button" href="https://twitter.com/climatecents"
+    data-size="large">Follow @ClimateCents</a>
+</div>
+
+
