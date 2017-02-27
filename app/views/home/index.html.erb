@@ -137,12 +137,12 @@
     <div id="join-the-fight-cta">
       <article>
         <h5>Have a great idea for making a difference in your community?</h5>
-        <a href="">Propose a project</a>
+        <a data-toggle="modal" data-target="#idea-submission-modal" href data-original-title title>Propose a project</a>
       </article>
 
       <article>
         <h5>Our partners are always looking for another set of hands.</h5>
-        <a href="">Volunteer for a Project</a>
+        <a data-toggle="modal" data-target="#volunteer-cc-modal" href data-original-title title>Volunteer for a Project</a>
       </article>
     </div>
   </section>
@@ -177,6 +177,8 @@
       </form>
     </div>
   </section>
+
+  <%= render "modal" %>
 
   <footer>
     <div class="left-column">
