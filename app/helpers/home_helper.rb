@@ -1,6 +1,6 @@
 module HomeHelper
   def get_location_partners(location)
-    Partner.where(location_id: location.id).limit(3)
+    Partner.where(location_id: location.id).order("RANDOM()").limit(3)
   end
 
   def get_partner_projects(partner)
