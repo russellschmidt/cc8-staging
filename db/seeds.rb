@@ -45,7 +45,7 @@ partner = Partner.new(location_id: loc.id,
 partner.save
 
 project = Project.new(partner_id: partner.id, name: "Bring Back the Bay's Kelp Forests",
-  blurb: "You have a unique opportunity to preserve and expand kelp forests in the Santa Monica Bay, which have been devastated by a century of pollution and mistreatment.",
+  blurb: "You have a unique opportunity to preserve and expand kelp forests in the Santa Monica Bay, which have been devastated by a century of pollution.",
   description: "Kelp is the most important 'plant' (okay, technically photosynthetic algae) you’ve never thought much about.
   Kelp forests are the ocean’s tropical rainforests, providing habitats for more than 700 species of fish, invertebrates, and other algae.
   Ocean plants, including kelp, are so widespread and good at scrubbing carbon that they cycle through roughly the same amount of greenhouse gases every day as all the land-based plants.
@@ -165,7 +165,7 @@ You can help out as a gardener, someone who helps sort fresh produce for the foo
 partner.save
 
 project = Project.new(partner_id: partner.id, name: "Urban Farming in Pacoima",
-  blurb: "MEND's GROW TOGETHER program empowers low-income, immigrant families to grow their own food by providing the supplies and support necessary for creating and maintaining backyard gardens.",
+  blurb: "MEND's GROW TOGETHER program empowers low-income, immigrant families to grow their own food by creating and maintaining backyard gardens.",
   description: "Little known fact — The earth’s soils store far more carbon than all of the plants in the world.
   The problem — Industrial agriculture has transferred the soil’s carbon to the atmosphere, but we’re now learning how to reverse the trend.
   The solution — By using compost, cover crop, and no-till practices instead of fossil fuel-based fertilizers, we can sequester carbon in the soil, where it helps plants grow better.
@@ -349,7 +349,7 @@ Click here to learn more and sign up to volunteer with GRID Alternatives!",
 partner.save
 
 project = Project.new(partner_id: partner.id, name: "Solar Panels for Safe Place for Youth",
-  blurb: "Climate Cents enables you to partner with GRID Alternatives to install solar power systems, free of charge, on the roofs of nonprofits serving our city’s most vulnerable population: homeless children.",
+  blurb: "Climate Cents enables you to partner with GRID Alternatives to install solar power systems, free of charge, on the roofs of nonprofits serving our city.",
   description: "Climate Cents enables you to partner with GRID Alternatives to install solar power systems, free of charge, on the roofs of nonprofits serving our city’s most vulnerable population — homeless children and teens, women and men.
 Rooftop solar cuts their energy bills to almost nothing, allowing them to focus resources on serving those in need.
 Solar power produces zero greenhouse gas emissions or pollutants of any kind, which helps our planet in a big way, especially compared to the dirty coal that still fuels too much of L.A.’s electricity. In sunny Southern California, you can’t ask for a better energy source.
