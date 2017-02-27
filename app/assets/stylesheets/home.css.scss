@@ -515,8 +515,7 @@ section#keep-in-touch {
 
     div#kit-submit-div {
       text-align: center;
-
-      input {
+      a {
         background: none;
         width: 170px;
         height: 44px;
@@ -528,8 +527,11 @@ section#keep-in-touch {
         text-align: center;
         line-height: 22px;
         color: #3EC631;
+        text-decoration: none;
+        padding: 9px 24px 9px 24px;
+
       }
-      input:hover {
+      a:hover, a:visited {
         background: rgba(122, 201, 67, 0.25);
       }
     }
