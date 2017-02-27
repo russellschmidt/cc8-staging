@@ -1,6 +1,6 @@
 module HomeHelper
   def get_location_partners(location)
-    Partner.where(location_id: location.id)
+    Partner.where(location_id: location.id).limit(3)
   end
 
   def get_partner_projects(partner)
