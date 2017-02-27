@@ -238,6 +238,12 @@ section#home-projects-section {
         width: 350px;
         height: 200px;
       }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: none;
+      }
       h5, h3, h6, p {
         margin-left: 30px;
         margin-right: 18px;
@@ -335,5 +341,9 @@ section#home-projects-section {
       }
     }
   }
+}
+
+section {
+
 }
 

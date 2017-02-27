@@ -79,6 +79,7 @@
                   <% if get_project_campaigns(project).present? %>
                     <% get_project_campaigns(project).each do |campaign| %>
       <article>
+        <%= link_to project_path(project) do %>
         <div class="home-projects-section-image">
           <img src="<%= return_350x200_image_url(partner.id) %>" alt="We identify local projects such as <%= partner.name %>'s <%= project.name %> that help reduce atmospheric CO2 to fight global warming"/>
         </div>
@@ -108,7 +109,7 @@
             <li class="rightmost">Remaining</li>
           </ul>
         </div>
-
+        <% end %>
       </article>
 
                     <% end %>
