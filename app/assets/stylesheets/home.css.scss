@@ -507,8 +507,20 @@ section#keep-in-touch {
 
     div#kit-submit-div {
       text-align: center;
+
+      input {
+        background: none;
+        width: 170px;
+        height: 44px;
+        border: 2px solid #3EC631;
+        border-radius: 100px;
+        font-family: Oxygen;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 22px;
+        color: #3EC631;
+      }
     }
-
   }
-
 }
