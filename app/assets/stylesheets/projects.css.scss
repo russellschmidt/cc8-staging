@@ -119,7 +119,7 @@ nav li#nav-logo {
       text-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
     }
     p {
-      margin-top: 4px;
+      margin-top: 8px;
       height: 22px;
       font-family: Oxygen;
       font-size: 1.8rem;      // 18px/10px
@@ -131,7 +131,7 @@ nav li#nav-logo {
     }
   }
   .partner-logo {
-    margin: 24px 0 0 0;
+    margin: 20px 0 0 0;
     text-align: center;
     img {
       max-height: 120px;
@@ -151,6 +151,18 @@ nav li#nav-logo {
     font-size: 16px;
     line-height: 20px;
     color: #063940;
+    &:hover, {
+      text-decoration: none;
+      padding-bottom: 10px;
+      border-bottom: 4px solid #3EC631;
+    }
+    &:visited, &:active, &:link {
+      text-decoration: none;
+    }
+  }
+  .active {
+    padding-bottom: 10px;
+    border-bottom: 4px solid #3EC631;
   }
   .tab-links:last-child {
     box-sizing: border-box;
@@ -168,5 +180,79 @@ nav li#nav-logo {
       padding-right: 5px;
       height: 16px;
     }
+  }
+  .tab-content {
+    margin: 3% 29.28% 7.142% 29.28%;
+    font-family: Oxygen;
+    font-size: 18px;
+    line-height: 32px;
+    color: #6E6E6E;
+  }
+}
+
+.footer-cta {
+  height: 100px;
+  width: 100%;
+  opacity: 0.95;
+  background: radial-gradient(circle, #1D818E 0%, #063940 54.42%, #063940 100%);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  div {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.footer-cta-inner {
+  display: flex;
+  flex-flow: no-wrap row;
+  justify-content: center;
+  div {
+    width: 33%;
+    text-align: center;
+  }
+  div:first-child {
+    margin-left: 16.667%;
+    .top-p-cta {
+      margin-top: 30px;
+      margin-bottom: 0;
+      font-family: "Source Sans Pro";
+      font-size: 12px;
+      font-weight: 600;
+      text-align: center;
+      line-height: 15px;
+      color: #FFFFFF;
+      text-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+    }
+    .bottom-p-cta {
+      font-family: "Source Sans Pro";
+      font-size: 21px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 27px;
+      color: #FFFFFF;
+      text-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+    }
+  }
+  div:last-child {
+    margin-right: 16.667%
+  }
+  div ul {
+    list-style-type: none;
+  }
+  div li {
+    display: inline;
+  }
+  button {
+    margin-top: 26px;
+    box-sizing: border-box;
+    width: 224px;
+    height: 48px;
+    background-color: #3EC631;
+    border: 2px solid rgba(6,57,64,0.1);
+    border-radius: 4px;
   }
 }

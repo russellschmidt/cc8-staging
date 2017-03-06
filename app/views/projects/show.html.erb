@@ -43,16 +43,17 @@
   <section>
     <!-- tab headings -->
     <div class="tab">
-      <a href="javascript:void(0)" class="tab-links" onclick="openProjectTab(event, 'overview')">Overview</a>
-      <a href="javascript:void(0)" class="tab-links" onclick="openProjectTab(event, 'science')">Science</a>
-      <a href="javascript:void(0)" class="tab-links" onclick="openProjectTab(event, 'partner')">Partner</a>
-      <a href="javascript:void(0)" class="tab-links" onclick="openProjectTab(event, 'news')">News</a>
-      <a href="javascript:void(0)" class="tab-links" onclick="openProjectTab(event, 'volunteer')">Volunteer</a>
-      <a href="javascript:void(0)" class="tab-links" onclick="openProjectTab(event, 'share')"><span class="glyphicon glyphicon-share-alt"></span>Share</a>
+      <a href="javascript:void(0)" class="tab-links active">Overview</a>
+      <a href="javascript:void(0)" class="tab-links" >Science</a>
+      <a href="javascript:void(0)" class="tab-links" >Partner</a>
+      <a href="javascript:void(0)" class="tab-links" >News</a>
+      <a href="javascript:void(0)" class="tab-links" >Volunteer</a>
+      <a href="javascript:void(0)" class="tab-links" ><span class="glyphicon glyphicon-share-alt"></span>Share</a>
     </div>
 
     <!-- content for tabs -->
     <% if @project.present? %>
+
       <div id="overview" class="tab-content">
         <p><%= @project.description %></p>
       </div>
@@ -71,186 +72,75 @@
       <div id="volunteer" class="tab-content">
       </div>
 
-      <div id="share" class="tab-content">
+      <div id="share" class="tab-content row">
+        <!-- Facebook share button code -->
+        <div class="fb-share-button col-xs-3 col-xs-offset-3 center"
+          data-href="<%= request.original_url %>"
+          data-layout="button_count"
+          data-size="large">
+        </div>
+        <div class="col-xs-3 center">
+          <a class="twitter-share-button"
+            href="https://twitter.com/share"
+            data-size="large"
+            data-text="Check out the <%=@project.name%> project from "
+            data-via="climatecents"
+            data-url="<%= request.original_url %>"
+            data-hashtags="climatecents">
+          Tweet</a>
+        </div>
+        <div class="fb-share-button"
+          data-href="http://www.climatecents.org"
+          data-layout="button_count"
+          data-size="large">
+        </div>
+        <hr/>
+        <div>
+          <a class="twitter-follow-button" href="https://twitter.com/climatecents"
+            data-size="large">Follow @ClimateCents</a>
+        </div>
       </div>
+
     <% end %>
   </section>
 </div>
 
+<div class="footer-cta">
 
-<div>
-  <p>Help heal the bay today!</p>
+  <div class="footer-cta-inner">
+    <% [get_current_campaign(@project)].each do |campaign| %>
+      <!-- Button trigger modal -->
+      <div>
+        <p class="top-p-cta">Est. Carbon Reduction / Yr</p>
+        <p class="bottom-p-cta"><%= number_with_delimiter(annualCarbonReduction(campaign), delimiter: ",") %> cu. lbs</p>
+      </div>
 
-  <div>
-    <h4>Active Projects</h4>
-    <% if get_project_campaigns(@project).present? %>
-      <% get_project_campaigns(@project).each do |campaign| %>
-        <p><%= campaign.name %></p>
-        <p>Campaign ends: <%= campaign.end_date.to_s(:long) %></p>
-      <% end %>
+      <div>
+        <ul>
+          <li><span class="progress-data-point"><%= percent_funded(campaign) %>%</span> funded</li>
+          <li>&nbsp;by <span class="progress-data-point"><%= number_of_campaign_backers(campaign) %></span>
+            <% if number_of_campaign_backers(campaign) == 1 %>
+              Backer
+            <% else %>
+              Backers
+            <% end %>
+          </li>
+          <li><span><%= days_remaining(campaign) %></span> days left</li>
+        </ul>
+        <div class="progress">
+          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= percent_funded(campaign)%>" aria-valuemin="0" aria-valuemax="100" style="min-width: 1px; width: <%= percent_funded(campaign)%>%;">
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" data-toggle="modal" data-target="#myModal">
+          Donate
+        </button>
+      </div>
     <% end %>
   </div>
 
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">
-  Donate
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Back this project!</h4>
-      </div>
-
-      <div class="modal-body">
-        <%= form_tag charges_path, id:"chargeForm" do %>
-          <script src="https://checkout.stripe.com/checkout.js"></script>
-          <%= hidden_field_tag 'stripeToken' %>
-          <%= hidden_field_tag 'stripeEmail' %>
-          <%= hidden_field_tag 'donationToCampaign', 2500 %>
-          <%= hidden_field_tag 'donationToTip', 250 %>
-          <%= hidden_field_tag 'totalDonation', 2750 %>
-          <%= hidden_field_tag 'campaign_id', get_project_campaigns(@project).first.id %>
-          <section class="row">
-            <div class="col-sm-6">
-              <div class="radio">
-                <label>
-                  <input type="radio" name="donationRadio" id="donationRadio1" value="500">
-                  $5
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="donationRadio" id="donationRadio2" value="1000">
-                  $10
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="donationRadio" id="donationRadio3" value="2500" checked>
-                  $25
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="donationRadio" id="donationRadio4" value="5000">
-                  $50
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="donationRadio" id="donationRadio5" value="10000">
-                  $100
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="donationRadio" id="donationRadio6" value="customRadio">
-                    <div class="form-group">
-                      <label class="sr-only" for="customDonationRadioInput">Amount (in dollars)</label>
-                      <div class="input-group">
-                        <div class="input-group-addon">$</div>
-                        <input type="number" class="form-control" id="customDonationRadioInput" placeholder="Custom Donation">
-                      </div>
-                    </div>
-                </label>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="form-group">
-                Learn More about Tips
-                <label class="sr-only" for="tipAmount">Amount (in dollars)</label>
-                <div class="input-group">
-                  <div class="input-group-addon">$</div>
-                  <input type="number" class="form-control" id="tipAmount" value="2.50">
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <button id="btn-buy" type="button" class="btn btn-success btn-lg btn-block">
-            <span class='glyphicon glyphicon-ok'></span>&nbsp;I want to help!
-          </button>
-          <script>
-          var handler = StripeCheckout.configure({
-            key: '<%= Rails.configuration.stripe[:publishable_key] %>',
-            token: function(token, arg) {
-              document.getElementById("stripeToken").value = token.id;
-              document.getElementById("stripeEmail").value = token.email;
-              document.getElementById("chargeForm").submit();
-            }
-          });
-          document.getElementById('btn-buy').addEventListener('click', function(e){
-            handler.open({
-              name: 'Climate Cents',
-              description: 'Donation to <%= get_project_campaigns(@project).first.name %>',
-              amount: Number(document.getElementById('totalDonation').value)
-            });
-            e.preventDefault();
-          })
-
-          </script>
-        <% end %>
-      </div>
-
-      <div class="modal-footer">
-        <div id="modal-message"></div>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
 </div>
 
-
-<hr/>
-<div>
-  <%= link_to 'Back', :back, class: "btn btn-primary btn-sm" %>
-</div>
-<hr/>
-<!-- Facebook share button code -->
-<div class="fb-share-button"
-  data-href="<%= request.original_url %>"
-  data-layout="button_count"
-  data-size="large">
-</div>
-<hr/>
-<!-- end FB share, start twitter share -->
-<div>
-  <a class="twitter-share-button"
-    href="https://twitter.com/share"
-    data-size="large"
-    data-text="Check out the <%=@project.name%> project from "
-    data-via="climatecents"
-    data-url="<%= request.original_url %>"
-    data-hashtags="climatecents">
-  Tweet</a>
-</div>
-<!-- end social share -->
-<hr />
-<div>
-  <% if user_signed_in? %>
-    <%= link_to current_user.email, edit_user_registration_path, class: "btn btn-link"%>
-    <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "btn btn-link"%>
-  <% else %>
-    <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-link" %>
-    <%= link_to 'Sign in', new_user_session_path, class: "btn btn-link" %>
-  <% end %>
-</div>
-<hr />
-<!-- Your share button code -->
-<div class="fb-share-button"
-  data-href="http://www.climatecents.org"
-  data-layout="button_count"
-  data-size="large">
-</div>
-<hr/>
-<div>
-  <a class="twitter-follow-button" href="https://twitter.com/climatecents"
-    data-size="large">Follow @ClimateCents</a>
-</div>
-
-
+<%= render 'modals' %>
