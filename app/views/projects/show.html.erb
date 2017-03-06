@@ -13,10 +13,10 @@
         </ul>
       </nav>
 
-      <div id='project-header'>
+      <div class='project-header'>
         <% if get_project_campaigns(@project).present? %>
           <% get_project_campaigns(@project).each do |campaign| %>
-            <h6><%= campaign.city %>, <%= campaign.state %></h6>
+            <h6><img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/icon-white-location-map.png" alt="local climate change map icon"/><%= campaign.city %>, <%= campaign.state %></h6>
           <% end %>
         <% end %>
         <h1><%= @project.name %></h1>
