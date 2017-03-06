@@ -19,15 +19,19 @@
             <h6><img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/icon-white-location-map.png" alt="local climate change map icon"/><%= campaign.city %>, <%= campaign.state %></h6>
           <% end %>
         <% end %>
-        <h1><%= @project.name %></h1>
-        <h2><%= @project.blurb %></h2>
-        <div id='hero-header-btn'>
+        <h1><%= @project.name unless @project.nil? %></h1>
+        <h2><%= @project.blurb unless @project.nil? %></h2>
+        <div class='hero-header-btn'>
           <%= link_to '/#home-projects-section' do %>
-            <button id="btn-hero-back-a-project"><span id="btn-hero-back-a-project-text">Back a Project</span></button>
+            <button><span class="glyphicon glyphicon-play"></span>Watch the story</button>
           <% end %>
         </div>
+        <div class="hero-partner">
+          <h6>PARTNER</h6>
+          <p><%= @partner.name %></p>
+        </div>
         <div class="partner-logo">
-          <img src="<%= return_logo_image_url(@project.partner_id) %>" alt="<%= get_partner(@project.partner_id) %> logo" />
+          <img src="<%= return_logo_image_url(@project.partner_id) %>" alt="<%= get_partner(@project.partner_id).name %> logo" />
         </div>
       </div>
 
@@ -35,8 +39,44 @@
   </section>
 </div>
 
-<h1></h1>
-<h2><%= @partner.name %></h2>
+<div class="project-detail">
+  <section>
+    <!-- tab headings -->
+    <div class="tab">
+      <a href="javascript:void(0)" class="tab-links" onclick="openProjectTab(event, 'overview')">Overview</a>
+      <a href="javascript:void(0)" class="tab-links" onclick="openProjectTab(event, 'science')">Science</a>
+      <a href="javascript:void(0)" class="tab-links" onclick="openProjectTab(event, 'partner')">Partner</a>
+      <a href="javascript:void(0)" class="tab-links" onclick="openProjectTab(event, 'news')">News</a>
+      <a href="javascript:void(0)" class="tab-links" onclick="openProjectTab(event, 'volunteer')">Volunteer</a>
+      <a href="javascript:void(0)" class="tab-links" onclick="openProjectTab(event, 'share')"><span class="glyphicon glyphicon-share-alt"></span>Share</a>
+    </div>
+
+    <!-- content for tabs -->
+    <% if @project.present? %>
+      <div id="overview" class="tab-content">
+        <p><%= @project.description %></p>
+      </div>
+
+      <div id="science" class="tab-content">
+        <p><%= @project.science %></p>
+      </div>
+
+      <div id="partner" class="tab-content">
+        <p><%= get_partner(@project.partner_id).description %></p>
+      </div>
+
+      <div id="news" class="tab-content">
+      </div>
+
+      <div id="volunteer" class="tab-content">
+      </div>
+
+      <div id="share" class="tab-content">
+      </div>
+    <% end %>
+  </section>
+</div>
+
 
 <div>
   <p>Help heal the bay today!</p>
