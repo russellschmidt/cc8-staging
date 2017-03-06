@@ -123,10 +123,27 @@ campaign = Campaign.new(project_id: project.id, name: "2017 Heal the Bay Campaig
   active: true)
 campaign.save
 
+# home project card image
 image = Image.new(
   aws_url: "https://s3.amazonaws.com/climatecents3/350x200-project/kelp-350x200.jpg",
   partner_id: partner.id,
   logo: false,
+  )
+image.save
+
+# hero image
+image = Image.new(
+  aws_url: "https://s3.amazonaws.com/climatecents3/HighResProject/bay-foundation-project-hero-kelp-restoration-1000x390.jpg",
+  partner_id: partner.id,
+  logo: false,
+  )
+image.save
+
+# logo
+image = Image.new(
+  aws_url: "https://s3.amazonaws.com/climatecents3/PartnerLogo/Bay-Foundation-logo-155x155.png",
+  partner_id: partner.id,
+  logo: true,
   )
 image.save
 
@@ -257,6 +274,22 @@ image = Image.new(
   )
 image.save
 
+# hero image
+image = Image.new(
+  aws_url: "https://s3.amazonaws.com/climatecents3/HighResProject/mend-project-hero-1024x680.jpg",
+  partner_id: partner.id,
+  logo: false,
+  )
+image.save
+
+# logo
+image = Image.new(
+  aws_url: "https://s3.amazonaws.com/climatecents3/PartnerLogo/MEND-logo.jpg",
+  partner_id: partner.id,
+  logo: true,
+  )
+image.save
+
 # -------------
 # Isidore Recycling
 partner = Partner.new(location_id: loc.id,
@@ -326,6 +359,22 @@ image = Image.new(
   )
 image.save
 
+# hero image
+image = Image.new(
+  aws_url: "https://s3.amazonaws.com/climatecents3/HighResProject/homeboy-recycling-isidore-project-hero-2880x1920.jpg",
+  partner_id: partner.id,
+  logo: false,
+  )
+image.save
+
+# logo
+image = Image.new(
+  aws_url: "https://s3.amazonaws.com/climatecents3/PartnerLogo/HBRLogoReverse.jpg",
+  partner_id: partner.id,
+  logo: true,
+  )
+image.save
+
 # -------------
 # GRID Alternatives
 partner = Partner.new(location_id: loc.id,
@@ -385,6 +434,22 @@ image = Image.new(
   aws_url: "https://s3.amazonaws.com/climatecents3/350x200-project/solar-350x200.jpg",
   partner_id: partner.id,
   logo: false,
+  )
+image.save
+
+# hero image
+image = Image.new(
+  aws_url: "https://s3.amazonaws.com/climatecents3/HighResProject/grid-project-hero-1011x584.jpg",
+  partner_id: partner.id,
+  logo: false,
+  )
+image.save
+
+# logo
+image = Image.new(
+  aws_url: "https://s3.amazonaws.com/climatecents3/PartnerLogo/GridAlternativeslogo.png",
+  partner_id: partner.id,
+  logo: true,
   )
 image.save
 
