@@ -56,6 +56,10 @@ project = Project.new(partner_id: partner.id, name: "Bring Back the Bay's Kelp F
   — sequester carbon
   — clean, oxygenate and de-acidify the water
   — support a multitude of marine life, restoring a flourishing ecosystem – seals, red urchin (the 'uni' you can find with sushi platters), and all kinds of fish.",
+  overview_headline: "",
+  science_headline: "",
+  news_headline:"",
+  volunteer_headline:"",
   science: "Kelp is the best way to fight global warming that you’ve never heard of.
 Plant-like life in the ocean, from seagrasses to plankton, add up to just 0.05 percent of the plant biomass on land, but are so pervasive and efficient at sucking up carbon that they cycle through approximately the same amount of carbon every year as all land-based plants.
 Kelp is especially powerful. It grows at an amazing rate, up to 1 foot per day, making it one of the most productive ecosystems on earth.
@@ -110,6 +114,7 @@ The Importance of 'Blue Carbon' to Fighting Climate Change
 'Blue Carbon: The Role of Healthy Oceans in Binding Carbon'
 A new Rapid Response Assessment report released 14 October 2009 at the Diversitas Conference, Cape Town Conference Centre, South Africa. Compiled by experts at GRID-Arendal and UNEP in collaboration with the UN Food and Agricultural Organization (FAO) and the UNESCO International Oceanographic Commissions and other institutions, the report highlights the critical role of the oceans and ocean ecosystems in maintaining our climate and in assisting policy makers to mainstream an oceans agenda into national and international climate change initiatives.http://www.grida.no/publications/rr/blue-carbon/
 Dan Laffoley & Gabriel Grimsditch, eds. ,The Management of Natural Coastal Carbon Sinks. 2009. UCN, Gland, Switzerland. 53 pp.https://cmsdata.iucn.org/downloads/carbon_managment_report_final_printed_version_1.pdf")
+
 project.save
 
 campaign = Campaign.new(project_id: project.id, name: "2017 Heal the Bay Campaign",
@@ -202,6 +207,10 @@ project = Project.new(partner_id: partner.id, name: "Urban Farming in Pacoima",
   * Brings families and community together
   * Maintain cultural traditions and sense of pride
   Many of these families come from agricultural backgrounds in their native countries and MEND empowers them to continue their healthy plant-based diets instead of assimilating to over-processed, less nutritious supermarket groceries.",
+  overview_headline: "",
+  science_headline: "",
+  news_headline:"",
+  volunteer_headline:"",
   science: "Our global food system creates 20–30% of all human being’s greenhouse gas emissions. Meat and dairy production contribute disproportionately to that total, as does food waste. But other things matter too.
 The earth’s soils contain more than three times the amount of carbon as the atmosphere, and 4.5 times the amount of carbon as all living things.
 Industrial agricultural methods have massively depleted carbon from the earth’s soil, transferring it into the atmosphere, causing global warming, and into the water, causing ocean acidification.
@@ -338,6 +347,10 @@ Electronics Recycling makes a huge impact.
 * Safeguards our water supplies by preventing dangerous lead and arsenic from leaching out of landfills.
 * Provides good jobs in L.A. to people who need a second chance
 Your donation will help Homeboy Recycling expand their programs that provide job training and employment opportunities sorely needed for people exiting California’s broken correctional system. Your support will allow their computer de-manufacturing program to grow to full capacity once more.  What Isidore calls 'demanufactuting' is manual disassembly of computers and it's the most efficient way to breakdown desktop computers for recycling. It's also the entry level job for their trainees. Depending on where the commodity market is, sometimes it makes financial sense to demanufacture computers into their component parts, and sometimes it doesn't. But since these are key entry level positions, Homeboy would love the support to be able to keep demanufacturing as a stable position for their workers, regardless of the market.",
+  overview_headline: "",
+  science_headline: "",
+  news_headline:"",
+  volunteer_headline:"",
   science: "")
 project.save
 
@@ -369,7 +382,7 @@ image.save
 
 # logo
 image = Image.new(
-  aws_url: "https://s3.amazonaws.com/climatecents3/PartnerLogo/HBRLogoReverse.jpg",
+  aws_url: "https://s3.amazonaws.com/climatecents3/PartnerLogo/HomeboyRecycling-isidore-logo",
   partner_id: partner.id,
   logo: true,
   )
@@ -404,6 +417,10 @@ Rooftop solar cuts their energy bills to almost nothing, allowing them to focus 
 Solar power produces zero greenhouse gas emissions or pollutants of any kind, which helps our planet in a big way, especially compared to the dirty coal that still fuels too much of L.A.’s electricity. In sunny Southern California, you can’t ask for a better energy source.
 Plus, GRID Alternatives prioritizes job training and employment for people from the region’s disadvantaged communities, helping to build a green-tech economy where opportunity is more than a slogan.
 Our first project is with Safe Place for Youth. Based in Venice, CA, its mission is to inspire, nurture, and empower the resilient human spirit of homeless youth by providing immediate and lasting solutions, one young person at a time.  The solar panels you install will enable Safe Place for Youth to power an energy-intensive 3D printing lab. Homeless teenagers there will learn cutting-edge technology and skills from leading professionals in the field to prepare them for good-paying careers.",
+  overview_headline: "",
+  science_headline: "",
+  news_headline:"",
+  volunteer_headline:"",
   science: "Solar power isn’t an obscure idea anymore. It’s a huge and growing industry. Its climate-change fighting power comes from the fact that it is replacing energy generated by dirty fossil fuels like coal, oil and natural gas.
 Where your electricity comes from depends a lot on where you live. In some places, it depends on coal-burning power plants, in other places natural gas or oil, and in still other spots, nuclear fission, hydro-electric, solar, wind, geothermal. Most likely it’s some combination of these.
 In Los Angeles, we get our power through the Los Angeles Department of Water and Power (LADWP). LADWP’s relied far too much on dirty coal plants based in Utah and Arizona 40% of the total! but it’s working to generate its electricity from cleaner sources.
@@ -447,7 +464,7 @@ image.save
 
 # logo
 image = Image.new(
-  aws_url: "https://s3.amazonaws.com/climatecents3/PartnerLogo/GridAlternativeslogo.png",
+  aws_url: "https://s3.amazonaws.com/climatecents3/PartnerLogo/GridAlternatives-logo.png",
   partner_id: partner.id,
   logo: true,
   )
