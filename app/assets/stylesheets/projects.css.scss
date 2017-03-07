@@ -242,9 +242,43 @@ nav li#nav-logo {
   }
   div ul {
     list-style-type: none;
+    display: flex;
+    flex-flow: row no-wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 26px auto 8px auto;
+    max-width: 300px;
   }
   div li {
     display: inline;
+    font-family: "Source Sans Pro";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #FFFFFF;
+    text-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+    span {
+      font-size: 20px;
+      font-weight: 600;
+      text-align: right;
+      line-height: 25px;
+      color: #FFFFFF;
+      text-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+    }
+  }
+  #project-progress-bar {
+    text-align: center;
+    margin:0;
+    width: 300px;
+    height: 11px;
+    border-radius: 5px;
+    margin: 0 auto;
+    background-color: #063940;
+    .progress-bar-success {
+      margin-right: 0;
+      margin-left: 0;
+      background-color: #3EC631;
+    }
   }
   button {
     margin-top: 26px;
@@ -254,5 +288,11 @@ nav li#nav-logo {
     background-color: #3EC631;
     border: 2px solid rgba(6,57,64,0.1);
     border-radius: 4px;
+    font-family: Oxygen;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    color: #FFFFFF;
   }
 }

@@ -127,7 +127,7 @@
           </li>
           <li><span><%= days_remaining(campaign) %></span> days left</li>
         </ul>
-        <div class="progress">
+        <div id="project-progress-bar" class="progress">
           <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= percent_funded(campaign)%>" aria-valuemin="0" aria-valuemax="100" style="min-width: 1px; width: <%= percent_funded(campaign)%>%;">
           </div>
         </div>
@@ -135,7 +135,7 @@
 
       <div>
         <button type="button" data-toggle="modal" data-target="#myModal">
-          Donate
+          Back This Project
         </button>
       </div>
     <% end %>
