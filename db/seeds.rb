@@ -22,44 +22,52 @@ loc.save
 # bay foundation
 partner = Partner.new(location_id: loc.id,
   name: "The Bay Foundation",
-  blurb:"Help Restore the Kelp Forests in the Santa Monica Bay",
-  description: "The Bay Foundation’s mission is to restore and enhance Santa Monica Bay through actions and partnerships that improve water quality, conserve and rehabilitate natural resources, and protect the Bay’s benefits and values.
+  blurb:"Help Restore the Kelp Forests of the Santa Monica Bay",
+  description: "<p>The Bay Foundation’s mission is to restore and enhance Santa Monica Bay through actions and partnerships that improve water quality, conserve and rehabilitate natural resources, and protect the Bay’s benefits and values.</p>
 
-  Nearly two million people live in the Santa Monica Bay Watershed stretching from Ventura County to Palos Verdes, from the Santa Monica Mountains and Griffith Park, to Baldwin Hills and out to the sea. More than 5,000 species of animals, fish, birds and plants make their home in the Bay and the Bay Watershed.
+<p>Nearly two million people live in the Santa Monica Bay Watershed stretching from Ventura County to Palos Verdes, from the Santa Monica Mountains and Griffith Park, to Baldwin Hills and out to the sea. More than 5,000 species of animals, fish, birds and plants make their home in the Bay and the Bay Watershed.</p>
 
-  The Bay Foundation (TBF)—also known as the Santa Monica Bay Restoration Foundation—is a 501(c) 3 non-profit environmental group founded in 1990 to restore and enhance Santa Monica Bay and local coastal waters.  TBF is staffed by science and policy experts who are passionate about understanding and protecting the Bay and the Bay watershed, and all the benefits that a healthy ecosystem can provide all those who use and enjoy it.
+<p>The Bay Foundation (TBF)—also known as the Santa Monica Bay Restoration Foundation—is a 501(c) 3 non-profit environmental group founded in 1990 to restore and enhance Santa Monica Bay and local coastal waters. TBF is staffed by science and policy experts who are passionate about understanding and protecting the Bay and the Bay watershed, and all the benefits that a healthy ecosystem can provide all those who use and enjoy it.</p>
 
-  TBF works with a broad group of stakeholders, including government agencies, environmental groups, local communities, industry and scientists, to create and put into action innovative policies and projects that clean up our waterways, create green spaces in urban areas, and restore natural habitats both on land and underwater, such as wetlands and kelp forests.
+<p>TBF works with a broad group of stakeholders, including government agencies, environmental groups, local communities, industry and scientists, to create and put into action innovative policies and projects that clean up our waterways, create green spaces in urban areas, and restore natural habitats both on land and underwater, such as wetlands and kelp forests.</p>
 
-  The Bay Foundation’s work stretches across 7 program areas – you can check them out at the links below:
+<p>The Bay Foundation’s work stretches across 7 program areas – you can check them out at the links below:</p>
 
-  Rivers and Streams Coastal Wetlands and Lagoons Beaches and Dunes In the Ocean Clean Boating Green Neighborhoods Clean Bay Certified
+<p>Rivers and Streams Coastal Wetlands and Lagoons Beaches and Dunes In the Ocean Clean Boating</p>
 
-  TBF is part of the U.S. EPA’s Santa Monica Bay National Estuary Program (NEP)—learn more about estuaries here.  The SMBNEP is one of 28 similar programs established under Section 320 of the 1987 Clean Water Act and administered by the U.S. EPA.
+<p>Green Neighborhoods Clean Bay Certified</p>
 
-  As part of the SMBNEP, TBF is the non-profit partner of the Santa Monica Bay Restoration Commission and the Santa Monica Bay Restoration Authority, and is focused on research, education, planning, cleanup efforts, and other priorities identified in the SMBNEP’s Bay Restoration Plan (BRP), a publicly-adopted comprehensive plan of action for protecting and restoring Santa Monica Bay. For more information on the entire SMBNEP, please visit the Background page.
+<p>TBF is part of the U.S. EPA’s Santa Monica Bay National Estuary Program (NEP)—learn more about estuaries here. The SMBNEP is one of 28 similar programs established under Section 320 of the 1987 Clean Water Act and administered by the U.S. EPA.</p>
 
-  The implementation of the BRP has resulted in massive improvements to the human and environmental health of the region.",
+<p>As part of the SMBNEP, TBF is the non-profit partner of the Santa Monica Bay Restoration Commission and the Santa Monica Bay Restoration Authority, and is focused on research, education, planning, cleanup efforts, and other priorities identified in the SMBNEP’s Bay Restoration Plan (BRP), a publicly-adopted comprehensive plan of action for protecting and restoring Santa Monica Bay. For more information on the entire SMBNEP, please visit the Background page.</p>
+
+<p>The implementation of the BRP has resulted in massive improvements to the human and environmental health of the region.</p>",
   volunteer: "",
   news: "")
 partner.save
 
 project = Project.new(partner_id: partner.id, name: "Bring Back the Bay's Kelp Forests",
   blurb: "You have a unique opportunity to preserve and expand kelp forests in the Santa Monica Bay, which have been devastated by a century of pollution.",
-  description: "Kelp is the most important 'plant' (okay, technically photosynthetic algae) you’ve never thought much about.
-  Kelp forests are the ocean’s tropical rainforests, providing habitats for more than 700 species of fish, invertebrates, and other algae.
-  Ocean plants, including kelp, are so widespread and good at scrubbing carbon that they cycle through roughly the same amount of greenhouse gases every day as all the land-based plants.
-  The foundation of the world’s most productive ecosystems, kelp plants efficiently remove the carbon that is causing our waters to grow acidic, squelching sea life like shellfish.  Excess CO2 accumulates in the atmosphere and in the ocean as a result of human activity.  The atmosphere warms, the ocean turns acidic.  Restoring kelp forests enables rapid carbon sequestration, as the kelp grows so quickly.  This approach reduces the CO2 in the atmosphere as well as the CO2 that’s dissolved in the ocean.  Therefore funding kelp restoration benefits the atmosphere and the ocean.  In addition this project increases local food security, retains local jobs, and may protect our coast from erosion. These all relate back to the threats our coast and lifestyle face as part of climate change.
-  You have a unique opportunity to preserve and expand kelp forests in the Santa Monica Bay, which have been devastated by a century of pollution and mistreatment.
-  Our partners at The Bay Foundation have already restored 39 acres and are working to double that amount. They and the fishermen they employ, dive several times a month with geological hammers and a passion for selectively culling the overpopulated purple urchins that are depriving the ecosystem of life.
-  Within days of clearing the sea floor, the kelp quickly returns, eventually growing up to 2 feet per day, and begins to:
-  — sequester carbon
-  — clean, oxygenate and de-acidify the water
-  — support a multitude of marine life, restoring a flourishing ecosystem – seals, red urchin (the 'uni' you can find with sushi platters), and all kinds of fish.",
-  overview_headline: "",
-  science_headline: "",
-  news_headline:"",
-  volunteer_headline:"",
+  description: "<p>Kelp is the most important &#8216;plant&#8217; (okay, technically photosynthetic algae) you’ve never thought much about.</p>
+
+<p>Kelp forests are the ocean’s tropical rainforests, providing habitats for more than 700 species of fish, invertebrates, and other algae.</p>
+
+<p>Ocean plants, including kelp, are so widespread and good at scrubbing carbon that they cycle through roughly the same amount of greenhouse gases every day as all the land-based plants.</p>
+
+<p>The foundation of the world’s most productive ecosystems, kelp plants efficiently remove the carbon that is causing our waters to grow acidic, squelching sea life like shellfish. Excess CO2 accumulates in the atmosphere and in the ocean as a result of human activity. The atmosphere warms, the ocean turns acidic. Restoring kelp forests enables rapid carbon sequestration, as the kelp grows so quickly. This approach reduces the CO2 in the atmosphere as well as the CO2 that’s dissolved in the ocean. Therefore funding kelp restoration benefits the atmosphere and the ocean. In addition this project increases local food security, retains local jobs, and may protect our coast from erosion. These all relate back to the threats our coast and lifestyle face as part of climate change.</p>
+
+<p>You have a unique opportunity to preserve and expand kelp forests in the Santa Monica Bay, which have been devastated by a century of pollution and mistreatment.</p>
+
+<p>Our partners at The Bay Foundation have already restored 39 acres and are working to double that amount. They and the fishermen they employ, dive several times a month with geological hammers and a passion for selectively culling the overpopulated purple urchins that are depriving the ecosystem of life.</p>
+
+<p>Within days of clearing the sea floor, the kelp quickly returns, eventually growing up to 2 feet per day, and begins to:
+* sequester carbon
+* clean, oxygenate and de-acidify the water
+* support a multitude of marine life, restoring a flourishing ecosystem – seals, red urchin (the &#8216;uni&#8217; you can find with sushi platters), and all kinds of fish.</p>",
+  overview_headline: "The oceean absorbs an enormous amount of the planet's carbon and kelp is a key player in this process.",
+  science_headline: "Kelp forests are the key to a carbon-absorbing, healthy offshore ecosystem.",
+  news_headline:"Kelp Forest News",
+  volunteer_headline:"Volunteer with #{partner.name}",
   science: "Kelp is the best way to fight global warming that you’ve never heard of.
 Plant-like life in the ocean, from seagrasses to plankton, add up to just 0.05 percent of the plant biomass on land, but are so pervasive and efficient at sucking up carbon that they cycle through approximately the same amount of carbon every year as all land-based plants.
 Kelp is especially powerful. It grows at an amazing rate, up to 1 foot per day, making it one of the most productive ecosystems on earth.
@@ -210,7 +218,7 @@ project = Project.new(partner_id: partner.id, name: "Urban Farming in Pacoima",
   overview_headline: "",
   science_headline: "",
   news_headline:"",
-  volunteer_headline:"",
+  volunteer_headline:"volunteer_headline:"Volunteer with #{partner.name}",",
   science: "Our global food system creates 20–30% of all human being’s greenhouse gas emissions. Meat and dairy production contribute disproportionately to that total, as does food waste. But other things matter too.
 The earth’s soils contain more than three times the amount of carbon as the atmosphere, and 4.5 times the amount of carbon as all living things.
 Industrial agricultural methods have massively depleted carbon from the earth’s soil, transferring it into the atmosphere, causing global warming, and into the water, causing ocean acidification.
@@ -350,7 +358,7 @@ Your donation will help Homeboy Recycling expand their programs that provide job
   overview_headline: "",
   science_headline: "",
   news_headline:"",
-  volunteer_headline:"",
+  volunteer_headline:"volunteer_headline:"Volunteer with #{partner.name}",",
   science: "")
 project.save
 
@@ -420,7 +428,7 @@ Our first project is with Safe Place for Youth. Based in Venice, CA, its mission
   overview_headline: "",
   science_headline: "",
   news_headline:"",
-  volunteer_headline:"",
+  volunteer_headline:"volunteer_headline:"Volunteer with #{partner.name}",",
   science: "Solar power isn’t an obscure idea anymore. It’s a huge and growing industry. Its climate-change fighting power comes from the fact that it is replacing energy generated by dirty fossil fuels like coal, oil and natural gas.
 Where your electricity comes from depends a lot on where you live. In some places, it depends on coal-burning power plants, in other places natural gas or oil, and in still other spots, nuclear fission, hydro-electric, solar, wind, geothermal. Most likely it’s some combination of these.
 In Los Angeles, we get our power through the Los Angeles Department of Water and Power (LADWP). LADWP’s relied far too much on dirty coal plants based in Utah and Arizona 40% of the total! but it’s working to generate its electricity from cleaner sources.
