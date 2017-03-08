@@ -56,27 +56,27 @@
 
       <div id="overview" class="tab-content">
         <h4><%= @project.overview_headline %></h4>
-        <p><%= @project.description %></p>
+        <p><%= @project.description.html_safe %></p>
       </div>
 
       <div id="science" class="tab-content">
         <h4><%= @project.science_headline %></h4>
-        <p><%= @project.science %></p>
+        <p><%= @project.science.html_safe %></p>
       </div>
 
       <div id="partner" class="tab-content">
 
-        <p><%= get_partner(@project.partner_id).description %></p>
+        <p><%= get_partner(@project.partner_id).description.html_safe %></p>
       </div>
 
       <div id="news" class="tab-content">
         <h4><%= @project.news_headline %></h4>
-        <p>Coming Soon</p>
+        <p>Coming soon</p>
       </div>
 
       <div id="volunteer" class="tab-content">
         <h4><%= @project.volunteer_headline %></h4>
-        <p>Coming Soon</p>
+        <p>Coming soon</p>
       </div>
 
       <div id="share" class="tab-content row">
