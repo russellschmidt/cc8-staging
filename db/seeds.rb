@@ -24,24 +24,15 @@ partner = Partner.new(location_id: loc.id,
   name: "The Bay Foundation",
   blurb:"Help Restore the Kelp Forests of the Santa Monica Bay",
   description: "<p>The Bay Foundation’s mission is to restore and enhance Santa Monica Bay through actions and partnerships that improve water quality, conserve and rehabilitate natural resources, and protect the Bay’s benefits and values.</p>
-
-<p>Nearly two million people live in the Santa Monica Bay Watershed stretching from Ventura County to Palos Verdes, from the Santa Monica Mountains and Griffith Park, to Baldwin Hills and out to the sea. More than 5,000 species of animals, fish, birds and plants make their home in the Bay and the Bay Watershed.</p>
-
-<p>The Bay Foundation (TBF)—also known as the Santa Monica Bay Restoration Foundation—is a 501(c) 3 non-profit environmental group founded in 1990 to restore and enhance Santa Monica Bay and local coastal waters. TBF is staffed by science and policy experts who are passionate about understanding and protecting the Bay and the Bay watershed, and all the benefits that a healthy ecosystem can provide all those who use and enjoy it.</p>
-
-<p>TBF works with a broad group of stakeholders, including government agencies, environmental groups, local communities, industry and scientists, to create and put into action innovative policies and projects that clean up our waterways, create green spaces in urban areas, and restore natural habitats both on land and underwater, such as wetlands and kelp forests.</p>
-
-<p>The Bay Foundation’s work stretches across 7 program areas – you can check them out at the links below:</p>
-
-<p>Rivers and Streams Coastal Wetlands and Lagoons Beaches and Dunes In the Ocean Clean Boating</p>
-
-<p>Green Neighborhoods Clean Bay Certified</p>
-
-<p>TBF is part of the U.S. EPA’s Santa Monica Bay National Estuary Program (NEP)—learn more about estuaries here. The SMBNEP is one of 28 similar programs established under Section 320 of the 1987 Clean Water Act and administered by the U.S. EPA.</p>
-
-<p>As part of the SMBNEP, TBF is the non-profit partner of the Santa Monica Bay Restoration Commission and the Santa Monica Bay Restoration Authority, and is focused on research, education, planning, cleanup efforts, and other priorities identified in the SMBNEP’s Bay Restoration Plan (BRP), a publicly-adopted comprehensive plan of action for protecting and restoring Santa Monica Bay. For more information on the entire SMBNEP, please visit the Background page.</p>
-
-<p>The implementation of the BRP has resulted in massive improvements to the human and environmental health of the region.</p>",
+  <p>Nearly two million people live in the Santa Monica Bay Watershed stretching from Ventura County to Palos Verdes, from the Santa Monica Mountains and Griffith Park, to Baldwin Hills and out to the sea. More than 5,000 species of animals, fish, birds and plants make their home in the Bay and the Bay Watershed.</p>
+  <p>The Bay Foundation (TBF)—also known as the Santa Monica Bay Restoration Foundation—is a 501(c) 3 non-profit environmental group founded in 1990 to restore and enhance Santa Monica Bay and local coastal waters. TBF is staffed by science and policy experts who are passionate about understanding and protecting the Bay and the Bay watershed, and all the benefits that a healthy ecosystem can provide all those who use and enjoy it.</p>
+  <p>TBF works with a broad group of stakeholders, including government agencies, environmental groups, local communities, industry and scientists, to create and put into action innovative policies and projects that clean up our waterways, create green spaces in urban areas, and restore natural habitats both on land and underwater, such as wetlands and kelp forests.</p>
+  <p>The Bay Foundation’s work stretches across 7 program areas – you can check them out at the links below:</p>
+  <p>Rivers and Streams Coastal Wetlands and Lagoons Beaches and Dunes In the Ocean Clean Boating</p>
+  <p>Green Neighborhoods Clean Bay Certified</p>
+  <p>TBF is part of the U.S. EPA’s Santa Monica Bay National Estuary Program (NEP)—learn more about estuaries here. The SMBNEP is one of 28 similar programs established under Section 320 of the 1987 Clean Water Act and administered by the U.S. EPA.</p>
+  <p>As part of the SMBNEP, TBF is the non-profit partner of the Santa Monica Bay Restoration Commission and the Santa Monica Bay Restoration Authority, and is focused on research, education, planning, cleanup efforts, and other priorities identified in the SMBNEP’s Bay Restoration Plan (BRP), a publicly-adopted comprehensive plan of action for protecting and restoring Santa Monica Bay. For more information on the entire SMBNEP, please visit the Background page.</p>
+  <p>The implementation of the BRP has resulted in massive improvements to the human and environmental health of the region.</p>",
   volunteer: "",
   news: "")
 partner.save
@@ -68,60 +59,90 @@ project = Project.new(partner_id: partner.id, name: "Bring Back the Bay's Kelp F
   science_headline: "Kelp forests are the key to a carbon-absorbing, healthy offshore ecosystem.",
   news_headline:"Kelp Forest News",
   volunteer_headline:"Volunteer with #{partner.name}",
-  science: "Kelp is the best way to fight global warming that you’ve never heard of.
-Plant-like life in the ocean, from seagrasses to plankton, add up to just 0.05 percent of the plant biomass on land, but are so pervasive and efficient at sucking up carbon that they cycle through approximately the same amount of carbon every year as all land-based plants.
-Kelp is especially powerful. It grows at an amazing rate, up to 1 foot per day, making it one of the most productive ecosystems on earth.
-To make that happen locally, the folks at the Bay Foundation dive down and smash the parasitic purple urchins on the sea floor that have choked the ecosystem.
-As the kelp re-grows, it sucks CO2 directly from the water, incorporating the carbon into its stalks and fronds, like land plants do. Plants reach maturity after about 1 year.
-When the fronds break off and sink to the deep sea floor, they become sediment, sequestering the carbon for the long-term, out of the water and the atmosphere.
-When the stalks land nearby, the growth cycle begins again, sequestering more carbon and the process goes on.
-This process is especially important because our oceans absorb more than 30% of the CO2 we release into the atmosphere.
-As a result, the water is becoming increasingly acidic. Ocean acidification triggers the death of coral and hurts nearly all kinds of marine life, including the shellfish that billions of people rely on for food.
-By restoring 150 acres of kelp forest by 2017, the Bay Foundation’s program is projected to directly store up to 19.8 million lbs of CO2 over the next decade, according to calculations based on several peer-reviewed studies.
-But that’s not the end of the story. Kelp generates powerful multiplier effects.
-The re-growth of kelp forests leads to the flourishing of ecosystems that store and sequester even more carbon.
-The Bay Foundation’s data show that giant kelp density has more than tripled between 2013 and 2015, with increases in other types of algae, the number and size of red urchins, the diversity of fish species, and the overall biomass of fish such as kelp bass and sheephead. The increasing presence of coastal life translates into a more powerful system for sequestering and storing carbon.
-As cutting-edge research indicates, animals can play a key role in carbon storage. In the ocean and the coastal areas restored by kelp, animals such fish, 'echinoderms' (sea urchins, sea stars) and oysters not only store carbon in their bodies (some of which gets sequestered permanently when thy die and fall to the sea floor), but also release carbonate minerals like CaCO2 directly into the water which lowers the water’s acidity and stores more carbon.
-The carbon burial capacity of marine vegetated habitats such as kelp forests is phenomenal, 180 times greater than the average burial rate in the open ocean.
-A recent report released by scientific institutes including the UNESCO International Oceanographic Commission has shown that as much as 7% of carbon dioxide (CO2) reductions we need can be achieved by protecting and restoring coastal plant life.
-Kelp can also suck up the excess nitrogen and phosphorous that comes from agricultural runoff and wastewater.
-There are some estimates that if we “accelerate seaweed production by 15% a year (the current growth rate is 9%) by 2050 that biomass will be able to remove eighteen per cent of the nitrogen and sixty-one per cent of the phosphorous contributed to the ocean by fertilizers annually, and will take up six per cent of the ocean’s emissions-related carbon.”
-Below is an explanation of how much carbon each of these factors reduce, individually and jointly and the scientific sources of this information.
-Calculations
-By surveying all relevant studies of kelp, our scientific partners at the Bay Foundation estimated that 23% of the carbon processed by kelp was stored physically on an on-going basis as 'standing stock' and that additional 50% of that amount was transported to the deep sea environment.
-By restoring 150 acres of kelp forest by 2017, the Bay Foundation’s program is projected to directly store up to 19.8 million lbs of CO2 over the next decade.
-That’s equivalent of 32.7 lbs of CO2 per square meter, or 9786.83 lbs of CO2 per 300 square meter plot.
-As a result of the secondary and tertiary effects of kelp forest re-growth on the ecosystem, we estimate a multiplier factor of 1.75, which means that for that the total CO2 storage impact of 300 acres will be 17,1127 lbs.
-We determine your personal impact by figuring out the per dollar cost of reducing 1 lb of CO2 and then multiplying that number by the amount of money you contributed.
-The cost of one dive to restore a 300 square meter plot is $1,000.
-BOTTOM LINE: You reduce an additional 17lbs of CO2 for every additional dollar you donate.
-Sources for Kelp’s Direct Carbon Impact:
-Wilmers CC, Estes JA, Edwards M, Laidre KL, Konar B. 2012. 'Do trophic cascades affect the storage and flux of atmospheric carbon? An analysis of sea otters and kelp forests,' Frontiers in Ecology and the Environment, doi:10.1890/110176.
-Dan Laffoley & Gabriel Grimsditch, eds., 2009. The Management of Natural Coastal Carbon Sinks. UCN, Gland, Switzerland. 53 pp.https://cmsdata.iucn.org/downloads/carbon_managment_report_final_printed_version_1.pdf
-Harrold C, Light K, Lisin S. 1998. Organic enrichment of submarine-canyon and continental-shelf benthic communities by macroalgal drift imported from nearshore kelp forests. Limnology and Oceanography, 4, doi: 10.4319/lo.1998.43.4.0669.
-Reed, D. C., Rassweiler, A. and Arkema, K. K. 2008. 'Biomass Rather Than Growth Rate Determines Variation In Net Primary Production By Giant Kelp.' Ecology, 89: 2493–2505. doi:10.1890/07–1106.1
-Sources for Kelp’s Indirect Impact:
-Atwood TB, et al. 2014. Trophic-level dependent effects on CO2 emissions from experimental stream ecosystems, Global Change Biology, 20, 3386–3396, doi: 10.1111/gcb.12516.
-Bay Foundation, 'Kelp Restoration Annual Report July 2014 – June 2015':http://www.santamonicabay.org/wp-content/uploads/2014/04/Kelp-Restoration-Annual-Report-October-2015-Final.pdf
-Bradley RA, Bradley DW. 1993. Wintering shorebirds increase after kelp (Macrocystis) recovery. The Condor 95: 372–376.
-Claisse et al. 2013. Kelp forest restoration has the potential to increase sea urchin gonad biomass. Ecosphere 4(3):38.
-Dojiri M, Yamaguchi M, Weisberg SB, Lee HJ. 2003. Changing anthropogenic influence on the Santa Monica Bay watershed. Marine Environmental Research 56: 1–14.
-Duggins DO, Simenstad CA, Estes JA. 1989. Magnification of secondary production by kelp detritus in coastal marine ecosystems. Science 245: 170–173.
-Ford T, Meux B. 2010. Giant Kelp community restoration in Santa Monica Bay. Urban Coast 2: 43–46.
-Foster MS, Schiel DR. 2010. Loss of predators and the collapse of southern California kelp forests: Alternatives, explanations and generalizations. Journal of Experimental Marine Biology and Ecology 393: 59–70.
-Graham MH. 2004. Effects of local deforestation on the diversity and structure of southern California giant kelp forest food webs. Ecosystems 7: 341–357.
-Graham MH, Vasquez JA, Buschmann AH. 2007. Global ecology of the giant kelp Macrocystis: from ecotypes to ecosystems. Oceanography and Marine Biology: An Annual Review 45: 39–88.
-Harrold C, Reed DC. 1985. Food availability, sea urchin grazing, and kelp korest community structure. Ecology 66: 1160–1169.
-Kelly E, editor. 2005. The role of kelp in the marine environment. Irish Wildlife Manuals, No. 17. National Parks and Wildlife Service, Department of Environment, Heritage and Local Government, Dublin, Ireland.
-Schmitz OJ et al. 2014. 'Animating the Carbon Cycle,' Ecosystems17: 344–359 DOI: 10.1007/s10021–013–9715–7, p. 349.
-Steneck RS, Graham MH, Bourque BJ, Corbett D, Erlandson JM, Estes JA, Tegner MJ. 2002. Kelp forest ecosystems: biodiversity, stability, resilience and future. Environ Conserv, 29(4):436–459.
-Strickland MS, Hawlena D, Reese A, Bradford MA, Schmitz OJ. 2013. Trophic cascade alters ecosystem carbon exchange. Proceedings of the National Academy of Sciences of the United States of America. 110(27):11035–11038. doi:10.1073/pnas.1305191110.
-Tegner MJ, Dayton PK. 2000. Ecosystem effects of fishing in kelp forest communities. ICES. Journal of Marine Science 57: 579–589.
-Wilmers CC, Estes JA, Edwards M, Laidre KL, Konar B. 2012. “Do trophic cascades affect the storage and flux of atmospheric carbon? An analysis of sea otters and kelp forests,” Frontiers in Ecology and the Environment, doi:10.1890/110176.
-The Importance of 'Blue Carbon' to Fighting Climate Change
-'Blue Carbon: The Role of Healthy Oceans in Binding Carbon'
-A new Rapid Response Assessment report released 14 October 2009 at the Diversitas Conference, Cape Town Conference Centre, South Africa. Compiled by experts at GRID-Arendal and UNEP in collaboration with the UN Food and Agricultural Organization (FAO) and the UNESCO International Oceanographic Commissions and other institutions, the report highlights the critical role of the oceans and ocean ecosystems in maintaining our climate and in assisting policy makers to mainstream an oceans agenda into national and international climate change initiatives.http://www.grida.no/publications/rr/blue-carbon/
-Dan Laffoley & Gabriel Grimsditch, eds. ,The Management of Natural Coastal Carbon Sinks. 2009. UCN, Gland, Switzerland. 53 pp.https://cmsdata.iucn.org/downloads/carbon_managment_report_final_printed_version_1.pdf")
+  science: "<p>Kelp is the best way to fight global warming that you’ve never heard of.
+Plant-like life in the ocean, from seagrasses to plankton, add up to just 0.05 percent of the plant biomass on land, but are so pervasive and efficient at sucking up carbon that they cycle through approximately the same amount of carbon every year as all land-based plants.</p>
+
+<p>Kelp is especially powerful. It grows at an amazing rate, up to 1 foot per day, making it one of the most productive ecosystems on earth.</p>
+
+<p>To make that happen locally, the folks at the Bay Foundation dive down and smash the parasitic purple urchins on the sea floor that have choked the ecosystem. As the kelp re-grows, it sucks CO2 directly from the water, incorporating the carbon into its stalks and fronds, like land plants do. Plants reach maturity after about 1 year. When the fronds break off and sink to the deep sea floor, they become sediment, sequestering the carbon for the long-term, out of the water and the atmosphere.</p>
+
+<p>When the stalks land nearby, the growth cycle begins again, sequestering more carbon and the process goes on. This process is especially important because our oceans absorb more than 30% of the CO2 we release into the atmosphere. As a result, the water is becoming increasingly acidic. Ocean acidification triggers the death of coral and hurts nearly all kinds of marine life, including the shellfish that billions of people rely on for food.</p>
+
+<p>By restoring 150 acres of kelp forest by 2017, the Bay Foundation’s program is projected to directly store up to 19.8 million lbs of CO2 over the next decade, according to calculations based on several peer-reviewed studies. </p>
+
+<p>But that’s not the end of the story. Kelp generates powerful multiplier effects. The re-growth of kelp forests leads to the flourishing of ecosystems that store and sequester even more carbon. The Bay Foundation’s data show that giant kelp density has more than tripled between 2013 and 2015, with increases in other types of algae, the number and size of red urchins, the diversity of fish species, and the overall biomass of fish such as kelp bass and sheephead. The increasing presence of coastal life translates into a more powerful system for sequestering and storing carbon.</p>
+
+<p>As cutting-edge research indicates, animals can play a key role in carbon storage. In the ocean and the coastal areas restored by kelp, animals such fish, &#8216;echinoderms&#8217; (sea urchins, sea stars) and oysters not only store carbon in their bodies (some of which gets sequestered permanently when thy die and fall to the sea floor), but also release carbonate minerals like CaCO2 directly into the water which lowers the water’s acidity and stores more carbon. The carbon burial capacity of marine vegetated habitats such as kelp forests is phenomenal, 180 times greater than the average burial rate in the open ocean.</p>
+
+<p>A recent report released by scientific institutes including the UNESCO International Oceanographic Commission has shown that as much as 7% of carbon dioxide (CO2) reductions we need can be achieved by protecting and restoring coastal plant life. Kelp can also suck up the excess nitrogen and phosphorous that comes from agricultural runoff and wastewater.</p>
+
+<p>There are some estimates that if we “accelerate seaweed production by 15% a year (the current growth rate is 9%) by 2050 that biomass will be able to remove eighteen per cent of the nitrogen and sixty-one per cent of the phosphorous contributed to the ocean by fertilizers annually, and will take up six per cent of the ocean’s emissions-related carbon.”</p>
+
+<p>Below is an explanation of how much carbon each of these factors reduce, individually and jointly and the scientific sources of this information.</p>
+
+<h3>Calculations</h3>
+
+<p>By surveying all relevant studies of kelp, our scientific partners at the Bay Foundation estimated that 23% of the carbon processed by kelp was stored physically on an on-going basis as &#8216;standing stock&#8217; and that additional 50% of that amount was transported to the deep sea environment.</p>
+
+<p>By restoring 150 acres of kelp forest by 2017, the Bay Foundation’s program is projected to directly store up to 19.8 million lbs of CO2 over the next decade. That’s equivalent of 32.7 lbs of CO2 per square meter, or 9786.83 lbs of CO2 per 300 square meter plot.</p>
+
+<p>As a result of the secondary and tertiary effects of kelp forest re-growth on the ecosystem, we estimate a multiplier factor of 1.75, which means that for that the total CO2 storage impact of 300 acres will be 17,1127 lbs.</p>
+
+<p>We determine your personal impact by figuring out the per dollar cost of reducing 1 lb of CO2 and then multiplying that number by the amount of money you contributed. The cost of one dive to restore a 300 square meter plot is $1,000.</p>
+
+<p>BOTTOM LINE: You reduce an additional 17lbs of CO2 for every additional dollar you donate.</p>
+
+<h3>Sources for Kelp’s Direct Carbon Impact:</h3>
+
+<p>Wilmers CC, Estes JA, Edwards M, Laidre KL, Konar B. 2012. &#8216;Do trophic cascades affect the storage and flux of atmospheric carbon? An analysis of sea otters and kelp forests,&#8217; Frontiers in Ecology and the Environment, doi:10.1890/110176.</p>
+
+<p>Dan Laffoley &amp; Gabriel Grimsditch, eds., 2009. The Management of Natural Coastal Carbon Sinks. UCN, Gland, Switzerland. 53 pp. <a href="https://cmsdata.iucn.org/downloads/carbon_managment_report_final_printed_version_1.pdf">https://cmsdata.iucn.org/downloads/carbon_managment_report_final_printed_version_1.pdf</a></p>
+
+<p>Harrold C, Light K, Lisin S. 1998. Organic enrichment of submarine-canyon and continental-shelf benthic communities by macroalgal drift imported from nearshore kelp forests. Limnology and Oceanography, 4, doi: 10.4319/lo.1998.43.4.0669.</p>
+
+<p>Reed, D. C., Rassweiler, A. and Arkema, K. K. 2008. &#8216;Biomass Rather Than Growth Rate Determines Variation In Net Primary Production By Giant Kelp.&#8217; Ecology, 89: 2493–2505. doi:10.1890/07–1106.1</p>
+
+<h3>Sources for Kelp’s Indirect Impact:</h3>
+
+<p>Atwood TB, et al. 2014. Trophic-level dependent effects on CO2 emissions from experimental stream ecosystems, Global Change Biology, 20, 3386–3396, doi: 10.1111/gcb.12516.</p>
+
+<p>Bay Foundation, &#8216;Kelp Restoration Annual Report July 2014 – June 2015&#8217; <a href="http://www.santamonicabay.org/wp-content/uploads/2014/04/Kelp-Restoration-Annual-Report-October-2015-Final.pdf">http://www.santamonicabay.org/wp-content/uploads/2014/04/Kelp-Restoration-Annual-Report-October-2015-Final.pdf</a></p>
+
+<p>Bradley RA, Bradley DW. 1993. Wintering shorebirds increase after kelp (Macrocystis) recovery. The Condor 95: 372–376.</p>
+
+<p>Claisse et al. 2013. Kelp forest restoration has the potential to increase sea urchin gonad biomass. Ecosphere 4(3):38.</p>
+
+<p>Dojiri M, Yamaguchi M, Weisberg SB, Lee HJ. 2003. Changing anthropogenic influence on the Santa Monica Bay watershed. Marine Environmental Research 56: 1–14.</p>
+
+<p>Duggins DO, Simenstad CA, Estes JA. 1989. Magnification of secondary production by kelp detritus in coastal marine ecosystems. Science 245: 170–173.</p>
+
+<p>Ford T, Meux B. 2010. Giant Kelp community restoration in Santa Monica Bay. Urban Coast 2: 43–46.</p>
+
+<p>Foster MS, Schiel DR. 2010. Loss of predators and the collapse of southern California kelp forests: Alternatives, explanations and generalizations. Journal of Experimental Marine Biology and Ecology 393: 59–70.</p>
+
+<p>Graham MH. 2004. Effects of local deforestation on the diversity and structure of southern California giant kelp forest food webs. Ecosystems 7: 341–357.</p>
+
+<p>Graham MH, Vasquez JA, Buschmann AH. 2007. Global ecology of the giant kelp Macrocystis: from ecotypes to ecosystems. Oceanography and Marine Biology: An Annual Review 45: 39–88.</p>
+
+<p>Harrold C, Reed DC. 1985. Food availability, sea urchin grazing, and kelp forest community structure. Ecology 66: 1160–1169.</p>
+
+<p>Kelly E, editor. 2005. The role of kelp in the marine environment. Irish Wildlife Manuals, No. 17. National Parks and Wildlife Service, Department of Environment, Heritage and Local Government, Dublin, Ireland.</p>
+
+<p>Schmitz OJ et al. 2014. &#8216;Animating the Carbon Cycle,&#8217; Ecosystems17: 344–359 DOI: 10.1007/s10021–013–9715–7, p. 349.</p>
+
+<p>Steneck RS, Graham MH, Bourque BJ, Corbett D, Erlandson JM, Estes JA, Tegner MJ. 2002. Kelp forest ecosystems: biodiversity, stability, resilience and future. Environ Conserv, 29(4):436–459.</p>
+
+<p>Strickland MS, Hawlena D, Reese A, Bradford MA, Schmitz OJ. 2013. Trophic cascade alters ecosystem carbon exchange. Proceedings of the National Academy of Sciences of the United States of America. 110(27):11035–11038. doi:10.1073/pnas.1305191110.</p>
+
+<p>Tegner MJ, Dayton PK. 2000. Ecosystem effects of fishing in kelp forest communities. ICES. Journal of Marine Science 57: 579–589.</p>
+
+<p>Wilmers CC, Estes JA, Edwards M, Laidre KL, Konar B. 2012. “Do trophic cascades affect the storage and flux of atmospheric carbon? An analysis of sea otters and kelp forests,” Frontiers in Ecology and the Environment, doi:10.1890/110176.</p>
+
+<p>The Importance of &#8216;Blue Carbon&#8217; to Fighting Climate Change
+&#8216;Blue Carbon: The Role of Healthy Oceans in Binding Carbon&#8217;
+A new Rapid Response Assessment report released 14 October 2009 at the Diversitas Conference, Cape Town Conference Centre, South Africa. Compiled by experts at GRID-Arendal and UNEP in collaboration with the UN Food and Agricultural Organization (FAO) and the UNESCO International Oceanographic Commissions and other institutions, the report highlights the critical role of the oceans and ocean ecosystems in maintaining our climate and in assisting policy makers to mainstream an oceans agenda into national and international climate change initiatives. <a href="http://www.grida.no/publications/rr/blue-carbon/">http://www.grida.no/publications/rr/blue-carbon/</a></p>
+
+<p>Dan Laffoley &amp; Gabriel Grimsditch, eds. ,The Management of Natural Coastal Carbon Sinks. 2009. UCN, Gland, Switzerland. 53 pp. <a href="https://cmsdata.iucn.org/downloads/carbon_managment_report_final_printed_version_1.pdf">https://cmsdata.iucn.org/downloads/carbon_managment_report_final_printed_version_1.pdf</a></p>")
 
 project.save
 
