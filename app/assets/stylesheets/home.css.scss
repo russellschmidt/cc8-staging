@@ -27,13 +27,13 @@ nav ul {
 
 nav li.nav-top {
   display: inline;
-  padding: 10px 30px 0 0;
+  padding: 10px 30px 0 0; // 10 30 0 0
   width: 150px;
   height: 20px;
   font-family: Oxygen;
-  font-size: 16px;
+  font-size: 1.6rem; // 16px / 10px
   text-align: right;
-  line-height: 20px;
+  line-height: 1.25; // 20px / 16px
 
   a {
     color: #FFFFFF;
@@ -52,7 +52,7 @@ nav li#nav-logo {
   width: 236px;
   height: 39px;
   margin-left: 30px;
-  margin-right: 556px;
+  margin-right: 556px; // 556 / 1400 =
 }
 
 div#hero-header {
@@ -608,5 +608,12 @@ footer {
       color: #3EC631;
       text-decoration: none;
     }
+  }
+}
+
+@media (max-width: 1400px) {
+  nav li#nav-logo {
+    margin-left: 1vw;
+    margin-right: 30vw;
   }
 }
