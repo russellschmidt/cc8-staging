@@ -1048,14 +1048,12 @@ iframe {
       padding-top: 3vh;
       margin: 0;
       hgroup h2 {
-        max-width: 90vw;
         height: auto; //55
         font-size: 3rem;
         line-height: 1.25;
         margin: 0;
       }
       hgroup h3{
-        max-width: 90vw;
         height: auto;
         font-size: 2rem;
         line-height: 1.25;
@@ -1072,7 +1070,7 @@ iframe {
     // chip in articles
     div#chip-in-section-articles{
       padding-top: 1vh;
-      max-width: 90%;
+      max-width: 667px;
       margin: 0 0 0 0;
       article {
         margin: 0 auto 3vh;
