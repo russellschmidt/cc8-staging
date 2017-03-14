@@ -764,12 +764,15 @@ iframe {
     }
     div#home-projects-section-articles {
       padding-top: 1vh;
+      padding-bottom: 3vh;
       article {
         max-width: 85vh;
-        height: 85vh;
+        height: 100vh;
         border: none;
-
         margin: 5vh 1vw;
+        &:last-child {
+          height: 85vh;
+        }
         div.home-projects-section-image {
           width: 100vw;
           height: 200px;
@@ -866,7 +869,7 @@ iframe {
         line-height: 1.25;
       }
       h5 {
-        padding: 0 2vw 0;
+        padding: 4vh 2vw 0;
         height: 20vh;
         font-size: 2rem;
         line-height: 1.25;
