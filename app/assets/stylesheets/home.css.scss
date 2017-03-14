@@ -628,31 +628,37 @@ iframe {
 
 // Media Queries
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 375px) {
   body {
     width: 100vw;
   }
   // TOP NAV
   nav {
-    margin: 2px;
+    margin: 1vh 1vw;
+  }
+  nav ul {
+    padding-left: 0;
+    margin: 0 auto;
   }
   nav li.nav-top {
     display: none;
-    max-width: 60vw;
+    max-width: 100vw;
+    width: 100vw;
   }
-
   nav li#nav-logo {
     display: inline;
-    margin: 0 auto;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
     a {
       text-align: center;
-      max-width: 60vw;
+      max-width: 100vw;
     }
   }
-  // Main Hero
 
+  // Main Hero
   section#hero-section{
-    max-height: 568px;
+    max-height: 100vh;
     height:100vh;
   }
 
@@ -717,8 +723,9 @@ iframe {
           font-size: 3rem; // 30/10
           line-height: 1.25px; // 38/30
           margin: 1vh 0;
+          padding: 0;
           width: 100vw;
-          max-width: 320px;
+          max-width: 100vw;
         }
         p {
           max-width: 100vw;
@@ -734,13 +741,13 @@ iframe {
     div#home-projects-section-header{
       padding: 3vh 1vh;
       hgroup h2 {
-        max-width: 320px;
+        max-width: 100vw;
         height: 4rem;
         font-size: 3rem;
         line-height: 1.25;
       }
       hgroup h3{
-        max-width: 320px;
+        max-width: 100vw;
         height: auto;
         font-size: 2rem;
         line-height: 1.25;
@@ -755,13 +762,13 @@ iframe {
     div#home-projects-section-articles {
       padding-top: 1vh;
       article {
-        max-width: 320px;
-        height: 100vh;
+        max-width: 85vh;
+        height: 85vh;
         border: none;
 
         margin: 5vh 1vw;
         div.home-projects-section-image {
-          width: 350px;
+          width: 100vw;
           height: 200px;
         }
         a {
@@ -847,23 +854,23 @@ iframe {
   }
 
   section#build-with-us {
-    height: 100vh;
+    height: 75vh;
     div#build-with-us-header {
       h2 {
-        padding-top: 10vh;
+        padding-top: 5vh;
         height: 30vh;
         font-size: 4rem;
         line-height: 1.25;
       }
       h5 {
-        padding-top: 15vh;
+        padding: 0 2vw 0;
         height: 30vh;
         font-size: 2rem;
         line-height: 1.25;
       }
     }
     div#build-with-us-cta {
-      padding-top: 5vh;
+      padding-top: 3vh;
       a {
         font-size: 1.8rem;
         line-height: 1.2;
@@ -875,7 +882,7 @@ iframe {
   }
 
   section#keep-in-touch {
-    height: 100vh;
+    height: 75vh;
     div#keep-in-touch-header {
       h2{
         padding-top: 5vh;
@@ -884,15 +891,14 @@ iframe {
         line-height: 1.25;
       }
       h5 {
-        padding-top: 0;
-        height: 10vh;
+        padding: 0 2vw;
+        height: 30vh;
         font-size: 2rem;
         line-height: 1.25;
       }
     }
     div#keep-in-touch-cta {
-      padding-top: 0;
-      margin-top: 5vh;
+      padding-top: 3vh;
       div#kit-email-div {
         text-align: center;
       }
