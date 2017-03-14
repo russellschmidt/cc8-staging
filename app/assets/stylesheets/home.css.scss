@@ -1930,9 +1930,10 @@ iframe {
     div#home-projects-section-articles {
       padding-top: 1vh;
       padding-bottom: 3vh;
+
       article {
         border: none;
-        margin: 5vh 1vw 5vh -2vw;
+        margin: 5vh 1vw 5vh 1vw;
         width: 350px;
         max-width:667px;
         &:last-child {
@@ -1963,7 +1964,7 @@ iframe {
         h3 {
           margin-top: 10px;
           width: auto;
-          height: auto;
+          height: 7rem;
           max-height: 7rem; //54/10
           font-size: 2.1rem; //21/10
           line-height: 1.28; // 28 / 21
