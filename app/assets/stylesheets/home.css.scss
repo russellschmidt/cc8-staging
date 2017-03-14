@@ -1047,6 +1047,11 @@ iframe {
     div#chip-in-section-header{
       padding-top: 3vh;
       margin: 0;
+      hgroup, hgroup h2, hgroup h3{
+        max-width: inherit;
+        width: 90vw;
+        margin-left: 2vw;
+      }
       hgroup h2 {
         height: auto; //55
         font-size: 3rem;
@@ -1070,8 +1075,9 @@ iframe {
     // chip in articles
     div#chip-in-section-articles{
       padding-top: 1vh;
-      max-width: 667px;
-      margin: 0 0 0 0;
+      max-width: inherit;
+      width: 90vw;
+      margin: 0 0 0 2vw;
       article {
         margin: 0 auto 3vh;
         max-width: 90%;
@@ -1102,21 +1108,25 @@ iframe {
   section#home-projects-section {
     div#home-projects-section-header{
         padding: 3vh 0;
-        hgroup {
-          margin: 0 auto;;
-        }
+      hgroup {
+        max-width: inherit;
+        width: 100vw;
+        margin: 0;
+      }
+      hgroup h2, hgroup h3 {
+        width: inherit;
+        margin: 0 0 0 2vw;
+        max-width: 90vw;
+      }
       hgroup h2 {
-
         height: 4rem;
         font-size: 3rem;
         line-height: 1.25;
       }
       hgroup h3{
-        width:90%;
         height: auto;
         font-size: 1.6rem;
         line-height: 1.25;
-        margin: 0;
       }
       hgroup h3:nth-child(2){
         margin-top: 1vh;
@@ -1130,7 +1140,7 @@ iframe {
       padding-bottom: 3vh;
       article {
         border: none;
-        margin: 5vh 1vw;
+        margin: 5vh 1vw 5vh -2vw;
         width: 350px;
         max-width:667px;
         &:last-child {
@@ -1206,7 +1216,7 @@ iframe {
       article h5 {
         font-size: 2.1rem;
         line-height: 1.29;
-        margin: 0;
+        margin: 0 0 0 -1vw;
         max-width: 100%;
         height: auto;
       }
