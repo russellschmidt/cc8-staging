@@ -989,7 +989,7 @@ iframe {
 // iphone 5/6 landscape mode
 @media all and (max-width: 667px) and (orientation: landscape) {
   body {
-    width: 100vw;
+    width: 100%;
   }
   // TOP NAV
   nav {
@@ -1023,7 +1023,7 @@ iframe {
   }
   #hero-header {
     margin: 20vh 0;
-    max-width:90%;
+    max-width:94%;
     text-align: center;
     h1 {
       font-size: 4rem; // 60/10 rem
@@ -1103,17 +1103,20 @@ iframe {
   // Projects
   section#home-projects-section {
     div#home-projects-section-header{
-      padding: 3vh 1vh;
+        padding: 3vh 0;
+        hgroup {
+          margin: 0 auto;;
+        }
       hgroup h2 {
-        max-width: 95%;
+
         height: 4rem;
         font-size: 3rem;
         line-height: 1.25;
       }
       hgroup h3{
-        max-width: 95%;
+        width:90%;
         height: auto;
-        font-size: 2rem;
+        font-size: 1.6rem;
         line-height: 1.25;
         margin: 0;
       }
@@ -1128,9 +1131,10 @@ iframe {
       padding-top: 1vh;
       padding-bottom: 3vh;
       article {
-
         border: none;
         margin: 5vh 1vw;
+        width: 350px;
+        max-width:667px;
         &:last-child {
 
         }
@@ -1187,7 +1191,7 @@ iframe {
 
   // Join the fight section start
   section#join-the-fight {
-    height: 100vh;
+    height: auto;
     div#join-the-fight-header  {
       h2 {
         padding: 8vh 2vw 0;
@@ -1205,7 +1209,7 @@ iframe {
         font-size: 2.1rem;
         line-height: 1.29;
         margin: 0;
-        max-width: 350px;
+        max-width: 100%;
         height: auto;
       }
       article a {
@@ -1221,19 +1225,26 @@ iframe {
   }
 
   section#build-with-us {
-    height: 75vh;
+    height: auto;
+    min-height: 65vh;
     div#build-with-us-header {
       h2 {
         padding-top: 5vh;
-        height: 30vh;
-        font-size: 4rem;
+        height: auto;
+        font-size: 3rem;
         line-height: 1.25;
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
       }
       h5 {
-        padding: 4vh 2vw 0;
-        height: 20vh;
+        padding: 4vh 8% 4vh;
+        height: auto;
         font-size: 2rem;
         line-height: 1.25;
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
       }
     }
     div#build-with-us-cta {
@@ -1242,28 +1253,33 @@ iframe {
         font-size: 1.8rem;
         line-height: 1.2;
 
-        width: 90vw;
+        width: 50vw;
       }
     }
   // end of build with us
   }
 
   section#keep-in-touch {
-    height: 75vh;
+    height: auto;
+    min-height: 65vh;
     div#keep-in-touch-header {
-      margin-top: 3vh;
+      margin-top: 6vh;
       h2{
         padding-top: 0;
         margin: 0;
-        height: 20vh;
+        height: 10vh;
         font-size: 4rem;
         line-height: 1.25;
+        width: 100%;
+        max-width: 100%;
       }
       h5 {
         padding: 0 2vw;
-        height: 20vh;
+        height: 10vh;
         font-size: 2rem;
         line-height: 1.25;
+        width: 100%;
+        max-width: 100%;
       }
     }
     div#keep-in-touch-cta {
@@ -1289,17 +1305,17 @@ iframe {
   }
 
   footer {
-    padding-top: 5vh;
-    height: 75vh;
-    text-align: center;
+    padding-top: 2vh;
+    height: 65vh;
+    text-align: left;
     div {
-      float: none;
+      float: left;
       margin-top: 1vh;
     }
 
     div.left-column {
-      width: 100vw;
-      margin-left: 0;
+      width: 25vw;
+      margin-left: 4vw;
       h4 {
         height: 2.5rem;
         font-size: 1.5rem;
@@ -1316,7 +1332,8 @@ iframe {
       }
     }
     div.right-column {
-      width: 100vw;
+      width: 45vw;
+      margin-right: 1vw;
       h4 {
         max-width: 100vw;
         height: 2rem;
