@@ -2169,6 +2169,7 @@ iframe {
 //
 // media query for 768px wide portrait
 @media screen and (min-device-width : 768px)
+    and (max-device-width : 1024px)
     and (orientation : portrait) {
 
   body {
@@ -2567,7 +2568,9 @@ iframe {
 
 // ==================================================
 // media query for ipad
-@media screen and (min-device-width : 1024px)
+@media screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
     and (orientation : landscape) {
   body {
     width: 100%;
@@ -2584,12 +2587,12 @@ iframe {
     display: inline;
     max-width: 100%;
     width: 100%;
-    padding: 0 0.5vw;
-    a {
-      font-size: 1.5rem;
-    }
+    // padding: 0 0.5vw;
+    // a {
+    //   font-size: 1.5rem;
+    // }
     &:nth-child(2) {
-      padding-left: 3vw;
+      padding-left: 16vw;
     }
   }
 
@@ -2608,7 +2611,7 @@ iframe {
   section#hero-section{
     max-height: 100vh;
     height:100vh;
-    padding: 2vh;
+    padding: 2vh 0 2vh 4vw;
   }
   #hero-header {
     margin: 20vh 0;
@@ -2622,7 +2625,7 @@ iframe {
     h2 {
       font-size: 2.4rem; // 24/10
       line-height: 1.29166667;  // 31 /24
-      margin: 0 1vh 3vh;
+      margin: 0 1vh 7vh;
     }
   }
   div#scroll-down-arrow {
@@ -2631,8 +2634,8 @@ iframe {
 
   // chip in section
   section#chip-in-section {
-    height: auto;
-    padding: 1vh 0;
+    height: 65vh;
+    padding: 1vh 0 0 4vw;
     div#chip-in-section-header{
       padding-top: 3vh;
       margin: 0;
@@ -2704,7 +2707,7 @@ iframe {
       }
       hgroup h2, hgroup h3 {
         width: inherit;
-        margin: 0 0 0 2vw;
+        margin: 0 0 0 4vw;
         max-width: 90vw;
       }
       hgroup h2 {
@@ -2713,15 +2716,15 @@ iframe {
         line-height: 1.25;
       }
       hgroup h3{
-        height: auto;
-        font-size: 1.6rem;
+        height: 4rem;
+        font-size: 2rem;
         line-height: 1.25;
       }
       hgroup h3:nth-child(2){
         margin-top: 1vh;
       }
       hgroup h3:last-child {
-        margin-top: 5vh;
+        margin-top: 2vh;
       }
     }
     div#home-projects-section-articles {
@@ -2823,8 +2826,7 @@ iframe {
   }
 
   section#build-with-us {
-    height: auto;
-    min-height: 65vh;
+    height: 40vh;
     div#build-with-us-header {
       h2 {
         padding-top: 5vh;
@@ -2858,8 +2860,7 @@ iframe {
   }
 
   section#keep-in-touch {
-    height: auto;
-    min-height: 65vh;
+    height: 40vh;
     div#keep-in-touch-header {
       margin-top: 6vh;
       h2{
@@ -2873,7 +2874,7 @@ iframe {
       }
       h5 {
         padding: 0 2vw;
-        height: 10vh;
+        height: 5vh;
         font-size: 2rem;
         line-height: 1.25;
         width: 100%;
@@ -2881,7 +2882,7 @@ iframe {
       }
     }
     div#keep-in-touch-cta {
-      padding-top: 3vh;
+      padding-top: 1vh;
       div#kit-email-div {
         text-align: center;
       }
@@ -2904,7 +2905,7 @@ iframe {
 
   footer {
     padding-top: 2vh;
-    height: 65vh;
+    height: 33vh;
     text-align: left;
     div {
       float: left;
