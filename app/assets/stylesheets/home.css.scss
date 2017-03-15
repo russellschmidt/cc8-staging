@@ -2563,7 +2563,7 @@ iframe {
     }
   // end of footer
   }
-  // End of 1024 width media query
+  // End of 768 width media query
 }
 
 // ==================================================
@@ -2960,6 +2960,28 @@ iframe {
   }
 // end of ipad landscape responsive section
 }
-// ==================================================
-// media query for ipad pro 1024x1366
 
+// ==================================================
+// media query for ipad pro 1024x1399 actually 1366 but our base design was for 1400px width
+// ==================================================
+// media query for ipad pro in portrait to the original design width of 1400px
+@media screen
+    and (min-device-width : 1025px)
+    and (max-device-width : 1399px)
+    and (orientation : portrait) {
+
+
+// end of portrait design 1025-1399px
+}
+
+// ==================================================
+// media query for ipad landscape
+@media screen
+    and (min-device-width : 1025px)
+    and (max-device-width : 1399px)
+    and (orientation : landscape) {
+
+
+
+// end of landscape design 1025-1399px
+}
