@@ -308,3 +308,92 @@
     color: #FFFFFF;
   }
 }
+
+// RESPONSIVE FUN -----------------------------------
+// ==================================================
+// Media Queries
+// iphone 5/6 in portrait
+@media screen and (max-width: 375px) and (orientation: portrait) {
+
+// end of 5/6 portait
+}
+
+
+// ==================================================
+// iphone 5/6 landscape mode
+@media screen and (max-width: 667px) and (orientation: landscape) {
+
+// end of 5/6 landscape
+}
+
+
+// ==================================================
+// media query for 6+/Nexus 414x736
+// media query for 414px wide portrait
+@media screen and (min-device-width : 414px)
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation : portrait) {
+
+// end of 6+/7+ portait
+}
+
+
+// ==================================================
+// media query for iphone 6+/7+
+@media screen and (min-device-width : 736px)
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation : landscape) {
+
+// end of 6+/7+ landscape
+}
+
+
+// ==================================================
+// media query for ipad 768 x 1024
+// ==================================================
+//
+// media query for 768px wide portrait
+@media screen and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : portrait) {
+
+// end of ipad portait
+}
+
+
+// ==================================================
+// media query for ipad
+@media screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : landscape) {
+
+// end of ipad landscape
+}
+
+
+// ==================================================
+// media query for ipad pro 1024x1399 actually 1366 but our base design was for 1400px width
+// ==================================================
+// media query for ipad pro in portrait to the original design width of 1400px
+@media screen
+    and (min-device-width : 1025px)
+    and (max-device-width : 1399px)
+    and (orientation : portrait) {
+
+
+// end of portrait design 1025-1399px
+}
+
+
+// ==================================================
+// media query for ipad landscape
+@media screen
+    and (min-device-width : 1025px)
+    and (max-device-width : 1399px)
+    and (orientation : landscape) {
+
+
+
+// end of landscape design 1025-1399px
+}
