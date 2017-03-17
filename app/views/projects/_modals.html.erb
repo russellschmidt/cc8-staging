@@ -14,8 +14,8 @@
           <%= hidden_field_tag 'stripeToken' %>
           <%= hidden_field_tag 'stripeEmail' %>
           <%= hidden_field_tag 'donationToCampaign', 2500 %>
-          <%= hidden_field_tag 'donationToTip', 250 %>
-          <%= hidden_field_tag 'totalDonation', 2750 %>
+          <%= hidden_field_tag 'donationToTip', 375 %>
+          <%= hidden_field_tag 'totalDonation', 2875 %>
           <%= hidden_field_tag 'campaign_id', get_project_campaigns(@project).first.id %>
           <section class="row">
             <div class="col-sm-6">
@@ -68,7 +68,7 @@
                 <label class="sr-only" for="tipAmount">Amount (in dollars)</label>
                 <div class="input-group">
                   <div class="input-group-addon">$</div>
-                  <input type="number" class="form-control" id="tipAmount" value="2.50">
+                  <input type="number" class="form-control" id="tipAmount" value="3.75">
                 </div>
               </div>
             </div>
@@ -89,7 +89,7 @@
           document.getElementById('btn-buy').addEventListener('click', function(e){
             handler.open({
               name: 'Climate Cents',
-              description: 'Donation to <%= get_project_campaigns(@project).first.name %>',
+              description: 'Donation to <%= get_partner(@project.partner_id).name %>',
               amount: Number(document.getElementById('totalDonation').value)
             });
             e.preventDefault();
