@@ -651,9 +651,86 @@ iframe {
     height: auto;
     padding-bottom: 4vh;
   }
+
+  // projects
+  section#home-projects-section {
+    div#home-projects-section-header {
+      hgroup {
+        h2, h3 {
+          height: auto;
+        }
+        h2 {
+          min-height: 55px;
+        }
+        h3 {
+          min-height: 30px;
+        }
+      }
+    }
+  }
+
+  // join the fight
+  section#join-the-fight {
+    height: auto;
+    min-height: 400px;
+    padding-bottom: 2vh;
+    div#join-the-fight-header {
+      hgroup {
+        h2 {
+          height: auto;
+          min-height: 55px;
+          padding: 4vh 4vw;
+        }
+      }
+    }
+  }
+
+  // build with us
+  section#build-with-us {
+    padding-bottom: 2vh;
+    div#build-with-us-header {
+      hgroup {
+        h2, h5 {
+          height: auto;
+        }
+        h2 {
+          min-height: 55px;
+        }
+        h5 {
+          min-height: 30px;
+          padding-top: 2vh;
+        }
+      }
+    }
+    div#build-with-us-cta {
+      padding-top: 3vh;
+    }
+  }
+
+  // keep in touch
+  section#keep-in-touch {
+    height: auto;
+    min-height: 250px;
+  }
+
+  // footer
+  footer {
+    height: auto;
+    min-height: 540px;
+    div.left-column {
+      margin-left: 10%;
+      width: 20%;
+    }
+    div.right-column {
+      margin-left: 5%;
+      width: 30%;
+    }
+
+  }
 }
 
-
+// under 850px default
+// --------------------------------------------------
 @media all and (max-width: 850px) {
   nav span {
     float: right;
@@ -692,7 +769,54 @@ iframe {
   }
 
   // join the fight
+  section#join-the-fight {
+    div#join-the-fight-header {
+      hgroup {
+        h2 {
+          padding: 2vh 2vw;
+        }
+      }
+    }
+    div#join-the-fight-cta {
+      article {
+        h5 {
+          margin: 6vh 4vw;
+        }
+        a {
+          margin: 6vh 15vw;
+        }
+      }
+    }
+  }
 
+  // build with us
+  section#build-with-us {
+    div#build-with-us-header {
+      hgroup {
+        h2 {
+          padding-top: 6vh;
+        }
+      }
+    }
+    div#build-with-us-cta {
+      padding-top: 2vh;
+    }
+  }
+
+  // footer
+  footer {
+    height: auto;
+    min-height: 540px;
+    div.left-column {
+      margin-left: 2%;
+      width: 25%;
+    }
+    div.right-column {
+      margin-left: 5%;
+      width: 60%;
+    }
+
+  }
 }
 
 // ==================================================
