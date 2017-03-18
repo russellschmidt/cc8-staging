@@ -1,20 +1,31 @@
-<h2>Thanks, you donated <strong><%= number_to_currency((params[:totalDonation].to_f)/100) %></strong>!</h2>
-<h3>Your contribution will remove the equivalent of
-  <%= pluralize(@co2.to_i, 'pound', 'pounds') %> of carbon dioxide (CO2) from the atmosphere
-</h3>
-<div>
+<div class="container-fluid charges-create">
+  <div class="jumbotron">
+    <h2>Thanks, you donated <strong><%= number_to_currency((params[:totalDonation].to_f)/100) %></strong>!</h2>
+    <h3>Your contribution will remove the equivalent of
+      <%= pluralize(@co2.to_i, 'pound', 'pounds') %> of carbon dioxide (CO2) from the atmosphere
+    </h3>
+  </div>
 
-<script>
-// Only works after `FB.init` is called
-function myFacebookLogin() {
-  FB.login(function(){
-    FB.api('/me/feed', 'post', {message: 'My donation to Climate Cents removed <%= @co2.to_i %> pounds of CO2 to help fight global warming http://www.climatecents.org'});},
-    {scope: 'publish_actions'});
-}
-</script>
-<button onclick="myFacebookLogin()" class="btn btn-lrg btn-primary"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>&nbsp;Share on Facebook!</button>
+  <script>
+  // Only works after `FB.init` is called
+  function myFacebookLogin() {
+    FB.login(function(){
+      FB.api('/me/feed', 'post', {message: 'My donation to Climate Cents removed <%= @co2.to_i %> pounds of CO2 to help fight global warming http://www.climatecents.org'});},
+      {scope: 'publish_actions'});
+  }
+  </script>
+  <div class="row">
+    <div class="col-xs-3 col-xs-offset-1 center">
+      <button onclick="myFacebookLogin()" class="btn btn-lrg btn-primary"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>&nbsp;Share on Facebook!</button>
+    </div>
+    <div class="col-xs-3 center">
+      <a href="https://twitter.com/share" class="twitter-share-button " data-text="I helped fight climate change by donating to offset <%= @co2.to_i %> pounds of CO2!" data-url="http://climatecents.org" data-via="climatecents" data-hashtags="climatecents" data-lang="en" data-show-count="false" data-size="large">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+    <div class="col-xs-3 center">
+      <%= link_to 'Home', root_path, class: "btn btn-success btn-large" %>
+    </div>
+  </div>
 
-<a href="https://twitter.com/share" class="twitter-share-button " data-text="I helped fight climate change by donating to offset <%= @co2.to_i %> pounds of CO2!" data-url="http://climatecents.org" data-via="climatecents" data-hashtags="climatecents" data-lang="en" data-show-count="false" data-size="large">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <hr />
 
-<hr />
-<%= link_to 'Home', root_path, class: "btn btn-link" %>
+</div>
