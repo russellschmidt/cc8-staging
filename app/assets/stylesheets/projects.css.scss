@@ -312,14 +312,63 @@
 // RESPONSIVE FUN -----------------------------------
 // ==================================================
 
+// under 1400px default
+// --------------------------------------------------
+@media all and (max-width: 1399px) {
+  .main.project-page {
+    nav li#nav-logo {
+      width: 236px;
+      max-width: 236px;
+      margin-right: 0;
+    }
+
+    nav span {
+      float: right;
+      padding: 1vh 6vw 0 0;
+    }
+
+    .project-header h1 {
+      height: auto;
+      min-height: 60px;
+    }
+
+    .project-header h2 {
+      height: auto;
+      min-height: 60px;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .main.project-page {
+    nav li#nav-logo {
+
+      .project-header h1 {
+        font-size: 3rem;
+      }
+
+      .project-header h2 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
 // ==================================================
 // media query for ipad pro portrait landscape
 @media screen
     and (max-device-width : 1399px)
     and (orientation : landscape) {
+  .main.project-page {
 
+    .project-header h1 {
+      font-size: 3rem;
+    }
 
-
+    .project-header h2 {
+      font-size: 2rem;
+    }
+  }
 // end of landscape design 1025-1399px
 }
 
@@ -330,8 +379,16 @@
 @media screen
     and (max-device-width : 1399px)
     and (orientation : portrait) {
+  .main.project-page {
 
+    .project-header h1 {
+      font-size: 3rem;
+    }
 
+    .project-header h2 {
+      font-size: 2rem;
+    }
+  }
 // end of portrait design 1025-1399px
 }
 // ==================================================
@@ -339,7 +396,16 @@
 @media screen
     and (max-device-width : 1024px)
     and (orientation : landscape) {
+  .main.project-page {
 
+    .project-header h1 {
+      font-size: 3rem;
+    }
+
+    .project-header h2 {
+      font-size: 2rem;
+    }
+  }
 // end of ipad landscape
 }
 // ==================================================
@@ -349,7 +415,34 @@
 // media query for 768px wide portrait
 @media screen and (min-device-width : 768px)
     and (orientation : portrait) {
+  .main.project-page {
 
+    nav li.nav-top {
+      display: none;
+    }
+
+    .project-header {
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+
+      h2 {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        padding: 0 3vw;
+      }
+
+      h6 {
+        margin-top: 14vh;
+      }
+    }
+
+    .project-detail {
+
+    }
+  }
 // end of ipad portait
 }
 
@@ -358,7 +451,28 @@
 @media screen and (min-device-width : 736px)
     and (-webkit-device-pixel-ratio: 3)
     and (orientation : landscape) {
+  .main.project-page {
+    nav li.nav-top {
+      display: none;
+    }
+    .project-header {
 
+      h1 {
+        font-size: 2.5rem;
+      }
+
+
+      h2 {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        padding: 0 3vw;
+      }
+
+      h6 {
+        margin-top: 14vh;
+      }
+    }
+  }
 // end of 6+/7+ landscape
 }
 
@@ -368,21 +482,153 @@
 @media screen and (min-device-width : 414px)
     and (-webkit-device-pixel-ratio: 3)
     and (orientation : portrait) {
+  .main.project-page {
+    nav li.nav-top {
+      display: none;
+    }
+    .project-header {
 
+      h1 {
+        font-size: 2.5rem;
+      }
+
+
+      h2 {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        padding: 0 3vw;
+      }
+
+      h6 {
+        margin-top: 14vh;
+      }
+    }
+  }
 // end of 6+/7+ portait
 }
 
 // ==================================================
 // iphone 5/6 landscape mode
 @media screen and (max-width: 667px) and (orientation: landscape) {
+  .main.project-page {
+    nav li.nav-top {
+      display: none;
+    }
+    .project-header {
 
+      h1 {
+        font-size: 2.5rem;
+      }
+
+
+      h2 {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        padding: 0 3vw;
+      }
+
+      h6 {
+        margin-top: 14vh;
+      }
+    }
+  }
 // end of 5/6 landscape
 }
 
 // Media Queries
 // iphone 5/6 in portrait
 @media screen and (max-width: 375px) and (orientation: portrait) {
+  .main.project-page {
+    margin-bottom: 40px;
+    section.hero-section {
+      height: 95vh;
+    }
+    nav li.nav-top {
+      display: none;
+    }
+    .project-header {
 
+      h1 {
+        font-size: 2.5rem;
+      }
+
+
+      h2 {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        padding: 0 3vw;
+      }
+
+      h6 {
+        &:first-child {
+          margin-top: 12vh;
+          font-size: 1rem;
+          line-height: 1.5;
+          height: 2rem;
+        }
+      }
+      .hero-partner {
+        margin-top: 5vh;
+        h6 {
+          margin-top: 0;
+        }
+      }
+      .hero-header-btn {
+        margin-top: 4vh;
+      }
+
+      .partner-logo {
+        img {
+          max-height: 80px;
+        }
+      }
+    }
+  }
+  .project-detail {
+    .tab {
+      margin: 0;
+      text-align: center;
+    }
+    .tab-links {
+      margin: 0 1vw;
+      width: 80px;
+      height: 18px;
+      font-size: 1.4rem;
+      line-height: 1.5;
+    }
+    .active {
+      padding-bottom: 5px;
+      border-bottom: 3px solid #3EC631;
+    }
+    .tab-links:last-child {
+      display: block;
+      box-sizing: border-box;
+      width: 120px;
+      height: 38px;
+      font-size: 1.4rem;
+      line-height: 1.5;
+      color: #3EC631;
+      padding: 7px 14px;
+      margin: 5% auto 2%;
+      span {
+        padding-right: 5px;
+        height: 16px;
+      }
+    }
+    .tab-content {
+      margin: 3% 3% 105px;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      h4 {
+        margin: 0 auto;
+        padding: 0;
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 1.25;
+        letter-spacing: normal;
+      }
+    }
+  }
 // end of 5/6 portait
 }
 
