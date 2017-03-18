@@ -588,7 +588,7 @@
     and (orientation : landscape) {
   .main.project-page {
     section.hero-section {
-      height: 65vh;
+      height: 60vh;
     }
 
     .project-header {
@@ -641,7 +641,7 @@
       border-bottom: 3px solid #3EC631;
     }
     .tab-links:last-child {
-      display: block;
+      display: inline;
       width: 120px;
       height: 38px;
       font-size: 1.4rem;
@@ -654,9 +654,10 @@
       }
     }
     .tab-content {
-      margin: 3% 3% 105px;
+      margin: 3% 3% 60px;
       font-size: 1.25rem;
       line-height: 1.5;
+      min-height: auto;
       h4 {
         margin: 0 auto;
         padding: 0;
