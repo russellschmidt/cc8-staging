@@ -893,6 +893,20 @@ iframe {
     and (-webkit-device-pixel-ratio: 3)
     and (orientation : landscape) {
 
+  body {
+    width: 105%;
+  }
+
+  section, section#hero-section,
+      section#chip-in-section,
+      section#home-projects-section,
+      section#join-the-fight,
+      section#build-with-us,
+      section#keep-in-touch {
+    padding-right: 3vw;
+    padding-left: 3vw;
+  }
+
 // end of 6+/7+ landscape
 }
 
