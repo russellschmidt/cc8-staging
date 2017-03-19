@@ -962,17 +962,170 @@ iframe {
 }
 
 // ==================================================
-// iphone 5/6 landscape mode
+// iphone 6 landscape mode
 @media screen and (max-width: 667px) and (orientation: landscape) {
+  $top-headline: 3.5rem;
+  $sub-headline: 2.2rem;
+  $single-page-height: 100vh;
 
-// end of 5/6 landscape
+  section, section#hero-section,
+      section#chip-in-section,
+      section#home-projects-section,
+      section#join-the-fight,
+      section#build-with-us,
+      section#keep-in-touch {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  section#hero-section {
+    height: $single-page-height;
+    header {
+      div#hero-header {
+        margin-top: 8vh;
+        h1 {
+          font-size: $top-headline;
+          margin-bottom: 1rem;
+        }
+        h2 {
+          font-size: $sub-headline;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  section#chip-in-section {
+    div#chip-in-section-header {
+      hgroup {
+        h2 {
+          font-size: $top-headline;
+        }
+        h3 {
+          font-size: $sub-headline;
+          &:last-child {
+            margin-top: 1vh;
+          }
+        }
+      }
+    }
+  }
+
+  section#home-projects-section {
+    div#home-projects-section-header {
+      hgroup {
+        h2 {
+          font-size: $top-headline;
+        }
+        h3 {
+          font-size: $sub-headline;
+          &:last-child {
+            margin-top: 2vh;
+          }
+        }
+      }
+    }
+    div#home-projects-section-articles {
+      padding-top: 0;
+    }
+  }
+
+  section#join-the-fight {
+    height: $single-page-height;
+    div#join-the-fight-header {
+      hgroup {
+        h2 {
+          font-size: $top-headline;
+        }
+      }
+    }
+    div#join-the-fight-cta {
+      article {
+        h5 {
+          font-size: $sub-headline;
+          max-width: 90vw;
+        }
+        a {
+          margin: 6vh 28vw;
+        }
+      }
+    }
+  }
+
+  section#build-with-us {
+    height: $single-page-height;
+    div#build-with-us-header {
+      padding-top: 82px;
+      hgroup {
+        h2 {
+          padding-top: 0;
+          font-size: $top-headline;
+          margin: 20px 1vw 10px;
+        }
+        h5 {
+          font-size: $sub-headline;
+          margin: 19px 1vw 10px;
+        }
+      }
+    }
+    div#build-with-us-cta {
+      padding-top: 29px;
+    }
+  }
+
+  section#keep-in-touch {
+    margin-top: 0;
+    padding-top: 82px;
+    height: $single-page-height;
+    div#keep-in-touch-header {
+      margin: 0;
+    }
+  }
+
+  footer {
+    height: $single-page-height;
+    min-height: auto;
+    div.left-column, div.right-column {
+      margin-top: 0;
+      padding-top: 12vh;
+      h4 {
+        height: auto;
+        width: auto;
+      }
+      ul {
+        margin: 3vh 0;
+      }
+      p {
+        width: auto;
+        height: auto;
+        &:last-child {
+          margin-top: 4vh;
+        }
+      }
+    }
+  }
+
+// end of 6 landscape
 }
 
 // Media Queries
-// iphone 5/6 in portrait
+// iphone 6 in portrait
 @media screen and (max-width: 375px) and (orientation: portrait) {
 
-// end of 5/6 portait
+// end of 6 portait
 }
 
+// ==================================================
+// iphone 6 landscape mode
+@media screen and (max-width: 568px) and (orientation: landscape) {
+
+// end of 6 landscape
+}
+
+// Media Queries
+// iphone 6 in portrait
+@media screen and (max-width: 320px) and (orientation: portrait) {
+
+// end of 6 portait
+}
 
