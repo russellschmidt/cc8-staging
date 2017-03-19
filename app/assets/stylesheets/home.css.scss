@@ -829,14 +829,14 @@ iframe {
     and (max-device-width : 1399px)
     and (orientation : landscape) {
   // main
-  body {
-    padding-left: 10vw;
-  }
 
+  section {
+    padding: 0 1vw;
+  }
   // top nav
 
   nav span {
-    padding-right: 5vw;
+    padding-right: 3vw;
   }
 
 
@@ -851,9 +851,8 @@ iframe {
     and (max-device-width : 1399px)
     and (orientation : portrait) {
 
-  section {
-    padding-left: 7vw;
-    padding-right: 7vw;
+  nav span {
+    padding-top: 0.5vh;
   }
 
 // end of portrait design 1025-1399px
@@ -864,6 +863,16 @@ iframe {
     and (max-device-width : 1024px)
     and (orientation : landscape) {
 
+  section, section#hero-section,
+      section#chip-in-section,
+      section#home-projects-section,
+      section#join-the-fight,
+      section#build-with-us,
+      section#keep-in-touch {
+    padding-right: 10vw;
+    padding-left: 0;
+  }
+
 // end of ipad landscape
 }
 // ==================================================
@@ -873,6 +882,7 @@ iframe {
 // media query for 768px wide portrait
 @media screen and (min-device-width : 768px)
     and (orientation : portrait) {
+
 
 // end of ipad portait
 }
