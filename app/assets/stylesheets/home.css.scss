@@ -810,6 +810,10 @@ iframe {
     div.left-column {
       margin-left: 2%;
       width: 25%;
+      address h5 {
+        font-size: 1.5rem;
+        line-height: 1.25;
+      }
     }
     div.right-column {
       margin-left: 5%;
@@ -824,7 +828,16 @@ iframe {
 @media screen
     and (max-device-width : 1399px)
     and (orientation : landscape) {
+  // main
+  body {
+    padding-left: 10vw;
+  }
 
+  // top nav
+
+  nav span {
+    padding-right: 5vw;
+  }
 
 
 // end of landscape design 1025-1399px
@@ -838,7 +851,10 @@ iframe {
     and (max-device-width : 1399px)
     and (orientation : portrait) {
 
-
+  section {
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
 
 // end of portrait design 1025-1399px
 }
