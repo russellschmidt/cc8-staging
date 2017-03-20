@@ -1,13 +1,7 @@
 module HomeHelper
   def get_location_partners(location)
     # Partner.where(location_id: location.id)
-
-    @partners = Partner.where(location_id: location.id).joins(projects: :campaigns).order("end_date asc")
-
-  end
-
-  def order_partner_by_campaign_expiry(location)
-
+    Partner.where(location_id: location.id).joins(projects: :campaigns).order("end_date asc")
   end
 
   def get_partner_projects(partner)

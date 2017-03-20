@@ -1455,7 +1455,175 @@ iframe {
 // Media Queries
 // iphone 5 in portrait
 @media screen and (max-width: 320px) and (orientation: portrait) {
+  $top-headline: 3rem;
+  $sub-headline: 2rem;
+  $top-headline-line-height: 1.25;
+  $sub-headline-line-height: 1.25;
+  $single-page-height: 100vh;
 
+  section#hero-section {
+    height: $single-page-height;
+    header {
+      nav {
+        ul {
+          padding: 0;
+          li#nav-logo {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            padding: 0;
+          }
+        }
+      }
+      div#hero-header {
+        margin-top: 28vh;
+        h1 {
+          font-size: $top-headline;
+          line-height: $top-headline-line-height;
+          margin: 0 auto 6vh;
+        }
+        h2 {
+          font-size: $sub-headline;
+          line-height: $sub-headline-line-height;
+          width: 90%;
+          margin: 0 auto 4vh;
+        }
+      }
+    }
+  }
+
+  section#chip-in-section {
+    div#chip-in-section-header {
+      hgroup {
+        h2 {
+          font-size: $top-headline;
+          line-height: $top-headline-line-height;
+        }
+        h3 {
+          font-size: $sub-headline;
+          line-height: $sub-headline-line-height;
+          &:last-child {
+            margin-top: 1vh;
+          }
+        }
+      }
+    }
+  }
+
+  section#home-projects-section {
+    div#home-projects-section-header {
+      hgroup {
+        h2 {
+          font-size: $top-headline;
+          line-height: $top-headline-line-height;
+        }
+        h3 {
+          font-size: $sub-headline;
+          line-height: $sub-headline-line-height;
+          &:last-child {
+            margin-top: 2vh;
+          }
+        }
+      }
+    }
+    div#home-projects-section-articles {
+      padding-top: 0;
+    }
+  }
+
+  section#join-the-fight {
+    height: $single-page-height;
+    div#join-the-fight-header {
+      padding-top: 5vh;
+      hgroup {
+        h2 {
+          font-size: $top-headline;
+          line-height: $top-headline-line-height;
+        }
+      }
+    }
+    div#join-the-fight-cta {
+      article {
+        h5 {
+          font-size: $sub-headline;
+          line-height: $sub-headline-line-height;
+          margin: 0;
+          padding: 3vh 2vw 1vh;
+          height: auto;
+        }
+        a {
+          margin: 0 15vw 6vh;
+        }
+      }
+    }
+  }
+
+  section#build-with-us {
+    height: $single-page-height *.7;
+    div#build-with-us-header {
+      padding-top: 9vh;
+      hgroup {
+        h2 {
+          padding-top: 0;
+          font-size: $top-headline;
+          margin: 2vh 1vw 0;
+        }
+        h5 {
+          font-size: $sub-headline;
+          margin: 0 1vw 0;
+        }
+      }
+    }
+    div#build-with-us-cta {
+      padding-top: 29px;
+    }
+  }
+
+  section#keep-in-touch {
+    margin-top: 0;
+    padding-top: 9vh;
+    height: $single-page-height *.6;
+    div#keep-in-touch-header {
+      margin: 0;
+      hgroup {
+        h2 {
+          font-size: $top-headline;
+          line-height: $top-headline-line-height;
+        }
+        h3, h5 {
+          font-size: $sub-headline;
+          line-height: $sub-headline-line-height;
+          height: auto;
+          min-height: 39px;
+        }
+      }
+    }
+  }
+
+  footer {
+    height: $single-page-height;
+    min-height: auto;
+    div.left-column, div.right-column {
+      margin-top: 0;
+      padding-top: 6vh;
+      h4 {
+        height: auto;
+        width: auto;
+      }
+      ul {
+        margin: 4vh auto;
+        width: 90%;
+      }
+      p {
+        width: 90%;
+        height: auto;
+        &:last-child {
+          margin-top: 4vh;
+        }
+      }
+    }
+  }
 // end of 5 portait
 }
 
