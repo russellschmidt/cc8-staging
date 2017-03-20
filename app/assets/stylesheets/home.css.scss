@@ -1420,7 +1420,7 @@ iframe {
 
   section#keep-in-touch {
     margin-top: 0;
-    padding-top: 82px;
+    padding-top: 9vh;
     height: $single-page-height;
     div#keep-in-touch-header {
       margin: 0;
@@ -1432,19 +1432,19 @@ iframe {
     min-height: auto;
     div.left-column, div.right-column {
       margin-top: 0;
-      padding-top: 12vh;
+      padding-top: 6vh;
       h4 {
         height: auto;
         width: auto;
       }
       ul {
-        margin: 3vh 0;
+        margin: 2vh 0;
       }
       p {
         width: auto;
         height: auto;
         &:last-child {
-          margin-top: 4vh;
+          margin-top: 3vh;
         }
       }
     }
