@@ -537,7 +537,7 @@
         font-size: 1.4rem;
         line-height: 1.5;
         padding: 7px 14px;
-        margin: 5% auto 2%;
+        margin: 2vw auto;
         span {
           padding-right: 5px;
           height: 16px;
@@ -553,6 +553,47 @@
           font-size: 2rem;
           line-height: 1.25;
           letter-spacing: normal;
+        }
+      }
+    }
+
+    .footer-cta-inner {
+      .left-column {
+        margin-left: 3vw;
+        .top-p-cta {
+          font-size: 1.2rem;
+          margin-top: 3vh;
+        }
+        .bottom-p-cta {
+          font-size: 1.8rem;
+        }
+      }
+      .center-column {
+        ul {
+          margin: 3vh auto 1vh auto;
+        }
+        li {
+          font-size: 1.2rem;
+          span {
+            font-size: 1.8rem;
+          }
+        }
+        #project-progress-bar {
+          .progress-bar-success {
+          }
+        }
+      }
+      .right-column {
+        margin-right: 3vw;
+        button {
+          margin-top: 3vh;
+          width: 85%;
+          max-width: 150px;
+          height: 4.5rem;
+          border-radius: 4px;
+          font-size: 1.6rem;
+          text-align: center;
+          line-height: 1.25;
         }
       }
     }
