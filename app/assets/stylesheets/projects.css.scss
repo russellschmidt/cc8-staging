@@ -8,7 +8,7 @@
   }
 
   nav {
-    margin: 30px 0 0 0;
+    margin: 3rem 0 0 0;
     padding: 0;
   }
 
@@ -22,9 +22,9 @@
     width: 150px;
     height: 20px;
     font-family: Oxygen;
-    font-size: 16px;
+    font-size: 1.6rem;
     text-align: right;
-    line-height: 20px;
+    line-height: 1.25;
     font-weight: 300;
 
     a {
@@ -46,266 +46,269 @@
     margin-left: 30px;
     margin-right: 556px;
   }
-}
 
-.project-header {
 
-  h6 {
-    margin: 170px auto 0 auto;
-    height: 23px;
-    font-family: "Source Sans Pro";
-    font-size: 1.8rem; /* 18px/10px */
-    font-weight: 300;
-    line-height: 1.2777; /* 23/18 */
-    color: #FFFFFF;
-    text-shadow: 0 2px 2px 0 rgba(6,57,64,0.7);
-    text-transform: uppercase;
-    text-align: center;
-    img {
-      width: 1.2em;
-      margin-right: 0.5rem;
-    }
-  }
-  h1 {
-    margin-top: 0;
-    height: 60px;
-    font-family: Oxygen;
-    font-size: 4.8rem; /* 48px/10px */
-    text-align: center;
-    line-height: 1.25; /* 60px / 48px */
-    color: #FFFFFF;
-    text-shadow: 0 2px 2px 0 rgba(6,57,64,0.7);
-  }
-  h2 {
-    min-height: 31px;
-    padding: 0 20%;
-    font-family: Oxygen;
-    font-size: 2.4rem; /* 24px/ 10px */
-    font-weight: 300;
-    text-align: center;
-    line-height: 1.2916; /* 31 / 24 */
-    color: #FFFFFF;
-    text-shadow: 0 2px 2px 0 #063940;
-  }
-  .hero-header-btn {
-    text-align: center;
-    margin-top: 44px;
-    button {
-      width: 200px;
-      height: 40px;
-      background-color: rgba(50,58,69,0.9);
-      border: 1px solid rgba(50,58,69,0.9);
-      border-radius: 30px;
+  .project-header {
+
+    h6 {
+      margin: 170px auto 0 auto;
+      height: 23px;
       font-family: "Source Sans Pro";
-      font-size: 18px;
-      font-weight: 600;
-      text-align: center;
-      line-height: 23px;
+      font-size: 1.8rem; /* 18px/10px */
+      font-weight: 300;
+      line-height: 1.2777; /* 23/18 */
       color: #FFFFFF;
-      span {
-        padding-right: 0.5rem;
+      text-shadow: 0 2px 2px 0 rgba(6,57,64,0.7);
+      text-transform: uppercase;
+      text-align: center;
+      img {
+        width: 1.2em;
+        margin-right: 0.5rem;
+      }
+    }
+    h1 {
+      margin-top: 0;
+      height: 60px;
+      font-family: Oxygen;
+      font-size: 4.8rem; /* 48px/10px */
+      text-align: center;
+      line-height: 1.25; /* 60px / 48px */
+      color: #FFFFFF;
+      text-shadow: 0 2px 2px 0 rgba(6,57,64,0.7);
+    }
+    h2 {
+      min-height: 31px;
+      padding: 0 20%;
+      font-family: Oxygen;
+      font-size: 2.4rem; /* 24px/ 10px */
+      font-weight: 300;
+      text-align: center;
+      line-height: 1.2916; /* 31 / 24 */
+      color: #FFFFFF;
+      text-shadow: 0 2px 2px 0 #063940;
+    }
+    .hero-header-btn {
+      text-align: center;
+      margin-top: 44px;
+      button {
+        width: 200px;
+        height: 40px;
+        background-color: rgba(50,58,69,0.9);
+        border: 1px solid rgba(50,58,69,0.9);
+        border-radius: 30px;
+        font-family: "Source Sans Pro";
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-align: center;
+        line-height: 1.25;
+        color: #FFFFFF;
+        span {
+          padding-right: 0.5rem;
+        }
+      }
+    }
+    .hero-partner {
+      margin: 0;
+      h6 {
+        margin-top: 64px;
+        height: 15px;
+        font-family: Oxygen;
+        font-size: 1.2rem;      // 12px / 10px
+        text-align: center;
+        line-height: 1.5;       // 15px / 10px
+        letter-spacing: 4px;
+        color: #FFFFFF;
+        text-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+      }
+      p {
+        margin-top: 8px;
+        height: 22px;
+        font-family: Oxygen;
+        font-size: 1.8rem;      // 18px/10px
+        font-weight: standard;
+        text-align: center;
+        line-height: 1.2222rem; // 22px / 18px
+        color: #FFFFFF;
+        text-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+      }
+    }
+    .partner-logo {
+      margin: 20px 0 0 0;
+      text-align: center;
+      img {
+        max-height: 120px;
       }
     }
   }
-  .hero-partner {
-    margin: 0;
-    h6 {
-      margin-top: 64px;
-      height: 15px;
-      font-family: Oxygen;
-      font-size: 1.2rem;      // 12px / 10px
-      text-align: center;
-      line-height: 1.5;       // 15px / 10px
-      letter-spacing: 4px;
-      color: #FFFFFF;
-      text-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
-    }
-    p {
-      margin-top: 8px;
-      height: 22px;
-      font-family: Oxygen;
-      font-size: 1.8rem;      // 18px/10px
-      font-weight: standard;
-      text-align: center;
-      line-height: 1.2222rem; // 22px / 18px
-      color: #FFFFFF;
-      text-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
-    }
-  }
-  .partner-logo {
-    margin: 20px 0 0 0;
-    text-align: center;
-    img {
-      max-height: 120px;
-    }
-  }
-}
 
-.project-detail {
-  .tab {
-    margin: 73px 300px;
-  }
-  .tab-links {
-    margin: 0 36px;
-    width: 100px;
-    height: 20px;
-    font-family: Oxygen;
-    font-size: 16px;
-    line-height: 20px;
-    color: #063940;
-    &:hover, {
-      text-decoration: none;
+  .project-detail {
+    .tab {
+      margin: 73px 300px;
+    }
+    .tab-links {
+      margin: 0 36px;
+      width: 100px;
+      height: 20px;
+      font-family: Oxygen;
+      font-size: 1.6rem;
+      line-height: 1.25;
+      color: #063940;
+      &:hover, {
+        text-decoration: none;
+        padding-bottom: 10px;
+        border-bottom: 4px solid #3EC631;
+      }
+      &:visited, &:active, &:link {
+        text-decoration: none;
+      }
+    }
+    .active {
       padding-bottom: 10px;
       border-bottom: 4px solid #3EC631;
     }
-    &:visited, &:active, &:link {
-      text-decoration: none;
-    }
-  }
-  .active {
-    padding-bottom: 10px;
-    border-bottom: 4px solid #3EC631;
-  }
-  .tab-links:last-child {
-    box-sizing: border-box;
-    width: 102px;
-    height: 38px;
-    border: 1px solid #3EC631;
-    border-radius: 4px;
-    font-family: Oxygen;
-    font-size: 14px;
-    text-align: center;
-    line-height: 17px;
-    color: #3EC631;
-    padding: 10px 21px;
-    span {
-      padding-right: 5px;
-      height: 16px;
-    }
-  }
-  .tab-content {
-    margin: 3% 29.28% 7.142% 29.28%;
-    font-family: Oxygen;
-    font-size: 18px;
-    line-height: 32px;
-    color: #6E6E6E;
-    min-height: 250px;
-    h4 {
+    .tab-links:last-child {
+      box-sizing: border-box;
+      width: 102px;
+      height: 38px;
+      border: 1px solid #3EC631;
+      border-radius: 4px;
       font-family: Oxygen;
-      font-size: 36px;
-      font-weight: bold;
-      line-height: 44px;
-      letter-spacing: -1px;
-      color: #063940;
+      font-size: 1.4rem;
       text-align: center;
+      line-height: 1.25;
+      color: #3EC631;
+      padding: 10px 21px;
+      span {
+        padding-right: 5px;
+        height: 16px;
+      }
+    }
+    .tab-content {
+      margin: 3% 29.28% 7.142% 29.28%;
+      font-family: Oxygen;
+      font-size: 1.8rem;
+      line-height: 1.6;
+      color: #6E6E6E;
+      min-height: 250px;
+      h4 {
+        font-family: Oxygen;
+        font-size: 3.6rem;
+        font-weight: bold;
+        line-height: 1.25;
+        letter-spacing: -1px;
+        color: #063940;
+        text-align: center;
+      }
     }
   }
-}
 
-.footer-cta {
-  height: 100px;
-  width: 100%;
-  opacity: 0.95;
-  background: radial-gradient(circle, #26484D 0%, #063940 54.42%, #063940 100%);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  color: #fff;
-  div {
-    margin: 0;
-    padding: 0;
+  .footer-cta {
+    height: 100px;
+    width: 100%;
+    opacity: 0.95;
+    background: radial-gradient(circle, #26484D 0%, #063940 54.42%, #063940 100%);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    div {
+      margin: 0;
+      padding: 0;
+    }
   }
-}
 
-.footer-cta-inner {
-  display: flex;
-  flex-flow: no-wrap row;
-  justify-content: center;
-  div {
-    width: 33%;
-    text-align: center;
-  }
-  div:first-child {
-    margin-left: 16.667%;
-    .top-p-cta {
-      margin-top: 30px;
-      margin-bottom: 0;
-      font-family: "Source Sans Pro";
-      font-size: 12px;
-      font-weight: 600;
-      text-align: center;
-      line-height: 15px;
-      color: #FFFFFF;
-      text-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
-    }
-    .bottom-p-cta {
-      font-family: "Source Sans Pro";
-      font-size: 21px;
-      font-weight: bold;
-      text-align: center;
-      line-height: 27px;
-      color: #FFFFFF;
-      text-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
-    }
-  }
-  div:last-child {
-    margin-right: 16.667%
-  }
-  div ul {
-    list-style-type: none;
+  .footer-cta-inner {
     display: flex;
-    flex-flow: row no-wrap;
-    justify-content: space-between;
-    padding: 0;
-    margin: 26px auto 8px auto;
-    max-width: 300px;
-  }
-  div li {
-    display: inline;
-    font-family: "Source Sans Pro";
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 18px;
-    color: #FFFFFF;
-    text-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
-    span {
-      font-size: 20px;
-      font-weight: 600;
-      text-align: right;
-      line-height: 25px;
-      color: #FFFFFF;
-      text-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+    flex-flow: no-wrap row;
+    justify-content: center;
+    div {
+      width: 33%;
+      text-align: center;
     }
-  }
-  #project-progress-bar {
-    text-align: center;
-    margin:0;
-    width: 300px;
-    height: 11px;
-    border-radius: 5px;
-    margin: 0 auto;
-    background-color: #063940;
-    .progress-bar-success {
-      margin-right: 0;
-      margin-left: 0;
-      background-color: #3EC631;
+    .left-column {
+      margin-left: 16.667%;
+      .top-p-cta {
+        margin-top: 30px;
+        margin-bottom: 0;
+        font-family: "Source Sans Pro";
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-align: center;
+        line-height: 1.333;
+        color: #FFFFFF;
+        text-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+      }
+      .bottom-p-cta {
+        font-family: "Source Sans Pro";
+        font-size: 2.1rem;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.25;
+        color: #FFFFFF;
+        text-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+      }
     }
-  }
-  button {
-    margin-top: 26px;
-    box-sizing: border-box;
-    width: 224px;
-    height: 48px;
-    background-color: #3EC631;
-    border: 2px solid rgba(6,57,64,0.1);
-    border-radius: 4px;
-    font-family: Oxygen;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 20px;
-    color: #FFFFFF;
+    .center-column {
+      ul {
+        list-style-type: none;
+        display: flex;
+        flex-flow: row no-wrap;
+        justify-content: space-between;
+        padding: 0;
+        margin: 26px auto 8px auto;
+        max-width: 300px;
+      }
+      li {
+        display: inline;
+        font-family: "Source Sans Pro";
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.333;
+        color: #FFFFFF;
+        text-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+        span {
+          font-size: 2rem;
+          font-weight: 600;
+          text-align: right;
+          line-height: 1.25;
+          color: #FFFFFF;
+          text-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+        }
+      }
+      #project-progress-bar {
+        text-align: center;
+        margin: 0;
+        width: 300px;
+        height: 11px;
+        border-radius: 5px;
+        margin: 0 auto;
+        background-color: #063940;
+        .progress-bar-success {
+          margin-right: 0;
+          margin-left: 0;
+          background-color: #3EC631;
+        }
+      }
+    }
+    .right-column {
+      margin-right: 16.667%;
+      button {
+        margin-top: 26px;
+        box-sizing: border-box;
+        width: 224px;
+        height: 48px;
+        background-color: #3EC631;
+        border: 2px solid rgba(6,57,64,0.1);
+        border-radius: 4px;
+        font-family: Oxygen;
+        font-size: 1.6rem;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.25;
+        color: #FFFFFF;
+      }
+    }
   }
 }
 
@@ -315,7 +318,7 @@
 // under 1400px default
 // --------------------------------------------------
 @media all and (max-width: 1399px) {
-  .main.project-page {
+  .project-page {
 
     nav li#nav-logo {
       width: 236px;
@@ -355,71 +358,123 @@
       }
 
       .partner-logo {
+        margin-top: 3vh;
         img {
           max-height: 80px;
         }
       }
     }
-  }
-  .project-detail {
-    .tab {
-      margin: 4vh 0 0 0;
-      text-align: center;
-    }
-    .tab-links {
-      margin: 0 1vw;
-      width: 80px;
-      height: 3rem;
-      font-size: 2rem;
-      line-height: 1.5;
-    }
-
-    .tab-links:last-child {
-      display: inline;
-      width: 80;
-      height: 38px;
-      font-size: 1.4rem;
-      line-height: 1.5;
-      padding: 7px 14px;
-      margin: 5% auto 2%;
-      span {
-        padding-right: 5px;
-        height: 16px;
+    .project-detail {
+      .tab {
+        margin: 4vh 0 0 0;
+        text-align: center;
       }
-    }
-    .tab-content {
-      margin: 3% 3% 105px;
-      font-size: 1.25rem;
-      line-height: 1.5;
-      h4 {
-        margin: 0 auto;
-        padding: 0;
+      .tab-links {
+        margin: 0 1vw;
+        width: 80px;
+        height: 3rem;
         font-size: 2rem;
-        line-height: 1.25;
-        letter-spacing: normal;
+        line-height: 1.5;
+      }
+
+      .tab-links:last-child {
+        display: inline;
+        width: 80;
+        height: 38px;
+        font-size: 1.4rem;
+        line-height: 1.5;
+        padding: 7px 14px;
+        margin: 5% auto 2%;
+        span {
+          padding-right: 5px;
+          height: 16px;
+        }
+      }
+      .tab-content {
+        margin: 3% 3% 105px;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        h4 {
+          margin: 0 auto;
+          padding: 0;
+          font-size: 2rem;
+          line-height: 1.25;
+          letter-spacing: normal;
+        }
       }
     }
-  }
-  .footer-cta-inner div {
 
-    &:first-child {
-      margin-left: 3%;
-
+    .footer-cta-inner {
+      div {
+        width: 33%;
+      }
+      .left-column {
+        margin-left: 5vw;
+        .top-p-cta {
+          margin-top: 3vh;
+          margin-bottom: 0;
+          font-size: 1.2rem;
+          line-height: 1.3;
+        }
+        .bottom-p-cta {
+          font-size: 2.1rem;
+          text-align: center;
+          line-height: 1.25;
+        }
+      }
+      .center-column {
+        ul {
+          padding: 0;
+          margin: 3vh auto 1vh auto;
+          max-width: 100%;
+        }
+        li {
+          font-size: 1.4rem;
+          line-height: 1.25;
+          span {
+            font-size: 2rem;
+            text-align: right;
+            line-height: 1.25;
+          }
+        }
+        #project-progress-bar {
+          text-align: center;
+          margin: 0 auto;
+          width: 90%;
+          height: 11px;
+          margin: 0 auto;
+          .progress-bar-success {
+            margin-right: 0;
+            margin-left: 0;
+          }
+        }
+      }
+      .right-column {
+        margin-right: 5vw;
+        button {
+          margin-top: 3vh;
+          width: 85%;
+          max-width: 180px;
+          height: 4.8rem;
+          border-radius: 4px;
+          font-size: 1.6rem;
+          text-align: center;
+          line-height: 1.25;
+        }
+      }
     }
-    &:last-child {
-      margin-right: 3%;
-    }
-
+    // end .project-page
   }
+// end <=1399px
 }
 
 // =============================================
-// max-width 750px for small browser windows
+// max-width 850px for small browser windows
 
-@media all and (max-width: 750px) {
-  .main.project-page {
+@media all and (max-width: 850px) {
+  .project-page {
     section.hero-section {
-      height: 100vh;
+      height: 75vh;
     }
 
     nav span {
@@ -458,127 +513,52 @@
         }
       }
     }
-  }
-  .project-detail {
-    .tab {
-      margin: 4vh 0 0 0;
-      text-align: center;
-    }
-    .tab-links {
-      margin: 0 1vw;
-      width: 80px;
-      height: 18px;
-      font-size: 1.4rem;
-      line-height: 1.5;
-    }
-    .active {
-      padding-bottom: 5px;
-      border-bottom: 3px solid #3EC631;
-    }
-    .tab-links:last-child {
-      display: block;
-      width: 120px;
-      height: 38px;
-      font-size: 1.4rem;
-      line-height: 1.5;
-      padding: 7px 14px;
-      margin: 5% auto 2%;
-      span {
-        padding-right: 5px;
-        height: 16px;
-      }
-    }
-    .tab-content {
-      margin: 3% 3% 155px;
-      font-size: 1.25rem;
-      line-height: 1.5;
-      h4 {
-        margin: 0 auto;
-        padding: 0;
-        font-size: 2rem;
-        line-height: 1.25;
-        letter-spacing: normal;
-      }
-    }
-  }
-  .footer-cta {
-    height: 140px;
-  }
-  .footer-cta-inner div {
-    width: 100%;
-    height: 33%;
-    ul {
-      margin: 0 1vw;
-      position: absolute;
-      bottom: 3vh;
-      left: 1vw;
-      width: 100vw;
-      max-width: 90vw;
-    }
-    li {
-      display: block;
-      margin: 1%;
-      font-size: 1.2rem;
-      line-height: 1.5;
-      width: 30%;
 
-      span {
+    .project-detail {
+      .tab {
+        margin: 4vh 0 0 0;
+        text-align: center;
+      }
+      .tab-links {
+        margin: 0 1vw;
+        width: 80px;
+        height: 18px;
         font-size: 1.4rem;
         line-height: 1.5;
       }
-    }
-
-    &:first-child {
-      margin-left: 3%;
-      margin: 0 auto;
-      position: absolute;
-      bottom: 12vh;
-
-      .top-p-cta {
-        font-size: 1rem;
+      .active {
+        padding-bottom: 5px;
+        border-bottom: 3px solid #3EC631;
+      }
+      .tab-links:last-child {
+        display: block;
+        width: 120px;
+        height: 38px;
+        font-size: 1.4rem;
         line-height: 1.5;
-        margin: 0.7rem 1vw;
-        width: 45%;
-        float: left;
-        text-align: center;
+        padding: 7px 14px;
+        margin: 5% auto 2%;
+        span {
+          padding-right: 5px;
+          height: 16px;
+        }
       }
-      .bottom-p-cta {
-        font-size: 1.2rem;
+      .tab-content {
+        margin: 3% 3% 155px;
+        font-size: 1.25rem;
         line-height: 1.5;
-        margin: 0.5rem 1vw;
-        width: 45%;
-        float: left;
-        text-align: center;
+        h4 {
+          margin: 0 auto;
+          padding: 0;
+          font-size: 2rem;
+          line-height: 1.25;
+          letter-spacing: normal;
+        }
       }
     }
-    &:last-child {
-      width: 100%;
-      margin: 0 auto;
-      position: absolute;
-      bottom: 7vh;
-      button {
-        width: 200px;
-        margin: 0 0 0 -3vw;
-        height: 3rem;
-        font-size: 1.6rem;
-        line-height: 1.5;
-      }
-    }
-    #project-progress-bar {
-      position: absolute;
-      margin: 0;
-      bottom: 1vh;
-      left: 1vw;
-      width: 96vw;
-      .progress-bar-success {
-        position: absolute;
-        margin: 0;
-        bottom: 1vh;
-        left: 1vw;
-      }
-    }
+    // end .project-page
   }
-
+  // end of 850px section
 }
 
 // ==================================================
@@ -586,7 +566,7 @@
 @media screen
     and (max-device-width : 1399px)
     and (orientation : landscape) {
-  .main.project-page {
+  .project-page {
     section.hero-section {
       height: 60vh;
     }
@@ -624,51 +604,52 @@
         }
       }
     }
-  }
-  .project-detail {
-    .tab {
-      margin: 4vh 0 0 0;
-      text-align: center;
-    }
-    .tab-links {
-      margin: 0 1vw;
-      width: 100px;
-      height: 3rem;
-      font-size: 2rem;
-      line-height: 1.5;
-    }
-    .active {
-      padding-bottom: 5px;
-      border-bottom: 3px solid #3EC631;
-    }
-    .tab-links:last-child {
-      display: inline;
-      width: 120px;
-      height: 38px;
-      font-size: 1.4rem;
-      line-height: 1.5;
-      padding: 7px 14px;
-      margin: 5% auto 2%;
-      span {
-        padding-right: 5px;
-        height: 16px;
-      }
-    }
-    .tab-content {
-      margin: 3% 3% 60px;
-      font-size: 1.25rem;
-      line-height: 1.5;
-      min-height: auto;
-      h4 {
-        margin: 0 auto;
-        padding: 0;
-        font-size: 2rem;
-        line-height: 1.25;
-        letter-spacing: normal;
-      }
-    }
-  }
 
+    .project-detail {
+      .tab {
+        margin: 4vh 0 0 0;
+        text-align: center;
+      }
+      .tab-links {
+        margin: 0 1vw;
+        width: 100px;
+        height: 3rem;
+        font-size: 2rem;
+        line-height: 1.5;
+      }
+      .active {
+        padding-bottom: 5px;
+        border-bottom: 3px solid #3EC631;
+      }
+      .tab-links:last-child {
+        display: inline;
+        width: 120px;
+        height: 38px;
+        font-size: 1.4rem;
+        line-height: 1.5;
+        padding: 7px 14px;
+        margin: 5% auto 2%;
+        span {
+          padding-right: 5px;
+          height: 16px;
+        }
+      }
+      .tab-content {
+        margin: 3% 3% 60px;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        min-height: auto;
+        h4 {
+          margin: 0 auto;
+          padding: 0;
+          font-size: 2rem;
+          line-height: 1.25;
+          letter-spacing: normal;
+        }
+      }
+    }
+    // end .project-page
+  }
 // end of landscape design 1025-1399px
 }
 
@@ -687,7 +668,7 @@
 @media screen
     and (max-device-width : 1024px)
     and (orientation : landscape) {
-  .main.project-page {
+  .project-page {
     section.hero-section {
       height: 70vh;
       padding: 0;
@@ -725,42 +706,32 @@
         }
       }
     }
-  }
-  .project-detail {
-    section {
-      padding: 0;
-    }
-    .tab {
-      margin: 2vh 0 0 0;
-      text-align: center;
-    }
-    .tab-links:last-child {
-      display: inline;
-    }
-    .tab-content {
-      margin: 3% 3% 105px;
-      font-size: 1.25rem;
-      line-height: 1.5;
-      h4 {
-        margin: 0 auto;
+
+    .project-detail {
+      section {
         padding: 0;
-        font-size: 2rem;
-        line-height: 1.25;
-        letter-spacing: normal;
+      }
+      .tab {
+        margin: 2vh 0 0 0;
+        text-align: center;
+      }
+      .tab-links:last-child {
+        display: inline;
+      }
+      .tab-content {
+        margin: 3% 3% 105px;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        h4 {
+          margin: 0 auto;
+          padding: 0;
+          font-size: 2rem;
+          line-height: 1.25;
+          letter-spacing: normal;
+        }
       }
     }
-  }
-    .footer-cta {
-    .footer-cta-inner {
-      div {
-        &:first-child {
-          margin-left: 3%;
-        }
-        &:last-child {
-          margin-right: 3%;
-        }
-      }
-    }
+  // end .project-page
   }
 // end of ipad landscape
 }
@@ -771,7 +742,7 @@
 // media query for 768px wide portrait
 @media screen and (max-device-width : 768px)
     and (orientation : portrait) {
-  .main.project-page {
+  .project-page {
     margin-bottom: 40px;
     section.hero-section {
       height: 60vh;
@@ -809,51 +780,29 @@
         }
       }
     }
-  }
-  .project-detail {
-    .tab {
-      margin: 0;
-      text-align: center;
-    }
-    .tab-links:last-child {
-      display: inline;
-    }
-    .tab-content {
-      margin: 3% 3% 105px;
-      font-size: 1.25rem;
-      line-height: 1.5;
-      h4 {
-        margin: 0 auto;
-        padding: 0;
-        font-size: 2rem;
-        line-height: 1.25;
-        letter-spacing: normal;
+
+    .project-detail {
+      .tab {
+        margin: 0;
+        text-align: center;
+      }
+      .tab-links:last-child {
+        display: inline;
+      }
+      .tab-content {
+        margin: 3% 3% 105px;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        h4 {
+          margin: 0 auto;
+          padding: 0;
+          font-size: 2rem;
+          line-height: 1.25;
+          letter-spacing: normal;
+        }
       }
     }
-  }
-  .footer-cta-inner {
-    div {
-      margin: 0;
-    }
-    .left-column, .right-column {
-      margin-left: 0;
-      width: 25%;
-    }
-    .left-column {
-      padding-right: 4vw;
-    }
-    .right-column {
-      padding-left: 4vw;
-    }
-
-    #project-progress-bar {
-      width: 90%;
-    }
-
-    button {
-      width: 160px;
-    }
-
+    // end .project-page
   }
 // end of ipad portait
 }
@@ -863,18 +812,32 @@
 @media screen and (max-device-width : 736px)
     and (-webkit-device-pixel-ratio: 3)
     and (orientation : landscape) {
-  .main.project-page {
+  .project-page {
     margin-bottom: 40px;
     section.hero-section {
       height: 95vh;
     }
+    nav ul {
+      padding: 0;
+      margin: 0 auto;
+    }
     nav li.nav-top {
       display: none;
+    }
+    nav li#nav-logo {
+      display: block;
+      text-align: center;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0;
     }
     .project-header {
 
       h1 {
         font-size: 2.5rem;
+        height: auto;
+        max-height: 4rem;
       }
 
 
@@ -886,7 +849,7 @@
 
       h6 {
         &:first-child {
-          margin-top: 12vh;
+          margin-top: 6vh;
           font-size: 1rem;
           line-height: 1.5;
           height: 2rem;
@@ -908,121 +871,50 @@
         }
       }
     }
-  }
-  .project-detail {
-    .tab {
-      margin: 0;
-      text-align: center;
-    }
-    .tab-links {
-      margin: 0 1vw;
-      width: 80px;
-      height: 18px;
-      font-size: 1.4rem;
-      line-height: 1.5;
-    }
-    .active {
-      padding-bottom: 5px;
-      border-bottom: 3px solid #3EC631;
-    }
-    .tab-links:last-child {
-      display: block;
-      width: 120px;
-      height: 38px;
-      font-size: 1.4rem;
-      line-height: 1.5;
-      padding: 7px 14px;
-      margin: 5% auto 2%;
-      span {
-        padding-right: 5px;
-        height: 16px;
-      }
-    }
-    .tab-content {
-      margin: 3% 3% 105px;
-      font-size: 1.25rem;
-      line-height: 1.5;
-      h4 {
-        margin: 0 auto;
-        padding: 0;
-        font-size: 2rem;
-        line-height: 1.25;
-        letter-spacing: normal;
-      }
-    }
-  }
-  .footer-cta-inner div {
-    width: 100%;
-    height: 33%;
-    ul {
-      margin: 0 1vw;
-      position: absolute;
-      bottom: 3vh;
-      left: 1vw;
-      width: 100%;
-    }
-    li {
-      display: block;
-      margin: 1%;
-      font-size: 1.2rem;
-      line-height: 1.5;
-      width: 30%;
 
-      span {
+    .project-detail {
+      .tab {
+        margin: 0;
+        text-align: center;
+      }
+      .tab-links {
+        margin: 0 1vw;
+        width: 80px;
+        height: 18px;
         font-size: 1.4rem;
         line-height: 1.5;
       }
-    }
-
-    &:first-child {
-      margin-left: 3%;
-      margin: 0 auto;
-      position: absolute;
-      bottom: 12vh;
-
-      .top-p-cta {
-        font-size: 1rem;
+      .active {
+        padding-bottom: 5px;
+        border-bottom: 3px solid #3EC631;
+      }
+      .tab-links:last-child {
+        display: block;
+        width: 120px;
+        height: 38px;
+        font-size: 1.4rem;
         line-height: 1.5;
-        margin: 0.7rem 1vw;
-        width: 45%;
-        float: left;
-        text-align: center;
+        padding: 7px 14px;
+        margin: 5% auto 2%;
+        span {
+          padding-right: 5px;
+          height: 16px;
+        }
       }
-      .bottom-p-cta {
-        font-size: 1.2rem;
+      .tab-content {
+        margin: 3vh 6vw 105px;
+        font-size: 1.25rem;
         line-height: 1.5;
-        margin: 0.5rem 1vw;
-        width: 45%;
-        float: left;
-        text-align: center;
+        h4 {
+          margin: 0 auto;
+          padding: 0;
+          font-size: 2rem;
+          line-height: 1.25;
+          letter-spacing: normal;
+        }
       }
     }
-    &:last-child {
-      width: 100%;
-      margin: 0 auto;
-      position: absolute;
-      bottom: 7vh;
-      button {
-        width: 200px;
-        margin: 0 0 0 -3vw;
-        height: 3rem;
-        font-size: 1.6rem;
-        line-height: 1.5;
-      }
-    }
-    #project-progress-bar {
-      position: absolute;
-      margin: 0;
-      bottom: 1vh;
-      left: 1vw;
-      width: 96vw;
-      .progress-bar-success {
-        position: absolute;
-        margin: 0;
-        bottom: 1vh;
-        left: 1vw;
-      }
-    }
+// end .project-page
   }
 // end of 6+/7+ landscape
 }
@@ -1033,7 +925,7 @@
 @media screen and (max-device-width : 414px)
     and (-webkit-device-pixel-ratio: 3)
     and (orientation : portrait) {
-  .main.project-page {
+  .project-page {
     margin-bottom: 40px;
     section.hero-section {
       height: 95vh;
@@ -1078,129 +970,58 @@
         }
       }
     }
-  }
-  .project-detail {
-    .tab {
-      margin: 0;
-      text-align: center;
-    }
-    .tab-links {
-      margin: 0 1vw;
-      width: 80px;
-      height: 18px;
-      font-size: 1.4rem;
-      line-height: 1.5;
-    }
-    .active {
-      padding-bottom: 5px;
-      border-bottom: 3px solid #3EC631;
-    }
-    .tab-links:last-child {
-      display: block;
-      width: 120px;
-      height: 38px;
-      font-size: 1.4rem;
-      line-height: 1.5;
-      padding: 7px 14px;
-      margin: 5% auto 2%;
-      span {
-        padding-right: 5px;
-        height: 16px;
-      }
-    }
-    .tab-content {
-      margin: 3% 3% 105px;
-      font-size: 1.25rem;
-      line-height: 1.5;
-      h4 {
-        margin: 0 auto;
-        padding: 0;
-        font-size: 2rem;
-        line-height: 1.25;
-        letter-spacing: normal;
-      }
-    }
-  }
-  .footer-cta-inner div {
-    width: 100%;
-    height: 33%;
-    ul {
-      margin: 0 1vw;
-      position: absolute;
-      bottom: 3vh;
-      left: 1vw;
-      width: 100%;
-    }
-    li {
-      display: block;
-      margin: 1%;
-      font-size: 1.2rem;
-      line-height: 1.5;
-      width: 30%;
 
-      span {
+    .project-detail {
+      .tab {
+        margin: 0;
+        text-align: center;
+      }
+      .tab-links {
+        margin: 0 1vw;
+        width: 80px;
+        height: 18px;
         font-size: 1.4rem;
         line-height: 1.5;
       }
-    }
-
-    &:first-child {
-      margin-left: 3%;
-      margin: 0 auto;
-      position: absolute;
-      bottom: 12vh;
-
-      .top-p-cta {
-        font-size: 1rem;
+      .active {
+        padding-bottom: 5px;
+        border-bottom: 3px solid #3EC631;
+      }
+      .tab-links:last-child {
+        display: block;
+        width: 120px;
+        height: 38px;
+        font-size: 1.4rem;
         line-height: 1.5;
-        margin: 0.7rem 1vw;
-        width: 45%;
-        float: left;
-        text-align: center;
+        padding: 7px 14px;
+        margin: 5% auto 2%;
+        span {
+          padding-right: 5px;
+          height: 16px;
+        }
       }
-      .bottom-p-cta {
-        font-size: 1.2rem;
+      .tab-content {
+        margin: 3% 3% 105px;
+        font-size: 1.25rem;
         line-height: 1.5;
-        margin: 0.5rem 1vw;
-        width: 45%;
-        float: left;
-        text-align: center;
+        h4 {
+          margin: 0 auto;
+          padding: 0;
+          font-size: 2rem;
+          line-height: 1.25;
+          letter-spacing: normal;
+        }
       }
     }
-    &:last-child {
-      width: 100%;
-      margin: 0 auto;
-      position: absolute;
-      bottom: 7vh;
-      button {
-        width: 200px;
-        margin: 0 0 0 -3vw;
-        height: 3rem;
-        font-size: 1.6rem;
-        line-height: 1.5;
-      }
-    }
-    #project-progress-bar {
-      position: absolute;
-      margin: 0;
-      bottom: 1vh;
-      left: 1vw;
-      width: 96vw;
-      .progress-bar-success {
-        position: absolute;
-        margin: 0;
-        bottom: 1vh;
-        left: 1vw;
-      }
-    }
+// end .project-page
   }
 // end of 6+/7+ portait
 }
 
 // ==================================================
-// iphone 5/6 landscape mode
+// iphone 6 landscape mode
 @media screen and (max-width: 667px) and (orientation: landscape) {
-  .main.project-page {
+  .project-page {
     margin-bottom: 40px;
     section.hero-section {
       height: 95vh;
@@ -1245,129 +1066,58 @@
         }
       }
     }
-  }
-  .project-detail {
-    .tab {
-      margin: 0;
-      text-align: center;
-    }
-    .tab-links {
-      margin: 0 1vw;
-      width: 80px;
-      height: 18px;
-      font-size: 1.4rem;
-      line-height: 1.5;
-    }
-    .active {
-      padding-bottom: 5px;
-      border-bottom: 3px solid #3EC631;
-    }
-    .tab-links:last-child {
-      display: block;
-      width: 120px;
-      height: 38px;
-      font-size: 1.4rem;
-      line-height: 1.5;
-      padding: 7px 14px;
-      margin: 5% auto 2%;
-      span {
-        padding-right: 5px;
-        height: 16px;
-      }
-    }
-    .tab-content {
-      margin: 3% 3% 105px;
-      font-size: 1.25rem;
-      line-height: 1.5;
-      h4 {
-        margin: 0 auto;
-        padding: 0;
-        font-size: 2rem;
-        line-height: 1.25;
-        letter-spacing: normal;
-      }
-    }
-  }
-  .footer-cta-inner div {
-    width: 100%;
-    height: 33%;
-    ul {
-      margin: 0 1vw;
-      position: absolute;
-      bottom: 3vh;
-      left: 1vw;
-      width: 100%;
-    }
-    li {
-      display: block;
-      margin: 1%;
-      font-size: 1.2rem;
-      line-height: 1.5;
-      width: 30%;
 
-      span {
+    .project-detail {
+      .tab {
+        margin: 0;
+        text-align: center;
+      }
+      .tab-links {
+        margin: 0 1vw;
+        width: 80px;
+        height: 18px;
         font-size: 1.4rem;
         line-height: 1.5;
       }
-    }
-
-    &:first-child {
-      margin-left: 3%;
-      margin: 0 auto;
-      position: absolute;
-      bottom: 12vh;
-
-      .top-p-cta {
-        font-size: 1rem;
+      .active {
+        padding-bottom: 5px;
+        border-bottom: 3px solid #3EC631;
+      }
+      .tab-links:last-child {
+        display: block;
+        width: 120px;
+        height: 38px;
+        font-size: 1.4rem;
         line-height: 1.5;
-        margin: 0.7rem 1vw;
-        width: 45%;
-        float: left;
-        text-align: center;
+        padding: 7px 14px;
+        margin: 5% auto 2%;
+        span {
+          padding-right: 5px;
+          height: 16px;
+        }
       }
-      .bottom-p-cta {
-        font-size: 1.2rem;
+      .tab-content {
+        margin: 3% 3% 105px;
+        font-size: 1.25rem;
         line-height: 1.5;
-        margin: 0.5rem 1vw;
-        width: 45%;
-        float: left;
-        text-align: center;
+        h4 {
+          margin: 0 auto;
+          padding: 0;
+          font-size: 2rem;
+          line-height: 1.25;
+          letter-spacing: normal;
+        }
       }
     }
-    &:last-child {
-      width: 100%;
-      margin: 0 auto;
-      position: absolute;
-      bottom: 7vh;
-      button {
-        width: 200px;
-        margin: 0 0 0 -3vw;
-        height: 3rem;
-        font-size: 1.6rem;
-        line-height: 1.5;
-      }
-    }
-    #project-progress-bar {
-      position: absolute;
-      margin: 0;
-      bottom: 1vh;
-      left: 1vw;
-      width: 96vw;
-      .progress-bar-success {
-        position: absolute;
-        margin: 0;
-        bottom: 1vh;
-        left: 1vw;
-      }
-    }
+// end .project-page
   }
-// end of 5/6 landscape
+// end of 6 landscape
 }
 
 // Media Queries
-// iphone 5/6 in portrait
+// iphone 6 in portrait
 @media screen and (max-width: 375px) and (orientation: portrait) {
-  .main.project-page {
+  .project-page {
     margin-bottom: 40px;
     section.hero-section {
       height: 95vh;
@@ -1412,122 +1162,65 @@
         }
       }
     }
-  }
-  .project-detail {
-    .tab {
-      margin: 0;
-      text-align: center;
-    }
-    .tab-links {
-      margin: 0 1vw;
-      width: 80px;
-      height: 18px;
-      font-size: 1.4rem;
-      line-height: 1.5;
-    }
-    .active {
-      padding-bottom: 5px;
-      border-bottom: 3px solid #3EC631;
-    }
-    .tab-links:last-child {
-      display: block;
-      width: 120px;
-      height: 38px;
-      font-size: 1.4rem;
-      line-height: 1.5;
-      padding: 7px 14px;
-      margin: 5% auto 2%;
-      span {
-        padding-right: 5px;
-        height: 16px;
-      }
-    }
-    .tab-content {
-      margin: 3% 3% 105px;
-      font-size: 1.25rem;
-      line-height: 1.5;
-      h4 {
-        margin: 0 auto;
-        padding: 0;
-        font-size: 2rem;
-        line-height: 1.25;
-        letter-spacing: normal;
-      }
-    }
-  }
-  .footer-cta-inner div {
-    width: 100%;
-    height: 33%;
-    ul {
-      margin: 0 1vw;
-      position: absolute;
-      bottom: 3vh;
-      left: 1vw;
-      width: 100%;
-    }
-    li {
-      display: block;
-      margin: 1%;
-      font-size: 1.2rem;
-      line-height: 1.5;
-      width: 30%;
 
-      span {
+    .project-detail {
+      .tab {
+        margin: 0;
+        text-align: center;
+      }
+      .tab-links {
+        margin: 0 1vw;
+        width: 80px;
+        height: 18px;
         font-size: 1.4rem;
         line-height: 1.5;
       }
-    }
-
-    &:first-child {
-      margin-left: 3%;
-      margin: 0 auto;
-      position: absolute;
-      bottom: 12vh;
-
-      .top-p-cta {
-        font-size: 1rem;
+      .active {
+        padding-bottom: 5px;
+        border-bottom: 3px solid #3EC631;
+      }
+      .tab-links:last-child {
+        display: block;
+        width: 120px;
+        height: 38px;
+        font-size: 1.4rem;
         line-height: 1.5;
-        margin: 0.7rem 1vw;
-        width: 45%;
-        float: left;
-        text-align: center;
+        padding: 7px 14px;
+        margin: 5% auto 2%;
+        span {
+          padding-right: 5px;
+          height: 16px;
+        }
       }
-      .bottom-p-cta {
-        font-size: 1.2rem;
+      .tab-content {
+        margin: 3% 3% 105px;
+        font-size: 1.25rem;
         line-height: 1.5;
-        margin: 0.5rem 1vw;
-        width: 45%;
-        float: left;
-        text-align: center;
+        h4 {
+          margin: 0 auto;
+          padding: 0;
+          font-size: 2rem;
+          line-height: 1.25;
+          letter-spacing: normal;
+        }
       }
     }
-    &:last-child {
-      width: 100%;
-      margin: 0 auto;
-      position: absolute;
-      bottom: 7vh;
-      button {
-        width: 200px;
-        margin: 0 0 0 -3vw;
-        height: 3rem;
-        font-size: 1.6rem;
-        line-height: 1.5;
-      }
-    }
-    #project-progress-bar {
-      position: absolute;
-      margin: 0;
-      bottom: 1vh;
-      left: 1vw;
-      width: 96vw;
-      .progress-bar-success {
-        position: absolute;
-        margin: 0;
-        bottom: 1vh;
-        left: 1vw;
-      }
-    }
+// end .project-page
   }
-// end of 5/6 portait
+// end of 6 portait
+}
+
+// ==================================================
+// iphone 5 landscape mode
+@media screen and (max-width: 568px) and (orientation: landscape) {
+
+// end of 5 landscape
+}
+
+// ==================================================
+// iphone 5 in portrait
+@media screen and (max-width: 320px) and (orientation: portrait) {
+
+// end of 5 portait
 }
 
