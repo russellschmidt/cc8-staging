@@ -358,7 +358,7 @@
       }
 
       .partner-logo {
-        margin-top: 3vh;
+        margin-top: 1vh;
         img {
           max-height: 80px;
         }
@@ -508,6 +508,7 @@
       }
 
       .partner-logo {
+        margin-top: 3vh;
         img {
           max-height: 80px;
         }
@@ -556,44 +557,59 @@
         }
       }
     }
-
-    .footer-cta-inner {
-      .left-column {
-        margin-left: 3vw;
-        .top-p-cta {
-          font-size: 1.2rem;
-          margin-top: 3vh;
+    .footer-cta {
+      height: 100px;
+      .footer-cta-inner {
+        flex-flow: wrap row;
+        div {
+          width: 100vw;
         }
-        .bottom-p-cta {
-          font-size: 1.8rem;
+        .left-column, .center-column, .right-column {
+          margin: 1vh auto 0;
+          height: auto;
         }
-      }
-      .center-column {
-        ul {
-          margin: 3vh auto 1vh auto;
-        }
-        li {
-          font-size: 1.2rem;
-          span {
-            font-size: 1.8rem;
+        .left-column {
+          display: none;
+          .top-p-cta, .bottom-p-cta {
+            width: 50%;
+            margin: 0;
+            padding: 0 1vw;
+            float: left;
+            vertical-align: text-bottom;
+            height: 1.5rem;
+            line-height: 1.5rem;
+            text-align: center;
+          }
+          .top-p-cta {
+            font-size: 1rem;
+          }
+          .bottom-p-cta {
+            font-size: 1.2rem;
           }
         }
-        #project-progress-bar {
-          .progress-bar-success {
+        .center-column {
+          ul {
+            margin: 0 1vw 1vh;
+          }
+          li {
+            font-size: 1.2rem;
+            span {
+              font-size: 1.6rem;
+            }
+          }
+          #project-progress-bar {
+            .progress-bar-success {
+            }
           }
         }
-      }
-      .right-column {
-        margin-right: 3vw;
-        button {
-          margin-top: 3vh;
-          width: 85%;
-          max-width: 150px;
-          height: 4.5rem;
-          border-radius: 4px;
-          font-size: 1.6rem;
-          text-align: center;
-          line-height: 1.25;
+        .right-column {
+          button {
+            margin: 1vh auto;
+            width: 70%;
+            max-width: 250px;
+            height: auto;
+            font-size: 1.4rem;
+          }
         }
       }
     }
