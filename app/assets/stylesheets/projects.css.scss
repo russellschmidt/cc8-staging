@@ -960,7 +960,7 @@
 
     .project-detail {
       .tab {
-        margin: 0;
+        margin: 10vh auto 2vh;
         text-align: center;
       }
       .tab-links {
@@ -975,17 +975,17 @@
         border-bottom: 3px solid #3EC631;
       }
       .tab-links:last-child {
-        display: block;
-        width: 120px;
-        height: 38px;
-        font-size: 1.4rem;
-        line-height: 1.5;
-        padding: 7px 14px;
-        margin: 5% auto 2%;
-        span {
-          padding-right: 5px;
-          height: 16px;
-        }
+        // display: block;
+        // width: 120px;
+        // height: 38px;
+        // font-size: 1.4rem;
+        // line-height: 1.5;
+        // padding: 7px 14px;
+        // margin: 5% auto 2%;
+        // span {
+        //   padding-right: 5px;
+        //   height: 16px;
+        // }
       }
       .tab-content {
         margin: 3vh 6vw 105px;
