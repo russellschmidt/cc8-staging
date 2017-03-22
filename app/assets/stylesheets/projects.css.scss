@@ -989,6 +989,35 @@
         }
       }
     }
+    .footer-cta {
+      height: 100px;
+      .footer-cta-inner {
+        .left-column {
+          display: none;
+        }
+        .center-column {
+          ul {
+            margin: 0 12vw 1vh;
+          }
+          li {
+            font-size: 1.2rem;
+            span {
+              font-size: 1.6rem;
+            }
+          }
+          #project-progress-bar {
+            width: 76%;
+            .progress-bar-success {
+            }
+          }
+        }
+        .right-column {
+          button {
+            margin: 0.5vh auto 2vh;
+          }
+        }
+      }
+    }
 // end .project-page
   }
 // end of 6+/7+ landscape
