@@ -1129,27 +1129,21 @@
   .project-page {
     margin-bottom: 40px;
     section.hero-section {
-      height: 95vh;
-    }
-    nav li.nav-top {
-      display: none;
+      height: 100vh;
     }
     .project-header {
-
       h1 {
         font-size: 2.5rem;
+        height: auto;
       }
-
-
       h2 {
         font-size: 1.5rem;
         line-height: 1.5;
         padding: 0 3vw;
       }
-
       h6 {
         &:first-child {
-          margin-top: 12vh;
+          margin-top: 5vh;
           font-size: 1rem;
           line-height: 1.5;
           height: 2rem;
@@ -1174,7 +1168,7 @@
 
     .project-detail {
       .tab {
-        margin: 0;
+        margin: 12vh 4vw 5vh;
         text-align: center;
       }
       .tab-links {
@@ -1189,7 +1183,6 @@
         border-bottom: 3px solid #3EC631;
       }
       .tab-links:last-child {
-        display: block;
         width: 120px;
         height: 38px;
         font-size: 1.4rem;
@@ -1214,6 +1207,35 @@
         }
       }
     }
+    .footer-cta {
+      .footer-cta-inner {
+        .left-column {
+          display: none;
+        }
+        .center-column {
+          ul {
+            margin: 2vh 12vw 1vw;
+          }
+          li {
+            font-size: 1.2rem;
+            span {
+              font-size: 1.6rem;
+            }
+          }
+          #project-progress-bar {
+            width: 76%;
+            .progress-bar-success {
+            }
+          }
+        }
+        .right-column {
+          button {
+            margin: 2vh auto 0;
+          }
+        }
+      }
+    }
+
 // end .project-page
   }
 // end of 6 landscape
@@ -1225,18 +1247,12 @@
   .project-page {
     margin-bottom: 40px;
     section.hero-section {
-      height: 95vh;
-    }
-    nav li.nav-top {
-      display: none;
+      height: 75vh;
     }
     .project-header {
-
       h1 {
         font-size: 2.5rem;
       }
-
-
       h2 {
         font-size: 1.5rem;
         line-height: 1.5;
@@ -1245,7 +1261,7 @@
 
       h6 {
         &:first-child {
-          margin-top: 12vh;
+          margin-top: 4vh;
           font-size: 1rem;
           line-height: 1.5;
           height: 2rem;
@@ -1270,7 +1286,7 @@
 
     .project-detail {
       .tab {
-        margin: 0;
+        margin: 4vh;
         text-align: center;
       }
       .tab-links {
