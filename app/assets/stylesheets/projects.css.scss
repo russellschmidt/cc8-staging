@@ -975,17 +975,6 @@
         border-bottom: 3px solid #3EC631;
       }
       .tab-links:last-child {
-        // display: block;
-        // width: 120px;
-        // height: 38px;
-        // font-size: 1.4rem;
-        // line-height: 1.5;
-        // padding: 7px 14px;
-        // margin: 5% auto 2%;
-        // span {
-        //   padding-right: 5px;
-        //   height: 16px;
-        // }
       }
       .tab-content {
         margin: 3vh 6vw 105px;
@@ -1014,27 +1003,28 @@
   .project-page {
     margin-bottom: 40px;
     section.hero-section {
-      height: 95vh;
+      height: 66vh;
     }
     nav li.nav-top {
-      display: none;
+      // display: none;
     }
     .project-header {
 
       h1 {
         font-size: 2.5rem;
+        margin-bottom: 0;
       }
-
 
       h2 {
         font-size: 1.5rem;
         line-height: 1.5;
         padding: 0 3vw;
+        margin-top: 0;
       }
 
       h6 {
         &:first-child {
-          margin-top: 12vh;
+          margin-top: 5vh;
           font-size: 1rem;
           line-height: 1.5;
           height: 2rem;
@@ -1059,7 +1049,7 @@
 
     .project-detail {
       .tab {
-        margin: 0;
+        margin: 5vh auto 2vh;
         text-align: center;
       }
       .tab-links {
