@@ -33,6 +33,7 @@ class ChargesController < ApplicationController
 
     if donation.save
       flash[:notice] = "Thank you!"
+      # Here is where you trigger the mailer to send the receipt email
     else
       flash[:error] = "Error saving the transaction to our database"
     end
