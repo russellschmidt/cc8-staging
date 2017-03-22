@@ -727,7 +727,7 @@
     and (orientation : landscape) {
   .project-page {
     section.hero-section {
-      height: 70vh;
+      height: 65vh;
       padding: 0;
     }
 
@@ -802,7 +802,7 @@
   .project-page {
     margin-bottom: 40px;
     section.hero-section {
-      height: 60vh;
+      height: 50vh;
     }
     .project-header {
       h1 {
@@ -815,14 +815,14 @@
       }
       h6 {
         &:first-child {
-          margin-top: 6vh;
+          margin-top: 4vh;
           font-size: 1rem;
           line-height: 1.5;
           height: 2rem;
         }
       }
       .hero-partner {
-        margin-top: 5vh;
+        margin-top: 3vh;
         h6 {
           margin-top: 0;
         }
@@ -840,14 +840,14 @@
 
     .project-detail {
       .tab {
-        margin: 0;
+        margin: 3vh 0 2vh;
         text-align: center;
       }
       .tab-links:last-child {
         display: inline;
       }
       .tab-content {
-        margin: 3% 3% 105px;
+        margin: 3vw 2vw 110px;
         font-size: 1.25rem;
         line-height: 1.5;
         h4 {
@@ -856,6 +856,35 @@
           font-size: 2rem;
           line-height: 1.25;
           letter-spacing: normal;
+        }
+      }
+    }
+    .footer-cta {
+      height: 100px;
+      .footer-cta-inner {
+        .left-column {
+          display: none;
+        }
+        .center-column {
+          ul {
+            margin: 0 12vw 1vh;
+          }
+          li {
+            font-size: 1.2rem;
+            span {
+              font-size: 1.6rem;
+            }
+          }
+          #project-progress-bar {
+            width: 76%;
+            .progress-bar-success {
+            }
+          }
+        }
+        .right-column {
+          button {
+            margin: 1vh auto 2vh;
+          }
         }
       }
     }
