@@ -751,7 +751,7 @@ iframe {
       hgroup {
         h2, h3 {
         height: auto;
-        max-height: auto;
+        max-height: none;
         }
       }
     }
@@ -855,7 +855,7 @@ iframe {
     padding-top: 0.5vh;
   }
 
-// end of portrait design 1025-1399px
+// end of portrait design ipad pro 1025-1399px
 }
 // ==================================================
 // media query for ipad
@@ -879,9 +879,103 @@ iframe {
 // media query for ipad 768 x 1024
 // ==================================================
 //
-// media query for 768px wide portrait
+// media query for 768px ipad portrait
 @media screen and (min-device-width : 768px)
     and (orientation : portrait) {
+
+  section, section#hero-section,
+      section#chip-in-section,
+      section#home-projects-section,
+      section#join-the-fight,
+      section#build-with-us,
+      section#keep-in-touch {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  section#hero-section {
+    height: auto;
+    nav li#nav-logo {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0 0 0 6vw;
+      text-align: center;
+    }
+    nav ul span li.nav-top {
+      display: none;
+      width: 0;
+    }
+    div#hero-header {
+      padding-bottom: 4vh;
+      h1, h2 {
+        width: 85vw;
+        margin: 0 auto;
+        height: auto;
+        max-height: none;
+      }
+      h2 {
+        padding-bottom: 5vh;
+      }
+    }
+  }
+
+  section#chip-in-section {
+    div#chip-in-section-header {
+      hgroup {
+        h2, h3 {
+          max-width: 75%;
+          height: auto;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  section#home-projects-section {
+    min-height: auto;
+    height: auto;
+    div#home-projects-section-header {
+      width: 90vw;
+      margin: 0 auto;
+      hgroup {
+        h2, h3 {
+          width: 90vw;
+          height: auto;
+          padding: 0 10vw;
+        }
+      }
+    }
+    div#home-projects-section-articles {
+      max-width: 300px;
+    }
+  }
+  hgroup {
+    h2, h3 {
+      width: 90vw;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+
+  section#build-with-us {
+    div#build-with-us-header {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      hgroup {
+        h2, h5 {
+          width: 75%;
+          max-width: none;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  footer {
+
+  }
 
 // end of ipad portait
 }
