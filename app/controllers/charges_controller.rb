@@ -34,11 +34,12 @@ class ChargesController < ApplicationController
     if donation.save
       flash[:notice] = "Thank you!"
       # Here is where you trigger the mailer to send the receipt email
+      ReceiptMailer.send_receipt_email(customer.email).deliver_now
     else
       flash[:error] = "Error saving the transaction to our database"
     end
 
-    @meta_description_text = "I just offset #{ @co2} pounds of CO2 by donating to Climate Cents"
+    @meta_description_text = "I just offset #{ @co2 } pounds of CO2 by donating to Climate Cents"
 
   rescue Stripe::CardError => e
     flash[:error] = e.message

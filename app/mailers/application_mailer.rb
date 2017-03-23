@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'hello@climatecents.org'
+  default from: 'thanks@mg.climatecents.org'
   layout 'mailer'
 end
