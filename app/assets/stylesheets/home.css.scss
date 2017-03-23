@@ -974,7 +974,19 @@ iframe {
   }
 
   footer {
+    padding: 0 7vw;
+    min-height: 500px;
+    div.left-column, div.right-column {
+      padding-top: 3vh;
+      margin-top: 0;
+    }
+    div.right-column {
+      p {
+        width: auto;
+        height: auto;
 
+      }
+    }
   }
 
 // end of ipad portait
