@@ -6,7 +6,7 @@
   <body>
     <h1>Hi <%= @email %></h1>
     <p>
-      Thank you for your donation.
+      Thank you for your donation to <%= Partner.find(Project.find(@campaign.project_id).partner_id).name %>'s <%= Project.find(@campaign.project_id).name %> project. Your donation of <%= number_to_currency(@co2 / @campaign.co2_per_dollar) %> removes the equivalent of <%= @co2.to_i %> pounds of heat-trapping carbon dioxide (CO2) from the atmosphere.
     </p>
   </body>
 </html>
