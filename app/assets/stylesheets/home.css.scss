@@ -235,7 +235,7 @@ section#home-projects-section {
     flex-flow: row wrap;
     justify-content: center;
     article {
-      max-width: 350px;
+      width: 350px;
       height: 540px;
       background-color: #FFFFFF;
       border: 1px solid #DCDCDC;
@@ -869,7 +869,7 @@ iframe {
       section#join-the-fight,
       section#build-with-us,
       section#keep-in-touch {
-    padding-right: 10vw;
+    padding-right: 0;
     padding-left: 0;
   }
 
@@ -947,7 +947,7 @@ iframe {
       }
     }
     div#home-projects-section-articles {
-      max-width: 300px;
+      max-width: 380px;
     }
   }
   hgroup {
