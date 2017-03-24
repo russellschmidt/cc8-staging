@@ -1766,7 +1766,11 @@
     }
     nav li#nav-logo {
       width: 100%;
-      max-width: 100%;
+      max-width: none;
+      padding: 0;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
     }
     .project-header {
       h1 {
@@ -1787,13 +1791,13 @@
         }
       }
       .hero-partner {
-        margin-top: 5vh;
+        margin-top: 3vh;
         h6 {
           margin-top: 0;
         }
       }
       .hero-header-btn {
-        margin-top: 4vh;
+        margin-top: 2vh;
       }
 
       .partner-logo {
