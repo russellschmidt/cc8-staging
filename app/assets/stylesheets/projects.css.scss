@@ -1170,22 +1170,41 @@
     margin-bottom: 40px;
     section.hero-section {
       height: 60vh;
+      padding: 0;
     }
-    nav li.nav-top {
+    nav {
+      ul {
+        padding-left: 0;
+      }
+      li.nav-top {
       // display: none;
+      }
+      li#nav-logo {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-width: none;
+        text-align: center;
+      }
     }
     .project-header {
-
+      h1, h2, h6 {
+        padding: 0;
+        margin: 0;
+        width: 94%;
+        max-width: none;
+        height: auto;
+        max-height: none;
+      }
       h1 {
-        font-size: 2.5rem;
-        margin-bottom: 0;
+        font-size: 2.4rem;
       }
 
       h2 {
         font-size: 1.5rem;
-        line-height: 1.5;
-        padding: 0 3vw;
-        margin-top: 0;
+        line-height: 1.6;
       }
 
       h6 {
@@ -1197,13 +1216,15 @@
         }
       }
       .hero-partner {
-        margin-top: 5vh;
+        margin-top: 3vh;
         h6 {
           margin-top: 0;
+          width: 100%;
+          max-width: none;
         }
       }
       .hero-header-btn {
-        margin-top: 4vh;
+        margin-top: 2vh;
       }
 
       .partner-logo {
@@ -1256,15 +1277,45 @@
       }
     }
     .footer-cta {
+      width: 100%;
+      padding: 0;
+      margin: 0;
       .footer-cta-inner {
+        .left-column, .center-column, .right-column {
+          padding-top: 14px;
+        }
         .left-column {
-          display: none;
+          width: 25%;
+          margin-top: 5px;
+          .top-p-cta {
+            font-size: 1.2rem;
+            height: auto;
+          }
+          .bottom-p-cta {
+            font-size: 1.6rem;
+            padding: 2px 0 0;
+            height: auto;
+          }
         }
         .center-column {
-          margin-top: 1vh;
+          width: 45%;
+          li {
+            font-size: 1.2rem;
+            span {
+              font-size: 1.6rem;
+            }
+          }
+
         }
         .right-column {
-          margin-top: 2vh;
+          width: 29%;
+          margin: 0 auto;
+          padding-right: 10px;
+          button {
+            margin-right: 4px;
+            height: 72px;
+            font-size: 1.6rem;
+          }
         }
       }
     }
