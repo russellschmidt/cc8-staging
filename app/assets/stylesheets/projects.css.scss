@@ -199,6 +199,11 @@
         color: #063940;
         text-align: center;
       }
+      p {
+        padding: 0 5%;
+        font-size: 1.6rem;
+        line-height: 1.5;
+      }
     }
   }
 
@@ -337,6 +342,7 @@
       }
       h2 {
         font-size: 3rem;
+        margin-top: 1vh;
       }
 
       h6 {
@@ -476,29 +482,34 @@
     section.hero-section {
       height: 75vh;
     }
-
-    nav span {
-      display: none;
+    nav {
+      margin-top: 2vh;
+      span {
+        display: none;
+      }
     }
 
     .project-header {
       h1 {
         font-size: 3rem;
+        height: auto;
+        margin-bottom: 0;
       }
       h2 {
         font-size: 2rem;
+        padding: 0 1vw;
       }
 
       h6 {
         &:first-child {
-          margin-top: 12vh;
+          margin-top: 4vh;
           font-size: 1rem;
           line-height: 1.5;
           height: 2rem;
         }
       }
       .hero-partner {
-        margin-top: 5vh;
+        margin-top: 2vh;
         h6 {
           margin-top: 0;
         }
@@ -508,7 +519,7 @@
       }
 
       .partner-logo {
-        margin-top: 3vh;
+        margin-top: 1vh;
         img {
           max-height: 80px;
         }
@@ -646,13 +657,13 @@
         }
       }
       .hero-partner {
-        margin-top: 5vh;
+        margin-top: 3vh;
         h6 {
           margin-top: 0;
         }
       }
       .hero-header-btn {
-        margin-top: 4vh;
+        margin-top: 2vh;
       }
 
       .partner-logo {
@@ -729,7 +740,7 @@
 
     nav span {
       float: right;
-      padding: 1vh 6vw 0 0;
+      padding: 1vh 4vw 0 0;
     }
 
     .project-header {
@@ -742,7 +753,7 @@
 
       h6 {
         &:first-child {
-          margin-top: 8vh;
+          margin-top: 4vh;
           font-size: 1rem;
           line-height: 1.5;
           height: 2rem;
