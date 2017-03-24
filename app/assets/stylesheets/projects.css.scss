@@ -1595,7 +1595,7 @@
   .project-page {
     margin-bottom: 40px;
     section.hero-section {
-      height: 110vh;
+      height: 112vh;
       header {
         nav {
           margin-top: 2vh;
@@ -1693,21 +1693,46 @@
     }
     .footer-cta {
       .footer-cta-inner {
+        .left-column, .center-column, .right-column {
+          margin: 0;
+          padding: 7px 4px;
+        }
+        .left-column, .right-column {
+          width: 30%;
+        }
         .left-column {
-          display: none;
+          display: block;
+          margin-top: 20px;
+          .top-p-cta, .bottom-p-cta {
+            height: auto;
+            max-height: none;
+            p {
+              padding: 0;
+              margin: 0;
+            }
+          }
+          .top-p-cta {
+            font-size: 1.4rem;
+          }
+          .bottom-p-cta {
+            font-size: 1.8rem;
+          }
         }
         .center-column {
+          width: 39%;
+          margin-top: 16px;
           ul {
-            margin: 2vh 12vw 1vw;
+            margin: 0;
+            padding-bottom: 6px;
           }
           li {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             span {
-              font-size: 1.6rem;
+              font-size: 1.8rem;
             }
           }
           #project-progress-bar {
-            width: 76%;
+            width: 90%;
             .progress-bar-success {
             }
           }
