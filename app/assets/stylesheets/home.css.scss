@@ -1397,7 +1397,7 @@ iframe {
 }
 
 // ==================================================
-// iphone 5 landscape mode
+// iphone 5/SE landscape mode
 @media screen and (max-width: 568px) and (orientation: landscape) {
   $top-headline: 3.5rem;
   $sub-headline: 2.2rem;
@@ -1555,11 +1555,11 @@ iframe {
       }
     }
   }
-// end of 5 landscape
+// end of 5/SE landscape
 }
 
 // Media Queries
-// iphone 5 in portrait
+// iphone 5/SE in portrait
 @media screen and (max-width: 320px) and (orientation: portrait) {
   $top-headline: 3rem;
   $sub-headline: 2rem;
@@ -1730,6 +1730,6 @@ iframe {
       }
     }
   }
-// end of 5 portait
+// end of 5/SE portait
 }
 
