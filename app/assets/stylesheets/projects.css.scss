@@ -1521,7 +1521,7 @@
 
     .project-detail {
       .tab {
-        margin: 5vh;
+        margin: 5vh 1vw;
         text-align: center;
       }
       .tab-links {
@@ -1566,11 +1566,21 @@
         .left-column {
           display: none;
         }
+        .center-column, .right-column {
+          margin: 0;
+          padding: 10px 4px;
+        }
         .center-column {
+          width: 60%;
           margin-top: 1vh;
         }
         .right-column {
+          width: 39%;
           margin-top: 2vh;
+          button {
+            width: 80%;
+            height: 52px;
+          }
         }
       }
     }
