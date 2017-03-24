@@ -74,7 +74,7 @@ project = Project.new(partner_id: partner.id, name: "Bring Back the Bay's Kelp F
 
   overview_headline: "The ocean absorbs an enormous amount of the planet's carbon and kelp is a key player in this process.",
   science_headline: "Kelp forests are the key to a carbon-absorbing, healthy offshore ecosystem.",
-  news_headline:"{partner.name} News",
+  news_headline:"#{partner.name} News",
   volunteer_headline:"Volunteer with #{partner.name}",
   science: "<p>Kelp is the best way to fight global warming that you’ve never heard of. Plant-like life in the ocean, from seagrasses to plankton, add up to just 0.05 percent of the plant biomass on land,
     but are so pervasive and efficient at sucking up carbon that they cycle through approximately the same amount of carbon every year as all land-based plants.</p>
@@ -209,10 +209,10 @@ partner = Partner.new(location_id: loc.id,
     by sharing what they learned and harvested. Tomatoes, melons, squash, cucumbers, peppers, kale, chard, broccoli, cabbage, cauliflower, green beans, cilantro, basil, rosemary and thyme are just some of the most common crops.</p>
     <p>Families use the people and climate-friendly techniques out there </p>
     <ul>
-    <li>Organic — no herbicides, pesticides, insecticides and petroleum-based fertilizers </li>
-    <li>Drip irrigation and straw as crop cover to reduce water use </li>
-    <li>Composting — turning plant waste into nourishment for the next generation of plants, not filling landfills </li>
-    <li>No Till — Companion Planting – putting plants together whose needs and by-products complement each other. </li>
+      <li>Organic — no herbicides, pesticides, insecticides and petroleum-based fertilizers </li>
+      <li>Drip irrigation and straw as crop cover to reduce water use </li>
+      <li>Composting — turning plant waste into nourishment for the next generation of plants, not filling landfills </li>
+      <li>No Till — Companion Planting – putting plants together whose needs and by-products complement each other. </li>
     </ul>
     <p>So far the project has built home gardens for 163 families, and provided the training and support to ensure their success.</p>
     <p>To combat hunger, build home gardens, and promote healthy and sustainable lifestyles, the MEND Grow Together Project has partnered with community organizations and individuals. In building all 163 home gardens, the MEND Grow Together
@@ -236,7 +236,8 @@ project = Project.new(partner_id: partner.id, name: "Urban Farming in Pacoima",
     <p>So we’re partnering with the best urban gardens and farms in Los Angeles to plant the seeds of this soil revolution.
     Our first project is with MEND in Pacoima. Their GROW TOGETHER program empowers low-income, immigrant families to grow their own food by providing the supplies and support necessary for creating and maintaining backyard gardens.
     It serves as a model for how farming close to home can transform the carbon cycle, while making our neighborhoods into vibrant centers of community and sustenance.</p>
-    <ul>Food grown close to home:
+    <p>Food grown close to home:</p>
+    <ul>
       <li>Reduces the fossil fuels necessary to transport produce long distances</li>
       <li>Slashes the need for petroleum-based fertilizers</li>
       <li>Directs organic waste from families and the community into compost instead of landfills</li>
@@ -253,7 +254,7 @@ project = Project.new(partner_id: partner.id, name: "Urban Farming in Pacoima",
     <p>Many of these families come from agricultural backgrounds in their native countries and MEND empowers them to continue their healthy plant-based diets instead of assimilating to over-processed, less nutritious supermarket groceries.</p>",
   overview_headline: "",
   science_headline: "",
-  news_headline:"{partner.name} News",
+  news_headline:"#{partner.name} News",
   volunteer_headline:"Volunteer with #{partner.name}",
   science: "<p>Our global food system creates 20–30% of all human being’s greenhouse gas emissions. Meat and dairy production contribute disproportionately to that total, as does food waste. But other things matter too.</p>
     <p>The earth’s soils contain more than three times the amount of carbon as the atmosphere, and 4.5 times the amount of carbon as all living things.</p>
@@ -397,8 +398,8 @@ partner = Partner.new(location_id: loc.id,
     <p>If you have materials, you can bring them to their facilities, free of charge:</p>
     <p>Monday through Friday: 10:00am - 1:30pm and 2:30 - 5:30pm</p>
     <address>1769 Naud St, Los Angeles, CA 90012</address>
-    They’re especially interested in arranging a contributions from organizations like businesses, nonprofits, and governments who have a lot of material for disposal. Homeboy Recycling offers competitive pricing for its certified, secure, and responsible e-waste solutions.</p>
-    To schedule a pickup and get a quote, call <a href='tel:13232223322'>(323) 222–3322</a> or email <a href='mailto:info@isidorerecycling.com'>info@isidorerecycling.com</a>.</p>",
+    <p>They’re especially interested in arranging a contributions from organizations like businesses, nonprofits, and governments who have a lot of material for disposal. Homeboy Recycling offers competitive pricing for its certified, secure, and responsible e-waste solutions.</p>
+    <p>To schedule a pickup and get a quote, call <a href='tel:13232223322'>(323) 222–3322</a> or email <a href='mailto:info@isidorerecycling.com'>info@isidorerecycling.com</a>.</p>",
   news: "<p>Check out Kabira Stokes’ TED talk on the unlikely story how she came to start and run a triple bottom line social enterprise</p>
     <p><iframe src='https://www.youtube.com/embed/sg18KmcTYXA' frameborder='0' allowfullscreen></iframe></p>")
 partner.save
@@ -424,7 +425,7 @@ project = Project.new(partner_id: partner.id, name: "Recycle Electronics, Rebuil
     love the support to be able to keep demanufacturing as a stable position for their workers, regardless of the market.</p>",
   overview_headline: "",
   science_headline: "",
-  news_headline:"{partner.name} News",
+  news_headline:"#{partner.name} News",
   volunteer_headline:"Volunteer with #{partner.name}",
   science: "<p>The science behind the climate-change fighting power of Isidore’s e-recycling program is simple.</p>
     <p>Computers make our world go around. We rely on them for almost everything. But producing them requires truckloads of metals – copper, aluminum, steel – for basic parts and even precious metals like gold, palladium, and platinum for specialized components.</p>
@@ -487,8 +488,8 @@ image.save
 partner = Partner.new(location_id: loc.id,
   name: "GRID Alternatives",
   blurb: "Solar Power for Homeless Youth",
-  description: "<p>GRID Alternatives’ mission is to make renewable energy technology and job training accessible to underserved communities.
-    A successful transition to clean, renewable energy is a must for our environment and to be truly successful, it must be just and include everyone in its benefits.</p>
+  description: "<p>GRID Alternatives’ mission is to make renewable energy technology and job training accessible to underserved communities.</p>
+    <p>A successful transition to clean, renewable energy is a must for our environment and to be truly successful, it must be just and include everyone in its benefits.</p>
     <p>What they do is simple - using a volunteer model, they install solar electric systems for families in underserved communities at no-cost.  The impact however, is tremendous.</p>
     <p>The GRID Alternatives Greater Los Angeles (GLA) office opened in 2007 and serves Los Angeles, Orange, and Ventura Counties.
     GLA leads teams of volunteers and job trainees to install solar electric systems for low-income families in Los Angeles, Orange and Ventura Counties, providing families
@@ -524,7 +525,7 @@ project = Project.new(partner_id: partner.id, name: "Solar Panels for Safe Place
     Homeless teenagers there will learn cutting-edge technology and skills from leading professionals in the field to prepare them for good-paying careers.</p>",
   overview_headline: "",
   science_headline: "",
-  news_headline:"{partner.name} News",
+  news_headline:"#{partner.name} News",
   volunteer_headline:"Volunteer with #{partner.name}",
   science: "<p>Solar power isn’t an obscure idea anymore. It’s a huge and growing industry. Its climate-change fighting power comes from the fact that it is replacing energy generated by dirty fossil fuels like coal, oil and natural gas.</p>
     <p>Where your electricity comes from depends a lot on where you live. In some places, it depends on coal-burning power plants, in other places natural gas or oil, and in still other spots, nuclear fission, hydro-electric, solar, wind, geothermal. Most likely it’s some combination of these.</p>
