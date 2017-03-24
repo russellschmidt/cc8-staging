@@ -1330,7 +1330,20 @@
   .project-page {
     margin-bottom: 40px;
     section.hero-section {
-      height: 100vh;
+      height: 100%;
+      nav ul {
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+      }
+      nav li#nav-logo {
+        width: 100%;
+        max-width: none;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        display: block;
+      }
     }
     .project-header {
       h1 {
@@ -1410,28 +1423,49 @@
     }
     .footer-cta {
       .footer-cta-inner {
+        .left-column, .center-column, .right-column {
+          margin-top: 10px;
+        }
+        .left-column, .right-column {
+          width: 29%;
+        }
         .left-column {
-          display: none;
+          display: block;
+          padding-top: 15px;
+          .top-p-cta, .bottom-p-cta {
+            width: 100%;
+            height: auto;
+            max-height: none;
+          }
+          .top-p-cta {
+            font-size: 1.4rem;
+          }
+          .bottom-p-cta {
+            font-size: 1.8rem;
+          }
         }
         .center-column {
+          width: 40%;
           ul {
-            margin: 2vh 12vw 1vw;
+            margin: 10px 10px;
           }
           li {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             span {
-              font-size: 1.6rem;
+              font-size: 1.8rem;
             }
           }
           #project-progress-bar {
-            width: 76%;
+            width: 90%;
             .progress-bar-success {
             }
           }
         }
         .right-column {
           button {
-            margin: 3vh auto 0;
+            margin: 10px 10px;
+            height: 56px;
+            font-size: 1.8rem;
           }
         }
       }
