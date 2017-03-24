@@ -204,6 +204,18 @@
         font-size: 1.6rem;
         line-height: 1.5;
       }
+      div {
+        margin: 2px auto;
+        max-width: 560px;
+        div {
+          text-align: center;
+        }
+        iframe {
+          width: 90%;
+          height: 315px;
+          margin: 0 auto;
+        }
+      }
     }
   }
 
