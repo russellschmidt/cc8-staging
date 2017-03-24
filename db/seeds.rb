@@ -401,7 +401,7 @@ partner = Partner.new(location_id: loc.id,
     <p>They’re especially interested in arranging a contributions from organizations like businesses, nonprofits, and governments who have a lot of material for disposal. Homeboy Recycling offers competitive pricing for its certified, secure, and responsible e-waste solutions.</p>
     <p>To schedule a pickup and get a quote, call <a href='tel:13232223322'>(323) 222–3322</a> or email <a href='mailto:info@isidorerecycling.com'>info@isidorerecycling.com</a>.</p>",
   news: "<p>Check out Kabira Stokes’ TED talk on the unlikely story how she came to start and run a triple bottom line social enterprise</p>
-    <p><iframe src='https://www.youtube.com/embed/sg18KmcTYXA' frameborder='0' allowfullscreen></iframe></p>")
+    <div><iframe width="560" height="315" src="https://www.youtube.com/embed/sg18KmcTYXA" frameborder="0" allowfullscreen></iframe></div>")
 partner.save
 
 project = Project.new(partner_id: partner.id, name: "Recycle Electronics, Rebuild Lives",
