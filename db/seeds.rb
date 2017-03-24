@@ -144,7 +144,7 @@ project = Project.new(partner_id: partner.id, name: "Bring Back the Bay's Kelp F
      <a href='http://www.grida.no/publications/rr/blue-carbon/''>http://www.grida.no/publications/rr/blue-carbon/</a></blockquote>
     <blockquote>Dan Laffoley &amp; Gabriel Grimsditch, eds., <cite>The Management of Natural Coastal Carbon Sinks.</cite> 2009. UCN, Gland, Switzerland. 53 pp.
     <a href='https://cmsdata.iucn.org/downloads/carbon_managment_report_final_printed_version_1.pdf'>https://cmsdata.iucn.org/downloads/carbon_managment_report_final_printed_version_1.pdf</a></blockquote>",
-  videoUrl: "https://www.youtube.com/watch?v=5KpA0DY_Wbo")
+  videoUrl: "https://www.youtube.com/embed/5KpA0DY_Wbo")
 
 project.save
 
@@ -322,7 +322,7 @@ project = Project.new(partner_id: partner.id, name: "Urban Farming in Pacoima",
     <p>Total: $438</p>
     <p>BOTTOM LINE:</p>
     <p>You reduce an additional 24 lbs of CO2 for every dollar you donate.</p>",
-  videoUrl: "https://www.youtube.com/watch?v=PYFMGtR83Mk")
+  videoUrl: "https://www.youtube.com/embed/PYFMGtR83Mk")
 project.save
 
 campaign = Campaign.new(project_id: project.id, name: "2017 MEND Urban Farming Campaign",
@@ -446,7 +446,7 @@ project = Project.new(partner_id: partner.id, name: "Recycle Electronics, Rebuil
     <p>Homeboy’s expenses include salary for the front-line worker and a small amount of time for supervision/guidance, the minimal wear and tear on equipment which causes depreciation, and small overhead costs.</p>
     <p>BOTTOM LINE:</p>
     <p>You reduce an additional 30 lbs of CO2(e) for every dollar you donate.</p>",
-  videoUrl: "https://www.youtube.com/watch?v=21T5ERwjjEQ")
+  videoUrl: "https://www.youtube.com/embed/21T5ERwjjEQ")
 project.save
 
 campaign = Campaign.new(project_id: project.id, name: "2017 Isidore Recycling Campaign",
@@ -542,7 +542,7 @@ project = Project.new(partner_id: partner.id, name: "Solar Panels for Safe Place
     <p>We determine your personal impact by figuring out the per dollar cost of reducing 1 lb of CO2 and then multiplying that number by the amount of money you contributed.</p>
     <p>This project’s estimated system cost is $31,737, including: $16,234 in installation labor, permitting and engineering costs $15,503 in equipment (panels, inverters, and balance of system costs).</p>
     <p>BOTTOM LINE: You reduce an additional 8.92 lbs of CO2 for every dollar you donate.</p>",
-videoUrl: "https://www.youtube.com/watch?v=bjt7ICudF_4")
+videoUrl: "https://www.youtube.com/embed/bjt7ICudF_4")
 project.save
 
 campaign = Campaign.new(project_id: project.id, name: "2017 GRID Alternatives solar campaign",
