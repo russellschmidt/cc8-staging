@@ -618,7 +618,7 @@
             margin: 1vh auto;
             width: 70%;
             max-width: 250px;
-            height: auto;
+            height: 30px;
             font-size: 1.4rem;
           }
         }
@@ -886,6 +886,12 @@
     margin-bottom: 40px;
     section.hero-section {
       height: 45vh;
+      nav {
+        margin-top: 1vh;
+        li#nav-logo {
+          margin-left: 0;
+        }
+      }
     }
     .project-header {
       h1 {
@@ -906,13 +912,13 @@
         }
       }
       .hero-partner {
-        margin-top: 3vh;
+        margin-top: 4vh;
         h6 {
           margin-top: 0;
         }
       }
       .hero-header-btn {
-        margin-top: 4vh;
+        margin-top: 2vh;
       }
 
       .partner-logo {
@@ -946,28 +952,51 @@
     .footer-cta {
       height: 100px;
       .footer-cta-inner {
+        .left-column, .center-column, .right-column {
+          float: left;
+          padding-top: 2.5vh;
+        }
+        .left-column, .right-column {
+          width: 29%
+        }
         .left-column {
-          display: none;
+          display: block;
+          .top-p-cta, .bottom-p-cta {
+            margin-top: 0;
+            width: 100%;
+          }
+          .top-p-cta {
+            font-size: 1.4rem;
+          }
+          .bottom-p-cta {
+            padding-top: 5px;
+            font-size: 2.2rem;
+          }
         }
         .center-column {
+          width: 40%;
           ul {
-            margin: 0 12vw 1vh;
+            margin: 0 0 10px;
+            padding: 0;
           }
           li {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
+            line-height: 1.5;
             span {
               font-size: 1.6rem;
             }
           }
           #project-progress-bar {
-            width: 76%;
+            width: 92%;
             .progress-bar-success {
             }
           }
         }
         .right-column {
           button {
-            margin: 12px auto 2vh;
+            margin: 0;
+            height: 40px;
+            font-size: 1.4rem;
           }
         }
       }
