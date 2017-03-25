@@ -233,10 +233,9 @@
       }
     }
     #video-modal {
-      .modal-header, .modal-body {
-        padding: 0;
-        margin: 0;
-        width: 90%;
+      .modal-dialog {
+        max-width: 50%;
+        max-height: 50%;
       }
     }
   }
@@ -1084,7 +1083,7 @@
     }
     .project-header {
       max-width: 736px;
-      padding-right: 5vw;
+      padding-right: 0;
       h1, h2, h6, div {
         width: 100%;
         margin: 0;
@@ -1236,7 +1235,7 @@
       }
       li#nav-logo {
         display: block;
-        margin: 0 auto;
+        margin: 0;
         padding: 0;
         margin: 0;
         width: 100%;
@@ -1245,6 +1244,7 @@
       }
     }
     .project-header {
+      text-align: center;
       h1, h2, h6 {
         padding: 0;
         margin: 0;
@@ -1260,7 +1260,9 @@
       h2 {
         font-size: 1.5rem;
         line-height: 1.6;
-        width: 90%;
+        width: 93%;
+        margin: 0;
+        padding-left: 2vw;
       }
 
       h6 {
@@ -1430,6 +1432,9 @@
       }
 
       .partner-logo {
+        width: 100%;
+        max-width: 667px;
+        text-align: center;
         img {
           max-height: 80px;
         }
@@ -1539,6 +1544,19 @@
     margin-bottom: 40px;
     section.hero-section {
       height: 70vh;
+      header {
+        ul {
+          padding: 0;
+          text-align: center;
+          width: 100%;
+          max-width: 375px;
+          li {
+            width: 100;
+            max-width: 375px;
+            padding: 0;
+          }
+        }
+      }
     }
     .project-header {
       h1 {
