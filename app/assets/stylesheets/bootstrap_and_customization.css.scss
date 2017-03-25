@@ -11,3 +11,78 @@ $second-sans-font: 'Source Sans Pro';
 .container-fluid {
   padding: 0;
 }
+
+// ----------------------------------------
+// Project Page video modal
+// ----------------------------------------
+
+#video-modal {
+  top: 5%;
+  .modal-dialog {
+    margin: 0 auto;
+    width: 90%;
+
+  }
+  .modal-content {
+    background-color: rgba(0,0,0,0.5)
+  }
+  .modal-header {
+    h4, button {
+      color: white;
+    }
+    h4 {
+      display: inline;
+    }
+    button.close {
+      opacity: 0.8;
+    }
+  }
+  .modal-body {
+    text-align: center;
+  }
+  iframe {
+    width: 80vw;
+    height: 60vh;
+    margin: 0 auto;
+  }
+  .modal-header, .modal-footer {
+    border: none;
+    button:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+@media all and (max-width: 850px) {
+  #video-modal {
+    top: 0;
+    .modal-dialog {
+      margin: 0 auto;
+      width: 100vw;
+      height: 100vh;
+    }
+    .modal-content {
+      height: 100vh;
+      width: 100vw;
+    }
+    .modal-header {
+      padding: 5px;
+      h4 {
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .modal-footer {
+      padding: 5px;
+    }
+    iframe {
+      width: 90vw;
+      height: 75vh;
+      margin: 0 auto;
+    }
+  }
+}
+
+// ----------------------------------------
+// End Project Page video modal styling
+// ----------------------------------------
