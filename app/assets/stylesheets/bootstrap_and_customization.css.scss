@@ -86,3 +86,163 @@ $second-sans-font: 'Source Sans Pro';
 // ----------------------------------------
 // End Project Page video modal styling
 // ----------------------------------------
+
+
+
+// ----------------------------------------
+// Project Page backer modal
+// ----------------------------------------
+
+#backer-modal {
+  .logo-container {
+    text-align: center;
+    h5 {
+      margin-top: 4%;
+    }
+    h2 {
+      margin-top: 1%;
+    }
+  }
+  .modal-dialog {
+
+  }
+  .modal-content {
+    background-color: #114247;
+  }
+  .modal-header {
+    min-height: 5%;
+  }
+  .modal-body {
+
+  }
+  .modal-header, .modal-footer {
+    border: none;
+  }
+  .donation-form {
+    margin-top: 3%;
+    h5 {
+      margin-bottom: 2%;
+    }
+  }
+  .row {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    align-items: flex-start;
+
+    #customDonationInput {
+      display: block;
+    }
+  }
+  .tip-section {
+    padding-top: 3%;
+  }
+  h2 {
+    min-height: 4.5rem;
+    font-family: Oxygen;
+    font-size: 3.6rem;
+    text-align: center;
+    line-height: 1.25;
+    color: #FFFFFF;
+    text-shadow: 0 2px 2px 0 rgba(6,57,64,0.7);
+  }
+  h5 {
+    min-height: 3.1rem;
+    font-family: Oxygen;
+    font-size: 2.4rem;
+    text-align: center;
+    line-height: 1.25;
+    color: #FFFFFF;
+    text-shadow: 0 2px 2px 0 rgba(6,57,64,0.7);
+  }
+  button, #customDonationInput {
+    box-sizing: border-box;
+    width: 12.2rem;
+    min-height: 4.2rem;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    font-family: Oxygen;
+    font-size: 2.1rem;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.25;
+    color: #FFFFFF;
+    margin: 9px 11px;
+    background-color: rgba(17, 66, 71, 0)
+  }
+  button#btn-buy {
+    display: block;
+    margin: 5% auto 0;
+    box-sizing: border-box;
+    min-width: 22.4rem;
+    min-height: 4.8rem;
+    background-color: #3EC631;
+    border: 2px solid rgba(6,57,64,0.1);
+    border-radius: 4px;
+    font-family: Oxygen;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.25;
+    color: #FFFFFF;
+  }
+  p {
+    font-family: Oxygen;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 1.25;
+    color: #FFFFFF;
+    text-shadow: 0 2px 2px 0 rgba(6,57,64,0.7);
+  }
+  input#tip-amount {
+    display: block;
+    margin: 2% auto 0;
+    width: 11rem;
+    min-height: 1rem;
+    opacity: 0.5;
+    font-family: Oxygen;
+    font-size: 2.1rem;
+    text-align: center;
+    line-height: 1.5;
+    color: #FFFFFF;
+    padding: 0 1%;
+    border: none;
+    border-bottom: 2px solid #fff;
+    background-color: rgba(17, 66, 71, 0)
+  }
+  input#customDonationInput {
+    width: 11rem;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'
+      version='1.1' height='30px' width='130px'><text x='2' y='28' fill='gray' font-size='21'
+      font-family='Oxygen'>$</text></svg>");
+    padding-left: 12px;
+  }
+  input#tip-amount {
+    width: 11rem;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'
+      version='1.1' height='30px' width='130px'><text x='2' y='24' fill='gray' font-size='21'
+      font-family='Oxygen'>$</text></svg>");
+    padding-left: 12px;
+  }
+}
+
+@media all and (max-width: 850px) {
+  #backer-modal {
+
+    .modal-dialog {
+
+    }
+    .modal-content {
+
+    }
+    .modal-header {
+
+    }
+    .modal-footer {
+    }
+  }
+}
+
+// ----------------------------------------
+// End Project Page backer modal styling
+// ----------------------------------------

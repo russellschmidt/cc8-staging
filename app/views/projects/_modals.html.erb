@@ -5,98 +5,71 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Back this project!</h4>
       </div>
 
       <div class="modal-body">
-        <%= form_tag charges_path, id:"chargeForm" do %>
-          <script src="https://checkout.stripe.com/checkout.js"></script>
-          <%= hidden_field_tag 'stripeToken' %>
-          <%= hidden_field_tag 'stripeEmail' %>
-          <%= hidden_field_tag 'donationToCampaign', 2500 %>
-          <%= hidden_field_tag 'donationToTip', 375 %>
-          <%= hidden_field_tag 'totalDonation', 2875 %>
-          <%= hidden_field_tag 'campaign_id', get_project_campaigns(@project).first.id %>
-          <section class="row">
-            <div class="col-sm-6">
-              <div class="radio">
-                <label>
-                  <input type="radio" name="donationRadio" id="donationRadio1" value="500">
-                  $5
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="donationRadio" id="donationRadio2" value="1000">
-                  $10
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="donationRadio" id="donationRadio3" value="2500" checked>
-                  $25
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="donationRadio" id="donationRadio4" value="5000">
-                  $50
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="donationRadio" id="donationRadio5" value="10000">
-                  $100
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="donationRadio" id="donationRadio6" value="customRadio">
-                    <div class="form-group">
-                      <label class="sr-only" for="customDonationRadioInput">Amount (in dollars)</label>
-                      <div class="input-group">
-                        <div class="input-group-addon">$</div>
-                        <input type="number" class="form-control" id="customDonationRadioInput" placeholder="Custom Donation">
-                      </div>
-                    </div>
-                </label>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="form-group">
-                Learn More about Tips
-                <label class="sr-only" for="tipAmount">Amount (in dollars)</label>
-                <div class="input-group">
-                  <div class="input-group-addon">$</div>
-                  <input type="number" class="form-control" id="tipAmount" value="3.75">
-                </div>
-              </div>
-            </div>
-          </section>
+        <div class="header">
+          <div class="logo-container">
+            <img src="https://s3.amazonaws.com/climatecents3/PartnerLogo/logo_climatecents_med_white.png" alt="Climate Cents logo"/>
+            <h5>Back this project:</h5>
+            <h2><%= @project.name %></h2>
+          </div>
+        </div>
 
-          <button id="btn-buy" type="button" class="btn btn-success btn-lg btn-block">
-            <span class='glyphicon glyphicon-ok'></span>&nbsp;I want to help!
-          </button>
-          <script>
-          var handler = StripeCheckout.configure({
-            key: '<%= Rails.configuration.stripe[:publishable_key] %>',
-            token: function(token, arg) {
-              document.getElementById("stripeToken").value = token.id;
-              document.getElementById("stripeEmail").value = token.email;
-              document.getElementById("chargeForm").submit();
-            }
-          });
-          document.getElementById('btn-buy').addEventListener('click', function(e){
-            handler.open({
-              name: 'Climate Cents',
-              description: 'Donation to <%= get_partner(@project.partner_id).name %>',
-              amount: Number(document.getElementById('totalDonation').value)
+        <div class="donation-form">
+          <h5>Choose your donation amount:</h5>
+          <%= form_tag charges_path, id:"chargeForm" do %>
+            <script src="https://checkout.stripe.com/checkout.js"></script>
+            <%= hidden_field_tag 'stripeToken' %>
+            <%= hidden_field_tag 'stripeEmail' %>
+            <%= hidden_field_tag 'donationToCampaign', 2500 %>
+            <%= hidden_field_tag 'donationToTip', 375 %>
+            <%= hidden_field_tag 'totalDonation', 2875 %>
+            <%= hidden_field_tag 'campaign_id', get_project_campaigns(@project).last.id %>
+            <div class="row">
+              <button id="donation-5" class="donation-button">$5</button>
+              <button id="donation-10" class="donation-button">$10</button>
+              <button id="donation-25" class="donation-button">$25</button>
+            </div>
+            <div class="row">
+              <button id="donation-50" class="donation-button">$50</button>
+              <button id="donation-100" class="donation-button">$100</button>
+              <div class="donation-button">
+                <input type="number" id="customDonationInput"
+                    placeholder="Custom" min="0">
+              </div>
+            </div>
+            <div class="tip-section">
+              <p>We give 100% of your donation to this project.</p>
+              <p>Help us keep the lights on by adding to the Climate Cents tip jar:</p>
+              <div class="tip-button">
+                <input type="number" id="tip-amount" value="3.75" min="0"/>
+              </div>
+            </div>
+            <button id="btn-buy" type="button">
+              Add My Support
+            </button>
+            <script>
+            var handler = StripeCheckout.configure({
+              key: '<%= Rails.configuration.stripe[:publishable_key] %>',
+              token: function(token, arg) {
+                document.getElementById("stripeToken").value = token.id;
+                document.getElementById("stripeEmail").value = token.email;
+                document.getElementById("chargeForm").submit();
+              }
             });
-            e.preventDefault();
-          })
+            document.getElementById('btn-buy').addEventListener('click', function(e){
+              handler.open({
+                name: 'Climate Cents',
+                description: 'Donation to <%= get_partner(@project.partner_id).name %>',
+                amount: Number(document.getElementById('totalDonation').value)
+              });
+              e.preventDefault();
+            })
 
-          </script>
-        <% end %>
+            </script>
+          <% end %>
+        </div>
       </div>
 
       <div class="modal-footer">
