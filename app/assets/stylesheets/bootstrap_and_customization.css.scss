@@ -243,6 +243,19 @@ $second-sans-font: 'Source Sans Pro';
     }
     .modal-footer {
     }
+    h2 {
+      font-size: 2.4rem;
+    }
+    h5 {
+      font-size: 1.6rem;
+    }
+    button, input#customDonationInput, input#tip-amount {
+      font-size: 1.8rem;
+      width: 8.0rem;
+    }
+    p {
+      font-size: 1.4rem;
+    }
   }
 }
 
