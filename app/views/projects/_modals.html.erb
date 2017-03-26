@@ -27,13 +27,13 @@
             <%= hidden_field_tag 'totalDonation', 2875 %>
             <%= hidden_field_tag 'campaign_id', get_project_campaigns(@project).last.id %>
             <div class="row">
-              <button id="donation-5" class="donation-button">$5</button>
-              <button id="donation-10" class="donation-button">$10</button>
-              <button id="donation-25" class="donation-button">$25</button>
+              <button type="button" id="donation-5" class="donation-button" value="500">$5</button>
+              <button type="button" id="donation-10" class="donation-button" value="1000">$10</button>
+              <button type="button" id="donation-25" class="donation-button" value="2500">$25</button>
             </div>
             <div class="row">
-              <button id="donation-50" class="donation-button">$50</button>
-              <button id="donation-100" class="donation-button">$100</button>
+              <button type="button" id="donation-50" class="donation-button" value="5000">$50</button>
+              <button type="button" id="donation-100" class="donation-button" value="10000">$100</button>
               <div class="donation-button">
                 <input type="number" id="customDonationInput"
                     placeholder="Custom" min="0">

@@ -1,54 +1,45 @@
-$(document).on('turbolinks:load', function() {
-  const TIP_PERCENT = 0.15
-  var tip, donation, total;
+const TIP_PERCENT = 0.15;
+var tip, donation, total;
+donation = 2500;
 
+$(document).on('turbolinks:load', function() {
   setInterval(function(){
-    if( ($("#customDonationRadioInput").val() == 0) && ($("#tipAmount").val() == 0) ){
+    if( ($("#customDonationInput").val() == 0) && ($("#tip-amount").val() == 0) ){
       $('#btn-buy').prop('disabled', true);
     } else {
       $('#btn-buy').prop('disabled', false);
     }
   }, 100);
 
-  $('#donationRadio1, #donationRadio2, #donationRadio3, #donationRadio4, #donationRadio5').click(function(){
-    donation = Number($(this).val());
-    donation = flipNegativeDonationValue(donation);
-
-    tip = calculateTip(TIP_PERCENT, donation);
-    $("#tipAmount").val(tip);
-    tip = tip * 100;
-    total = tip + donation;
-    setHiddenFields(donation, tip, total)
+  $('.donation-button').click(function(){
+    $('.donation-button').css({"background-color": "rgba(17, 66, 71, 0)", "color": "#FFFFFF"});
+    $(this).css({"background-color": "#fff", "color": "rgba(17, 66, 71, 1)"});
+      // set donation
+    donation = validateInput( Number($(this).val()) );
+      // set tip
+    tip = setTip(donation);
+      // set total
+    total = Number(donation) + Number(tip);
+    setHiddenFields(donation, tip, total);
   });
 
-  $('#customDonationRadioInput').on('keyup mouseup', function(){
-    $("#donationRadio6").prop("checked", true);
-    donation = Number($('#customDonationRadioInput').val() * 100);
-    donation = flipNegativeDonationValue(donation);
+  $('#backer-modal #customDonationInput').click(function(){
+    $(this).css({"color": "rgba(17, 66, 71, 1)"});
+  })
+
+  $('#customDonationInput').on('keyup mouseup', function(){
+    donation = validateInput(Number($('#customDonationInput').val() * 100));
 
     tip = calculateTip(TIP_PERCENT, donation);
-    $("#tipAmount").val(tip);
+    $('#tip-amount').val(Number(tip/100).toFixed(2));
     tip = tip * 100;
     total = tip + donation;
     setHiddenFields(donation, tip, total);
   });
 
-  $("#donationRadio6").click(function(){
-    donation = Number($('#customDonationRadioInput').val());
-    donation = flipNegativeDonationValue(donation);
-
-    $('#customDonationRadioInput').val(donation);
-    tip = calculateTip(TIP_PERCENT, donation * 100);
-    $("#tipAmount").val(tip);
-    tip = tip * 100;
-    total = tip + donation;
-    setHiddenFields(donation, tip, total);
-  });
-
-  $('#tipAmount').on('keyup mouseup', function(){
-    tip = Number($("#tipAmount").val());
-    tip = flipNegativeTipValue(tip);
-    $("#tipAmount").val(tip);
+  $('#tip-amount').on('keyup mouseup', function(){
+    tip = validateInput( Number($("#tip-amount").val()) );
+    $("#tip-amount").val(tip);
     tip = tip * 100;
     total = tip + donation;
     setHiddenFields(donation, tip, total);
@@ -56,30 +47,31 @@ $(document).on('turbolinks:load', function() {
 });
 
 
+function calculateTip(tipPercent, donation) {
+  return ((tipPercent*donation).toFixed(2));
+}
 
-function togglePaymentButton(){
+function setTip(donation) {
+  const tip = calculateTip(TIP_PERCENT, donation);
+  $('#tip-amount').val(Number(tip/100).toFixed(2));
+  return tip;
+}
+
+function togglePaymentButton() {
   const MIN_DONATION = 1;
   var donation = $('input[type=hidden]#donationToCampaign').val(donation);
   var tip = $('input[type=hidden]#donationToTip').val(tip);
   var total = $('input[type=hidden]#totalDonation').val(total);
 }
 
-function flipNegativeTipValue(tip){
-  if (tip < 0){
-    tip = tip * -1;
+function validateInput(num) {
+  if (isNaN(num)) {
+    return 0;
+  } else if (num < 0) {
+    return num * -1;
+  } else {
+    return num;
   }
-  return tip;
-}
-
-function flipNegativeDonationValue(donation){
-  if (donation < 0) {
-    donation = donation * -1;
-  }
-  return donation;
-}
-
-function calculateTip(tipPercent, donation) {
-  return ((tipPercent*donation/100).toFixed(2));
 }
 
 function setHiddenFields(donation, tip, total) {
