@@ -1372,7 +1372,7 @@ iframe {
   }
 
   footer {
-    height: $single-page-height;
+    height: $single-page-height*.8;
     min-height: auto;
     div.left-column, div.right-column {
       margin: 0;
