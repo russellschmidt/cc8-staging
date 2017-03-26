@@ -2,6 +2,10 @@ const TIP_PERCENT = 0.15;
 var tip, donation, total;
 donation = 2500;
 
+$(document).on("wheel", "input[type=number]", function (e) {
+    $(this).blur();
+});
+
 $(document).on('turbolinks:load', function() {
   setInterval(function(){
     if( ($("#customDonationInput").val() == 0) && ($("#tip-amount").val() == 0) ){
@@ -32,16 +36,13 @@ $(document).on('turbolinks:load', function() {
 
     tip = calculateTip(TIP_PERCENT, donation);
     $('#tip-amount').val(Number(tip/100).toFixed(2));
-    tip = tip * 100;
-    total = tip + donation;
+    total = Number(tip) + Number(donation);
     setHiddenFields(donation, tip, total);
   });
 
   $('#tip-amount').on('keyup mouseup', function(){
-    tip = validateInput( Number($("#tip-amount").val()) );
-    $("#tip-amount").val(tip);
-    tip = tip * 100;
-    total = tip + donation;
+    tip = validateInput( Number($("#tip-amount").val()) * 100 );
+    total = Number(tip) + Number(donation);
     setHiddenFields(donation, tip, total);
   });
 });
@@ -75,8 +76,7 @@ function validateInput(num) {
 }
 
 function setHiddenFields(donation, tip, total) {
-  $('input[type=hidden]#donationToCampaign').val(donation);
-  $('input[type=hidden]#donationToTip').val(tip);
-  $('input[type=hidden]#totalDonation').val(total);
+  $('input[type=hidden]#donationToCampaign').val(Math.floor(Number(donation)));
+  $('input[type=hidden]#donationToTip').val(Math.floor(Number(tip)));
+  $('input[type=hidden]#totalDonation').val(Math.floor(total));
 }
-
