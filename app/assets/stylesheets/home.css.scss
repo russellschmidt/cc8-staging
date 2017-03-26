@@ -1243,19 +1243,23 @@ iframe {
             width: 100%;
             text-align: center;
             margin: 0 auto;
-            padding: 0;
+            padding: 2vh 0;
           }
         }
       }
       div#hero-header {
-        margin-top: 6vh;
+        margin-top: 0;
+        padding-top: 20vh;
         h1 {
           font-size: $top-headline;
-          margin-bottom: 1rem;
+          margin: 0 auto;
+          line-height: 1.25;
         }
         h2 {
           font-size: $sub-headline;
           margin-top: 0;
+          padding-top: 3vh;
+          line-height: 1.25;
         }
       }
     }
@@ -1320,9 +1324,9 @@ iframe {
   }
 
   section#build-with-us {
-    height: $single-page-height;
+    height: $single-page-height*.75;
     div#build-with-us-header {
-      padding-top: 82px;
+      padding-top: 5vh;
       hgroup {
         h2 {
           padding-top: 0;
@@ -1344,14 +1348,24 @@ iframe {
 
   section#keep-in-touch {
     margin-top: 0;
-    padding-top: 82px;
-    height: $single-page-height;
+    padding-top: 5vh;
+    height: $single-page-height*.6;
     div#keep-in-touch-header {
       margin: 0;
       hgroup {
         h2 {
+          padding-top: 0;
+          font-size: $top-headline;
+          margin: 20px 1vw 10px;
+          line-height: 1.25;
+        }
+        h5 {
+          font-size: $sub-headline;
+          margin: 19px 1vw 10px;
+          line-height: 1.5;
           height: auto;
-          min-height: 55px;
+          min-height: none;
+          max-height: none;
         }
       }
     }
