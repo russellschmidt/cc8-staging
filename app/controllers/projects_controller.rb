@@ -11,6 +11,6 @@ class ProjectsController < ApplicationController
     end
 
     def find_partner(project)
-      Partner.find(project.partner_id)
+      Partner.friendly.find(project.partner_id)
     end
 end
