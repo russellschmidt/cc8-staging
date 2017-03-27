@@ -24,7 +24,7 @@
             <%= hidden_field_tag 'totalDonation', 2875 %>
             <%= hidden_field_tag 'campaign_id', get_project_campaigns(@project).last.id %>
             <%= hidden_field_tag 'stripeBillingName' %>
-            <%= hidden_field_tag 'stripeBillingAddress1' %>
+            <%= hidden_field_tag 'stripeBillingAddress' %>
             <%= hidden_field_tag 'stripeBillingAddressCity' %>
             <%= hidden_field_tag 'stripeBillingAddressState' %>
             <%= hidden_field_tag 'stripeBillingAddressCountry' %>
@@ -76,7 +76,7 @@
                 document.getElementById("stripeToken").value = token.id;
                 document.getElementById("stripeEmail").value = token.email;
                 document.getElementById("stripeBillingName").value = address.billing_name;
-                document.getElementById("stripeBillingAddress1").value = address.billing_address_line1;
+                document.getElementById("stripeBillingAddress").value = address.billing_address_line1;
                 document.getElementById("stripeBillingAddressCity").value = address.billing_address_city;
                 document.getElementById("stripeBillingAddressState").value = address.billing_address_state;
                 document.getElementById("stripeBillingAddressZip").value = address.billing_address_zip;

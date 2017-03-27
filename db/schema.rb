@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170327185039) do
+ActiveRecord::Schema.define(version: 20170327222936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,13 @@ ActiveRecord::Schema.define(version: 20170327185039) do
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
     t.string   "stripe_email"
+    t.string   "name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "country"
+    t.string   "countryCode"
     t.index ["campaign_id"], name: "index_donations_on_campaign_id", using: :btree
     t.index ["user_id"], name: "index_donations_on_user_id", using: :btree
   end

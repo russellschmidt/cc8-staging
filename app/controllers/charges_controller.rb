@@ -16,12 +16,19 @@ class ChargesController < ApplicationController
     )
 
     donation = Donation.new(
-      campaign_id: params[:campaign_id],
-      stripe_customer_id: customer.id,
-      total_in_cents: params[:totalDonation],
-      tip_in_cents: params[:donationToTip],
+      campaign_id:                params[:campaign_id],
+      stripe_customer_id:         customer.id,
+      total_in_cents:             params[:totalDonation],
+      tip_in_cents:               params[:donationToTip],
       campaign_donation_in_cents: params[:donationToCampaign],
-      stripe_email: params[:stripeEmail]
+      stripe_email:               params[:stripeEmail],
+      name:                       params[:stripeBillingName],
+      address:                    params[:stripeBillingAddress],
+      city:                       params[:stripeBillingAddressCity],
+      state:                      params[:stripeBillingAddressState],
+      zip:                        params[:stripeBillingAddressZip],
+      country:                    params[:stripeBillingAddressCountry],
+      countryCode:                params[:stripeBillingAddressCountryCode]
     )
 
     if user_signed_in?
