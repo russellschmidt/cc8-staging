@@ -76,6 +76,10 @@ GEM
     domain_name (0.5.20170223)
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
+    exception_handler (0.7.6.0)
+      bundler
+      rails (>= 4.2.0)
+      responders
     execjs (2.7.0)
     factory_girl (4.8.0)
       activesupport (>= 3.0.0)
@@ -277,6 +281,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.2)
   devise (~> 4.2.0)
+  exception_handler
   factory_girl_rails
   faker
   figaro
