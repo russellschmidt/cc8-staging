@@ -11,9 +11,9 @@ class ChargesController < ApplicationController
     charge = Stripe::Charge.create(
       customer: customer.id,
       amount: params[:totalDonation],
-      description: 'Test Stripe Customer',
+      description: Campaign.find(params[:campaign_id]).name,
       currency: 'usd'
-      )
+    )
 
     donation = Donation.new(
       campaign_id: params[:campaign_id],

@@ -12,12 +12,10 @@
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="A month's subscription"
-          data-amount="500"
-          data-locale="auto"
           data-image="https://s3.amazonaws.com/climatecents/logos/footer-logos/logo_climatecents_mark.png"
-          data-zip-code="true"></script>
+          ></script>
 <% end %>
 
 <hr/>
 <%= link_to 'Back', :back, class: "btn btn-primary btn-sm" %>
+
