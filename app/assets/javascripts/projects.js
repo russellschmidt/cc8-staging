@@ -1,4 +1,6 @@
 $(document).on('turbolinks:load', function() {
+  // Bootstrap tooltip enabling
+  $('[data-toggle="tooltip"]').tooltip()
 
   changeTabContent()
 

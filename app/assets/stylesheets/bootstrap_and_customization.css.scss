@@ -103,17 +103,11 @@ $second-sans-font: 'Source Sans Pro';
       margin-top: 1%;
     }
   }
-  .modal-dialog {
-
-  }
   .modal-content {
     background-color: #114247;
   }
   .modal-header {
     min-height: 5%;
-  }
-  .modal-body {
-
   }
   .modal-header, .modal-footer {
     border: none;
@@ -133,7 +127,6 @@ $second-sans-font: 'Source Sans Pro';
     flex-flow: wrap row;
     justify-content: center;
     align-items: flex-start;
-
     #customDonationInput {
       display: block;
     }
@@ -176,7 +169,7 @@ $second-sans-font: 'Source Sans Pro';
   }
   button#btn-buy {
     display: block;
-    margin: 5% auto 0;
+    margin: 11% auto 3%;
     box-sizing: border-box;
     min-width: 22.4rem;
     min-height: 4.8rem;
@@ -198,30 +191,70 @@ $second-sans-font: 'Source Sans Pro';
     color: #FFFFFF;
     text-shadow: 0 2px 2px 0 rgba(6,57,64,0.7);
   }
-  input#tip-amount {
-    display: block;
-    margin: 2% auto 0;
-    width: 11rem;
-    min-height: 1rem;
-    opacity: 0.5;
-    font-family: Oxygen;
-    font-size: 2.1rem;
-    text-align: center;
-    line-height: 1.5;
-    color: #FFFFFF;
-    padding: 0 1%;
-    border: none;
-    border-bottom: 2px solid #fff;
-    background-color: rgba(17, 66, 71, 0)
+
+  .tip-jar {
+    margin: 2% auto;
+    .right-column, .left-column {
+      float: left;
+      margin: 0;
+      padding: 0;
+      height: auto;
+    }
+    .left-column {
+      width: 48%;
+    }
+    .right-column {
+      width: 52%;
+    }
+    .tip-jar-image {
+      text-align: right;
+      img {
+        height: 60px;
+      }
+    }
+    .tip-button, .tip-jar-tool-tip {
+      text-align: left;
+    }
+    .tip-button input#tip-amount,
+          .tip-jar-tool-tip a {
+        color: #FFFFFF;
+        opacity: 0.5;
+        font-family: Oxygen;
+      }
+    .tip-button {
+      margin-top: 5px;
+      margin-left: 1vw;
+      text-align: left;
+      input#tip-amount {
+        width: 9rem;
+        min-height: 1rem;
+        font-size: 2.1rem;
+        text-align: center;
+        line-height: 1.5;
+        padding: 0 1%;
+        border: none;
+        border-bottom: 2px solid #fff;
+        background-color: rgba(17, 66, 71, 0)
+      }
+    }
+    .tip-jar-tool-tip {
+      a, a:hover, a:visited {
+        font-size: 1.1rem;
+        line-height: 1.5;
+      }
+    }
   }
+
+  // insert dollar sign into input field as background image
   input#customDonationInput {
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'
       version='1.1' height='30px' width='224px'><text x='2' y='28' fill='gray' font-size='21'
       font-family='Oxygen'>$</text></svg>");
     padding-left: 12px;
   }
+  //
   input#tip-amount {
-    width: 11rem;
+    width: 9rem;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'
       version='1.1' height='30px' width='130px'><text x='2' y='24' fill='gray' font-size='21'
       font-family='Oxygen'>$</text></svg>");
@@ -231,18 +264,6 @@ $second-sans-font: 'Source Sans Pro';
 
 @media all and (max-width: 850px) {
   #backer-modal {
-
-    .modal-dialog {
-
-    }
-    .modal-content {
-
-    }
-    .modal-header {
-
-    }
-    .modal-footer {
-    }
     h2 {
       font-size: 2.4rem;
     }
@@ -255,6 +276,20 @@ $second-sans-font: 'Source Sans Pro';
     }
     p {
       font-size: 1.4rem;
+    }
+    .tip-jar {
+      .left-column {
+        width: 39%;
+      }
+      .right-column {
+        width: 60%;
+      }
+      .tip-button {
+        margin-left: 4vw;
+      }
+    }
+    button#btn-buy {
+      margin: 12% auto 2%;
     }
   }
 }
