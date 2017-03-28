@@ -22,8 +22,13 @@
       <div class="fb-share">
         <button onclick="myFacebookLogin()">Share Project Story</button>
       </div>
+<!--       <div class="twitter-share">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-text="I helped fight climate change by donating to offset <%= @co2.to_i %> pounds of CO2!" data-url="http://climatecents.org" data-via="climatecents" data-hashtags="climatecents" data-lang="en" data-show-count="false" data-size="large">Tweet Project Story</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div> -->
       <div class="twitter-share">
-        <a href="https://twitter.com/intent/tweet?hashtags=climatecents&amp;original_referer=http%3A%2F%2Flocalhost%3A3000%2Fcharges&amp;ref_src=twsrc%5Etfw&amp;text=I%20helped%20fight%20climate%20change%20by%20donating%20to%20offset%2045%20pounds%20of%20CO2!&amp;tw_p=tweetbutton&amp;url=http%3A%2F%2Fclimatecents.org&amp;via=climatecents">
+        <a href="https://twitter.com/intent/tweet?hashtags=climatecents&amp;original_referer=http%3A%2F%2Flocalhost%3A3000%2Fcharges&amp;ref_src=twsrc%5Etfw&amp;text=I%20helped%20fight%20climate%20change%20by%20donating%20to%20offset%20<%= @co2.to_i %>%20pounds%20of%20CO2!&amp;tw_p=tweetbutton&amp;url=http%3A%2F%2Fclimatecents.org&amp;via=climatecents">
+          <button>Tweet Project Story</button>
+        </a>
       </div>
     </div>
     <div class="done-button-div">

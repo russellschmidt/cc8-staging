@@ -73,7 +73,8 @@
   .left-column {
     text-align: right;
     img {
-      max-height: 80px;
+      height: 80px;
+      width: auto;
     }
   }
   .right-column {
@@ -102,7 +103,7 @@
     color: #FFFFFF;
     text-align: center;
   }
-  .twitter-share a {
+  .twitter-share button {
     // dear future dev
     // I had to use !important to override twitter's widget to
     // customize the button. It is bad practice but I assure you
