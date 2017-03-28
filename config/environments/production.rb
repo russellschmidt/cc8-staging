@@ -96,7 +96,7 @@ Rails.application.configure do
   # assign exceptions to our standard exception (4xx) template via exception_handler gem
   # 5XXs default assigned to "exception" i.e. " 500 => 'exception', "
   # 4XX defined as nil by default so they inherit from Application Controller
-  config.exception_handler {
+  config.exception_handler = {
     layouts: {
       500 => nil,
       501 => nil,
