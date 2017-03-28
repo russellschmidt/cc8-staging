@@ -85,31 +85,17 @@
         </div>
 
         <div id="share" class="tab-content row">
-          <!-- Facebook share button code -->
-          <div class="fb-share-button col-xs-3 col-xs-offset-3 center"
-            data-href="<%= request.original_url %>"
-            data-layout="button_count"
-            data-size="large">
-          </div>
-          <div class="col-xs-3 center">
-            <a class="twitter-share-button"
-              href="https://twitter.com/share"
-              data-size="large"
-              data-text="Check out the <%=@project.name%> project from "
-              data-via="climatecents"
-              data-url="<%= request.original_url %>"
-              data-hashtags="climatecents">
-            Tweet</a>
-          </div>
-          <div class="fb-share-button"
-            data-href="http://www.climatecents.org"
-            data-layout="button_count"
-            data-size="large">
-          </div>
-          <hr/>
-          <div>
-            <a class="twitter-follow-button" href="https://twitter.com/climatecents"
-              data-size="large">Follow @ClimateCents</a>
+          <h4 class="word-h4">Word of mouth is our best way to build support.</h4>
+          <h4>Please share this project with friends:</h4>
+          <div class="social-icons">
+            <div class="fb-share">
+              <button onclick="myFacebookLogin()"><span><img src="https://s3.amazonaws.com/climatecents3/climate-cents-icons/fb-icon-transp.png" alt="share your atmospheric CO2-reducing Climate Cents donation via our platform for crowdfunded/crowdsourced local climate change projects with your friends on Facebook"/></span>Share Project Story</button>
+            </div>
+            <div class="twitter-share">
+              <a href="https://twitter.com/intent/tweet?hashtags=climatecents&amp;original_referer=http%3A%2F%2Flocalhost%3A3000%2Fcharges&amp;ref_src=twsrc%5Etfw&amp;text=Fight%20climate%20change%20by%20donating%20to%20<%= request.original_url %>!&amp;tw_p=tweetbutton&amp;via=climatecents">
+                <button><span><img src="https://s3.amazonaws.com/climatecents3/climate-cents-icons/twtr-icon-transp.png" alt="share your atmospheric CO2-reducing Climate Cents donation via our platform for crowdfunded/crowdsourced local climate change projects with your friends on Twitter"/></span>Tweet Project Story</button>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -177,3 +163,13 @@
   </div>
 
 <!-- end YouTube/Vimeo/video popout -->
+<!-- Facebook magic -->
+<script>
+// Only works after `FB.init` is called
+function myFacebookLogin() {
+  FB.login(function(){
+    FB.api('/me/feed', 'post', {message: 'Check out this project fighting global warming <%= request.original_url %>'});},
+    {scope: 'publish_actions'});
+}
+</script>
+<!-- end facebook magic -->

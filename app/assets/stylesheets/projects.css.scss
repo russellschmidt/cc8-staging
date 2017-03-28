@@ -232,6 +232,58 @@
           font-size: 1.4rem;
         }
       }
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+      }
+      .social-icons {
+        padding-top: 24px;
+        flex-flow: row wrap;
+      }
+      .fb-share, .twitter-share {
+        padding: 0 10px 20px;
+        span img {
+          max-height: 31px;
+          width: auto
+        }
+      }
+      .fb-share button {
+        box-sizing: border-box;
+        width: 222px;
+        height: 46px;
+        background-color: #3B5998;
+        border: 1px solid #FFFFFF;
+        border-radius: 4px;
+        font-family: Oxygen;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.25;
+        color: #FFFFFF;
+        text-align: center;
+        span {
+          padding-right: 19px;
+        }
+      }
+      .twitter-share button {
+        box-sizing: border-box;
+        width: 222px;
+        height: 46px;
+        background-color: #4099FF;
+        border: 1px solid #FFFFFF;
+        border-radius: 4px;
+        font-family: Oxygen;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.25;
+        color: #FFFFFF;
+        span {
+          padding-right: 10px;
+        }
+      }
     }
   }
 
