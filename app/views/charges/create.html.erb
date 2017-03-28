@@ -1,17 +1,39 @@
 <div class="container-fluid charges-create">
+  <div class="top-logo">
+    <img src="https://s3.amazonaws.com/climatecents3/climate-cents-icons/logo_climatecents_med_white.png" alt="Climate Cents thanks you for your contribution to our crowdfunded climate change project" />
+  </div>
 
+  <section>
+    <h2>Thank You!</h2>
+    <h2>You've just invested <%= number_to_currency((params[:totalDonation].to_f)/100) %> to help the <%= get_partner(@campaign.project_id).name %>'s <%= @campaign.name %> campaign.</h2>
+    <h4>Your contribution will remove <%= pluralize(@co2.to_i, 'pound', 'pounds') %> of carbon dioxide from the atmosphere.</h4>
+    <h2>Spread the word.</h2>
+    <div class="partner-logo">
+      <div class="left-column">
+        <img src="<%= return_logo_image_url(get_partner(@campaign.project_id).id) %>" alt ="Logo for Climate Cents' partner <%= get_partner(@campaign.project_id).name %> for the <%= @campaign.name %> supporting the <%= get_project(@campaign.project_id).name %>" />
+      </div>
+      <div class="right-column">
+        <p><%= get_project(@campaign.project_id).name %></p>
+      </div>
+    </div>
+    <h4>Word of mouth is our best way to build support.</h4>
+    <h4>Please share this project with friends:</h4>
+    <div class="social-icons">
+      <div class="fb-share">
+        <button onclick="myFacebookLogin()">Share Project Story</button>
+      </div>
+      <div class="twitter-share">
+        <a href="https://twitter.com/share" data-text="I helped fight climate change by donating to offset <%= @co2.to_i %> pounds of CO2!" data-url="http://climatecents.org" data-via="climatecents" data-hashtags="climatecents" data-lang="en" data-show-count="false" data-size="large">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+    </div>
+    <%= link_to 'Done', root_path %>
+  </section>
 </div>
 
 
 
-<div class="container-fluid charges-create">
-  <div class="jumbotron">
-    <h2>Thanks, you donated <strong><%= number_to_currency((params[:totalDonation].to_f)/100) %></strong>!</h2>
-    <h3>Your contribution will remove the equivalent of
-      <%= pluralize(@co2.to_i, 'pound', 'pounds') %> of carbon dioxide (CO2) from the atmosphere
-    </h3>
 
-  </div>
+
 
   <script>
   // Only works after `FB.init` is called
@@ -33,6 +55,3 @@
     </div>
   </div>
 
-  <hr />
-
-</div>

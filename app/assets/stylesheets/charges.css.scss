@@ -1,3 +1,40 @@
 .charges-create {
   font-family: Oxygen;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(rgb(31,96,77), rgb(21,71,81), rgb(19,80,67)) center no-repeat no-repeat;
+
+  .top-logo {
+    text-align: center;
+    width: 100%;
+  }
+
+  h2 {
+    font-family: Oxygen;
+    font-size: 3.6rem;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.25;
+    color: #FFFFFF;
+  }
+  h4 {
+    font-family: Oxygen;
+    font-size: 2.4rem;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.25;
+    color: #FFFFFF;
+    text-shadow: 0 2px 2px 0 rgba(6,57,64,0.7);
+  }
+  p {
+    font-family: Oxygen;
+    font-size: 2.1rem;
+    font-weight: bold;
+    line-height: 1.25;
+    color: #FFFFFF;
+    text-shadow: 0 2px 2px 0 rgba(6,57,64,0.7);
+  }
+  .left-column, .right-column {
+
+  }
 }
