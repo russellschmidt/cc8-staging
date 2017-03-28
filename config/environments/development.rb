@@ -1,6 +1,6 @@
 Rails.application.configure do
-  # set to true for testing exception handler in dev mode
-  config.exception_handler = { dev: true }
+  # uncomment & set to true for testing exception_handler in dev mode
+  # config.exception_handler = { dev: true }
 
   # Settings specified here will take precedence over those in config/application.rb.
 

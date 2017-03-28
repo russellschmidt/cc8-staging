@@ -1,3 +1,25 @@
-<%= content_tag :div, class: "exception", data: { status: @exception.status, response: @exception.response.to_s.humanize, rails: Rails.version }, onclick: ("location.href=\"#{root_url}\";" if @exception.status == "500" && Rails.application.routes.recognize_path("/")), title: ("Return Home" if @exception.status == "500" && Rails.application.routes.recognize_path("/")) do %>
-  <%= content_tag :span, @exception.description.html_safe %>
-<% end %>
+<div class="exception-page container-fluid">
+  <div class="fullpage">
+    <nav>
+      <ul>
+        <li class="nav-home-link"><%= link_to root_path do %>
+          <img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170213/logo_climatecents_med_white.png"
+          alt="Climate Cents logo"/><% end %>
+        </li>
+      </ul>
+    </nav>
+
+
+
+    <div class="row">
+      <div class="col-xs-12">
+        <%= content_tag :div, class: "exception", data: { status: @exception.status, response: @exception.response.to_s.humanize, rails: Rails.version }, onclick: ("location.href=\"#{root_url}\";" if @exception.status == "500" && Rails.application.routes.recognize_path("/")), title: ("Return Home" if @exception.status == "500" && Rails.application.routes.recognize_path("/")) do %>
+          <h1>
+            <%= content_tag :span, @exception.description.html_safe %>
+          </h1>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>
