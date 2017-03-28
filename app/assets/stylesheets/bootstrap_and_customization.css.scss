@@ -94,6 +94,7 @@ $second-sans-font: 'Source Sans Pro';
 // ----------------------------------------
 
 #backer-modal {
+
   .logo-container {
     text-align: center;
     h5 {
@@ -103,7 +104,28 @@ $second-sans-font: 'Source Sans Pro';
       margin-top: 1%;
     }
   }
+  .close-modal {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    max-width: 42px;
+    max-height: 36px;
+    button {
+      width: 42px;
+      height: 36px;
+      padding: 0;
+      margin: 0
+    }
+  }
+  .modal-dialog {
+    margin: 0;
+  }
   .modal-content {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    margin: 0;
     background-color: #114247;
   }
   .modal-header {
