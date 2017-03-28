@@ -111,6 +111,7 @@
       margin: 0;
       h6 {
         margin-top: 64px;
+        min-height: 15px;
         font-family: Oxygen;
         font-size: 1.2rem;      // 12px / 10px
         text-align: center;
@@ -121,6 +122,7 @@
       }
       p {
         margin-top: 8px;
+        min-height: 22px;
         font-family: Oxygen;
         font-size: 1.8rem;      // 18px/10px
         font-weight: standard;

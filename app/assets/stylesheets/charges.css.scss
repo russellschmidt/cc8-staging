@@ -1,40 +1,148 @@
 .charges-create {
   font-family: Oxygen;
-  height: 100vh;
+  height: auto;
   width: 100vw;
   background: linear-gradient(rgb(31,96,77), rgb(21,71,81), rgb(19,80,67)) center no-repeat no-repeat;
 
   .top-logo {
     text-align: center;
     width: 100%;
+    padding-top: 39px;
+    min-height: 39px;
   }
 
+  section {
+    margin-top: 47px;
+  }
   h2 {
     font-family: Oxygen;
-    font-size: 3.6rem;
+    font-size: 3.2rem;
     font-weight: 300;
     text-align: center;
     line-height: 1.25;
     color: #FFFFFF;
+    padding: 0 2%;
+    margin: 0 auto;
+    max-width: 760px;
   }
   h4 {
     font-family: Oxygen;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     font-weight: 300;
     text-align: center;
     line-height: 1.25;
     color: #FFFFFF;
-    text-shadow: 0 2px 2px 0 rgba(6,57,64,0.7);
+    text-shadow: 0 2px 2px rgba(6,57,64,0.7);
+    max-width: 500px;
+    padding: 0 2%;
+    margin: 0 auto;
+  }
+  .contrib-h4 {
+    padding-top: 29px;
+  }
+  .spread-h2 {
+    padding-top: 25px;
+  }
+  .word-h4 {
+    padding-top: 14px;
   }
   p {
     font-family: Oxygen;
-    font-size: 2.1rem;
+    font-size: 1.9rem;
     font-weight: bold;
     line-height: 1.25;
     color: #FFFFFF;
-    text-shadow: 0 2px 2px 0 rgba(6,57,64,0.7);
+    text-shadow: 0 2px 2px rgba(6,57,64,0.7);
+  }
+  .partner-logo, .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .partner-logo {
+    flex-flow: row no-wrap;
   }
   .left-column, .right-column {
-
+    width: 50%;
+    padding: 28px 8px 14px;
+    p {
+      max-width: 200px;
+    }
+  }
+  .left-column {
+    text-align: right;
+    img {
+      max-height: 80px;
+    }
+  }
+  .right-column {
+    text-align: left;
+    padding-top: 40px;
+  }
+  .social-icons {
+    padding-top: 24px;
+    flex-flow: row wrap;
+  }
+  .fb-share, .twitter-share {
+    padding: 0 10px;
+  }
+  .fb-share button {
+    box-sizing: border-box;
+    width: 222px;
+    height: 46px;
+    background-color: #3B5998;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    font-family: Oxygen;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.25;
+    color: #FFFFFF;
+    text-align: center;
+  }
+  .twitter-share a {
+    // dear future dev
+    // I had to use !important to override twitter's widget to
+    // customize the button. It is bad practice but I assure you
+    // it was not my preference. -RS
+    box-sizing: border-box;
+    width: 222px;
+    height: 46px;
+    background-color: #4099FF;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    font-family: Oxygen;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.25;
+    color: #FFFFFF;
+  }
+  .done-button-div {
+    width: 100%;
+    min-height: 46px;
+    text-align: center;
+    margin-top: 47px;
+  }
+  .done-confirmation-button {
+    text-align: center;
+    padding: 12px 41px 14px;
+    box-sizing: border-box;
+    width: 122px;
+    height: 46px;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    font-family: Oxygen;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.25;
+    color: #FFFFFF;
+    &:hover {
+      text-decoration: none;
+      background-color: rgba(255,255,255,0.2);
+    }
   }
 }

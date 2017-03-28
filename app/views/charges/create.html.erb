@@ -5,28 +5,30 @@
 
   <section>
     <h2>Thank You!</h2>
-    <h2>You've just invested <%= number_to_currency((params[:totalDonation].to_f)/100) %> to help the <%= get_partner(@campaign.project_id).name %>'s <%= @campaign.name %> campaign.</h2>
-    <h4>Your contribution will remove <%= pluralize(@co2.to_i, 'pound', 'pounds') %> of carbon dioxide from the atmosphere.</h4>
-    <h2>Spread the word.</h2>
+    <h2>You've just invested <%= number_to_currency((params[:totalDonation].to_f)/100) %> to help the <%= get_partner_from_project_id(@campaign.project_id).name %>'s <%= @campaign.name %>.</h2>
+    <h4 class="contrib-h4">Your contribution will remove <%= pluralize(@co2.to_i, 'pound', 'pounds') %> of carbon dioxide from the atmosphere.</h4>
+    <h2 class="spread-h2">Spread the word.</h2>
     <div class="partner-logo">
       <div class="left-column">
-        <img src="<%= return_logo_image_url(get_partner(@campaign.project_id).id) %>" alt ="Logo for Climate Cents' partner <%= get_partner(@campaign.project_id).name %> for the <%= @campaign.name %> supporting the <%= get_project(@campaign.project_id).name %>" />
+        <img src="<%= return_logo_image_url(get_partner_from_project_id(@campaign.project_id).id) %>" alt ="Logo for Climate Cents' partner <%= get_partner_from_project_id(@campaign.project_id).name %> for the <%= @campaign.name %> supporting the <%= get_project(@campaign.project_id).name %>" />
       </div>
       <div class="right-column">
         <p><%= get_project(@campaign.project_id).name %></p>
       </div>
     </div>
-    <h4>Word of mouth is our best way to build support.</h4>
+    <h4 class="word-h4">Word of mouth is our best way to build support.</h4>
     <h4>Please share this project with friends:</h4>
     <div class="social-icons">
       <div class="fb-share">
         <button onclick="myFacebookLogin()">Share Project Story</button>
       </div>
       <div class="twitter-share">
-        <a href="https://twitter.com/share" data-text="I helped fight climate change by donating to offset <%= @co2.to_i %> pounds of CO2!" data-url="http://climatecents.org" data-via="climatecents" data-hashtags="climatecents" data-lang="en" data-show-count="false" data-size="large">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a href="https://twitter.com/intent/tweet?hashtags=climatecents&amp;original_referer=http%3A%2F%2Flocalhost%3A3000%2Fcharges&amp;ref_src=twsrc%5Etfw&amp;text=I%20helped%20fight%20climate%20change%20by%20donating%20to%20offset%2045%20pounds%20of%20CO2!&amp;tw_p=tweetbutton&amp;url=http%3A%2F%2Fclimatecents.org&amp;via=climatecents">
       </div>
     </div>
-    <%= link_to 'Done', root_path %>
+    <div class="done-button-div">
+      <%= link_to 'Done', root_path, class:'done-confirmation-button' %>
+    </div>
   </section>
 </div>
 
@@ -35,23 +37,11 @@
 
 
 
-  <script>
-  // Only works after `FB.init` is called
-  function myFacebookLogin() {
-    FB.login(function(){
-      FB.api('/me/feed', 'post', {message: 'My donation to Climate Cents removed <%= @co2.to_i %> pounds of CO2 to help fight global warming http://www.climatecents.org'});},
-      {scope: 'publish_actions'});
-  }
-  </script>
-  <div class="row">
-    <div class="col-xs-3 col-xs-offset-1 center">
-      <button onclick="myFacebookLogin()" class="btn btn-lrg btn-primary"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>&nbsp;Share on Facebook!</button>
-    </div>
-    <div class="col-xs-3 center">
-      <a href="https://twitter.com/share" class="twitter-share-button " data-text="I helped fight climate change by donating to offset <%= @co2.to_i %> pounds of CO2!" data-url="http://climatecents.org" data-via="climatecents" data-hashtags="climatecents" data-lang="en" data-show-count="false" data-size="large">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>
-    <div class="col-xs-3 center">
-      <%= link_to 'Home', root_path, class: "btn btn-success btn-large" %>
-    </div>
-  </div>
-
+<script>
+// Only works after `FB.init` is called
+function myFacebookLogin() {
+  FB.login(function(){
+    FB.api('/me/feed', 'post', {message: 'My donation to Climate Cents removed <%= @co2.to_i %> pounds of CO2 to help fight global warming http://www.climatecents.org'});},
+    {scope: 'publish_actions'});
+}
+</script>
