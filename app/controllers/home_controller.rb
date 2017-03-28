@@ -3,4 +3,6 @@ class HomeController < ApplicationController
     @locations = Location.all
   end
 
+  def tos
+  end
 end

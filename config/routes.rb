@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 
   resources :charges
 
+  get 'terms-of-service', to: 'home#tos', as: :tos
+  get 'privacy-policy', to: 'home#tos', as: :privacy
   root 'home#index'
 end
