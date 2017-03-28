@@ -1258,7 +1258,7 @@ iframe {
         h2 {
           font-size: $sub-headline;
           margin-top: 0;
-          padding-top: 3vh;
+          padding: 3vh 2vw 0;
           line-height: 1.25;
         }
       }
@@ -1270,9 +1270,11 @@ iframe {
       hgroup {
         h2 {
           font-size: $top-headline;
+          padding: auto 2vw;
         }
         h3 {
           font-size: $sub-headline;
+          padding: auto 2vw;
           &:last-child {
             margin-top: 1vh;
           }
@@ -1286,9 +1288,11 @@ iframe {
       hgroup {
         h2 {
           font-size: $top-headline;
+          padding: inherit 1vw;
         }
         h3 {
           font-size: $sub-headline;
+          padding: inherit 1vw;
           &:last-child {
             margin-top: 2vh;
           }
@@ -1333,11 +1337,13 @@ iframe {
           font-size: $top-headline;
           margin: 20px 1vw 10px;
           line-height: 1.25;
+          padding: inherit 1vw;
         }
         h5 {
           font-size: $sub-headline;
           margin: 19px 1vw 10px;
           line-height: 1.5;
+          padding: inherit 1vw;
         }
       }
     }
@@ -1597,7 +1603,7 @@ iframe {
         }
       }
       div#hero-header {
-        margin-top: 28vh;
+        margin-top: 0;
         h1 {
           font-size: $top-headline;
           line-height: $top-headline-line-height;
