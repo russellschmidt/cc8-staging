@@ -42,6 +42,7 @@ class ChargesController < ApplicationController
       flash[:notice] = "Thank you!"
       # Here is where you trigger the mailer to send the receipt email
       ReceiptMailer.send_receipt_email(customer.email, @campaign, @co2).deliver_later
+      ReceiptMailer.mail_sorter( Project.find(@campaign.project_id) )
     else
       flash[:error] = "Error saving the transaction to our database"
     end
