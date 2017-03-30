@@ -1,0 +1,42 @@
+<p style="font-size:18px;">Hi <%= donation_object.donation.name %>,</p>
+<p style="font-size:18px;">
+  You just invested <%= number_to_currency(donation_object.charge.amount / 100) %> to restore Kelp Forests in the Santa Monica Bay<%= donation_object.donation.tip_in_cents > 0 ? " and help Climate Cents continue to support this project and others." : "." %></p>
+<p style="font-size:18px;">
+  What does that mean?</p>
+<p style="font-size:18px;">
+  <b>YOU ARE AWESOME! Your&nbsp;</b><b style="font-size: 18px;"><%= number_to_currency(donation_object.donation.campaign_donation_in_cents / 100 ) %></b><b>&nbsp;is going to be pooled with funds from more than 40 other investors to make possible Kelp Restoration Dive #5 at the end of the month.</b></p>
+<p style="font-size:18px;">
+  Our partners from the Bay Foundation will clear 300 square meters of seafloor at Plot S23-NE in the Santa Monica Bay.</p>
+<p style="font-size:18px;">
+  <b>Giant kelp will rapidly start to grow and over the next year it&#39;ll draw down 8.5 TONS of carbon dioxide (CO2) from the climate system. You personally made possible <%= co2 %> of that total.</b></p>
+<p style="font-size: 18px; text-align: center;">
+  <img align="center" alt="" dir="ltr" src="http://climatecents.net/wp-content/uploads/2017/01/LP-121005-1158-450x337.jpg" style="border-width: 0px; border-style: solid; margin: 5px;" /></p>
+<p style="font-size:18px;">
+  Why does that matter?</p>
+<p style="font-size:18px;">
+  Because human-generated greenhouse gases like CO2 are the cause of global warming.</p>
+<p style="font-size:18px;">
+  Because the oceans absorb more than 30% of the CO2 humans emit into the atmosphere and that makes the water more acidic, hurting all kinds of marine life.</p>
+<p style="font-size:18px;">
+  <b>So YOUR support is turning the tide against CO2 and restoring the &quot;rainforests of the sea&quot; so that thriving populations of fish, uni and all kinds of other plants and animals can return to the shores of Southern California.</b></p>
+<p style="font-size:18px;">
+  Feels good, doesn&#39;t it?</p>
+<p style="font-size:18px;">
+  <b>Share the story of your involvement on <a href="http://facebook.com/climatecents/">Facebook</a> or <a href="http://twitter.com/home?status=I+fight+%23climatechange+by+backing+%40ClimateCents+enviro+projects+in+%23LosAngeles+Join+our+local+movmnt+to+%23ActOnClimate+climatecents.org">Twitter</a>. You&#39;ll motivate your friends to take action and you&#39;ll look good doing it.</b></p>
+
+<p style="font-size:18px;">Want to multiply your impact? Sign up to <a href="https://act.myngp.com/Forms/-4898562902509548800">donate monthly/a>.</p>
+
+<p style="font-size:18px;">
+  Thank you for your support,</p>
+<p style="font-size:18px;">
+  Nick, David and the whole Climate Cents team</p>
+<p>
+  &nbsp;</p>
+<p>
+  ---</p>
+<div>
+  &nbsp;</div>
+<div>
+<p>
+  <i>Climate Cents is a 501(c)(3) nonprofit, IRS id 46-1275511. Charitable donations are tax-deductible to the fullest extent allowable under the law. No goods or services were provided in consideration of your gift of <%= number_to_currency(donation_object.charge.amount / 100) %> on <%= donation_object.donation.created_at.to_s(:long) %>.</i>
+</p>

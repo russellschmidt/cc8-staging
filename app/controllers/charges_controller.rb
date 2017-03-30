@@ -35,14 +35,19 @@ class ChargesController < ApplicationController
       donation = set_user_id donation
     end
 
-    @campaign = Campaign.find(params[:campaign_id])
+    # @campaign = Campaign.find(params[:campaign_id])
     @co2 = @campaign.co2_per_dollar.to_f * (params[:donationToCampaign].to_f/100)
+    @donation_object = {
+      customer: customer,
+      charge: charge,
+      donation: donation,
+    }
 
     if donation.save
       flash[:notice] = "Thank you!"
       # Here is where you trigger the mailer to send the receipt email
       ReceiptMailer.send_receipt_email(customer.email, @campaign, @co2).deliver_later
-      ReceiptMailer.mail_sorter( Project.find(@campaign.project_id) )
+      ReceiptMailer.mail_sorter( @donation_object, @co2 ) )
     else
       flash[:error] = "Error saving the transaction to our database"
     end
