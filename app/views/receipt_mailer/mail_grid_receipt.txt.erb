@@ -1,0 +1,37 @@
+Hi <%= donation_object.donation.name %>,
+
+You just invested <%= number_to_currency(donation_object.charge.amount / 100) %>to install solar panels on the roof of Safe Place for Youth's homeless center in Venice.
+
+
+What does that mean?
+
+YOU ARE AWESOME! Your <%= number_to_currency(donation_object.donation.campaign_donation_in_cents / 100 ) %> is going to be pooled with funds from more than 400 other investors to to make possible the installation later this year<%= donation_object.donation.tip_in_cents > 0 ? " and help Climate Cents continue to support this project and others." : "." %>
+
+GRID Alternatives, a nonprofit specializing in rooftop solar for disadvantaged communities will install 6 panels that will provide enough electricity to cut Safe Place for Youth's energy costs to almost nothing, while powering a 3D printing lab, where homeless teenagers will learn cutting-edge technology and skills from leading professionals.
+
+Over the next decade, the rooftop solar system will help the center avoid drawing on thousands of kilowatt hours of electricity from the local utility, LADWP, which gets much of its power from dirty coal-fired power plants. That means the project will prevent the release of more than 132 tons of carbon dioxide (CO2) over the next decade. You personally made possible <%= co2 %> pounds of that total.
+
+Why does that matter?
+
+Because human-generated greenhouse gases like CO2 are the cause of global warming.
+
+Because the less money Safe Place for Youth has to spend on electricity, the more money it has to spend on vital services to help homeless teenagers get back on their feet and begin rewarding careers.
+
+Because GRID Alternatives prioritizes job training and employment for people from the region's disadvantaged communities, helping to build a green-tech economy where opportunity is more than a slogan.
+
+
+So YOUR support is turning the tide against CO2 and lifting up the most disadvantaged communities in Los Angeles.
+
+
+Feels good, doesn't it?
+
+Share the story of your involvement on http://facebook.com/climatecents/ or http://twitter.com/home?status=I+fight+%23climatechange+by+backing+%40ClimateCents+enviro+projects+in+%23LosAngeles+Join+our+local+movmnt+to+%23ActOnClimate+climatecents.org.
+
+Want to multiply your impact? Sign up to donate monthly at https://act.myngp.com/Forms/-6844117941533603072.
+
+  Thank you for your support,
+  Nick, David and the whole Climate Cents team
+
+  ---
+
+Climate Cents is a 501(c)(3) nonprofit, IRS id 46-1275511. Charitable donations are tax-deductible to the fullest extent allowable under the law. No goods or services were provided in consideration of your gift of <%= number_to_currency(donation_object.charge.amount / 100) %> on <%= donation_object.donation.created_at.to_s(:long) %>.
