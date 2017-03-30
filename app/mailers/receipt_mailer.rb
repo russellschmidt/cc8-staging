@@ -3,9 +3,6 @@ class ReceiptMailer < ApplicationMailer
 
   def send_receipt_email( donation_object, co2 )
     @email = donation_object.customer.email
-    @campaign = Campaign.find(donation_object.donation.campaign_id)
-    @co2 = co2
-
     mail(to: @email, subject: "Thank you for donating with Climate Cents")
   end
 
@@ -24,6 +21,7 @@ class ReceiptMailer < ApplicationMailer
         mail_grid_receipt(donation_object, co2)
       else
         send_receipt_email(donation_object, co2)
+      end
     else
       # call send_receipt_email
       send_receipt_email(donation_object, co2)
@@ -31,16 +29,24 @@ class ReceiptMailer < ApplicationMailer
     # end
   end
 
-  def mail_kelp_receipt()
+  def mail_kelp_receipt(donation_object, co2)
+    @email = donation_object.customer.email
+    mail(to: @email, subject: "Thank you for donating with Climate Cents")
   end
 
-  def mail_mend_receipt()
+  def mail_mend_receipt(donation_object, co2)
+    @email = donation_object.customer.email
+    mail(to: @email, subject: "Thank you for donating with Climate Cents")
   end
 
-  def mail_homeboy_receipt()
+  def mail_homeboy_receipt(donation_object, co2)
+    @email = donation_object.customer.email
+    mail(to: @email, subject: "Thank you for donating with Climate Cents")
   end
 
-  def mail_grid_receipt()
+  def mail_grid_receipt(donation_object, co2)
+    @email = donation_object.customer.email
+    mail(to: @email, subject: "Thank you for donating with Climate Cents")
   end
 
 end
