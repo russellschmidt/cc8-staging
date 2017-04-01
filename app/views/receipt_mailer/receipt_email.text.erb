@@ -1,6 +1,6 @@
 Hi <%= @fullname %>,
 
-You just invested <%= number_to_currency(@total / 100) %> in <%= Project.find(Campaign.find(params[:campaign_id]).project_id).name %>..
+You just invested <%= number_to_currency(@total / 100) %> in <%= Project.find(Campaign.find(@campaignId).project_id).name %>..
 
 What does that mean?
 

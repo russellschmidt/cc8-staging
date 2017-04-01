@@ -45,7 +45,7 @@ class ReceiptMailer < ApplicationMailer
     mail(to: @email, subject: "Thank you for donating with Climate Cents")
   end
 
-  def receipt_email(email, co2, fullname, totalDonation, donationToTip, donationToCampaign, donationCreated)
+  def receipt_email(email, co2, fullname, totalDonation, donationToTip, donationToCampaign, donationCreated, campaignId)
     @email = email
     @co2 = co2
     @fullname = fullname
@@ -53,6 +53,7 @@ class ReceiptMailer < ApplicationMailer
     @tip = donationToTip
     @gift = donationToCampaign
     @timestamp = donationCreated
+    @campaignId = campaignId
     mail(to: @email, subject: "Thank you for donating with Climate Cents")
   end
 

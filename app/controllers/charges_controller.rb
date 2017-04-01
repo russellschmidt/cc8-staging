@@ -114,7 +114,8 @@ class ChargesController < ApplicationController
             params[:totalDonation].to_f,
             params[:donationToTip].to_f,
             params[:donationToCampaign].to_f,
-            @donation_created).deliver_later
+            @donation_created).deliver_later,
+            params[:campaign_id]
         end
       else
         ReceiptMailer.receipt_email(
@@ -124,7 +125,8 @@ class ChargesController < ApplicationController
             params[:totalDonation].to_f,
             params[:donationToTip].to_f,
             params[:donationToCampaign].to_f,
-            @donation_created).deliver_later
+            @donation_created).deliver_later,
+            params[:campaign_id]
       end
     end
 
