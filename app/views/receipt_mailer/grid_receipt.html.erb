@@ -1,4 +1,4 @@
-<p>Hi <%= /^\w*\b/.match(@fullname)[0] %>,</p>
+<p>Hi <%= /^\w*\b/.match(@fullname) %>,</p>
 <p style="font-size:18px;">
   You just invested <%= number_to_currency(@total / 100) %> to install solar panels on the roof of Safe Place for Youth's homeless center in Venice.</p>
 

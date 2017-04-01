@@ -1,4 +1,4 @@
-<p>Hi <%= /^\w*\b/.match(@fullname)[0] %>,</p>
+<p>Hi <%= /^\w*\b/.match(@fullname) %>,</p>
 <p style="font-size:18px;">
   You just invested <%= number_to_currency(@total / 100) %>  to jumpstart Homeboy Recycling’s (formerly Isidore Recycling) computer de-manufacturing near downtown L.A.</p>
 <p style="font-size:18px;">

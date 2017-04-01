@@ -1,4 +1,4 @@
-Hi <%= @fullname %>,
+Hi <%= /^\w*\b/.match(@fullname) %>,
 
 You just invested <%= number_to_currency(@total / 100) %> to jumpstart Homeboy Recycling’s (formerly Isidore Recycling) computer de-manufacturing near downtown L.A.<%= @tip > 0 ? " and help Climate Cents continue to support this project and others." : "" %>
 
