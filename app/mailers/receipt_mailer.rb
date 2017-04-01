@@ -1,52 +1,64 @@
 class ReceiptMailer < ApplicationMailer
   default from: "thanks@mg.climatecents.org"
 
-  def send_receipt_email( donation_object, co2 )
-    @email = donation_object.customer.email
+  def kelp_receipt(email, co2, fullname, totalDonation, donationToTip, donationToCampaign, donationCreated)
+    @email = email
+    @co2 = co2
+    @fullname = fullname
+    @total = totalDonation
+    @tip = donationToTip
+    @gift = donationToCampaign
+    @timestamp = donationCreated
     mail(to: @email, subject: "Thank you for donating with Climate Cents")
   end
 
-  def mail_sorter(donation_object, co2)
-    project = Project.Find(Campaign.find(donation_object.donation.campaign_id).project_id)
-    if project.name.present?
-    # if project match
-      case project.name
-      when "Bring Back the Bay's Kelp Forests"
-        mail_kelp_receipt(donation_object, co2)
-      when "Urban Farming in Pacoima"
-        mail_mend_receipt(donation_object, co2)
-      when "Recycle Electronics, Rebuild Lives"
-        mail_homeboy_receipt(donation_object, co2)
-      when "Solar Panels for Safe Place for Youth"
-        mail_grid_receipt(donation_object, co2)
-      else
-        send_receipt_email(donation_object, co2)
-      end
-    else
-      # call send_receipt_email
-      send_receipt_email(donation_object, co2)
-    end
-    # end
-  end
-
-  def mail_kelp_receipt(donation_object, co2)
-    @email = donation_object.customer.email
+  def mend_receipt(email, co2, fullname, totalDonation, donationToTip, donationToCampaign, donationCreated)
+    @email = email
+    @co2 = co2
+    @fullname = fullname
+    @total = totalDonation
+    @tip = donationToTip
+    @gift = donationToCampaign
+    @timestamp = donationCreated
     mail(to: @email, subject: "Thank you for donating with Climate Cents")
   end
 
-  def mail_mend_receipt(donation_object, co2)
-    @email = donation_object.customer.email
+  def homeboy_receipt(email, co2, fullname, totalDonation, donationToTip, donationToCampaign, donationCreated)
+    @email = email
+    @co2 = co2
+    @fullname = fullname
+    @total = totalDonation
+    @tip = donationToTip
+    @gift = donationToCampaign
+    @timestamp = donationCreated
     mail(to: @email, subject: "Thank you for donating with Climate Cents")
   end
 
-  def mail_homeboy_receipt(donation_object, co2)
-    @email = donation_object.customer.email
+  def grid_receipt(email, co2, fullname, totalDonation, donationToTip, donationToCampaign, donationCreated)
+    @email = email
+    @co2 = co2
+    @fullname = fullname
+    @total = totalDonation
+    @tip = donationToTip
+    @gift = donationToCampaign
+    @timestamp = donationCreated
     mail(to: @email, subject: "Thank you for donating with Climate Cents")
   end
 
-  def mail_grid_receipt(donation_object, co2)
-    @email = donation_object.customer.email
+  def receipt_email(email, co2, fullname, totalDonation, donationToTip, donationToCampaign, donationCreated)
+    @email = email
+    @co2 = co2
+    @fullname = fullname
+    @total = totalDonation
+    @tip = donationToTip
+    @gift = donationToCampaign
+    @timestamp = donationCreated
     mail(to: @email, subject: "Thank you for donating with Climate Cents")
+  end
+
+  def test_email(email)
+    @email = email
+    mail(to: @email, subject: "This is a send_test_email")
   end
 
 end

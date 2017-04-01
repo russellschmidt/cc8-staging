@@ -1,0 +1,28 @@
+Hi <%= @fullname %>,
+
+You just invested <%= number_to_currency(@total / 100) %> in <%= Project.find(Campaign.find(params[:campaign_id]).project_id).name %>..
+
+What does that mean?
+
+YOU ARE AWESOME! Your <%= number_to_currency( @gift / 100 ) %> is going to be pooled with funds from other investors to make this campaign possible<%= @tip > 0 ? " and help Climate Cents continue to support this project and others." : "." %>
+
+You personally made possible <%= @co2 %> pounds of CO2 removal from the atmosphere.
+
+Why does that matter?
+
+Because human-generated greenhouse gases like CO2 are the cause of global warming.
+
+So YOUR support is turning the tide against CO2 and helping your local community.
+
+Feels good, doesn't it?
+
+Share the story of your involvement on http://facebook.com/climatecents/ or http://twitter.com/home?status=I+fight+%23climatechange+by+backing+%40ClimateCents+enviro+projects+in+%23LosAngeles+Join+our+local+movmnt+to+%23ActOnClimate+climatecents.org. You'll motivate your friends to take action and you'll look good doing it.
+
+Want to multiply your impact? Sign up to donate monthly https://act.myngp.com/Forms/-6844117941533603072.
+
+Thank you for your support,
+
+Nick, David, and the whole Climate Cents team
+
+---
+Climate Cents is a 501(c)(3) nonprofit, IRS ID 46-1275511. Charitable donations are tax-deductible to the fullest extent allowable under the law. No goods or services were provided in consideration of your gift of <%= number_to_currency(@total / 100) %> on <%= @timestamp %>.

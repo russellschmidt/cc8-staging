@@ -1,0 +1,46 @@
+
+<p style="font-size:18px;">Hi <%= @fullname %>,</p>
+<p style="font-size:18px;">
+  You just invested <%= number_to_currency(@total / 100) %> to create gardens nourished with love and compost in Pacoima.</p>
+<p style="font-size:18px;">
+  What does that mean?</p>
+<p style="font-size:18px;">
+  <b>YOU ARE AWESOME! Your&nbsp;</b><b style="font-size: 18px;"><%= number_to_currency(@gift / 100 ) %></b><b>&nbsp;is going to be pooled with funds from more than a dozen other investors to make possible Urban Farming Project #1 on May 15<%= @tip > 0 ? " and help Climate Cents continue to support this project and others." : "." %></b></p>
+
+<p style="font-size:18px;">Our partners at MEND provide supplies and mentorship to more than 30 families who want to start urban gardens of their own, including training on how to turn their food and paper scraps into the nourishing compost that restores soils and helps plants grow better.</p>
+
+<p style="font-size:18px;"><b>Growing food organically and with homemade compost reduces the carbon dioxide that gets released from when food is grown using chemical fertilizers and shipped long distances and the methane (CH4) that's produced when homemade waste is sent to landfills or incinerators instead of naturally recycled into the soil. This project will prevent the release of more than 2 tons of CO2 and CH4 from the climate system over the next year.</b></p>
+
+<p style="font-size:18px;">
+  <b>You personally made possible <%= @co2 %> pounds of that total.</b></p>
+
+<p style="font-size: 18px; text-align: center;">
+  <img align="center" alt="" src="http://climatecents.net/wp-content/uploads/2017/01/kids-w-plants.jpg" style="border-width: 0px; border-style: solid; margin: 5px;" /></p>
+
+<p style="font-size:18px;">Why does that matter?</p>
+
+<p style="font-size:18px;">Because human-generated greenhouse gases like CO2 are the cause of global warming.</p>
+
+<p style="font-size:18px;">Because local, homegrown food nourishes our bodies and our souls and keeps our city healthy.</p>
+
+<p style="font-size:18px;"><b>So YOUR support is turning the tide against CO2 and keeping neighborhoods across our city healthy, beautiful and well-fed.</b></p>
+
+<p style="font-size:18px;">Feels good, doesn't it?</p>
+
+<p style="font-size:18px;"><b>Share the story of your involvement on <a href="http://facebook.com/climatecents/">Facebook</a> or <a href="http://twitter.com/home?status=I+fight+%23climatechange+by+backing+%40ClimateCents+enviro+projects+in+%23LosAngeles+Join+our+local+movmnt+to+%23ActOnClimate+climatecents.org">Twitter</a>. You'll motivate your friends to take action and you'll look good doing it.</b></p>
+
+<p style="font-size:18px;">Want to multiply your impact? Sign up to <a href="https://act.myngp.com/Forms/-4538274932319909120">donate monthly</a>.</p>
+
+<p style="font-size:18px;">
+  Thank you for your support,</p>
+<p style="font-size:18px;">
+  Nick, David, and the whole Climate Cents team</p>
+<p>
+  &nbsp;</p>
+<p>
+  ---</p>
+<div>
+  &nbsp;</div>
+<p>
+  <i>Climate Cents is a 501(c)(3) nonprofit, IRS ID 46-1275511. Charitable donations are tax-deductible to the fullest extent allowable under the law. No goods or services were provided in consideration of your gift of <%= number_to_currency(@total / 100) %> on <%= @timestamp %>.</i>
+</p>

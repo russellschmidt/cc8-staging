@@ -35,32 +35,25 @@ class ChargesController < ApplicationController
       donation = set_user_id donation
     end
 
-    # @campaign = Campaign.find(params[:campaign_id])
-    @donation_object = {
-      customer: {
-        email: customer.email.to_s
-      },
-      donation: donation,
-    }
     @campaign = Campaign.find(params[:campaign_id])
     @co2 = @campaign.co2_per_dollar.to_f * (params[:donationToCampaign].to_f/100)
 
-
     if donation.save
       flash[:notice] = "Thank you!"
-      # Here is where you trigger the mailer to send the receipt email
-      ReceiptMailer.send_receipt_email(customer.email, @campaign, @co2).deliver_later
-      ReceiptMailer.mail_sorter( @donation_object, @co2 ).deliver_later
+
+      @donation_created = donation.created_at.to_s(:long)
+      send_correct_email
     else
       flash[:error] = "Error saving the transaction to our database"
     end
 
-    @meta_description_text = "I just offset #{ @co2 } pounds of CO2 by donating to Climate Cents"
+    @meta_description_text = "I just removed #{ @co2 } pounds of CO2 by donating to Climate Cents"
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to charges_path
   end
+
 
   private
     def set_user_id(donation)
@@ -71,5 +64,68 @@ class ChargesController < ApplicationController
       donation
     end
 
+    def send_correct_email
+      campaign = Campaign.find(params[:campaign_id])
+      project = Project.find(campaign.project_id)
+      if project.name.present?
+      # if project match
+        case project.name
+        when "Bring Back the Bay's Kelp Forests"
+          ReceiptMailer.kelp_receipt(
+            params[:stripeEmail],
+            @co2,
+            params[:stripeBillingName],
+            params[:totalDonation].to_f,
+            params[:donationToTip].to_f,
+            params[:donationToCampaign].to_f,
+            @donation_created).deliver_later
+        when "Urban Farming in Pacoima"
+          ReceiptMailer.mend_receipt(
+            params[:stripeEmail],
+            @co2,
+            params[:stripeBillingName],
+            params[:totalDonation].to_f,
+            params[:donationToTip].to_f,
+            params[:donationToCampaign].to_f,
+            @donation_created).deliver_later
+        when "Recycle Electronics, Rebuild Lives"
+          ReceiptMailer.homeboy_receipt(
+            params[:stripeEmail],
+            @co2,
+            params[:stripeBillingName],
+            params[:totalDonation].to_f,
+            params[:donationToTip].to_f,
+            params[:donationToCampaign].to_f,
+            @donation_created).deliver_later
+        when "Solar Panels for Safe Place for Youth"
+          ReceiptMailer.grid_receipt(
+            params[:stripeEmail],
+            @co2,
+            params[:stripeBillingName],
+            params[:totalDonation].to_f,
+            params[:donationToTip].to_f,
+            params[:donationToCampaign].to_f,
+            @donation_created).deliver_later
+        else
+          ReceiptMailer.receipt_email(
+            params[:stripeEmail],
+            @co2,
+            params[:stripeBillingName],
+            params[:totalDonation].to_f,
+            params[:donationToTip].to_f,
+            params[:donationToCampaign].to_f,
+            @donation_created).deliver_later
+        end
+      else
+        ReceiptMailer.receipt_email(
+            params[:stripeEmail],
+            @co2,
+            params[:stripeBillingName],
+            params[:totalDonation].to_f,
+            params[:donationToTip].to_f,
+            params[:donationToCampaign].to_f,
+            @donation_created).deliver_later
+      end
+    end
 
 end
