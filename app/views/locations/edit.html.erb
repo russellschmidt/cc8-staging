@@ -1,2 +1,11 @@
-<h1>Edit Locations</h1>
-<%= render partial: 'form', locals: {location: @location} %>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>Edit <%= @location.name %></h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <%= render partial: 'form', locals: {location: @location} %>
+  </div>
+</div>

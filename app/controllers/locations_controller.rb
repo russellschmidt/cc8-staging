@@ -1,6 +1,8 @@
 class LocationsController < ApplicationController
   layout 'administration'
 
+  before_filter :find_location, only: [:edit, :update, :show]
+
   def new
     @location = Location.new
   end
@@ -16,11 +18,9 @@ class LocationsController < ApplicationController
   end
 
   def edit
-    @location = Location.find(params[:id])
   end
 
   def update
-    @location = Location.find(params[:id])
     if @location.update(location_params)
       redirect_to location_path(@location)
     else
@@ -34,11 +34,13 @@ class LocationsController < ApplicationController
   end
 
   def show
-    @location = Location.find(params[:id])
     @partners = Partner.where(location_id: @location.id)
   end
 
   private
+    def find_location
+      @location = Location.find(params[:id])
+    end
 
     def location_params
       params.require(:location).permit(:name)
