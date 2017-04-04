@@ -34,14 +34,14 @@
   </div>
 
   <div class="col-xs-3">
-    <p>Edit Partner</p>
+    <h5>Edit Partner</h5>
   </div>
 </div>
 
 <% @partners.each do |partner| %>
 <div class="row">
   <div class="col-xs-3">
-    <p><%= link_to partner.name, partner_path(partner), class: "btn btn-link" %></p>
+    <%= link_to partner.name, partner_path(partner), class: "btn btn-link" %>
   </div>
 
   <div class="col-xs-3">
@@ -53,7 +53,7 @@
   </div>
 
   <div class="col-xs-3">
-    <p><%= link_to "Edit #{partner.name}", edit_partner_path(partner), class: "btn btn-link" %></p>
+    <%= link_to "Edit #{partner.name}", edit_partner_path(partner), class: "btn btn-link" %>
   </div>
 </div>
 <% end %>
