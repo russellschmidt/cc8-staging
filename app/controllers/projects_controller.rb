@@ -5,6 +5,18 @@ class ProjectsController < ApplicationController
     @partner = find_partner(@project)
   end
 
+  def new
+  end
+
+  def create
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
   private
     def project_params
       params.require(:project).permit(:name, :blurb, :description, :partner_id, :slug, :videoUrl)

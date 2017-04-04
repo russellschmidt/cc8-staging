@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Climate Cents Administration</title>
+
+    <meta name="description" content="Crowfund local projects that fight climate change and make our city a better place with Climate Cents.">
+    <meta name="keywords" content="climate cents, climate change, global warming, local project, crowdfund, crowdfunding, charity,
+        nonprofit, non-profit, CO2, what is climate change, what causes global warming, is climate change real, is global warming real">
+    <meta name="author" content="Climate Cents, a 501c3 organization">
+
+    <meta name="robots" content="index, follow">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- http://realfavicongenerator.net/ -->
+
+    <meta property="fb:page_id" content="">
+    <meta property="og:title" content="Support Climate Cents">
+    <meta property="og:image:secure_url" content="https://s3.amazonaws.com/climatecents/SocialShare/climatechangefight.jpg">
+    <meta property="og:description" content="<%= @meta_description_text %>">
+    <meta property="og:url" content="http://www.climatecents.org">
+    <meta property="og:site_name" content="Climate Cents">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://www.climatecents.org">
+    <meta name="twitter:title" content="Climate Cents">
+    <meta name="twitter:description" content="Crowfund local projects that fight climate change and make our city a better place.">
+    <meta name="twitter:image" content="https://s3.amazonaws.com/climatecents/SocialShare/climatechangefight.jpg">
+    <meta name="twitter:site" content="Climate Cents">
+
+    <%= csrf_meta_tags %>
+
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+  </head>
+
+  <body>
+
+    <div class="container administration">
+      <% if notice.present? || alert.present? %>
+        <section>
+          <% if notice.present? %>
+            <%= notice %>
+          <% elsif alert.present? %>
+            <%= alert %>
+          <% end %>
+        </section>
+      <% end %>
+
+      <%= yield %>
+    </div>
+
+  </body>
+</html>

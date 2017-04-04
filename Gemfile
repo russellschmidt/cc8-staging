@@ -49,6 +49,8 @@ gem 'stripe'
 gem 'figaro'
 gem 'mailgun_rails'
 gem 'exception_handler'
+
+gem 'paperclip'
 # end RS added
 ###
 
