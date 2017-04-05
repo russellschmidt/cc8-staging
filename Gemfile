@@ -51,6 +51,8 @@ gem 'mailgun_rails', '~> 0.9.0'
 gem 'exception_handler', '~> 0.7.6'
 
 gem 'paperclip', '~> 5.1.0'
+
+gem 'aws-sdk', '< 2.0'
 # end RS added
 ###
 
