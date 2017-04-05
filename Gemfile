@@ -50,7 +50,7 @@ gem 'figaro', '~> 1.1.1'
 gem 'mailgun_rails', '~> 0.9.0'
 gem 'exception_handler', '~> 0.7.6'
 
-gem "paperclip" #, github: "thoughtbot/paperclip", ref: "c38bb31"
+gem "paperclip", "~> 5.1" #, github: "thoughtbot/paperclip", ref: "c38bb31"
 gem "aws-sdk", '~> 2'
 # gem 'aws-sdk', '< 2.0'
 # end RS added
