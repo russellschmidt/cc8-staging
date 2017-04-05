@@ -87,8 +87,6 @@
       <article>
         <%= link_to project_path(project) do %>
         <div class="home-projects-section-image">
-          <!-- images must be entered into Image model with '350x200' in their name (and their image canvas dimensions, obvi) -->
-          <!--           <img src="<%= return_350x200_image_url(partner.id) %>" alt="We identify local projects such as <%= partner.name %>'s <%= project.name %> that help reduce atmospheric CO2 to fight global warming"/> -->
           <img src="<%= project.small_image.url %>" alt="We identify local projects such as <%= partner.name %>'s <%= project.name %> that help reduce atmospheric CO2 to fight global warming"/>
         </div>
 

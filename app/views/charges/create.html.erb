@@ -5,12 +5,12 @@
 
   <section>
     <h2>Thank You!</h2>
-    <h2>You've just invested <%= number_to_currency((params[:totalDonation].to_f)/100) %> to help the <%= get_partner_from_project_id(@campaign.project_id).name %>'s <%= @campaign.name %>.</h2>
+    <h2>You've just invested <%= number_to_currency((params[:totalDonation].to_f)/100) %> to help <%= get_partner_from_project_id(@campaign.project_id).name %>'s <%= @campaign.name %>.</h2>
     <h4 class="contrib-h4">Your contribution will remove <%= pluralize(@co2.to_i, 'pound', 'pounds') %> of carbon dioxide from the atmosphere.</h4>
     <h2 class="spread-h2">Spread the word.</h2>
     <div class="partner-logo">
       <div class="left-column">
-        <img src="<%= return_logo_image_url(get_partner_from_project_id(@campaign.project_id).id) %>" alt ="Logo for Climate Cents' partner <%= get_partner_from_project_id(@campaign.project_id).name %> for the <%= @campaign.name %> supporting the <%= get_project(@campaign.project_id).name %>" />
+        <%= image_tag get_project(@campaign.project_id).logo.url, alt: "Logo for Climate Cents' partner #{get_partner_from_project_id(@campaign.project_id).name} for #{@campaign.name} supporting the #{get_project(@campaign.project_id).name}" %>
       </div>
       <div class="right-column">
         <p><%= get_project(@campaign.project_id).name %></p>

@@ -2,11 +2,11 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :projects, only: [:new, :create, :edit, :update, :show, :index]
-  resources :locations, except: [:destroy]
-  resources :campaigns
-  resources :partners
+  resources :locations, only: [:new, :create, :edit, :update, :show, :index]
+  resources :campaigns, only: [:new, :create, :edit, :update, :show, :index]
+  resources :partners, only: [:new, :create, :edit, :update, :show, :index]
 
-  resources :charges
+  resources :charges, only: [:new, :create]
 
   get 'terms-of-service', to: 'home#tos', as: :tos
   get 'privacy-policy', to: 'home#tos', as: :privacy
