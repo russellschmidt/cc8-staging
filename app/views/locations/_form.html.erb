@@ -1,7 +1,7 @@
 <%= form_for(location) do |f| %>
   <div class="form-group">
-    <label for="location_name">Name</label>
-    <%= f.text_field :name, class: "form-control", id: "location_name", placeholder: "Anytown" %>
+    <label for="location-name">Name</label>
+    <%= f.text_field :name, class: "form-control", id: "location-name", placeholder: "Anytown" %>
   </div>
   <%= f.submit "Save", class:"btn btn-default" %>
 <% end %>

@@ -1,0 +1,21 @@
+<%= form_for(partner) do |f| %>
+  <div class="form-group">
+    <label for="partner-name">Name</label>
+    <%= f.text_field :name, class: "form-control", id: "partner-name", placeholder: "Anytown" %>
+  </div>
+
+   <div class="form-group">
+    <label for="partner-loc">Location</label>
+    <%= f.select( :location_id, Location.all.collect {|loc| [loc.name, loc.id] }, class: "form-control", id: "partner-loc") %>
+  </div>
+
+<div>
+    t.text     "blurb"
+    t.text     "description"
+    t.text     "news"
+    t.text     "volunteer"
+</div>
+
+
+  <%= f.submit "Save", class:"btn btn-default" %>
+<% end %>

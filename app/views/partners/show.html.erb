@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h1><%= @partner.name %></h1>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <div class="col-xs-12">
+    <%= link_to "Edit #{@partner.name} info", edit_partner_path(@partner), class: "btn btn-default" %>
+    <%= link_to "Create New Partner in #{Location.find(@partner.location_id).name}", location_path(Location.find(@partner.location_id)), class: "btn btn-default" %>
+    <%= link_to "All Partners", partners_path, class: "btn btn-default" %>
+    <%= link_to "All Locations", locations_path, class: "btn btn-default" %>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <div class="col-xs-3">
+    <h5>Project Name</h5>
+  </div>
+
+  <div class="col-xs-2">
+    <h5>Number of Campaigns</h5>
+  </div>
+
+  <div class="col-xs-2">
+    <h5>Active Campaigns</h5>
+  </div>
+
+  <div class="col-xs-5">
+    <h5>Edit Partner</h5>
+  </div>
+</div>
+
+<% @projects.each do |project| %>
+<div class="row">
+  <div class="col-xs-3">
+    <%= link_to project.name, project_path(project), class: "btn btn-link" %>
+  </div>
+
+  <div class="col-xs-2">
+    <p><%= Campaign.where(project_id: project.id).count %></p>
+  </div>
+
+  <div class="col-xs-2">
+    <p><%= active_campaigns_by_project(project) %></p>
+  </div>
+
+  <div class="col-xs-5">
+    <%= link_to "Edit #{project.name}", edit_project_path(project), class: "btn btn-link" %>
+  </div>
+</div>
+<% end %>
