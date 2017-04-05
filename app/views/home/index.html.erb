@@ -87,9 +87,11 @@
       <article>
         <%= link_to project_path(project) do %>
         <div class="home-projects-section-image">
-          <img src="<%= return_350x200_image_url(partner.id) %>" alt="We identify local projects such as <%= partner.name %>'s <%= project.name %> that help reduce atmospheric CO2 to fight global warming"/>
+          <!-- images must be entered into Image model with '350x200' in their name (and their image canvas dimensions, obvi) -->
+          <!--           <img src="<%= return_350x200_image_url(partner.id) %>" alt="We identify local projects such as <%= partner.name %>'s <%= project.name %> that help reduce atmospheric CO2 to fight global warming"/> -->
+          <img src="<%= project.small_image.url %>" alt="We identify local projects such as <%= partner.name %>'s <%= project.name %> that help reduce atmospheric CO2 to fight global warming"/>
         </div>
-        <!-- images must be entered into Image model with '350x200' in their name (and their image canvas dimensions, obvi) -->
+
         <h5><img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/icon-green-location-map.png" alt="Climate Cents Project Partner location"/><%= campaign.city %>, <%= campaign.state %></h5>
         <h3><%= partner.blurb %></h3>
         <h6><%= partner.name %></h6>
