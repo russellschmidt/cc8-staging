@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h1>All Projects</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <%= link_to 'Create New Project', new_project_path, class: "btn btn-default" %>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <div class="col-xs-4">
+    <h5>Project</h5>
+  </div>
+
+  <div class="col-xs-4">
+    <h5>Campaigns by Project</h5>
+  </div>
+
+  <div class="col-xs-4">
+    <h5>Edit Project</h5>
+  </div>
+</div>
+
+<% @projects.each do |project| %>
+
+  <div class="row">
+    <div class="col-xs-4">
+      <p><%= link_to project.name, project_path(project), class: "btn btn-link" %></p>
+    </div>
+
+    <div class="col-xs-4">
+      <p><%= Campaign.where(project_id: project.id).count %></p>
+    </div>
+
+    <div class="col-xs-4">
+      <p><%= link_to 'Edit', edit_project_path(project), class: "btn btn-link" %></p>
+    </div>
+  </div>
+
+<% end %>
+

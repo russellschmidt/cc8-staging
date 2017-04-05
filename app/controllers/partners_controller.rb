@@ -12,7 +12,7 @@ class PartnersController < ApplicationController
     if @partner.save
       redirect_to partner_path(@partner)
     else
-      flash[:error] = "Error saving the location to our database"
+      flash[:error] = "Error saving the partner to our database"
       redirect_to partners_path
     end
   end
@@ -24,7 +24,7 @@ class PartnersController < ApplicationController
     if @partner.update(partner_params)
       redirect_to partner_path(@partner)
     else
-      flash[:error] = "Error updating the location in our database"
+      flash[:error] = "Error updating the partner in our database"
       redirect_to partners_path
     end
   end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170327222936) do
+ActiveRecord::Schema.define(version: 20170405083325) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,8 +84,8 @@ ActiveRecord::Schema.define(version: 20170327222936) do
     t.text     "blurb"
     t.text     "description"
     t.integer  "partner_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.text     "science"
     t.string   "overview_headline"
     t.string   "science_headline"
@@ -93,6 +93,18 @@ ActiveRecord::Schema.define(version: 20170327222936) do
     t.string   "volunteer_headline"
     t.string   "videoUrl"
     t.string   "slug"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
+    t.string   "hero_image_file_name"
+    t.string   "hero_image_content_type"
+    t.integer  "hero_image_file_size"
+    t.datetime "hero_image_updated_at"
+    t.string   "small_image_file_name"
+    t.string   "small_image_content_type"
+    t.integer  "small_image_file_size"
+    t.datetime "small_image_updated_at"
     t.index ["partner_id"], name: "index_projects_on_partner_id", using: :btree
     t.index ["slug"], name: "index_projects_on_slug", unique: true, using: :btree
   end

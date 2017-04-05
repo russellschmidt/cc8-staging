@@ -1,0 +1,66 @@
+<%= form_for(project) do |f| %>
+  <div class="form-group">
+    <label for="project-name">Name</label>
+    <%= f.text_field :name, class: "form-control", id: "project-name", placeholder: "Project Name" %>
+  </div>
+
+   <div class="form-group">
+    <label for="project-partner">Partner for Project</label>
+    <%= f.select( :partner_id, Partner.all.collect {|partner| [partner.name, partner.id] }, class: "form-control", id: "project-partner", selected: params[:partner_param]) %>
+  </div>
+
+  <div class="form-group">
+    <label for="project-blurb">Blurb</label>
+    <p>The Project blurb appears on the hero image on the Project page and ought to be a brief sentence 10-20 words in length.</p>
+    <%= f.text_field :blurb, class: "form-control", id: "project-blurb", placeholder: "Enter a brief blurb about the partner" %>
+  </div>
+
+  <div class="form-group">
+    <label for="project-video-url">Blurb</label>
+    <p>Enter the URL including http:// for the video</p>
+    <%= f.text_field :videoUrl, class: "form-control", id: "project-video-url", placeholder: "https://www.youtube.com/watch?v=rd0jlzFeXiw" %>
+  </div>
+
+  <div class="form-group">
+    <label for="project-ov-head">Project Headline</label>
+    <p>The Project tab headline appears on the Overview tab on the Project page and ought to be a short sentence.</p>
+    <%= f.text_field :overview_headline, class: "form-control", id: "project-ov-head", placeholder: "Enter a brief headline for the Project's Partner tab" %>
+  </div>
+
+
+  <div class="form-group">
+    <label for="project-science-head">Science Headline</label>
+    <p>The Science Overview headline appears on the Science tab on the Project page and ought to be a short sentence.</p>
+    <%= f.text_field :science_headline, class: "form-control", id: "project-science-head", placeholder: "Enter a brief headline for the Project's Science tab" %>
+  </div>
+
+
+  <div class="form-group">
+    <label for="project-news-head">News Headline</label>
+    <p>The Project News headline appears on the News tab on the Project page and ought to be a short sentence.</p>
+    <%= f.text_field :news_headline, class: "form-control", id: "project-news-head", placeholder: "Enter a brief headline for the Project's News tab" %>
+  </div>
+
+  <div class="form-group">
+    <label for="project-vol-head">Volunteer Headline</label>
+    <p>The Project Volunteer headline appears on the Volunteer tab on the Project page and ought to be a short sentence.</p>
+    <%= f.text_field :volunteer_headline, class: "form-control", id: "project-vol-head", placeholder: "Enter a brief headline for the Project's Volunteer tab" %>
+  </div>
+
+  <div class="form-group">
+    <label for="project-ov">Project Overview description</label>
+    <p>Long description in HTML that appears on the Project page in the Overview tab.</p>
+    <%= f.text_area :description, cols: 18, rows: 24, class: "form-control", id: "project-ov", placeholder: "Please enter a Project description in HTML." %>
+  </div>
+
+  <div class="form-group">
+    <label for="project-science">Science</label>
+    <p>Long description in HTML that appears on the Project page in the Science tab.</p>
+    <%= f.text_area :science, cols: 18, rows: 24, class: "form-control", id: "project-science", placeholder: "Please enter some News copy in HTML." %>
+  </div>
+
+  <div class="row form-group">
+    <%= f.submit "Save", class:"btn btn-default" %>
+    <%= link_to "Back", projects_path, class:"btn btn-danger" %>
+  </div>
+<% end %>

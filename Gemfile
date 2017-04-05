@@ -39,18 +39,18 @@ gem 'jbuilder', '~> 2.5'
 
 ####
 # RS added for test-dev-prod
-gem 'devise', '~>4.2.0'
+gem 'devise', '~> 4.2.0'
 gem 'bootstrap-sass', '~> 3.3'
 
 gem 'autoprefixer-rails'
 gem 'friendly_id', '~> 5.1.0'
 
-gem 'stripe'
-gem 'figaro'
-gem 'mailgun_rails'
-gem 'exception_handler'
+gem 'stripe', '~> 2.0.0'
+gem 'figaro', '~> 1.1.1'
+gem 'mailgun_rails', '~> 0.9.0'
+gem 'exception_handler', '~> 0.7.6'
 
-gem 'paperclip'
+gem 'paperclip', '~> 5.1.0'
 # end RS added
 ###
 
@@ -58,9 +58,9 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   # Add in rspec
-  gem 'rspec-rails'
-  gem 'rails-controller-testing'
-  gem 'factory_girl_rails'
+  gem 'rspec-rails', '~> 3.5.0'
+  gem 'rails-controller-testing', '~> 1.0.1'
+  gem 'factory_girl_rails', '~> 4.8.0'
 end
 
 group :development do
