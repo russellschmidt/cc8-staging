@@ -6,16 +6,35 @@
 
    <div class="form-group">
     <label for="partner-loc">Location</label>
-    <%= f.select( :location_id, Location.all.collect {|loc| [loc.name, loc.id] }, class: "form-control", id: "partner-loc") %>
+    <%= f.select( :location_id, Location.all.collect {|loc| [loc.name, loc.id] }, class: "form-control", id: "partner-loc", selected: params[:location_param]) %>
   </div>
 
-<div>
-    t.text     "blurb"
-    t.text     "description"
-    t.text     "news"
-    t.text     "volunteer"
-</div>
+  <div class="form-group">
+    <label for="partner-blurb">Blurb</label>
+    <p>The Partner blurb appears on the hero image on the Project page and ought to be a brief sentence 10-20 words in length.</p>
+    <%= f.text_field :blurb, class: "form-control", id: "partner-blurb", placeholder: "Enter a brief blurb about the partner" %>
+  </div>
 
+  <div class="form-group">
+    <label for="partner-desc">Description</label>
+    <p>Long description in HTML that appears on the Project page in the Partner tab.</p>
+    <%= f.text_area :description, cols: 18, rows: 24, class: "form-control", id: "partner-desc", placeholder: "Please enter a Description in HTML." %>
+  </div>
 
-  <%= f.submit "Save", class:"btn btn-default" %>
+  <div class="form-group">
+    <label for="partner-news">News</label>
+    <p>Long description in HTML that appears on the Project page in the News tab.</p>
+    <%= f.text_area :news, cols: 18, rows: 24, class: "form-control", id: "partner-news", placeholder: "Please enter some News copy in HTML." %>
+  </div>
+
+  <div class="form-group">
+    <label for="partner-vol">Volunteer</label>
+    <p>Long description in HTML that appears on the Project page in the Volunteer tab.</p>
+    <%= f.text_area :volunteer, cols: 18, rows: 24, class: "form-control", id: "partner-vol", placeholder: "Please enter some Volunteer copy in HTML." %>
+  </div>
+
+  <div class="row form-group">
+    <%= f.submit "Save", class:"btn btn-default" %>
+    <%= link_to "Back", partners_path, class:"btn btn-danger" %>
+  </div>
 <% end %>

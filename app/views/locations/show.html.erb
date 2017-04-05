@@ -8,8 +8,8 @@
 
 <div class="row">
   <div class="col-xs-12">
-    <%= link_to "Edit #{@location.name} name", edit_location_path(@location), class: "btn btn-default" %>
-    <%= link_to "Create New Partner in #{@location.name}", new_partner_path, class: "btn btn-default" %>
+    <%= link_to "Edit location #{@location.name}", edit_location_path(@location), class: "btn btn-default" %>
+    <%= link_to "Create New Partner in #{@location.name}", new_partner_path(location_param: @location), class: "btn btn-default" %>
     <%= link_to "All Locations", locations_path, class: "btn btn-default" %>
   </div>
 </div>
