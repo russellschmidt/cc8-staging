@@ -6,7 +6,7 @@
         <ul>
           <li class="nav-top" id="nav-logo"><%= link_to root_path do %>
             <img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170213/logo_climatecents_med_white.png"
-            alt="Climate Cents logo"/><% end %>
+            alt="Climate Cents logo, crowdfunded environmental charity projects that help your community"/><% end %>
           </li>
           <span>
             <li class="nav-top"><%= link_to "How It Works", "/#chip-in-section" %></li>
@@ -20,7 +20,7 @@
       <div class='project-header'>
         <% if get_project_campaigns(@project).present? %>
           <% get_project_campaigns(@project).each do |campaign| %>
-            <h6><img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/icon-white-location-map.png" alt="local climate change map icon"/><%= campaign.city %>, <%= campaign.state %></h6>
+            <h6><img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/icon-white-location-map.png" alt="local climate change map icon for environmental and green projects in #{campaign.city}, #{campaign.state}"/><%= campaign.city %>, <%= campaign.state %></h6>
           <% end %>
         <% end %>
         <h1><%= @project.name unless @project.nil? %></h1>
@@ -37,7 +37,6 @@
           <p><%= @partner.name %></p>
         </div>
         <div class="partner-logo">
-          <!-- <img src="<%= return_logo_image_url(@project.partner_id) %>" alt="<%= get_partner(@project.partner_id).name %> logo" /> -->
           <%= image_tag @project.logo.url, alt: "#{get_partner(@project.partner_id).name} logo image, a Climate Cents partner fighting climate change locally" %>
         </div>
       </div>

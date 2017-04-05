@@ -5,7 +5,7 @@
         <ul>
           <li class="nav-top" id="nav-logo"><%= link_to root_path do %>
             <img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170213/logo_climatecents_med_white.png"
-            alt="Climate Cents logo"/><% end %>
+            alt="Climate Cents logo, a nonprofit providing a free charity crowdfunding platform to local environmental, green, progressive, and community-oriented charities and non-profits in your community"/><% end %>
           </li>
           <span>
             <li class="nav-top "><%= link_to "How It Works", "/#chip-in-section" %></li>
@@ -24,7 +24,7 @@
           <% end %>
         </div>
         <div id="scroll-down-arrow">
-          <img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/Button_DropDownCarrot_White.png" alt="scroll down arrow carat carrot"/>
+          <img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/Button_DropDownCarrot_White.png" alt="scroll down arrow carat carrot for Climate Cents projects where donors choose among crowdfunded carbon reduction projects that help the community"/>
         </div>
       </div>
 
@@ -42,7 +42,7 @@
     <div id="chip-in-section-articles">
       <article>
         <div class="chip-in-section-icon">
-          <img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/icon_01_identify.png" alt="We identify local projects that help reduce atmospheric CO2 to fight global warming"/>
+          <img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/icon_01_identify.png" alt="Climate Cents as a nonprofit helps host and identify local projects that help reduce atmospheric CO2 to fight global warming and man-made climate change"/>
         </div>
         <h2>We Identify</h2>
         <p>Our team vets and partners with local projects that reduce carbon in the atmosphere while having positive impact in our communities.</p>
@@ -50,7 +50,7 @@
 
       <article>
         <div class="chip-in-section-icon">
-          <img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/icon_02_connect.png" alt="We identify local projects that help reduce atmospheric CO2 to fight global warming"/>
+          <img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/icon_02_connect.png" alt="Our crowd funding platform is free to charities and non-profits as well as social enterprise groups to help us all fight man-made climate change locally in our communities"/>
         </div>
         <h2>We Connect</h2>
         <p>We sign up thousands of people like you to support our vetted initiatves and as a group, help these projects in the fight against climate change.</p>
@@ -58,7 +58,7 @@
 
       <article>
         <div class="chip-in-section-icon">
-          <img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/icon_03_report.png" alt="We identify local projects that help reduce atmospheric CO2 to fight global warming"/>
+          <img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/icon_03_report.png" alt="Donors can see data visualization and updates on the progress of our partners projects fighting man made climate change in our community."/>
         </div>
         <h2>We Report</h2>
         <p>We then measure, track, and report the progress of every project, so you can see the impact of every dollar you donate and follow.</p>
@@ -87,10 +87,10 @@
       <article>
         <%= link_to project_path(project) do %>
         <div class="home-projects-section-image">
-          <img src="<%= project.small_image.url %>" alt="We identify local projects such as <%= partner.name %>'s <%= project.name %> that help reduce atmospheric CO2 to fight global warming"/>
+          <img src="<%= project.small_image.url %>" alt="We identify local projects such as <%= partner.name %>'s <%= project.name %> <%= campaign.name %> that help reduce atmospheric CO2 to fight global warming and climate change in <%=campaign.city%>, <%=campaign.state%>"/>
         </div>
 
-        <h5><img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/icon-green-location-map.png" alt="Climate Cents Project Partner location"/><%= campaign.city %>, <%= campaign.state %></h5>
+        <h5><img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/icon-green-location-map.png" alt="Climate Cents Project Partner <%= partner.name %>'s location in <%=campaign.city%>, <%=campaign.state%>"/><%= campaign.city %>, <%= campaign.state %></h5>
         <h3><%= partner.blurb %></h3>
         <h6><%= partner.name %></h6>
         <p><%= project.blurb %></p>
