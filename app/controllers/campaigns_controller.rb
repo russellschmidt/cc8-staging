@@ -3,7 +3,7 @@ class CampaignsController < ApplicationController
   before_filter :find_campaign, only: [:show, :edit, :create]
 
   def index
-    @campaigns = Campaign.all
+    @campaigns = Campaign.all.order("end_date DESC")
   end
 
   def show
