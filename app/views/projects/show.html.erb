@@ -1,5 +1,7 @@
 <div class="main project-page">
-  <section class="hero-section" style='background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("<%= return_hero_image_url(@project.partner_id) %>") no-repeat center center /cover;'>
+<!--   <section class="hero-section" style='background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("<%= return_hero_image_url(@project.partner_id) %>") no-repeat center center /cover;'> -->
+  <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+      url('<%= @project.hero_image.url %>') no-repeat center center /cover;">
     <header>
       <nav>
         <ul>
@@ -36,7 +38,8 @@
           <p><%= @partner.name %></p>
         </div>
         <div class="partner-logo">
-          <img src="<%= return_logo_image_url(@project.partner_id) %>" alt="<%= get_partner(@project.partner_id).name %> logo" />
+          <!-- <img src="<%= return_logo_image_url(@project.partner_id) %>" alt="<%= get_partner(@project.partner_id).name %> logo" /> -->
+          <%= image_tag @project.logo.url %>
         </div>
       </div>
 

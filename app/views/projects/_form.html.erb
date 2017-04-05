@@ -1,4 +1,4 @@
-<%= form_for(project) do |f| %>
+<%= form_for(project, html: { multipart: true }) do |f| %>
   <div class="form-group">
     <label for="project-name">Name</label>
     <%= f.text_field :name, class: "form-control", id: "project-name", placeholder: "Project Name" %>
@@ -20,6 +20,38 @@
     <p>Enter the URL including http:// for the video</p>
     <%= f.text_field :videoUrl, class: "form-control", id: "project-video-url", placeholder: "https://www.youtube.com/watch?v=rd0jlzFeXiw" %>
   </div>
+
+  <hr />
+
+  <div class="form-group">
+    <label for="image-logo">Partner/Project Logo for Project</label>
+    <p>Upload the logo for the partner or this project</p>
+    <%= f.file_field :logo, class: "form-control", id: "image-logo" %>
+    <% if @project.logo.url.present? %>
+      <%= image_tag @project.logo.url %>
+    <% end %>
+  </div>
+
+
+  <div class="form-group">
+    <label for="image-hero">Hero Image for Project</label>
+    <p>Upload the large image (min 800x664) for this project</p>
+    <%= f.file_field :hero_image, class: "form-control", id: "image-hero" %>
+    <% if @project.hero_image.url.present? %>
+      <%= image_tag @project.hero_image.url %>
+    <% end %>
+  </div>
+
+  <div class="form-group">
+    <label for="image-small">Icon/Card Image for Project</label>
+    <p>Upload the small 350x200 image for the project card</p>
+    <%= f.file_field :small_image, class: "form-control", id: "image-small" %>
+    <% if @project.small_image.url.present? %>
+      <%= image_tag @project.small_image.url %>
+    <% end %>
+  </div>
+
+  <hr />
 
   <div class="form-group">
     <label for="project-ov-head">Project Headline</label>

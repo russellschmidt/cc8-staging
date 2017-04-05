@@ -26,7 +26,9 @@
             <%= hidden_field_tag 'donationToCampaign', 2500 %>
             <%= hidden_field_tag 'donationToTip', 375 %>
             <%= hidden_field_tag 'totalDonation', 2875 %>
-            <%= hidden_field_tag 'campaign_id', get_project_campaigns(@project).last.id %>
+            <% if get_project_campaigns(@project).present? %>
+              <%= hidden_field_tag 'campaign_id', get_project_campaigns(@project).last.id %>
+            <% end %>
             <%= hidden_field_tag 'stripeBillingName' %>
             <%= hidden_field_tag 'stripeBillingAddress' %>
             <%= hidden_field_tag 'stripeBillingAddressCity' %>

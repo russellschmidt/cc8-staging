@@ -41,7 +41,8 @@ class ProjectsController < ApplicationController
   # start private
     def project_params
       params.require(:project).permit(:name, :blurb, :description, :partner_id, :slug, :videoUrl,
-          :science, :overview_headline, :science_headline, :news_headline, :volunteer_headline)
+          :science, :overview_headline, :science_headline, :news_headline, :volunteer_headline,
+          :logo, :hero_image, :small_image)
     end
 
     def find_partner(project)
