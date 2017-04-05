@@ -1,0 +1,70 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h1>All Campaigns</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <%= link_to 'Create New Campaign', new_campaign_path, class: "btn btn-default" %>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <div class="col-xs-2">
+    <h5>Campaign</h5>
+  </div>
+
+  <div class="col-xs-2">
+    <h5>Partner</h5>
+  </div>
+
+  <div class="col-xs-2">
+    <h5>Project</h5>
+  </div>
+
+  <div class="col-xs-2">
+    <h5>Active?</h5>
+  </div>
+
+  <div class="col-xs-2">
+    <h5>% to Goal</h5>
+  </div>
+
+  <div class="col-xs-2">
+    <h5>Edit Campaign</h5>
+  </div>
+</div>
+
+<% @campaigns.each do |campaign| %>
+
+  <div class="row">
+    <div class="col-xs-2">
+      <p><%= link_to campaign.name, campaign_path(campaign) %></p>
+    </div>
+
+    <div class="col-xs-2">
+      <p><%= link_to get_partner_from_project_id(get_project(campaign.project_id)).name, partner_path(get_partner_from_project_id(get_project(campaign.project_id))) %></p>
+    </div>
+
+    <div class="col-xs-2">
+      <p><%= link_to get_project(campaign.project_id).name, project_path(get_project(campaign.project_id)) %></p>
+    </div>
+
+    <div class="col-xs-2">
+      <p><%= campaign_active_inactive(campaign) %></p>
+    </div>
+
+    <div class="col-xs-2">
+      <p><%=  %></p>
+    </div>
+
+    <div class="col-xs-2">
+      <p><%= link_to 'Edit', edit_campaign_path(campaign), class: "btn btn-link" %></p>
+    </div>
+  </div>
+
+<% end %>
+
