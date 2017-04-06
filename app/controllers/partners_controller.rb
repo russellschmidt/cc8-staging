@@ -1,4 +1,6 @@
 class PartnersController < ApplicationController
+  before_action :authenticate_user!, :admin_list
+
   layout 'administration'
 
   before_filter :find_partner, only: [:edit, :update, :show]
@@ -45,6 +47,12 @@ class PartnersController < ApplicationController
 
     def partner_params
       params.require(:partner).permit(:name, :blurb, :location_id, :description, :news, :volunteer)
+    end
+
+    def admin_list
+      unless user_signed_in? && current_user.admin?
+        redirect_to admin_index_path
+      end
     end
   # end private
 end

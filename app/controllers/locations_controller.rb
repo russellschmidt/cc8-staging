@@ -1,4 +1,6 @@
 class LocationsController < ApplicationController
+  before_action :authenticate_user!, :admin_list
+
   layout 'administration'
 
   before_filter :find_location, only: [:edit, :update, :show]
@@ -38,6 +40,7 @@ class LocationsController < ApplicationController
   end
 
   private
+  # start private
     def find_location
       @location = Location.find(params[:id])
     end
@@ -45,4 +48,11 @@ class LocationsController < ApplicationController
     def location_params
       params.require(:location).permit(:name)
     end
+
+    def admin_list
+      unless user_signed_in? && current_user.admin?
+        redirect_to admin_index_path
+      end
+    end
+  # end private
 end

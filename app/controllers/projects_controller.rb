@@ -1,4 +1,7 @@
 class ProjectsController < ApplicationController
+  before_action :authenticate_user!, except: [:show]
+  before_action :admin_list, except: [:show]
+
   layout "administration", only: [:index, :new, :edit]
 
   before_filter :find_project, only: [:show, :edit, :update]
@@ -51,6 +54,12 @@ class ProjectsController < ApplicationController
 
     def find_project
       @project = Project.friendly.find(params[:id])
+    end
+
+    def admin_list
+      unless user_signed_in? && current_user.admin?
+        redirect_to admin_index_path
+      end
     end
   # end private
 end

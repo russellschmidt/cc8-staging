@@ -4,7 +4,12 @@
     <h3>From <%= @donation.name %> on <%= @donation.created_at.to_s(:short) %></h3>
   </div>
 </div>
-
+<hr />
+<div class="jumbotron">
+  <h1 style="color: red; text-shadow: 0 1px 1px black;">Warning</h1>
+  <p>Changes here do NOT update Stripe or the bank account. They only update our database.</p>
+  <p>However, changes made to DONATIONS can be irrecoverable. Use caution.</p>
+</div>
 <hr />
 
 <div class="row">

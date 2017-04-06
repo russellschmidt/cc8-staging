@@ -1,14 +1,86 @@
-    t.integer  "user_id"
-    t.integer  "campaign_id"
-    t.string   "stripe_customer_id"
-    t.integer  "total_in_cents"
-    t.integer  "tip_in_cents"
-    t.integer  "campaign_donation_in_cents"
-    t.string   "stripe_email"
-    t.string   "name"
-    t.string   "address"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zip"
-    t.string   "country"
-    t.string   "countryCode"
+<%= form_for(donation) do |f| %>
+  <div class="form-group">
+    <label for="donation-name">Donor Name</label>
+    <%= f.text_field :name, class: "form-control", id: "donation-name", placeholder: "Chris Jones" %>
+  </div>
+  <div class="form-group">
+    <label for="donation-email">Donor Email</label>
+    <%= f.text_field :stripe_email, class: "form-control", id: "donation-email", placeholder: "dontChangeMe@Email.com" %>
+  </div>
+
+  <div class="form-group">
+    <label for="donation-campaign">Campaign Donated To</label>
+    <%= f.select( :campaign_id, Campaign.all.collect {|campaign| [campaign.name, campaign.id] }, class: "form-control", id: "donation-campaign", selected: params[:campaign_param]) %>
+  </div>
+
+  <div class="form-group">
+    <label for="donation-user">Climate Cents User ID</label>
+    <%= f.select( :user_id, User.all.collect {|user| [user.name, user.id] }, class: "form-control", id: "donation-user") %>
+  </div>
+
+  <div class="form-group">
+    <label for="donation-stripe-id">Donor Email</label>
+    <%= f.text_field :stripe_customer_id, class: "form-control", id: "donation-stripe-id" %>
+  </div>
+
+  <hr />
+
+  <div class="form-group">
+    <label for="donation-to-campaign">Campaign donation portion in cents</label>
+    <p>Donation to campaign in cents (so dollar goal * 100, no decimals</p>
+    <%= f.number_field :campaign_donation_in_cents, class: "form-control", id: "donation-to-campaign", placeholder: "100", min: "100" %>
+  </div>
+
+  <div class="form-group">
+    <label for="donation-to-tip">Tip donation in cents</label>
+    <p>Tip donation in cents (so dollar goal * 100, no decimals</p>
+    <%= f.number_field :tip_in_cents, class: "form-control", id: "donation-to-tip", min: "100" %>
+  </div>
+
+  <div class="form-group">
+    <label for="donation-total">Total donation in cents</label>
+    <p>Total donation in cents (so dollar goal * 100, no decimals</p>
+    <%= f.number_field :total_in_cents, class: "form-control", id: "donation-total", min: "100" %>
+  </div>
+
+  <hr />
+
+  <div class="form-group">
+    <label for="donation-address">Address</label>
+    <%= f.text_field :address, class: "form-control", id: "donation-address", placeholder: "1234 Main Street, Apt. 5A" %>
+  </div>
+
+  <div class="form-group">
+    <label for="donation-city">City</label>
+    <%= f.text_field :city, class: "form-control", id: "donation-city", placeholder: "Rancho Cucamonga" %>
+  </div>
+
+  <div class="form-group">
+    <label for="donation-state">State (2 letter Abbrev.)</label>
+    <%= f.text_field :state, class: "form-control", id: "donation-state", placeholder: "CA", maxlength: "2" %>
+  </div>
+
+  <div class="form-group">
+    <label for="donation-zip">Country</label>
+    <%= f.text_field :zip, class: "form-control", id: "donation-zip", placeholder: "90001",
+      maxlength:"10" %>
+  </div>
+
+  <div class="form-group">
+    <label for="donation-country">Country</label>
+    <%= f.text_field :country, class: "form-control", id: "donation-city", placeholder: "United States" %>
+  </div>
+
+  <div class="form-group">
+    <label for="donation-country-code">Country Code (2 letter Abbrev.)</label>
+    <%= f.text_field :countryCode, class: "form-control", id: "donation-country-code", placeholder: "US", maxlength: "2" %>
+  </div>
+
+  <hr />
+
+  <div class="row form-group">
+    <%= f.submit "Save", class:"btn btn-default", data: {confirm: "Are you sure?"} %>
+    <%= link_to "Back", donations_path, class: "btn btn-danger" %>
+  </div>
+
+<% end %>

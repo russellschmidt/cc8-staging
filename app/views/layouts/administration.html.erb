@@ -55,18 +55,20 @@
           <% end %>
         </section>
       <% end %>
-      <div class="nav">
-        <div class="row">
-          <div class="col-xs-12">
-            <%= link_to 'Locations', locations_path, class: 'btn btn-default btn-sm' %>
-            <%= link_to 'Parters', partners_path, class: 'btn btn-default btn-sm' %>
-            <%= link_to 'Projects', projects_path, class: 'btn btn-default btn-sm' %>
-            <%= link_to 'Campaigns', campaigns_path, class: 'btn btn-default btn-sm' %>
-            <%= link_to 'Donations', donations_path, class: 'btn btn-default btn-sm' %>
-            <%= link_to 'Admin', admin_index_path, class: 'btn btn-default btn-sm' %>
+      <% if user_signed_in? && current_user.admin? %>
+        <div class="nav">
+          <div class="row">
+            <div class="col-xs-12">
+              <%= link_to 'Locations', locations_path, class: 'btn btn-default btn-sm' %>
+              <%= link_to 'Parters', partners_path, class: 'btn btn-default btn-sm' %>
+              <%= link_to 'Projects', projects_path, class: 'btn btn-default btn-sm' %>
+              <%= link_to 'Campaigns', campaigns_path, class: 'btn btn-default btn-sm' %>
+              <%= link_to 'Donations', donations_path, class: 'btn btn-default btn-sm' %>
+              <%= link_to 'Admin', admin_index_path, class: 'btn btn-default btn-sm' %>
+            </div>
           </div>
         </div>
-      </div>
+      <% end %>
       <%= yield %>
     </div>
 
