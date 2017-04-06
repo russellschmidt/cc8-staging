@@ -8,7 +8,8 @@ $(document).on("wheel", "input[type=number]", function (e) {
 
 $(document).on('turbolinks:load', function() {
   setInterval(function(){
-    if( ($("#customDonationInput").val() == 0) && ($("#tip-amount").val() == 0) ){
+    // min charge is $1.00
+    if( $('input[type=hidden]#totalDonation').val() < 100 ){
       $('#btn-buy').prop('disabled', true);
     } else {
       $('#btn-buy').prop('disabled', false);
