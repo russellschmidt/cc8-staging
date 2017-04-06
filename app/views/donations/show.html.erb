@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-xs-12">
     <h1>Donation</h1>
-    <h3>From <%= @donation.name %> on <%= @donation.created_at.to_s %></h3>
+    <h3>From <%= @donation.name %> on <%= @donation.created_at.to_s(:short) %></h3>
   </div>
 </div>
 
@@ -50,6 +50,9 @@
     </tr>
     <tr>
       <td>Total Donation: </td><td><%= number_to_currency(@donation.total_in_cents.to_f/100) %></td>
+    </tr>
+    <tr>
+      <td>Date Donated: </td><td><%= @donation.created_at.to_s(:long) %></td>
     </tr>
     <tr>
       <td>Email: </td><td><%= @donation.stripe_email %></td>
