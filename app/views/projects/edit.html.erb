@@ -46,7 +46,7 @@
       <%= percent_funded(campaign) %>
     </div>
     <div class="col-xs-1">
-      <%= link_to "Edit", edit_campaign_path(campaign) %>
+      <%= link_to "Edit", edit_campaign_path(campaign, project_param: @project.id) %>
     </div>
   </div>
 <% end %>

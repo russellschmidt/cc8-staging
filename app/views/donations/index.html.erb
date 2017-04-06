@@ -1,0 +1,78 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h1>All Donations</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <%= link_to 'Create New Donation', new_donation_path, class: "btn btn-default" %>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <div class="col-xs-2">
+    <h5>Donor name</h5>
+  </div>
+
+  <div class="col-xs-2">
+    <h5>Email</h5>
+  </div>
+
+  <div class="col-xs-2">
+    <h5>Date</h5>
+  </div>
+
+  <div class="col-xs-2">
+    <h5>Campaign</h5>
+  </div>
+
+  <div class="col-xs-1">
+    <h5>$ to Campaign</h5>
+  </div>
+
+  <div class="col-xs-1">
+    <h5>$ to Tip</h5>
+  </div>
+
+  <div class="col-xs-2">
+    <h5>Edit</h5>
+  </div>
+</div>
+
+<% @donations.each do |donation| %>
+
+  <div class="row">
+    <div class="col-xs-2">
+      <p><%= link_to donation.name, donation_path(donation) %></p>
+    </div>
+
+    <div class="col-xs-2">
+      <p><%= donation.stripe_email %></p>
+    </div>
+
+    <div class="col-xs-2">
+      <p><%= donation.created_at.to_s(:long) %></p>
+    </div>
+
+    <div class="col-xs-2">
+      <p><%= Campaign.find(donation.campaign_id) %></p>
+    </div>
+
+    <div class="col-xs-2">
+      <p><%= number_to_currency(donation.campaign_donation_in_cents.to_f/100) %></p>
+    </div>
+
+    <div class="col-xs-2">
+      <p><%= number_to_currency(donation.tip_in_cents.to_f/100) %></p>
+    </div>
+
+    <div class="col-xs-2">
+      <p><%= link_to 'Edit', edit_donation_path(donation) %></p>
+    </div>
+  </div>
+
+<% end %>
+
