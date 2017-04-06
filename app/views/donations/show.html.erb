@@ -1,0 +1,79 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h1>Donation</h1>
+    <h3>From <%= @donation.name %> on <%= @donation.created_at.to_s %></h3>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <div class="col-xs-12">
+    <%= link_to "Edit donation", edit_donation_path(@donation, campaign_param: @donation.campaign_id), class: "btn btn-default" %>
+    <%= link_to "New Donation for #{Campaign.find(@donation.campaign_id).name}", new_donation_path(campaign_param: @donation.campaign_id) , class: "btn btn-default" %>
+  </div>
+</div>
+
+<hr />
+
+<div>
+  <table class="table table-striped"><tbody>
+    <tr>
+      <td>Donation ID:</td><td><%= @donation.id %></td>
+    </tr>
+    <tr>
+      <td>User ID: </td><td><%= @donation.user_id %></td>
+    </tr>
+    <tr>
+      <td>Campaign ID: </td><td><%= @donation.campaign_id %></td>
+    </tr>
+    <tr>
+      <td>Campaign Name: </td><td><%= Campaign.find(@donation.campaign_id).name %></td>
+    </tr>
+    <tr>
+      <td>Project Name: </td><td><%= Project.find(Campaign.find(@donation.campaign_id).project_id).name %></td>
+    </tr>
+    <tr>
+      <td>Partner Name: </td><td><%= Partner.find(Project.find(Campaign.find(@donation.campaign_id).project_id).id).name %></td>
+    </tr>
+    <tr>
+      <td>Location Name: </td><td><%= Location.find(Partner.find(Project.find(Campaign.find(@donation.campaign_id).project_id).partner_id).location_id).name %></td>
+    </tr>
+    <tr>
+      <td>Stripe customer ID:</td><td> <%= @donation.stripe_customer_id %></td>
+    </tr>
+    <tr>
+      <td>Campaign Donation:</td><td> <%= number_to_currency(@donation.campaign_donation_in_cents.to_f/100) %></td>
+    </tr>
+    <tr>
+      <td>Tip: </td><td><%= number_to_currency(@donation.tip_in_cents.to_f/100) %></td>
+    </tr>
+    <tr>
+      <td>Total Donation: </td><td><%= number_to_currency(@donation.total_in_cents.to_f/100) %></td>
+    </tr>
+    <tr>
+      <td>Email: </td><td><%= @donation.stripe_email %></td>
+    </tr>
+    <tr>
+      <td>Name: </td><td><%= @donation.name %></td>
+    </tr>
+    <tr>
+      <td>Address: </td><td><%= @donation.address %></td>
+    </tr>
+    <tr>
+      <td>City: </td><td><%= @donation.city %></td>
+    </tr>
+    <tr>
+      <td>State: </td><td><%= @donation.state %></td>
+    </tr>
+    <tr>
+      <td>ZIP: </td><td><%= @donation.zip %></td>
+    </tr>
+    <tr>
+      <td>Country: </td><td><%= @donation.country %></td>
+    </tr>
+    <tr>
+      <td>Country Code: </td><td><%= @donation.countryCode %></td>
+    </tr>
+  </tbody></table>
+</div>

@@ -1,6 +1,6 @@
 class DonationsController < ApplicationController
   layout "administration"
-  before_filter :find_campaign, only: [:show, :edit, :create]
+  before_filter :find_donation, only: [:show, :edit, :create]
 
   def index
     @donations = Donation.all.order("created_at ASC")
