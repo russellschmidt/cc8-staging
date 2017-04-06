@@ -51,7 +51,7 @@
   .project-header {
 
     h6 {
-      margin: 170px auto 0 auto;
+      margin: 120px auto 0 auto;
       height: 23px;
       font-family: "Source Sans Pro";
       font-size: 1.8rem; /* 18px/10px */
@@ -144,7 +144,7 @@
 
   .project-detail {
     .tab {
-      margin: 73px 300px;
+      margin: 73px 270px;;
     }
     .tab-links {
       margin: 0 36px;
@@ -424,7 +424,7 @@ input[type="number"] {
 
     nav span {
       float: right;
-      padding: 1vh 6vw 0 0;
+      padding: 1vh 0 0 0;
     }
 
     .project-header {
@@ -432,30 +432,30 @@ input[type="number"] {
         font-size: 4rem;
       }
       h2 {
-        font-size: 3rem;
-        margin-top: 1vh;
+        font-size: 2.4rem;
+        margin-top: 12px;
       }
 
       h6 {
         &:first-child {
-          margin-top: 8vh;
+          margin-top: 144px;
           font-size: 1rem;
           line-height: 1.5;
           height: 2rem;
         }
       }
       .hero-partner {
-        margin-top: 5vh;
+        margin-top: 48px;
         h6 {
           margin-top: 0;
         }
       }
       .hero-header-btn {
-        margin-top: 4vh;
+        margin-top: 36px;
       }
 
       .partner-logo {
-        margin-top: 1vh;
+        margin-top: 24px;
         img {
           max-height: 80px;
         }
@@ -463,7 +463,7 @@ input[type="number"] {
     }
     .project-detail {
       .tab {
-        margin: 4vh 0 0 0;
+        margin: 36px 0 0 0;
         text-align: center;
       }
       .tab-links {
@@ -476,7 +476,7 @@ input[type="number"] {
 
       .tab-links:last-child {
         display: inline;
-        width: 80;
+        width: 80px;
         height: 38px;
         font-size: 1.4rem;
         line-height: 1.5;
@@ -508,7 +508,7 @@ input[type="number"] {
       .left-column {
         margin-left: 5vw;
         .top-p-cta {
-          margin-top: 3vh;
+          margin-top: 24px;
           margin-bottom: 0;
           font-size: 1.2rem;
           line-height: 1.3;
@@ -522,7 +522,7 @@ input[type="number"] {
       .center-column {
         ul {
           padding: 0;
-          margin: 3vh auto 1vh auto;
+          margin: 24px auto 8px auto;
           max-width: 100%;
         }
         li {
@@ -549,7 +549,7 @@ input[type="number"] {
       .right-column {
         margin-right: 5vw;
         button {
-          margin-top: 3vh;
+          margin-top: 24px;
           width: 85%;
           max-width: 180px;
           height: 4.8rem;
@@ -572,9 +572,10 @@ input[type="number"] {
   .project-page {
     section.hero-section {
       height: 75vh;
+      max-height: 525px;
     }
     nav {
-      margin-top: 2vh;
+      margin-top: 12px;
       span {
         display: none;
       }
@@ -586,12 +587,12 @@ input[type="number"] {
         margin: 0 auto;
       }
       h1 {
-        font-size: 3rem;
+        font-size: 3.2rem;
         height: auto;
         margin-bottom: 0;
       }
       h2 {
-        font-size: 2rem;
+        font-size: 2.1rem;
         padding: 0 1vw;
       }
       div {
@@ -604,25 +605,25 @@ input[type="number"] {
 
       h6 {
         &:first-child {
-          margin-top: 4vh;
+          margin-top: 54px;
           font-size: 1rem;
           line-height: 1.5;
           height: 2rem;
         }
       }
       .hero-partner {
-        margin-top: 2vh;
+        margin-top: 12px;
         width: 100%;
         h6 {
           margin-top: 0;
         }
       }
       .hero-header-btn {
-        margin-top: 4vh;
+        margin-top: 36px;
       }
 
       .partner-logo {
-        margin-top: 1vh;
+        margin-top: 12px;
         img {
           max-height: 80px;
         }
@@ -631,7 +632,7 @@ input[type="number"] {
 
     .project-detail {
       .tab {
-        margin: 4vh 0 0 0;
+        margin: 36px 0 0 0;
         text-align: center;
       }
       .tab-links {
@@ -652,7 +653,7 @@ input[type="number"] {
         font-size: 1.4rem;
         line-height: 1.5;
         padding: 7px 14px;
-        margin: 2vw auto;
+        margin: 16px auto;
         span {
           padding-right: 5px;
           height: 16px;
@@ -679,7 +680,7 @@ input[type="number"] {
           width: 100%;
         }
         .left-column, .center-column, .right-column {
-          margin: 1vh auto 0;
+          margin: 8px auto 0;
           height: auto;
         }
         .left-column {
@@ -703,7 +704,7 @@ input[type="number"] {
         }
         .center-column {
           ul {
-            margin: 0 1vw 1vh;
+            margin: 0 1vw 8px;
           }
           li {
             font-size: 1.2rem;
@@ -718,7 +719,7 @@ input[type="number"] {
         }
         .right-column {
           button {
-            margin: 1vh auto;
+            margin: 8px auto;
             width: 70%;
             max-width: 250px;
             height: 30px;
@@ -739,7 +740,7 @@ input[type="number"] {
     and (orientation : landscape) {
   .project-page {
     section.hero-section {
-      height: 55vh;
+      height: 53vh;
     }
 
     .project-header {
@@ -1119,10 +1120,10 @@ input[type="number"] {
     margin-bottom: 40px;
     section.hero-section {
       max-width: 736px;
-      height: 95vh;
+      height: 90vh;
     }
     nav {
-      margin: 5px auto 0;
+      margin: 12px auto 0;
     }
     nav ul {
       padding: 0;
@@ -1149,15 +1150,15 @@ input[type="number"] {
       }
 
       h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
         height: auto;
         max-height: 4rem;
       }
       h2 {
-        font-size: 1.5rem;
-        line-height: 1.5;
+        font-size: 1.8rem;
+        line-height: 1.6;
         padding: 0;
-        width: 70%;
+        width: 85%;
         margin: 0 auto;
       }
 
@@ -1188,7 +1189,7 @@ input[type="number"] {
 
     .project-detail {
       .tab {
-        margin: 5vh auto 5vh;
+        margin: 44px auto 30px;
         text-align: center;
       }
       .tab-links {
@@ -1281,8 +1282,11 @@ input[type="number"] {
   .project-page {
     margin-bottom: 40px;
     section.hero-section {
-      height: 60vh;
+      height: 55vh;
       padding: 0;
+      nav {
+        margin-top: 16px;
+      }
     }
     nav {
       ul {
@@ -1462,6 +1466,7 @@ input[type="number"] {
       }
     }
     .project-header {
+      height: 75vh;
       h1 {
         font-size: 2.5rem;
         height: auto;
@@ -1600,8 +1605,12 @@ input[type="number"] {
 @media screen and (max-width: 375px) and (orientation: portrait) {
   .project-page {
     margin-bottom: 40px;
+
     section.hero-section {
-      height: 70vh;
+      nav {
+        margin-top: 16px;
+      }
+      height: 65vh;
       header {
         ul {
           padding: 0;
@@ -1890,13 +1899,13 @@ input[type="number"] {
   .project-page {
     margin-bottom: 40px;
     nav {
-      margin: 1vh auto;
+      margin: 12px auto;
       ul {
         padding-left: 0;
       }
     }
     section.hero-section {
-      height: 75vh;
+      height: 70vh;
     }
     nav li#nav-logo {
       width: 100%;
