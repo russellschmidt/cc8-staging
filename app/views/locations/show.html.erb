@@ -37,7 +37,7 @@
 <% @partners.each do |partner| %>
 <div class="row">
   <div class="col-xs-3">
-    <%= link_to partner.name, partner_path(partner), class: "btn btn-link" %>
+    <%= link_to partner.name, partner_path(partner) %>
   </div>
 
   <div class="col-xs-3">
@@ -49,7 +49,7 @@
   </div>
 
   <div class="col-xs-3">
-    <%= link_to "Edit #{partner.name}", edit_partner_path(partner), class: "btn btn-link" %>
+    <%= link_to "Edit #{partner.name}", edit_partner_path(partner) %>
   </div>
 </div>
 <% end %>

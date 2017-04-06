@@ -4,6 +4,16 @@
   </div>
 </div>
 
+<hr />
+
+<div class="row">
+  <div class="col-xs-12">
+    <%= link_to "Create New Project for #{Partner.find(@project.partner_id).name}", new_project_path(partner_param: Partner.find(@project.partner_id)), class: "btn btn-default" %>
+  </div>
+</div>
+
+<hr />
+
 <div class="row">
   <div class="col-xs-12">
     <%= render partial: 'form', locals: {project: @project} %>

@@ -13,15 +13,19 @@
 <hr />
 
 <div class="row">
-  <div class="col-xs-4">
+  <div class="col-xs-3">
     <h5>Partner</h5>
   </div>
 
-  <div class="col-xs-4">
+  <div class="col-xs-3">
     <h5>Projects by Partner</h5>
   </div>
 
-  <div class="col-xs-4">
+  <div class="col-xs-3">
+    <h5>Partner Location</h5>
+  </div>
+
+  <div class="col-xs-3">
     <h5>Edit Partner</h5>
   </div>
 </div>
@@ -29,16 +33,20 @@
 <% @partners.each do |partner| %>
 
   <div class="row">
-    <div class="col-xs-4">
-      <p><%= link_to partner.name, partner_path(partner), class: "btn btn-link" %></p>
+    <div class="col-xs-3">
+      <p><%= link_to partner.name, partner_path(partner) %></p>
     </div>
 
-    <div class="col-xs-4">
+    <div class="col-xs-3">
       <p><%= Project.where(partner_id: partner.id).count %></p>
     </div>
 
-    <div class="col-xs-4">
-      <p><%= link_to 'Edit', edit_partner_path(partner), class: "btn btn-link" %></p>
+    <div class="col-xs-3">
+      <p><%= Location.find(partner.location_id).name %></p>
+    </div>
+
+    <div class="col-xs-3">
+      <p><%= link_to 'Edit', edit_partner_path(partner) %></p>
     </div>
   </div>
 

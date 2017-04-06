@@ -9,7 +9,7 @@
 <div class="row">
   <div class="col-xs-12">
     <%= link_to "Edit #{@partner.name} info", edit_partner_path(@partner), class: "btn btn-default" %>
-    <%= link_to "Create New Partner in #{Location.find(@partner.location_id).name}", location_path(Location.find(@partner.location_id)), class: "btn btn-default" %>
+    <%= link_to "Create New Partner in #{Location.find(@partner.location_id).name}", new_partner_path(location_param: Location.find(@partner.location_id)), class: "btn btn-default" %>
     <%= link_to "All Partners", partners_path, class: "btn btn-default" %>
     <%= link_to "All Locations", locations_path, class: "btn btn-default" %>
   </div>
@@ -38,7 +38,7 @@
 <% @projects.each do |project| %>
 <div class="row">
   <div class="col-xs-3">
-    <%= link_to project.name, project_path(project), class: "btn btn-link" %>
+    <%= link_to project.name, project_path(project) %>
   </div>
 
   <div class="col-xs-2">
@@ -50,7 +50,7 @@
   </div>
 
   <div class="col-xs-5">
-    <%= link_to "Edit #{project.name}", edit_project_path(project), class: "btn btn-link" %>
+    <%= link_to "Edit #{project.name}", edit_project_path(project) %>
   </div>
 </div>
 <% end %>

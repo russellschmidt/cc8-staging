@@ -1,0 +1,100 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h1><%= @campaign.name %></h1>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <div class="col-xs-12">
+    <%= link_to "Edit #{@campaign.name}", edit_campaign_path(@campaign), class: "btn btn-default" %>
+    <%= link_to "New Campaign for #{Project.find(@campaign.project_id).name}", new_campaign_path(project_param: Project.find(@campaign.project_id)) , class: "btn btn-default" %>
+    <%= link_to "All Campaigns", campaigns_path, class: "btn btn-default" %>
+    <%= link_to "All Projects", projects_path, class: "btn btn-default" %>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <div class="col-xs-3">
+    <p>Time to go: <%= distance_of_time_in_words_to_now(@campaign.end_date) %></p>
+  </div>
+  <div class="col-xs-2">
+    <p>Goal: <%= number_to_currency(@campaign.dollar_goal_in_cents.to_f/100) %></p>
+  </div>
+  <div class="col-xs-2">
+    <p>Total Raised: <%= number_to_currency(campaign_raised_to_date_in_cents(@campaign)/100) %></p>
+  </div>
+  <div class="col-xs-2">
+    <p>Total Tips: <%= number_to_currency(tips_raised_to_date_in_cents(@campaign)/100) %></p>
+  </div>
+  <div class="col-xs-3">
+    <%= link_to get_partner_from_project_id(@campaign.project_id).name, partner_path(get_partner_from_project_id(@campaign.project_id)), class: "btn btn-default" %>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <div class="col-xs-3">
+    <h5>Donation</h5>
+  </div>
+
+  <div class="col-xs-2">
+    <h5>Name</h5>
+  </div>
+
+  <div class="col-xs-2">
+    <h5>Date</h5>
+  </div>
+
+  <div class="col-xs-1">
+    <h5>$ to Campaign</h5>
+  </div>
+
+  <div class="col-xs-1">
+    <h5>$ to Tip</h5>
+  </div>
+
+  <div class="col-xs-1">
+    <h5>$ Total</h5>
+  </div>
+
+  <div class="col-xs-2">
+    <h5>Edit Donation</h5>
+  </div>
+</div>
+
+<% @donations.each do |donation| %>
+<div class="row">
+  <div class="col-xs-3">
+    <%= link_to donation.stripe_email, donation_path(donation) %>
+  </div>
+
+  <div class="col-xs-2">
+    <p><%= donation.name %></p>
+  </div>
+
+  <div class="col-xs-2">
+    <p><%= donation.created_at.to_s(:short) %></p>
+  </div>
+
+  <div class="col-xs-1">
+    <p><%= number_to_currency(donation.campaign_donation_in_cents.to_f / 100) %></p>
+  </div>
+
+  <div class="col-xs-1">
+    <p><%= number_to_currency(donation.tip_in_cents.to_f / 100)%></p>
+  </div>
+
+  <div class="col-xs-1">
+    <p><%= number_to_currency(donation.total_in_cents.to_f / 100) %></p>
+  </div>
+
+  <div class="col-xs-2">
+    <%= link_to "Edit", edit_donation_path(donation) %>
+  </div>
+</div>
+<% end %>
