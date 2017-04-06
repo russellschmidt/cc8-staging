@@ -5,11 +5,12 @@
 </div>
 
 <div class="jumbotron">
-
+  <h1>Note!</h1>
+  <p>Changes here do NOT update Stripe or the bank account. They just update our database.</p>
 </div>
 
 <div class="row">
   <div class="col-xs-12">
-    <%= render partial: 'form', locals: {campaign: @campaign} %>
+    <%= render partial: 'form', locals: {donation: @donation} %>
   </div>
 </div>

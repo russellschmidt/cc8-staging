@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h1>Edit donation</h1>
+    <h3>Donation from <%= @donation.name %> on <%= @donation.created_at.to_s(:short) %></h3>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <h1>Note!</h1>
+  <p>Changes here do NOT update Stripe or the bank account. They just update our database.</p>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <%= render partial: 'form', locals: {donation: @donation} %>
+  </div>
+</div>
