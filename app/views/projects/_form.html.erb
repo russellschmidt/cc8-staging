@@ -17,15 +17,16 @@
 
   <div class="form-group">
     <label for="project-video-url">Blurb</label>
-    <p>Enter the URL including http:// for the video</p>
-    <%= f.text_field :videoUrl, class: "form-control", id: "project-video-url", placeholder: "https://www.youtube.com/watch?v=rd0jlzFeXiw" %>
+    <p>Enter the URL including https:// for the video. For optimal results go to youtube, find your video, click SHARE and then EMBED. Copy just the URL with the word 'embed' in it like so:
+    "https://www.youtube.com/embed/fFAw12TyhYg"</p>
+    <%= f.text_field :videoUrl, class: "form-control", id: "project-video-url", placeholder: "https://www.youtube.com/embed/fFAw12TyhYg" %>
   </div>
 
   <hr />
 
   <div class="form-group">
     <label for="image-logo">Partner/Project Logo for Project</label>
-    <p>Upload the logo for the partner or this project</p>
+    <p>Upload the logo for the partner or this project. Good logos are roughly 150x150px but will be scaled automatically.</p>
     <%= f.file_field :logo, class: "form-control", id: "image-logo" %>
     <% if @project.logo.url.present? %>
       <%= image_tag @project.logo.url %>
@@ -35,7 +36,8 @@
 
   <div class="form-group">
     <label for="image-hero">Hero Image for Project</label>
-    <p>Upload the large image (min 800x664) for this project</p>
+    <p>Upload the large image (min 800x664) for this project. Minimum height should be 664px. Preferred width is 1400px. These will be scaled automatically but can be distorted if the
+    image is too small.</p>
     <%= f.file_field :hero_image, class: "form-control", id: "image-hero" %>
     <% if @project.hero_image.url.present? %>
       <%= image_tag @project.hero_image.url %>
@@ -44,7 +46,8 @@
 
   <div class="form-group">
     <label for="image-small">Icon/Card Image for Project</label>
-    <p>Upload the small 350x200 image for the project card</p>
+    <p>Upload the small 350x200 image for the project card. The image will be sized to 350x200px
+    automatically but for bigger images keep a 7:4 ratio to avoid distortion.</p>
     <%= f.file_field :small_image, class: "form-control", id: "image-small" %>
     <% if @project.small_image.url.present? %>
       <%= image_tag @project.small_image.url %>
@@ -55,27 +58,27 @@
 
   <div class="form-group">
     <label for="project-ov-head">Project Headline</label>
-    <p>The Project tab headline appears on the Overview tab on the Project page and ought to be a short sentence.</p>
+    <p>The Project tab headline appears on the Overview tab on the Project page and ought to be a short sentence. Optional.</p>
     <%= f.text_field :overview_headline, class: "form-control", id: "project-ov-head", placeholder: "Enter a brief headline for the Project's Partner tab" %>
   </div>
 
 
   <div class="form-group">
     <label for="project-science-head">Science Headline</label>
-    <p>The Science Overview headline appears on the Science tab on the Project page and ought to be a short sentence.</p>
+    <p>The Science Overview headline appears on the Science tab on the Project page and ought to be a short sentence. Optional.</p>
     <%= f.text_field :science_headline, class: "form-control", id: "project-science-head", placeholder: "Enter a brief headline for the Project's Science tab" %>
   </div>
 
 
   <div class="form-group">
     <label for="project-news-head">News Headline</label>
-    <p>The Project News headline appears on the News tab on the Project page and ought to be a short sentence.</p>
+    <p>The Project News headline appears on the News tab on the Project page and ought to be a short sentence. Optional.</p>
     <%= f.text_field :news_headline, class: "form-control", id: "project-news-head", placeholder: "Enter a brief headline for the Project's News tab" %>
   </div>
 
   <div class="form-group">
     <label for="project-vol-head">Volunteer Headline</label>
-    <p>The Project Volunteer headline appears on the Volunteer tab on the Project page and ought to be a short sentence.</p>
+    <p>The Project Volunteer headline appears on the Volunteer tab on the Project page and ought to be a short sentence. Optional.</p>
     <%= f.text_field :volunteer_headline, class: "form-control", id: "project-vol-head", placeholder: "Enter a brief headline for the Project's Volunteer tab" %>
   </div>
 

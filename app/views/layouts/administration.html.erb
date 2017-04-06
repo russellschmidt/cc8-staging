@@ -11,8 +11,8 @@
     <meta name="keywords" content="climate cents, climate change, global warming, local project, crowdfund, crowdfunding, charity,
         nonprofit, non-profit, CO2, what is climate change, what causes global warming, is climate change real, is global warming real">
     <meta name="author" content="Climate Cents, a 501c3 organization">
-
-    <meta name="robots" content="index, follow">
+    <!-- don't let web crawlers index admin pages -->
+    <meta name="robots" content="noindex, nofollow">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -20,7 +20,7 @@
     <!-- http://realfavicongenerator.net/ -->
 
     <meta property="fb:page_id" content="">
-    <meta property="og:title" content="Support Climate Cents">
+    <meta property="og:title" content="Climate Cents Admin page">
     <meta property="og:image:secure_url" content="https://s3.amazonaws.com/climatecents/SocialShare/climatechangefight.jpg">
     <meta property="og:description" content="<%= @meta_description_text %>">
     <meta property="og:url" content="http://www.climatecents.org">
@@ -36,11 +36,11 @@
 
     <%= csrf_meta_tags %>
 
-<!--     <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <!-- <script src="https://checkout.stripe.com/checkout.js"></script> -->
+
   </head>
 
   <body>
