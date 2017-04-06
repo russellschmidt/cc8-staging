@@ -38,7 +38,7 @@
     </div>
 
     <div class="col-xs-4">
-      <p><%= link_to 'Edit', edit_project_path(project) %></p>
+      <p><%= link_to 'Edit', edit_project_path(project, partner_param: Partner.find(project.partner_id)) %></p>
     </div>
   </div>
 

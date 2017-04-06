@@ -14,7 +14,8 @@ class DonationsController < ApplicationController
   end
 
   def create
-    if @donation.save(donation_params)
+    @donation = Donation.create(donation_params)
+    if @donation.save
       redirect_to donation_path(@donation)
     else
       flash[:error] = "Error saving the donation to our database"

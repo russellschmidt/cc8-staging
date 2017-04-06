@@ -25,6 +25,10 @@ module ProjectsHelper
     Campaign.where(project_id: project_id, active: true).last
   end
 
+  def get_project_campaign_array(project_id)
+    Campaign.where(project_id: project_id).order("end_date ASC")
+  end
+
   def percent_funded(campaign)
     if campaign.present?
       unless total_donations_for_campaign(campaign).nil? && campaign.dollar_goal_in_cents.nil?

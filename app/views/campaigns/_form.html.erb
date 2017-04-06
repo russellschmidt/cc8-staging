@@ -1,14 +1,4 @@
-
-    t.text     "description"
-    t.integer  "dollar_goal_in_cents"
-    t.datetime "start_date"
-    t.datetime "end_date"
-    t.integer  "co2_per_dollar"
-    t.boolean  "active"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-
-<%= form_for(project, html: { multipart: true }) do |f| %>
+<%= form_for(campaign) do |f| %>
   <div class="form-group">
     <label for="camp-name">Name</label>
     <%= f.text_field :name, class: "form-control", id: "camp-name", placeholder: "Campaign Name" %>
@@ -20,72 +10,54 @@
   </div>
 
   <div class="form-group">
-    <label for="camp-city">City</label>
+    <label for="camp-city">Campaign City for marketing copy</label>
     <%= f.text_field :city, class: "form-control", id: "camp-city", placeholder: "Rancho Cucamonga" %>
   </div>
 
   <div class="form-group">
-    <label for="camp-state">State</label>
-    <%= f.text_field :city, class: "form-control", id: "camp-state", placeholder: "CA", maxlength: "5" %>
+    <label for="camp-state">State (2 letter Abbrev.) for marketing copy</label>
+    <%= f.text_field :state, class: "form-control", id: "camp-state", placeholder: "CA", maxlength: "2" %>
   </div>
 
   <div class="form-group">
     <label for="camp-desc">Campaign description</label>
-    <p>Long description in HTML that appears on the Project page in the Overview tab.</p>
-    <%= f.text_area :description, cols: 18, rows: 24, class: "form-control", id: "project-ov", placeholder: "Please enter a Project description in HTML." %>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="form-group">
-    <label for="project-ov-head">Project Headline</label>
-    <p>The Project tab headline appears on the Overview tab on the Project page and ought to be a short sentence.</p>
-    <%= f.text_field :overview_headline, class: "form-control", id: "project-ov-head", placeholder: "Enter a brief headline for the Project's Partner tab" %>
-  </div>
-
-
-  <div class="form-group">
-    <label for="project-science-head">Science Headline</label>
-    <p>The Science Overview headline appears on the Science tab on the Project page and ought to be a short sentence.</p>
-    <%= f.text_field :science_headline, class: "form-control", id: "project-science-head", placeholder: "Enter a brief headline for the Project's Science tab" %>
-  </div>
-
-
-  <div class="form-group">
-    <label for="project-news-head">News Headline</label>
-    <p>The Project News headline appears on the News tab on the Project page and ought to be a short sentence.</p>
-    <%= f.text_field :news_headline, class: "form-control", id: "project-news-head", placeholder: "Enter a brief headline for the Project's News tab" %>
+    <p>Short plaintext campaign description that appears on the charge receipt.</p>
+    <%= f.text_field :description, class: "form-control", id: "camp-desc", placeholder: "2017 GRID Alternatives solar for Safe Place for Youth campaign" %>
   </div>
 
   <div class="form-group">
-    <label for="project-vol-head">Volunteer Headline</label>
-    <p>The Project Volunteer headline appears on the Volunteer tab on the Project page and ought to be a short sentence.</p>
-    <%= f.text_field :volunteer_headline, class: "form-control", id: "project-vol-head", placeholder: "Enter a brief headline for the Project's Volunteer tab" %>
+    <label for="camp-dollar-goal">Campaign dollar goal in cents</label>
+    <p>Dollar goal in cents (so dollar goal * 100, no decimals</p>
+    <%= f.number_field :dollar_goal_in_cents, class: "form-control", id: "camp-dollar-goal", placeholder: "100000", min: "100"  %>
   </div>
 
   <div class="form-group">
-    <label for="project-ov">Project Overview description</label>
-    <p>Long description in HTML that appears on the Project page in the Overview tab.</p>
-    <%= f.text_area :description, cols: 18, rows: 24, class: "form-control", id: "project-ov", placeholder: "Please enter a Project description in HTML." %>
+    <label for="camp-co2">CO2 Per Dollar</label>
+    <p>Pounds of CO2 offset by a $1.00 Donation</p>
+    <%= f.number_field :co2_per_dollar, class: "form-control", id: "camp-co2", placeholder: "10", min: "0"  %>
   </div>
 
   <div class="form-group">
-    <label for="project-science">Science</label>
-    <p>Long description in HTML that appears on the Project page in the Science tab.</p>
-    <%= f.text_area :science, cols: 18, rows: 24, class: "form-control", id: "project-science", placeholder: "Please enter some News copy in HTML." %>
+    <label for="camp-start">Start Time</label>
+    <p>Date / Time / AM/PM</p>
+    <%= f.datetime_field :start_date, class: "form-control", id: "camp-start" %>
   </div>
+
+  <div class="form-group">
+    <label for="camp-end">End Time</label>
+    <p>Date / Time / AM/PM</p>
+    <%= f.datetime_field :end_date, class: "form-control", id: "camp-end" %>
+  </div>
+
+  <div class="form-group">
+    <label for="camp-active">Is Campaign Active?</label>
+    <%= f.check_box :active, class: "form-control", id: "camp-active", value: "1" %><span>Check for yes, uncheck for no</span>
+  </div>
+
 
   <div class="row form-group">
     <%= f.submit "Save", class:"btn btn-default" %>
-    <%= link_to "Back", projects_path, class:"btn btn-danger" %>
+    <%= link_to "Back", campaigns_path, class:"btn btn-danger" %>
   </div>
+
 <% end %>

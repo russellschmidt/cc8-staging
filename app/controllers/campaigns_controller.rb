@@ -1,6 +1,6 @@
 class CampaignsController < ApplicationController
   layout "administration"
-  before_filter :find_campaign, only: [:show, :edit, :create]
+  before_filter :find_campaign, only: [:show, :edit, :update]
 
   def index
     @campaigns = Campaign.all.order("end_date ASC")
@@ -15,7 +15,8 @@ class CampaignsController < ApplicationController
   end
 
   def create
-    if @campaign.save(campaign_params)
+    @campaign = Campaign.create(campaign_params)
+    if @campaign.save
       redirect_to campaign_path(@campaign)
     else
       flash[:error] = "Error saving the campaign to our database"
@@ -39,8 +40,7 @@ class CampaignsController < ApplicationController
   # start private
     def campaign_params
       params.require(:campaign).permit(:project_id, :name, :description, :dollar_goal_in_cents,
-        :start_date, :end_date, :co2_per_dollar, :active, :created_at, :updated_at, :city, :state
-        )
+        :start_date, :end_date, :co2_per_dollar, :active, :city, :state)
     end
 
     def find_campaign

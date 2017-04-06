@@ -8,7 +8,56 @@
 
 <div class="row">
   <div class="col-xs-12">
+    <h3><%= @project.name %> Campaigns</h3>
+  </div>
+</div>
+
+  <div class="row">
+    <div class="col-xs-3">
+      <h5>Campaign</h5>
+    </div>
+    <div class="col-xs-3">
+      <h5>Start Date</h5>
+    </div>
+    <div class="col-xs-3">
+      <h5>End Date</h5>
+    </div>
+    <div class="col-xs-1">
+      <h5>Percent Funded</h5>
+    </div>
+    <div class="col-xs-1">
+      <h5>Edit Campaign</h5>
+    </div>
+  </div>
+
+
+<% get_project_campaign_array(@project.id).each do |campaign| %>
+  <div class="row">
+    <div class="col-xs-3">
+      <%= link_to campaign.name, campaign_path(campaign) %>
+    </div>
+    <div class="col-xs-3">
+      <%= campaign.start_date.to_s(:long) %>
+    </div>
+    <div class="col-xs-3">
+      <%= campaign.end_date.to_s(:long) %>
+    </div>
+    <div class="col-xs-1">
+      <%= percent_funded(campaign) %>
+    </div>
+    <div class="col-xs-1">
+      <%= link_to "Edit", edit_campaign_path(campaign) %>
+    </div>
+  </div>
+<% end %>
+
+
+<hr />
+
+<div class="row">
+  <div class="col-xs-12">
     <%= link_to "Create New Project for #{Partner.find(@project.partner_id).name}", new_project_path(partner_param: Partner.find(@project.partner_id)), class: "btn btn-default" %>
+    <%= link_to "New Campaign for #{@project.name}", new_campaign_path(project_param: @project.id) , class: "btn btn-default" %>
   </div>
 </div>
 
