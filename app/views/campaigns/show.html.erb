@@ -9,7 +9,12 @@
 <div class="row">
   <div class="col-xs-12">
     <%= link_to "Edit #{@campaign.name}", edit_campaign_path(@campaign, project_param: @campaign.project_id), class: "btn btn-default" %>
-    <%= link_to "New Campaign for #{Project.find(@campaign.project_id).name}", new_campaign_path(project_param: @campaign.project_id) , class: "btn btn-default" %>
+    <%= link_to "New Campaign for #{Project.find(@campaign.project_id).name}",
+              new_campaign_path(project_param: @campaign.project_id) , class: "btn btn-default" %>
+    <%= link_to "Delete #{@campaign.name}", [@campaign],
+              method: :delete,
+              data: { confirm: 'Are you sure? Forever is a long time.' },
+              class: "btn btn-danger" %>
   </div>
 </div>
 

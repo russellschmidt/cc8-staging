@@ -1,6 +1,6 @@
 module CampaignsHelper
   def campaign_active_inactive(campaign)
-    if campaign.end_date > Time.now
+    if (campaign.end_date > Time.now)
       distance_of_time_in_words_to_now(campaign.end_date)
     else
       "inactive"

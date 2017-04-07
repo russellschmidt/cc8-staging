@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
 
   layout "administration", only: [:index, :new, :edit]
 
-  before_filter :find_project, only: [:show, :edit, :update]
+  before_filter :find_project, only: [:show, :edit, :update, :destroy]
 
   def index
     @projects = Project.all
@@ -37,6 +37,16 @@ class ProjectsController < ApplicationController
     else
       flash[:error] = "Error updating the project in our database"
       redirect_to projects_path
+    end
+  end
+
+  def destroy
+    if @project.destroy
+      flash[:notice] = "Deletion successful. Also deleted associated Campaigns."
+      redirect_to projects_path
+    else
+      flash[:error] = "{@project.name} did not delete"
+      redirect_to project_path(@project)
     end
   end
 

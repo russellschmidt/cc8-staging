@@ -3,7 +3,7 @@ class CampaignsController < ApplicationController
 
   layout "administration"
 
-  before_filter :find_campaign, only: [:show, :edit, :update]
+  before_filter :find_campaign, only: [:show, :edit, :update, :destroy]
 
   def index
     @campaigns = Campaign.all.order("end_date ASC")
@@ -36,6 +36,16 @@ class CampaignsController < ApplicationController
     else
       flash[:error] = "Error saving the campaign to our database"
       redirect_to campaigns_path
+    end
+  end
+
+  def destroy
+    if @campaign.destroy
+      flash[:notice] = "Deletion successful. Donations are not deleted though their campaign_id is unhelpful now."
+      redirect_to campaigns_path
+    else
+      flash[:error] = "{@campaign.name} did not delete"
+      redirect_to campaign_path(@campaign)
     end
   end
 
