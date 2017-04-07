@@ -51,7 +51,7 @@ module ProjectsHelper
 
   def annualCarbonReduction(campaign)
     if campaign.present?
-      (campaign.co2_per_dollar * ( campaign.dollar_goal_in_cents / 100 ) * ((365) / ((campaign.end_date - campaign.start_date) / 60 / 60 / 24  ))).to_i
+      (campaign.co2_per_dollar * ( campaign.dollar_goal_in_cents / 100 ) * ((365.25) / ((campaign.end_date - campaign.start_date) / 1.day ))).to_i
     end
   end
 
