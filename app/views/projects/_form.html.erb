@@ -29,7 +29,7 @@
     <p>Upload the logo for the partner or this project. Good logos are roughly 150x150px but will be scaled automatically.</p>
     <%= f.file_field :logo, class: "form-control", id: "image-logo" %>
     <% if @project.logo.url.present? %>
-      <%= image_tag @project.logo.url %>
+      <%= image_tag @project.logo.url(:logo) %>
     <% end %>
   </div>
 
@@ -40,7 +40,7 @@
     image is too small.</p>
     <%= f.file_field :hero_image, class: "form-control", id: "image-hero" %>
     <% if @project.hero_image.url.present? %>
-      <%= image_tag @project.hero_image.url %>
+      <%= image_tag @project.hero_image.url(:large) %>
     <% end %>
   </div>
 
@@ -50,7 +50,7 @@
     automatically but for bigger images keep a 7:4 ratio to avoid distortion.</p>
     <%= f.file_field :small_image, class: "form-control", id: "image-small" %>
     <% if @project.small_image.url.present? %>
-      <%= image_tag @project.small_image.url %>
+      <%= image_tag @project.small_image.url(:thumb) %>
     <% end %>
   </div>
 
