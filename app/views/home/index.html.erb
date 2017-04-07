@@ -87,7 +87,7 @@
       <article>
         <%= link_to project_path(project) do %>
         <div class="home-projects-section-image">
-          <img src="<%= project.small_image.url %>" alt="We identify local projects such as <%= partner.name %>'s <%= project.name %> <%= campaign.name %> that help reduce atmospheric CO2 to fight global warming and climate change in <%=campaign.city%>, <%=campaign.state%>"/>
+          <img src="<%= project.small_image.url(:thumb) %>" alt="We identify local projects such as <%= partner.name %>'s <%= project.name %> <%= campaign.name %> that help reduce atmospheric CO2 to fight global warming and climate change in <%=campaign.city%>, <%=campaign.state%>"/>
         </div>
 
         <h5><img src="https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/icon-green-location-map.png" alt="Climate Cents Project Partner <%= partner.name %>'s location in <%=campaign.city%>, <%=campaign.state%>"/><%= campaign.city %>, <%= campaign.state %></h5>

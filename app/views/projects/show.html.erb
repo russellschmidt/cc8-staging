@@ -1,6 +1,6 @@
 <div class="main project-page">
   <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-      url('<%= @project.hero_image.url %>') no-repeat center center /cover;">
+      url('<%= @project.hero_image.url(:large) %>') no-repeat center center /cover;">
     <header>
       <nav>
         <ul>
@@ -37,7 +37,7 @@
           <p><%= @partner.name %></p>
         </div>
         <div class="partner-logo">
-          <%= image_tag @project.logo.url, alt: "#{get_partner(@project.partner_id).name} logo image, a Climate Cents partner fighting climate change locally" %>
+          <%= image_tag @project.logo.url(:standard), alt: "#{get_partner(@project.partner_id).name} logo image, a Climate Cents partner fighting climate change locally" %>
         </div>
       </div>
 
