@@ -3,7 +3,7 @@ class LocationsController < ApplicationController
 
   layout 'administration'
 
-  before_filter :find_location, only: [:edit, :update, :show]
+  before_filter :find_location, only: [:edit, :update, :show, :destroy]
 
   def new
     @location = Location.new
@@ -37,6 +37,16 @@ class LocationsController < ApplicationController
 
   def show
     @partners = Partner.where(location_id: @location.id)
+  end
+
+  def destroy
+    if @location.destroy
+      flash[:notice] = "Deletion successful. Also deleted associated Partners, Projects, Campaigns."
+      redirect_to locations_path
+    else
+      flash[:error] = "{@location.name} did not delete"
+      redirect_to location_path(@location)
+    end
   end
 
   private

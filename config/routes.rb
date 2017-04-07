@@ -3,10 +3,10 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :admin, only: [:index]
-  resources :locations, only: [:new, :create, :edit, :update, :show, :index]
-  resources :partners, only: [:new, :create, :edit, :update, :show, :index]
-  resources :projects, only: [:new, :create, :edit, :update, :show, :index]
-  resources :campaigns, only: [:new, :create, :edit, :update, :index, :show]
+  resources :locations
+  resources :partners
+  resources :projects
+  resources :campaigns
   resources :donations, only: [:new, :create, :edit, :update, :show, :index]
 
   resources :charges, only: [:new, :create]

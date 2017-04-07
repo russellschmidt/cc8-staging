@@ -4,7 +4,9 @@ class Project < ApplicationRecord
 
   belongs_to :partner
 
-  has_many :campaigns
+  has_many :campaigns, dependent: :destroy
+
+  validates :name, presence: true
 
   has_attached_file :logo, styles: { standard: "80>x80" },
     default_url: "https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/logo_climatecents_med_white.png",

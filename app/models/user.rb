@@ -5,4 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   has_many :donations
+
+  validates :email, presence: true
+  validates :encrypted_password, presence: true
 end

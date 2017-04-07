@@ -13,32 +13,42 @@
 <hr />
 
 <div class="row">
-  <div class="col-xs-4">
+  <div class="col-xs-3">
     <h5>Location</h5>
   </div>
 
-  <div class="col-xs-4">
+  <div class="col-xs-2">
     <h5>Partners in Location</h5>
   </div>
 
-  <div class="col-xs-4">
-    <h5>Edit Location</h5>
+  <div class="col-xs-2">
+  </div>
+
+  <div class="col-xs-2">
   </div>
 </div>
 
 <% @locations.each do |location| %>
 
   <div class="row">
-    <div class="col-xs-4">
-      <p><%= link_to location.name, location_path(location) %></p>
+    <div class="col-xs-3">
+      <%= link_to location.name, location_path(location) %>
     </div>
 
-    <div class="col-xs-4">
-      <p><%= Partner.where(location_id: location.id).count %></p>
+    <div class="col-xs-2">
+      <p><%= Partner.where(location_id: location.id).count %>
     </div>
 
-    <div class="col-xs-4">
-      <p><%= link_to 'Edit', edit_location_path(location) %></p>
+    <div class="col-xs-2">
+      <%= link_to 'Edit', edit_location_path(location),
+              class: "btn btn-default btn-sm" %>
+    </div>
+
+    <div class="col-xs-2">
+    <%= link_to 'Delete', [location],
+              method: :delete,
+              data: { confirm: 'Are you sure? Forever is a long time.' },
+              class: "btn btn-danger btn-sm" %>
     </div>
   </div>
 
