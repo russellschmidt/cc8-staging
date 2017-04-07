@@ -13,14 +13,14 @@ class Project < ApplicationRecord
     path: "projectLogo/:attachment/:id/:style/:filename.:extension"
   validates_attachment :logo, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 
-  has_attached_file :hero_image, styles: { large: "800>x664" },
+  has_attached_file :hero_image, styles: { large: "800x664<" },
     default_url: "https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/277H-compressor.png",
     storage: :s3,
     bucket: 'climate-cents',
     path: "projectHeroImage/:attachment/:id/:style/:filename.:extension"
   validates_attachment :hero_image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 
-  has_attached_file :small_image, styles: { thumb: "350x200" },
+  has_attached_file :small_image, styles: { thumb: "350x200!" },
     default_url: "https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/microcrafts570.jpg",
     storage: :s3,
     bucket: 'climate-cents',
