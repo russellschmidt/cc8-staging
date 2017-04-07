@@ -3,7 +3,7 @@ class PartnersController < ApplicationController
 
   layout 'administration'
 
-  before_filter :find_partner, only: [:edit, :update, :show]
+  before_filter :find_partner, only: [:edit, :update, :show, :destroy]
 
   def new
     @partner = Partner.new
@@ -37,6 +37,16 @@ class PartnersController < ApplicationController
 
   def show
     @projects = Project.where(partner_id: @partner.id)
+  end
+
+  def destroy
+    if @partner.destroy
+      flash[:notice] = "Deletion successful. Also deleted associated Projects, Campaigns."
+      redirect_to partners_path
+    else
+      flash[:error] = "{@partner.name} did not delete"
+      redirect_to partner_path(@partner)
+    end
   end
 
   private
