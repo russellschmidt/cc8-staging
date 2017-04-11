@@ -10,8 +10,8 @@ $(document).on('turbolinks:load', function() {
     changeTabContent();
   });
 
-  $("#video-modal").on('hidden.bs.modal', function (e) {
-    $("#video-modal iframe").attr("src", $("#video-modal iframe").attr("src"));
+  $('#video-modal button.close').click(function() {
+    stopVideoOnClose()
   });
 })
 
@@ -35,4 +35,10 @@ function hideInactiveTabContent() {
 function changeTabContent(){
   hideInactiveTabContent();
   showActiveTabContent();
+}
+
+function stopVideoOnClose() {
+  const $video_link = $('#video-container iframe').attr("src");
+  $('#video-container iframe').attr("src", "");
+  $('#video-container iframe').attr("src", $video_link);
 }
