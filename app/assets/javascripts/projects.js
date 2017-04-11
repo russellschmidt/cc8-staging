@@ -9,6 +9,10 @@ $(document).on('turbolinks:load', function() {
     $(this).addClass('active');
     changeTabContent();
   });
+
+  $("#video-modal").on('hidden.bs.modal', function (e) {
+    $("#video-modal iframe").attr("src", $("#video-modal iframe").attr("src"));
+  });
 })
 
 function showActiveTabContent() {
