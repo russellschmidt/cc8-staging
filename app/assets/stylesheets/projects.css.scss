@@ -144,7 +144,8 @@
 
   .project-detail {
     .tab {
-      margin: 73px 270px;;
+      max-width: 850px;
+      margin: 73px auto;
     }
     .tab-links {
       margin: 0 36px;
@@ -463,7 +464,7 @@ input[type="number"] {
     }
     .project-detail {
       .tab {
-        margin: 36px 0 0 0;
+        margin: 36px auto 0;
         text-align: center;
       }
       .tab-links {
@@ -605,7 +606,7 @@ input[type="number"] {
 
       h6 {
         &:first-child {
-          margin-top: 54px;
+          margin-top: 25px;
           font-size: 1rem;
           line-height: 1.5;
           height: 2rem;
