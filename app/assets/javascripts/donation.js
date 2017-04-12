@@ -18,7 +18,15 @@ $(document).on('turbolinks:load', function() {
 
   $('.donation-button').click(function(){
     $('.donation-button').css({"background-color": "rgba(17, 66, 71, 0)", "color": "#FFFFFF"});
-    $(this).css({"background-color": "#fff", "color": "rgba(17, 66, 71, 1)"});
+    $('.donation-button input').css({"background-color": "rgba(17, 66, 71, 0)", "color": "#FFFFFF"});
+
+    if ( $(this).children('#customDonationInput').length > 0 ){
+      $(this).css({"background-color": "rgba(17, 66, 71, 0)", "color": "#FFFFFF"});
+      $(this).children('#customDonationInput').css({"background-color": "#fff", "color": "rgba(17, 66, 71, 1)"});
+    } else {
+      $(this).css({"background-color": "#fff", "color": "rgba(17, 66, 71, 1)"});
+    }
+
       // set donation
     donation = validateInput( Number($(this).val()) );
       // set tip
