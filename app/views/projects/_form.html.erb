@@ -4,7 +4,7 @@
     <%= f.text_field :name, class: "form-control", id: "project-name", placeholder: "Project Name" %>
   </div>
 
-   <div class="form-group">
+  <div class="form-group">
     <label for="project-partner">Partner for Project</label>
     <%= f.select( :partner_id, Partner.all.collect {|partner| [partner.name, partner.id] }, class: "form-control", id: "project-partner", selected: params[:partner_param]) %>
   </div>
