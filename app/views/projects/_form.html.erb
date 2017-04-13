@@ -29,7 +29,7 @@
     <p>Upload the logo for the partner or this project. Good logos are roughly 150x150px but will be scaled automatically.</p>
     <%= f.file_field :logo, class: "form-control", id: "image-logo" %>
     <% if @project.logo.url.present? %>
-      <%= image_tag @project.logo.url(:logo) %>
+      <%= image_tag @project.logo.url(:standard) %>
     <% end %>
   </div>
 
