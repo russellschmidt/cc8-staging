@@ -6,7 +6,7 @@
 
   <div class="form-group">
     <label for="camp-project">Project for Campaign</label>
-    <%= f.select( :project_id, Project.all.collect {|project| [project.name, project.id] }, class: "form-control", id: "camp-project", selected: params[:project_param]) %>
+    <%= f.select( :project_id, Project.all.order('name asc').collect {|project| [project.name, project.slug] }, class: "form-control", id: "camp-project", selected: params[:project_param]) %>
   </div>
 
   <div class="form-group">

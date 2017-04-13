@@ -65,7 +65,7 @@
     </div>
 
     <div class="col-xs-1">
-      <%= link_to 'Edit', edit_campaign_path(campaign, project_param: Project.find(campaign.project_id)),
+      <%= link_to 'Edit', edit_campaign_path(campaign, project_param: Project.friendly.find(campaign.project_id)),
           class: 'btn btn-default btn-sm ' %>
     </div>
 
