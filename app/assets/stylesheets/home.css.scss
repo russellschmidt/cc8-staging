@@ -1022,6 +1022,10 @@ iframe {
     and (-webkit-device-pixel-ratio: 3)
     and (orientation : portrait) {
 
+  $top-headline: 4rem;
+  $sub-headline: 3rem;
+  $single-page-height: 100vh;
+
   section, section#hero-section,
       section#chip-in-section,
       section#home-projects-section,
@@ -1033,6 +1037,7 @@ iframe {
   }
 
   section#hero-section {
+    height: $single-page-height;
     header {
       nav {
         ul {
@@ -1044,6 +1049,21 @@ iframe {
             margin: 0 auto;
             padding: 2vh 0;
           }
+        }
+      }
+      div#hero-header {
+        margin-top: 0;
+        padding-top: 20vh;
+        h1 {
+          font-size: $top-headline;
+          margin: 0 auto;
+          line-height: 1.25;
+        }
+        h2 {
+          font-size: $sub-headline;
+          margin-top: 0;
+          padding: 3vh 2vw 0;
+          line-height: 1.25;
         }
       }
     }
@@ -1235,8 +1255,8 @@ iframe {
 // iphone 6 in portrait
 @media screen and (max-width: 375px) and (orientation: portrait) {
 
-  $top-headline: 4rem;
-  $sub-headline: 3rem;
+  $top-headline: 3.6rem;
+  $sub-headline: 2.8rem;
   $single-page-height: 100vh;
 
   section, section#hero-section,
@@ -1245,8 +1265,8 @@ iframe {
       section#join-the-fight,
       section#build-with-us,
       section#keep-in-touch {
-    padding-right: 1vw;
-    padding-left: 1vw;
+    padding-right: 2vw;
+    padding-left: 2vw;
   }
 
   section#hero-section {
@@ -1599,7 +1619,7 @@ iframe {
 // iphone 5/SE in portrait
 @media screen and (max-width: 320px) and (orientation: portrait) {
   $top-headline: 3rem;
-  $sub-headline: 2rem;
+  $sub-headline: 2.4rem;
   $top-headline-line-height: 1.25;
   $sub-headline-line-height: 1.25;
   $single-page-height: 100vh;
@@ -1624,13 +1644,13 @@ iframe {
         h1 {
           font-size: $top-headline;
           line-height: $top-headline-line-height;
-          margin: 0 auto 6vh;
+          margin: 0 auto 2vh;
         }
         h2 {
           font-size: $sub-headline;
           line-height: $sub-headline-line-height;
           width: 90%;
-          margin: 0 auto 4vh;
+          margin: 0 auto 5vh;
         }
       }
     }
