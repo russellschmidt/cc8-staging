@@ -1,4 +1,4 @@
-const TIP_PERCENT = 0.15;
+const TIP_PERCENT = 0.10;
 var tip, donation, total;
 donation = 2500;
 

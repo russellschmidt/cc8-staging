@@ -21,7 +21,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.create(project_params)
     if @project.save
-      redirect_to edit_project_path(@project)
+      redirect_to edit_project_path(@project, partner_param: @project.partner_id)
     else
       flash[:error] = "Error saving the project to our database"
       redirect_to projects_path
@@ -33,7 +33,7 @@ class ProjectsController < ApplicationController
 
   def update
     if @project.update(project_params)
-      redirect_to edit_project_path(@project)
+      redirect_to edit_project_path(@project, partner_param: @project.partner_id)
     else
       flash[:error] = "Error updating the project in our database"
       redirect_to projects_path
