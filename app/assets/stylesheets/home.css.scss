@@ -1265,8 +1265,8 @@ iframe {
       section#join-the-fight,
       section#build-with-us,
       section#keep-in-touch {
-    padding-right: 2vw;
-    padding-left: 2vw;
+    padding-right: 1vw;
+    padding-left: 1vw;
   }
 
   section#hero-section {
@@ -1287,6 +1287,7 @@ iframe {
       div#hero-header {
         margin-top: 0;
         padding-top: 20vh;
+        width: 100%;
         h1 {
           font-size: $top-headline;
           margin: 0 auto;
@@ -1294,7 +1295,7 @@ iframe {
         }
         h2 {
           font-size: $sub-headline;
-          margin-top: 0;
+          margin: 0 auto inherit;
           padding: 3vh 2vw 0;
           line-height: 1.25;
         }
