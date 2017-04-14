@@ -8,7 +8,8 @@ class Project < ApplicationRecord
 
   validates :name, presence: true
 
-  has_attached_file :logo, styles: { standard: "80>x80" },
+  has_attached_file :logo, styles: { standard: "80x80>", large: "120x120>" },
+    convert_options: { standard: "-strip", large: "-strip" },
     default_url: "https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/logo_climatecents_med_white.png",
     storage: :s3,
     bucket: 'climate-cents',
@@ -16,6 +17,7 @@ class Project < ApplicationRecord
   validates_attachment :logo, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 
   has_attached_file :hero_image, styles: { large: "800x664<" },
+    convert_options: { large: "-strip" },
     default_url: "https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/277H-compressor.png",
     storage: :s3,
     bucket: 'climate-cents',
@@ -23,6 +25,7 @@ class Project < ApplicationRecord
   validates_attachment :hero_image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 
   has_attached_file :small_image, styles: { thumb: "350x200!" },
+    convert_options: { thumb: "-strip" },
     default_url: "https://s3.amazonaws.com/climatecents3/ClimateCents_2017Site_01_ProductionFile_20170114/microcrafts570.jpg",
     storage: :s3,
     bucket: 'climate-cents',
