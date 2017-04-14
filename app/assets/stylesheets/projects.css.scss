@@ -138,8 +138,8 @@
       text-align: center;
       img {
         max-height: 120px;
-        -webkit-filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
-        filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+        -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,0.5));
+        filter: drop-shadow(0 2px 2px rgba(0,0,0,0.5));
       }
     }
   }
