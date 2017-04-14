@@ -1032,6 +1032,23 @@ iframe {
     padding-left: 3vw;
   }
 
+  section#hero-section {
+    header {
+      nav {
+        ul {
+          padding: 0;
+          li#nav-logo {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            padding: 2vh 0;
+          }
+        }
+      }
+    }
+  }
+
   // footer
   footer {
     div.left-column {
