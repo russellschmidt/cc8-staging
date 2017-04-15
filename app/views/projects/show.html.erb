@@ -61,37 +61,42 @@
       <% if @project.present? %>
 
         <div id="overview" class="tab-content">
-          <h4><%= @project.overview_headline.present? ? @project.overview_headline : "Coming soon" %></h4>
+          <h4><%= @project.overview_headline.present? ? @project.overview_headline : "" %></h4>
           <% if @project.description.present? %>
             <div><%= @project.description.html_safe %></div>
           <% end %>
+          <%= render 'fblike' %>
         </div>
 
         <div id="science" class="tab-content">
-          <h4><%= @project.science_headline.present? ? @project.science_headline : "Coming soon" %></h4>
+          <h4><%= @project.science_headline.present? ? @project.science_headline : "" %></h4>
           <% if @project.science.present? %>
             <div><%= @project.science.html_safe %></div>
           <% end %>
+          <%= render 'fblike' %>
         </div>
 
         <div id="partner" class="tab-content">
           <% if get_partner(@project.partner_id).description.present? %>
             <div><%= get_partner(@project.partner_id).description.html_safe %></div>
           <% end %>
+          <%= render 'fblike' %>
         </div>
 
         <div id="news" class="tab-content">
-          <h4><%= @project.news_headline.present? ? @project.news_headline : "Coming soon" %></h4>
+          <h4><%= @project.news_headline.present? ? @project.news_headline : "" %></h4>
           <% if get_partner(@project.partner_id).news.present? %>
             <div><%= get_partner(@project.partner_id).news.html_safe %></div>
           <% end %>
+          <%= render 'fblike' %>
         </div>
 
         <div id="volunteer" class="tab-content">
-          <h4><%= @project.volunteer_headline.present? ? @project.volunteer_headline : "Coming soon" %></h4>
+          <h4><%= @project.volunteer_headline.present? ? @project.volunteer_headline : "" %></h4>
           <% if get_partner(@project.partner_id).volunteer.present? %>
             <div><%= get_partner(@project.partner_id).volunteer.html_safe %></div>
           <% end %>
+          <%= render 'fblike' %>
         </div>
 
         <div id="share" class="tab-content row">
