@@ -65,7 +65,7 @@
           <% if @project.description.present? %>
             <div><%= @project.description.html_safe %></div>
           <% end %>
-          <%= render 'fblike' %>
+
         </div>
 
         <div id="science" class="tab-content">
@@ -73,14 +73,14 @@
           <% if @project.science.present? %>
             <div><%= @project.science.html_safe %></div>
           <% end %>
-          <%= render 'fblike' %>
+
         </div>
 
         <div id="partner" class="tab-content">
           <% if get_partner(@project.partner_id).description.present? %>
             <div><%= get_partner(@project.partner_id).description.html_safe %></div>
           <% end %>
-          <%= render 'fblike' %>
+
         </div>
 
         <div id="news" class="tab-content">
@@ -88,7 +88,7 @@
           <% if get_partner(@project.partner_id).news.present? %>
             <div><%= get_partner(@project.partner_id).news.html_safe %></div>
           <% end %>
-          <%= render 'fblike' %>
+
         </div>
 
         <div id="volunteer" class="tab-content">
@@ -96,7 +96,7 @@
           <% if get_partner(@project.partner_id).volunteer.present? %>
             <div><%= get_partner(@project.partner_id).volunteer.html_safe %></div>
           <% end %>
-          <%= render 'fblike' %>
+
         </div>
 
         <div id="share" class="tab-content row">
