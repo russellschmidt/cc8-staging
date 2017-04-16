@@ -53,6 +53,8 @@ gem 'exception_handler', '~> 0.7.6'
 gem "paperclip", "~> 5.1" #, github: "thoughtbot/paperclip", ref: "c38bb31"
 gem "aws-sdk", '~> 2'
 gem 'rails_12factor'
+
+gem 'rails_real_favicon'
 # end RS added
 ###
 
