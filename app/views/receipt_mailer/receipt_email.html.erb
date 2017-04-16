@@ -5,7 +5,7 @@
 <p style="font-size:18px;">
   What does that mean?</p>
 <p style="font-size:18px;">
-  <b>YOU ARE AWESOME! Your&nbsp;</b><b style="font-size: 18px;"><%= number_to_currency(@gift ) %></b><b>&nbsp;is going to be pooled with funds from other investors to make this campaign possible<%= @tip > 0 ? " and help Climate Cents continue to support this project and others." : "." %></b></p>
+  <b>YOU ARE AWESOME! Your&nbsp;</b><b style="font-size: 18px;"><%= number_to_currency(@gift / 100 ) %></b><b>&nbsp;is going to be pooled with funds from other investors to make this campaign possible<%= @tip > 0 ? " and help Climate Cents continue to support this project and others." : "." %></b></p>
 
 <p style="font-size:18px;"><b>You personally made possible <%= @co2 %> pounds of CO2 removal from the atmosphere.</b></p>
 
