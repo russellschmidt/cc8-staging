@@ -56,7 +56,7 @@ document.getElementById('fb-share-btn').onclick = function() {
   FB.ui({
     method: 'share',
     display: 'popup',
-    href: "https://www.climatecents.org/<%= get_project(@campaign.project_id).slug %>",
+    href: "https://www.climatecents.org/projects/<%= get_project(@campaign.project_id).slug %>",
     quote: 'My donation to Climate Cents removed <%= @co2.to_i %> pounds of CO2 to help fight global warming http://www.climatecents.org',
     hashtag: '#climatecents'
   }, function(response){});
