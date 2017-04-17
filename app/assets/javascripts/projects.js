@@ -38,7 +38,7 @@ function changeTabContent(){
 }
 
 function stopVideoOnClose() {
-  const $video_link = $('#video-container iframe').attr("src");
+  var $video_link = $('#video-container iframe').attr("src").split("?");
   $('#video-container iframe').attr("src", "");
-  $('#video-container iframe').attr("src", $video_link);
+  $('#video-container iframe').attr("src", $video_link[0]);
 }
