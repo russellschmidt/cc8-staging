@@ -611,7 +611,7 @@ input[type="number"] {
       h1 {
         font-size: 3.2rem;
         height: auto;
-        margin-bottom: 0;
+        margin-bottom: 12px;
       }
       h2 {
         font-size: 2.1rem;
@@ -627,15 +627,14 @@ input[type="number"] {
 
       h6 {
         &:first-child {
-          margin-top: 25px;
+          margin-top: 66px;
           font-size: 1rem;
           line-height: 1.5;
           height: 2rem;
         }
       }
       .hero-header-btn {
-        position: absolute;
-        top: $header-height - 250px;
+        margin-top: 22px;
         width: 100%;
       }
 
