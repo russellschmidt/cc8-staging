@@ -1955,7 +1955,7 @@ input[type="number"] {
       }
     }
     section.hero-section {
-      height: 70vh;
+      height: 76vh;
     }
     nav li#nav-logo {
       width: 100%;
@@ -1970,9 +1970,9 @@ input[type="number"] {
         font-size: 2.5rem;
       }
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         line-height: 1.5;
-        padding: 6px 3vw 0;
+        padding: 6px 3vw 1vh;
       }
 
       h6 {
@@ -1984,7 +1984,8 @@ input[type="number"] {
         }
       }
       .hero-partner {
-        margin-top: 3vh;
+        margin-top: 0;
+        top: 59vh;
         h6 {
           margin-top: 0;
         }
