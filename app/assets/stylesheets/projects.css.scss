@@ -1657,7 +1657,7 @@ input[type="number"] {
       nav {
         margin-top: 16px;
       }
-      height: 65vh;
+      height: 75vh;
       header {
         ul {
           padding: 0;
@@ -1674,10 +1674,10 @@ input[type="number"] {
     }
     .project-header {
       h1 {
-        font-size: 2.5rem;
+        font-size: 2.6rem;
       }
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         line-height: 1.5;
         padding: 0 3vw;
       }
@@ -1691,7 +1691,8 @@ input[type="number"] {
         }
       }
       .hero-partner {
-        margin-top: 5vh;
+        margin-top: 0;
+        top: 59vh;
         h6 {
           margin-top: 0;
         }
@@ -1701,6 +1702,7 @@ input[type="number"] {
       }
 
       .partner-logo {
+        top: 62vh;
         img {
           max-height: 80px;
         }
@@ -1709,7 +1711,7 @@ input[type="number"] {
 
     .project-detail {
       .tab {
-        margin: 5vh 1vw;
+        margin: 9vh 1vw 4vh;
         text-align: center;
       }
       .tab-links {
