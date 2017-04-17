@@ -34,7 +34,7 @@ $second-sans-font: 'Source Sans Pro';
       display: inline;
     }
     button.close {
-      opacity: 0.8;
+      opacity: 1;
     }
   }
   .modal-body {
@@ -90,7 +90,7 @@ $second-sans-font: 'Source Sans Pro';
 
 
 // ----------------------------------------
-// Project Page backer modal
+// Project Page backer / checkout modal
 // ----------------------------------------
 
 #backer-modal {
@@ -188,6 +188,9 @@ $second-sans-font: 'Source Sans Pro';
     color: #FFFFFF;
     margin: 9px 11px;
     background-color: rgba(17, 66, 71, 0)
+  }
+  button.close:hover {
+    opacity: 0.8;
   }
   button#btn-buy {
     display: block;
@@ -288,7 +291,17 @@ $second-sans-font: 'Source Sans Pro';
 }
 
 @media all and (max-width: 850px) {
+  $close-button-dimension: 30px;
   #backer-modal {
+    .close-modal {
+      max-width: $close-button-dimension;
+      max-height: $close-button-dimension;
+      button {
+        width: $close-button-dimension;
+        height: $close-button-dimension;
+        min-height: $close-button-dimension;
+      }
+    }
     h2 {
       font-size: 2.4rem;
     }
@@ -302,7 +315,11 @@ $second-sans-font: 'Source Sans Pro';
     p {
       font-size: 1.4rem;
     }
+    .tip-section {
+      padding: 3% inherit;
+    }
     .tip-jar {
+      min-height: 65px;
       .left-column {
         width: 39%;
       }
@@ -315,9 +332,14 @@ $second-sans-font: 'Source Sans Pro';
       .tip-jar-tool-tip {
         display: none;
       }
+      .tip-jar-image{
+        img {
+          height: 45px;
+        }
+      }
     }
     button#btn-buy {
-      margin: 12% auto 2%;
+      margin: 0 auto;
     }
   }
 }
