@@ -58,7 +58,7 @@
       font-weight: 300;
       line-height: 1.2777; /* 23/18 */
       color: #FFFFFF;
-      text-shadow: 0 2px 2px rgba(6,57,64,0.7);
+      text-shadow: 0 2px 2px rgba(6,57,64,0.25); //.7
       text-transform: uppercase;
       text-align: center;
       img {
@@ -74,7 +74,7 @@
       text-align: center;
       line-height: 1.25; /* 60px / 48px */
       color: #FFFFFF;
-      text-shadow: 0 2px 2px rgba(6,57,64,0.7);
+      text-shadow: 0 2px 2px rgba(6,57,64,0.25); //.7
     }
     h2 {
       min-height: 60px;
@@ -118,7 +118,7 @@
         line-height: 1.5;       // 15px / 10px
         letter-spacing: 4px;
         color: #FFFFFF;
-        text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        text-shadow: 0 1px 2px rgba(0,0,0,0.25); //.5
       }
       p {
         margin-top: 8px;
@@ -129,7 +129,7 @@
         text-align: center;
         line-height: 1.2222rem; // 22px / 18px
         color: #FFFFFF;
-        text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        text-shadow: 0 1px 2px rgba(0,0,0,0.25); //.5
       }
     }
     .partner-logo {
@@ -138,8 +138,8 @@
       text-align: center;
       img {
         max-height: 120px;
-        -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,0.5));
-        filter: drop-shadow(0 2px 2px rgba(0,0,0,0.5));
+        -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,0.25)); // .5
+        filter: drop-shadow(0 2px 2px rgba(0,0,0,0.25)); // .5
       }
     }
   }
