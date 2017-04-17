@@ -1830,10 +1830,11 @@ input[type="number"] {
         }
       }
       .hero-header-btn {
-        margin-top: 4vh;
+        margin-top: 2vh;
       }
 
       .partner-logo {
+        top: 85vh;
         img {
           max-height: 80px;
         }
@@ -1842,7 +1843,7 @@ input[type="number"] {
 
     .project-detail {
       .tab {
-        margin: 12vh 4vw 5vh;
+        margin: 16vh 4vw 5vh;
         text-align: center;
       }
       .tab-links {
