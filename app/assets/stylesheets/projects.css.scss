@@ -798,15 +798,19 @@ input[type="number"] {
       }
 
       .partner-logo {
+        top: 450px;
+        margin: 40px auto 0;
+        right: 0;
         img {
-          max-height: 80px;
+          max-height: 100px;
         }
       }
     }
 
     .project-detail {
       .tab {
-        margin: 4vh 0 0 0;
+        margin: 6vh auto 0;
+        width: 100%;
         text-align: center;
       }
       .tab-links {
@@ -972,8 +976,9 @@ input[type="number"] {
       }
 
       .partner-logo {
+        top: 450px;
         img {
-          max-height: 80px;
+          max-height: 120px;
         }
       }
     }
@@ -983,7 +988,8 @@ input[type="number"] {
         padding: 0;
       }
       .tab {
-        margin: 2vh 0 0 0;
+        width: 100%;
+        margin: 2vh auto 0;
         text-align: center;
       }
       .tab-links:last-child {
