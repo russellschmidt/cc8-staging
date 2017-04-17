@@ -1487,10 +1487,15 @@ input[type="number"] {
 // ==================================================
 // iphone 6 landscape mode
 @media screen and (max-width: 667px) and (orientation: landscape) {
+
   .project-page {
     margin-bottom: 40px;
     section.hero-section {
-      height: 100%;
+      position: relative;
+      width: 105%;
+      max-width: none;
+      height: 102vh;
+      right: 0;
       nav ul {
         padding: 0;
         width: 100%;
@@ -1508,11 +1513,11 @@ input[type="number"] {
     .project-header {
       height: 75vh;
       h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
         height: auto;
       }
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         line-height: 1.5;
         padding: 0 3vw;
       }
@@ -1525,7 +1530,8 @@ input[type="number"] {
         }
       }
       .hero-partner {
-        margin-top: 5vh;
+        margin-top: 0;
+        top: 73vh;
         h6 {
           margin-top: 0;
         }
@@ -1536,8 +1542,9 @@ input[type="number"] {
 
       .partner-logo {
         width: 100%;
-        max-width: 667px;
+        max-width: none;
         text-align: center;
+        top: 80vh;
         img {
           max-height: 80px;
         }
@@ -1546,7 +1553,7 @@ input[type="number"] {
 
     .project-detail {
       .tab {
-        margin: 12vh 4vw 5vh;
+        margin: 16vh 4vw 5vh;
         text-align: center;
       }
       .tab-links {
