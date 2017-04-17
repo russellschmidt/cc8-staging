@@ -1206,7 +1206,8 @@ input[type="number"] {
         }
       }
       .hero-partner {
-        margin-top: 5vh;
+        margin-top: 0;
+        top: 65vh;
         h6 {
           margin-top: 0;
         }
@@ -1216,6 +1217,7 @@ input[type="number"] {
       }
 
       .partner-logo {
+        top: 71vh;
         img {
           max-height: 80px;
         }
@@ -1224,7 +1226,7 @@ input[type="number"] {
 
     .project-detail {
       .tab {
-        margin: 44px auto 30px;
+        margin: 55px auto 30px;
         text-align: center;
       }
       .tab-links {
