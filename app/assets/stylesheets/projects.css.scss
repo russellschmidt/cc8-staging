@@ -906,9 +906,9 @@ input[type="number"] {
       }
 
       .partner-logo {
-        margin-top: 55px;
+        margin-top: 50px;
         img {
-          max-height: 80px;
+          max-height: 100px;
         }
       }
     }
@@ -938,7 +938,7 @@ input[type="number"] {
 // end of portrait design 1025-1399px
 }
 // ==================================================
-// media query for ipad
+// media query for ipad landscape
 @media screen
     and (max-device-width : 1024px)
     and (orientation : landscape) {
@@ -950,16 +950,16 @@ input[type="number"] {
 
     .project-header {
       h1 {
-        font-size: 3rem;
+        font-size: 3.2rem;
       }
       h2 {
-        font-size: 2rem;
+        font-size: 2.6rem;
         padding: 0 2vw;
       }
 
       h6 {
         &:first-child {
-          margin-top: 6vh;
+          margin-top: 8vh;
           font-size: 1rem;
           line-height: 1.5;
           height: 2rem;
@@ -976,7 +976,7 @@ input[type="number"] {
       }
 
       .partner-logo {
-        top: 450px;
+        top: 400px;
         img {
           max-height: 120px;
         }
@@ -989,7 +989,7 @@ input[type="number"] {
       }
       .tab {
         width: 100%;
-        margin: 2vh auto 0;
+        margin: 8vh auto 0;
         text-align: center;
       }
       .tab-links:last-child {
