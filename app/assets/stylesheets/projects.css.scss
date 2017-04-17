@@ -1319,7 +1319,7 @@ input[type="number"] {
   .project-page {
     margin-bottom: 40px;
     section.hero-section {
-      height: 55vh;
+      height: 63vh;
       padding: 0;
       nav {
         margin-top: 16px;
@@ -1351,29 +1351,30 @@ input[type="number"] {
         max-width: 414px;
         height: auto;
         max-height: none;
+        margin: 0 auto;
       }
       h1 {
-        font-size: 2.4rem;
+        font-size: 2.5rem;
       }
 
       h2 {
         font-size: 1.5rem;
-        line-height: 1.6;
+        line-height: 1.5;
         width: 93%;
-        margin: 0;
         padding-left: 2vw;
       }
 
       h6 {
         &:first-child {
-          margin-top: 60px;
+          margin-top: 40px;
           font-size: 1rem;
           line-height: 1.5;
           height: 2rem;
         }
       }
       .hero-partner {
-        margin-top: 3vh;
+        margin-top: 0;
+        top: 45vh;
         h6 {
           margin-top: 0;
           width: 100%;
@@ -1385,6 +1386,7 @@ input[type="number"] {
       }
 
       .partner-logo {
+        top: 50vh;
         img {
           max-height: 80px;
         }
@@ -1393,7 +1395,7 @@ input[type="number"] {
 
     .project-detail {
       .tab {
-        margin: 5vh auto 2vh;
+        margin: 7vh auto 2vh;
         text-align: center;
       }
       .tab-links {
