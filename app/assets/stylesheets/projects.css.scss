@@ -58,7 +58,7 @@
       font-weight: 300;
       line-height: 1.2777; /* 23/18 */
       color: #FFFFFF;
-      text-shadow: 0 2px 2px 0 rgba(6,57,64,0.7);
+      text-shadow: 0 2px 2px rgba(6,57,64,0.7);
       text-transform: uppercase;
       text-align: center;
       img {
@@ -74,7 +74,7 @@
       text-align: center;
       line-height: 1.25; /* 60px / 48px */
       color: #FFFFFF;
-      text-shadow: 0 2px 2px 0 rgba(6,57,64,0.7);
+      text-shadow: 0 2px 2px rgba(6,57,64,0.7);
     }
     h2 {
       min-height: 60px;
@@ -85,7 +85,7 @@
       text-align: center;
       line-height: 1.2916; /* 31 / 24 */
       color: #FFFFFF;
-      text-shadow: 0 2px 2px 0 #063940;
+      text-shadow: 0 2px 2px #063940;
     }
     .hero-header-btn {
       text-align: center;
@@ -118,7 +118,7 @@
         line-height: 1.5;       // 15px / 10px
         letter-spacing: 4px;
         color: #FFFFFF;
-        text-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+        text-shadow: 0 1px 2px rgba(0,0,0,0.5);
       }
       p {
         margin-top: 8px;
@@ -129,7 +129,7 @@
         text-align: center;
         line-height: 1.2222rem; // 22px / 18px
         color: #FFFFFF;
-        text-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+        text-shadow: 0 1px 2px rgba(0,0,0,0.5);
       }
     }
     .partner-logo {
@@ -147,7 +147,7 @@
   .project-detail {
     .tab {
       max-width: 850px;
-      margin: 73px auto;
+      margin: 75px auto;
     }
     .tab-links {
       margin: 0 36px;
@@ -659,7 +659,7 @@ input[type="number"] {
 
     .project-detail {
       .tab {
-        margin: 44px 0 0 0;
+        margin: 55px 0 0 0;
         text-align: center;
       }
       .tab-links {
@@ -761,13 +761,13 @@ input[type="number"] {
 }
 
 // ==================================================
-// media query for ipad pro portrait landscape
+// media query for ipad pro landscape
 @media screen
     and (max-device-width : 1399px)
     and (orientation : landscape) {
   .project-page {
     section.hero-section {
-      height: 53vh;
+      height: 542px;
     }
 
     .project-header {
@@ -854,7 +854,7 @@ input[type="number"] {
 
     // end .project-page
   }
-// end of landscape design 1025-1399px
+// end of landscape design 1025-1399px ipad pro landscape
 }
 
 // ==================================================
@@ -896,13 +896,13 @@ input[type="number"] {
         }
       }
       .hero-partner {
-        margin-top: 5vh;
+        margin-top: 68px;
         h6 {
           margin-top: 0;
         }
       }
       .hero-header-btn {
-        margin-top: 4vh;
+        margin-top: 55px;
       }
 
       .partner-logo {
@@ -935,7 +935,7 @@ input[type="number"] {
       }
     }
   }
-// end of portrait design 1025-1399px
+// end of portrait design 1025-1399px ipad pro portrait
 }
 // ==================================================
 // media query for ipad landscape
@@ -944,7 +944,7 @@ input[type="number"] {
     and (orientation : landscape) {
   .project-page {
     section.hero-section {
-      height: 65vh;
+      height: 500px;
       padding: 0;
     }
 
@@ -989,7 +989,7 @@ input[type="number"] {
       }
       .tab {
         width: 100%;
-        margin: 8vh auto 0;
+        margin: 10vh auto 0;
         text-align: center;
       }
       .tab-links:last-child {
@@ -1022,7 +1022,7 @@ input[type="number"] {
   .project-page {
     margin-bottom: 40px;
     section.hero-section {
-      height: 48vh;
+      height: 490px;
       nav {
         margin-top: 3vh;
         li#nav-logo {
@@ -1061,9 +1061,9 @@ input[type="number"] {
 
       .partner-logo {
         width: 100%;
-        top: 390px;
+        top: 400px;
         img {
-          max-height: 100px;
+          max-height: 80px;
         }
       }
     }
@@ -1147,7 +1147,7 @@ input[type="number"] {
 }
 
 // ==================================================
-// media query for iphone 6+/7+
+// media query for iphone 6+/7+ Landscape
 @media screen and (max-device-width : 736px)
     and (-webkit-device-pixel-ratio: 3)
     and (orientation : landscape) {
@@ -1155,7 +1155,7 @@ input[type="number"] {
     margin-bottom: 40px;
     section.hero-section {
       max-width: 736px;
-      height: 90vh;
+      height: 375px;
     }
     nav {
       margin: 12px auto 0;
@@ -1207,7 +1207,7 @@ input[type="number"] {
       }
       .hero-partner {
         margin-top: 0;
-        top: 65vh;
+        top: 270px;
         h6 {
           margin-top: 0;
         }
@@ -1217,7 +1217,7 @@ input[type="number"] {
       }
 
       .partner-logo {
-        top: 71vh;
+        top: 295px;
         img {
           max-height: 80px;
         }
@@ -1319,7 +1319,7 @@ input[type="number"] {
   .project-page {
     margin-bottom: 40px;
     section.hero-section {
-      height: 63vh;
+      height: 465px;
       padding: 0;
       nav {
         margin-top: 16px;
@@ -1375,7 +1375,7 @@ input[type="number"] {
       }
       .hero-partner {
         margin-top: 0;
-        top: 46.5vh;
+        top: 345px;
         h6 {
           margin-top: 0;
           width: 100%;
@@ -1387,7 +1387,7 @@ input[type="number"] {
       }
 
       .partner-logo {
-        top: 50vh;
+        top: 370px;
         img {
           max-height: 80px;
         }
@@ -1494,7 +1494,7 @@ input[type="number"] {
       position: relative;
       width: 105%;
       max-width: none;
-      height: 102vh;
+      height: 385px;
       right: 0;
       nav ul {
         padding: 0;
@@ -1531,7 +1531,7 @@ input[type="number"] {
       }
       .hero-partner {
         margin-top: 0;
-        top: 73vh;
+        top: 275px;
         h6 {
           margin-top: 0;
         }
@@ -1544,7 +1544,7 @@ input[type="number"] {
         width: 100%;
         max-width: none;
         text-align: center;
-        top: 80vh;
+        top: 300px;
         img {
           max-height: 80px;
         }
@@ -1657,7 +1657,7 @@ input[type="number"] {
       nav {
         margin-top: 16px;
       }
-      height: 75vh;
+      height: 500px;
       header {
         ul {
           padding: 0;
@@ -1692,7 +1692,7 @@ input[type="number"] {
       }
       .hero-partner {
         margin-top: 0;
-        top: 59vh;
+        top: 395px;
         h6 {
           margin-top: 0;
         }
@@ -1702,7 +1702,7 @@ input[type="number"] {
       }
 
       .partner-logo {
-        top: 62vh;
+        top: 410px;
         img {
           max-height: 80px;
         }
@@ -1785,7 +1785,7 @@ input[type="number"] {
   .project-page {
     margin-bottom: 40px;
     section.hero-section {
-      height: 112vh;
+      height: 360px;
       header {
         nav {
           margin-top: 2vh;
@@ -1824,7 +1824,8 @@ input[type="number"] {
         }
       }
       .hero-partner {
-        margin-top: 5vh;
+        margin-top: 0;
+        top: 250px;
         h6 {
           margin-top: 0;
         }
@@ -1834,7 +1835,7 @@ input[type="number"] {
       }
 
       .partner-logo {
-        top: 85vh;
+        top: 275px;
         img {
           max-height: 80px;
         }
@@ -1955,7 +1956,7 @@ input[type="number"] {
       }
     }
     section.hero-section {
-      height: 76vh;
+      height: 430px;
     }
     nav li#nav-logo {
       width: 100%;
@@ -1985,7 +1986,7 @@ input[type="number"] {
       }
       .hero-partner {
         margin-top: 0;
-        top: 59vh;
+        top: 335px;
         h6 {
           margin-top: 0;
         }
@@ -1995,8 +1996,9 @@ input[type="number"] {
       }
 
       .partner-logo {
+        top: 340px;
         img {
-          max-height: 60px;
+          max-height: 80px;
         }
       }
     }
