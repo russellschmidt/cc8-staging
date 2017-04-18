@@ -28,26 +28,24 @@
 
 <hr/>
 
-<!-- Load Facebook SDK for JavaScript -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<% if user_signed_in? && current_user.admin? %>
 
-<!-- Your embedded video player code -->
-<div class="fb-video" data-href="https://www.facebook.com/facebook/videos/745374435626149/" data-width="500" data-show-text="false">
-  <div class="fb-xfbml-parse-ignore">
-    <blockquote cite="https://www.facebook.com/facebook/videos/745374435626149/">
-      <a href="https://www.facebook.com/facebook/videos/745374435626149/">How to Share With Just Friends</a>
-      <p>How to share with just friends.</p>
-      Posted by <a href="https://www.facebook.com/facebook/">Facebook</a> on Friday, December 5, 2014
-    </blockquote>
+  <div id="fb-root"></div>
+
+  <!-- Your embedded video player code -->
+  <div class="fb-video" data-href="https://www.facebook.com/facebook/videos/745374435626149/" data-width="500" data-show-text="false">
+    <div class="fb-xfbml-parse-ignore">
+      <blockquote cite="https://www.facebook.com/facebook/videos/745374435626149/">
+        <a href="https://www.facebook.com/facebook/videos/745374435626149/">How to Share With Just Friends</a>
+        <p>How to share with just friends.</p>
+        Posted by <a href="https://www.facebook.com/facebook/">Facebook</a> on Friday, December 5, 2014
+      </blockquote>
+    </div>
   </div>
-</div>
+
+  <hr />
+
+
 
 <!-- Reports -->
 
@@ -56,3 +54,13 @@
 <!-- $$$ -->
 <!-- Most popular projects/campaigns -->
 <!-- Upcoming campaigns ending -->
+
+<!-- Load Facebook SDK for JavaScript -->
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<% end %>
