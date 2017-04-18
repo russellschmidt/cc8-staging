@@ -13,6 +13,10 @@ $(document).on('turbolinks:load', function() {
   $('#video-modal button.close').click(function() {
     stopVideoOnClose()
   });
+
+  $('.hero-header-btn button').click(function() {
+    makeVideoAutoplay();
+  });
 })
 
 function showActiveTabContent() {
@@ -35,6 +39,11 @@ function hideInactiveTabContent() {
 function changeTabContent(){
   hideInactiveTabContent();
   showActiveTabContent();
+}
+
+function makeVideoAutoplay(){
+  const $video_link = $('#video-container iframe').attr("src") + "?&autoplay=1";
+  $('#video-container iframe').attr("src", $video_link);
 }
 
 function stopVideoOnClose() {
