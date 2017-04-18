@@ -130,14 +130,15 @@
 
         <div class="center-column">
           <ul>
+            <li><span class="progress-data-point"><%= number_to_currency(campaign.dollar_goal_in_cents/100, precision: 0) %></span>&nbsp;goal</li>
             <li><span class="progress-data-point"><%= percent_funded(campaign) %>%</span> funded</li>
-            <li>&nbsp;by <span class="progress-data-point"><%= number_of_campaign_backers(campaign) %></span>
+<!--             <li>&nbsp;by <span class="progress-data-point"><%= number_of_campaign_backers(campaign) %></span>
               <% if number_of_campaign_backers(campaign) == 1 %>
                 Backer
               <% else %>
                 Backers
               <% end %>
-            </li>
+            </li> -->
             <li><span><%= days_remaining(campaign) %></span> days left</li>
           </ul>
           <div id="project-progress-bar" class="progress">
