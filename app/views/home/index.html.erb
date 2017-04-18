@@ -101,17 +101,13 @@
         </div>
         <div class="progress-label">
           <ul>
-            <li class="leftmost"><span class="progress-data-point"><%= percent_funded(campaign) %>%</span></li>
-            <li><span class="progress-data-point"><%= number_of_campaign_backers(campaign) %></span></li>
+            <li class="leftmost"><span class="progress-data-point"><%= number_to_currency(campaign.dollar_goal_in_cents/100, precision: 0) %></span></li>
+            <li><span class="progress-data-point"><%= percent_funded(campaign) %>%</span></li>
             <li class="rightmost"><span class="progress-data-point"><%= days_remaining(campaign) %> Days</span></li>
           </ul>
           <ul>
+            <li class="leftmost">Goal</li>
             <li class="leftmost">Funded</li>
-            <% if number_of_campaign_backers(campaign) == 1 %>
-              <li>Backer</li>
-            <% else %>
-              <li>Backers</li>
-            <% end %>
             <li class="rightmost">Remaining</li>
           </ul>
         </div>
